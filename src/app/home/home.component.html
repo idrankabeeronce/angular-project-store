@@ -1,0 +1,74 @@
+<div class="box tui-text_body-l" (tuiSwipe)="onSwipe($event)">
+    <div class="buttons-wrapper">
+        <button tuiIconButton appearance="flat" icon="tuiIconChevronLeftLarge" (click)="scrollItem('right')"></button>
+        <button tuiIconButton appearance="flat" icon="tuiIconChevronRightLarge" (click)="scrollItem('left')"></button>
+    </div>
+    <div class="items" [ngClass]="background">
+        <div class="box-item item-0">
+            <div class="tui-text_h3 text-header">PRODUCTS THAT MAKES <br> YOUR LIFE EASIER</div>
+        </div>
+        <a routerLink="/products" class="box-item item-1">
+            <div class="tui-text_h3 text-header">GET GIFTS FOR YOUR FAMILY</div>
+        </a>
+        <div class="box-item item-2"></div>
+        <div class="box-item item-3"></div>
+    </div>
+</div>
+<div class="main-container">
+
+
+    <div class="tui-text_h5 label-best tui-space_bottom-5">Best Seller</div>
+
+    <div class="best-container">
+        <tui-scrollbar class="scroll-container">
+
+            <div class="flex-container">
+
+                <ng-container *ngFor="let item of bestSellers">
+                    <div class="item">
+                        <ng-container *ngIf="item.tag == 'new'">
+                            <div class="tag">NEW</div>
+                        </ng-container>
+                        <div class="item-img tui-space_bottom-2">
+
+                            <img [src]="item.imageSrc">
+                        </div>
+                        <div class="tui-text_body-m-2">{{item.name}}</div>
+                        <div class="extra tui-text_body-m-2">
+                            <div>${{item.price}}</div>
+                            <div class="rating-flex">
+                                <ng-container *ngIf="item.rating > 0 || item.rating >= 0.2; else srcNull">
+                                    <tui-svg *ngIf="item.rating >= 0.2; else srcHalf" [src]="ratingSrcFull"></tui-svg>
+                                </ng-container>
+
+                                <ng-container *ngIf="item.rating > 0.2 || item.rating >= 0.4; else srcNull">
+                                    <tui-svg *ngIf="item.rating >= 0.4; else srcHalf" [src]="ratingSrcFull"></tui-svg>
+                                </ng-container>
+
+                                <ng-container *ngIf="item.rating > 0.4 || item.rating >= 0.6; else srcNull">
+                                    <tui-svg *ngIf="item.rating >= 0.6; else srcHalf" [src]="ratingSrcFull"></tui-svg>
+                                </ng-container>
+
+                                <ng-container *ngIf="item.rating > 0.6 || item.rating >= 0.8; else srcNull">
+                                    <tui-svg *ngIf="item.rating >= 0.8; else srcHalf" [src]="ratingSrcFull"></tui-svg>
+                                </ng-container>
+
+                                <ng-container *ngIf="item.rating > 0.8 || item.rating == 1; else srcNull">
+                                    <tui-svg *ngIf="item.rating == 1; else srcHalf" [src]="ratingSrcFull"></tui-svg>
+                                </ng-container>
+
+                            </div>
+                            <ng-template #srcNull>
+                                <tui-svg [src]="ratingSrcNull"></tui-svg>
+                            </ng-template>
+                            <ng-template #srcHalf>
+                                <tui-svg [src]="ratingSrcHalf"></tui-svg>
+                            </ng-template>
+                        </div>
+
+                    </div>
+                </ng-container>
+            </div>
+        </tui-scrollbar>
+    </div>
+</div>

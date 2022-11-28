@@ -1,0 +1,66 @@
+.checkout-wrapper, .item-container, .item-h_1, .sub-total-container, .shipping-container, .total-container, .discount-container, .discount-code-container{
+    display: flex;
+}
+.item-h_1 {
+    align-items: center;
+}
+.item-container {
+    align-items: center;
+    justify-content: space-between;
+}
+.checkout-wrapper {
+    width: 100%;
+}
+.checkout-content, .shopping-list-content {
+    width: 50%;
+}
+.tui-text_body-m, .tui-text_body-s {
+    color: var(--tui-base-07)
+} 
+.text-black {
+    color: black;
+}
+.padding-top-bottom-1 {
+    padding: 1rem 0 1rem 0;
+}
+.sub-total-container, .shipping-container, .total-container, .discount-container {
+    justify-content: space-between;
+}
+.border-top {
+    border-top: 1px solid var(--tui-base-04);
+}
+.item-image {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    border: 1px solid var(--tui-base-04);
+    border-radius: var(--tui-radius-m);
+}
+.amount-field {
+    background: var(--tui-base-07);
+    margin-left: calc(80px - 0.7rem);
+    margin-top: -78px;
+    position: absolute;
+    width: 1.4rem;
+    height: 1.4rem;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.4rem;
+}
+.old-price {
+    text-decoration: line-through;
+}
+.link-home {
+    text-decoration: none;
+    color: black;
+}
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  text-decoration: none;
+  pointer-events: none;
+}
+.focused {
+    color: var(--tui-text-01)
+}

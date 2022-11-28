@@ -1,0 +1,8 @@
+<ng-container *ngIf="parent; else child">
+    <!-- Parent with all products -->
+    <app-goods></app-goods>
+</ng-container>
+<!-- Child of products with certain goods -->
+<ng-template #child>
+    <router-outlet></router-outlet>
+</ng-template>

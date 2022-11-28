@@ -1,0 +1,72 @@
+<div class="bottom-wrapper">
+    <div tuiMode="onLight" class="bottom-field">
+        <div class="bottom-field-group">
+            <div class="about-field bottom-item-field tui-space_bottom-3">
+                <div class="tui-space_bottom-5 header-field">
+                    <h3 class="tui-space_top-0 tui-space_bottom-0">ABOUT</h3>
+                    <button #button_1 (click)="getContent(button_1, section_1)" class="expand-button" tuiIconButton type="button" appearance="icon" icon="tuiIconPlusLarge"></button>
+                </div>
+                <section #section_1 class="content">
+                    <ng-container *ngFor="let item of About">
+                        <a [routerLink]="item.link" (click)="scrollTop()" tuiLink class="tui-space_bottom-3"><span
+                                class="tui-text_body-m">{{item.name}}</span></a>
+                    </ng-container>
+                </section>
+            </div>
+            <div class="for-clients-field bottom-item-field tui-space_bottom-3">
+
+                <div class="tui-space_bottom-5 header-field">
+                    <h3 class="tui-space_top-0 tui-space_bottom-0">FOR CLIENTS</h3>
+                    <button #button_2 (click)="getContent(button_2, section_2)" class="expand-button" tuiIconButton type="button" appearance="icon" icon="tuiIconPlusLarge"></button>
+                </div>
+                <section #section_2 class="content">
+                    <ng-container *ngFor="let item of ForClients">
+                        <a [routerLink]="item.link" (click)="scrollTop()" tuiLink class="tui-space_bottom-3"><span
+                                class="tui-text_body-m">{{item.name}}</span></a>
+                    </ng-container>
+                </section>
+            </div>
+        </div>
+        <div class="bottom-field-group">
+            <div class="service-field bottom-item-field tui-space_bottom-3">
+                <div class="tui-space_bottom-5 header-field">
+                    <h3 class="tui-space_top-0 tui-space_bottom-0">SERVICE</h3>
+                    <button #button_3 (click)="getContent(button_3, section_3)" class="expand-button" tuiIconButton type="button" appearance="icon" icon="tuiIconPlusLarge"></button>
+                </div>
+                <section #section_3 class="content">
+                    <ng-container *ngFor="let item of Service">
+                        <a [routerLink]="item.link" (click)="scrollTop()" tuiLink class="tui-space_bottom-3"><span
+                                class="tui-text_body-m">{{item.name}}</span></a>
+                    </ng-container>
+                </section>
+            </div>
+            <div class="subscribtion-field bottom-item-field tui-space_bottom-3">
+                <div class="tui-space_bottom-5 header-field">
+                    <h3 class="tui-space_top-0 tui-space_bottom-0">BE THE FIRST TO KNOW</h3>
+                    <button #button_4 (click)="getContent(button_4, section_4)" class="expand-button" tuiIconButton type="button" appearance="icon" icon="tuiIconPlusLarge"></button>
+                </div>
+                <section #section_4 class="content">
+                    <p class="tui-text_body-m tui-space_bottom-3">Subscribe to get news and relevant deals
+                        notifications</p>
+                    <div style="display: flex;">
+                        <tui-input #d style="width:100%;" [formControl]="emailField"
+                            [tuiTextfieldCustomContent]="emailField.valid ? success : ''"
+                            [tuiTextfieldLabelOutside]="true" tuiTextfield type="email"
+                            (ngModelChange)="changeInput(button_enability)">Email</tui-input>
+                        <button #button_enability [disabled]="true" tuiIconButton type="button" appearance="icon"
+                            class="button-email" icon="tuiIconMailLarge"></button>
+
+                    </div>
+                    <ng-container *ngIf="!emailField.valid && !(emailField.value == '')">
+                        <tui-notification class="tui-space_top-1 notification-text" status="warning">
+                            Adress must contain the @ symbol. Address {{emailField.value}} is not complete
+                        </tui-notification>
+                    </ng-container>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #success>
+    <tui-svg src="tuiIconCheckLarge" class="success tui-space_left-3"></tui-svg>
+</ng-template>

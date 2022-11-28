@@ -1,0 +1,53 @@
+<div class="container">
+
+    <div class="sum-container tui-space_top-6 tui-space_bottom-10">
+        <!-- INFORMATION SECTION-->
+        <div class="contact-container padding-bottom">
+            <div class="tui-text_body-m chapter">Contacts</div>
+            <div class="group-flex">
+                <div class="tui-text_body-m">{{contact}}</div>
+                <a tuiLink routerLink="/{{id}}/checkout">Change</a>
+            </div>
+        </div>
+        <div class="shipping-info-container border-top padding-top">
+            <div class="tui-text_body-m chapter">Ship to</div>
+            <div class="group-flex">
+                <div class="tui-text_body-m">{{shipTo}}</div>
+                <a tuiLink routerLink="/{{id}}/checkout">Change</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHIPPING SECTION-->
+    <div class="tui-space_bottom-10">
+        <h3 class="tui-text_body-xl">Shipping information</h3>
+        <form class="shipping-methods-sum" [formGroup]="radioForm">
+        <ng-container *ngFor="let method of shippingMethod">
+            <div class="shipping-method-container padding-top padding-bottom tui-text_body-m">
+                <tui-radio class="tui-space_right-5" formControlName="radioValue" [item]="method.id" (ngModelChange)="changeMethod(method)"></tui-radio>
+                <div class="shipping-description">
+                <div>
+                    <div>{{method.name}}</div>
+                    <div class="tui-text_body-s">{{method.deliveryTime}}</div>
+                </div>
+                <ng-container *ngIf="method.price != 0; else free">
+                    <div>${{method.price}}</div>
+                </ng-container>
+                <ng-template #free>
+                    <div>Free</div>
+                </ng-template>
+            </div>
+            </div>
+        </ng-container>
+    </form>
+    </div>
+
+    <!-- NAVIGATION SECTION-->
+    <div class="navigation-container">
+        <a tuiLink routerLink="/{{id}}/checkout">
+            <tui-svg src="tuiIconChevronLeft" class="tui-space_right-1"></tui-svg>
+            Return to information
+        </a>
+        <button tuiButton (click)="goToPayment()">Continue to payment</button>
+    </div>
+</div>

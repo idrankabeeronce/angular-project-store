@@ -1,0 +1,44 @@
+.contact-container, .shipping-info-container, .group-flex, .navigation-container, .shipping-method-container {
+    display: flex;
+    
+}
+.chapter {
+    width: 100px;
+    color: var(--tui-base-07);
+}
+.navigation-container, .group-flex {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.shipping-method-container {
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid var(--tui-base-04);
+}
+.shipping-method-container:last-child {
+    border-bottom: none;
+}
+.shipping-description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.sum-container, .shipping-methods-sum{
+    padding: 1rem .5rem 1rem .5rem;
+    border: 1px solid var(--tui-base-04);
+    border-radius: var(--tui-radius-m);
+}
+.shipping-methods-sum {
+    padding: 0 .5rem 0 .5rem;
+}
+.border-top {
+    border-top: 1px solid var(--tui-base-04);
+}
+.padding-bottom {
+    padding-bottom: .5rem;
+}
+.padding-top {
+    padding-top: .5rem;
+}

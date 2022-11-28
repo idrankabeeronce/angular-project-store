@@ -1,18 +1,66 @@
+import { NgDompurifySanitizer } from "@tinkoff/ng-dompurify";
+import { TuiRootModule, TuiDialogModule, TuiAlertModule, TUI_SANITIZER } from "@taiga-ui/core";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { ALL_TAIGA_UI_MODULES } from "./taiga modules/all_taiga_modules";
+import { ProductsComponent } from './products/products.component';
+import { DealsComponent } from './deals/deals.component';
+import { HomeComponent } from './home/home.component';
+import { GoodsComponent } from './products/goods/goods.component';
+import { BottomComponent } from './bottom/bottom.component';
+import { SupportComponent } from './support/support.component';
+import { VacancyComponent } from './support/vacancy/vacancy.component';
+import { AboutComponent } from './support/about/about.component';
+import { ContactUsComponent } from './support/contact-us/contact-us.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HttpClientModule  } from '@angular/common/http';
+import { LayoutModule } from '@angular/cdk/layout';
+import { ExampleTextComponent } from './example-text/example-text.component';
+import { ItemComponent } from './products/goods/item/item.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './shopping-cart/checkout/checkout.component';
+import { InformationComponent } from './shopping-cart/checkout/information/information.component';
+import { ShippingComponent } from './shopping-cart/checkout/shipping/shipping.component';
+import { PaymentComponent } from './shopping-cart/checkout/payment/payment.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    ProductsComponent,
+    DealsComponent,
+    HomeComponent,
+    GoodsComponent,
+    BottomComponent,
+    SupportComponent,
+    VacancyComponent,
+    AboutComponent,
+    ContactUsComponent,
+    PageNotFoundComponent,
+    ExampleTextComponent,
+    ItemComponent,
+    ShoppingCartComponent,
+    CheckoutComponent,
+    InformationComponent,
+    ShippingComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    TuiRootModule,
+    TuiDialogModule,
+    TuiAlertModule,
+    ALL_TAIGA_UI_MODULES,
+    LayoutModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: TUI_SANITIZER, useClass: NgDompurifySanitizer }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

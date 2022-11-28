@@ -1,0 +1,393 @@
+[
+    {
+        "category": "cabels",
+        "goods": [
+            {
+                "type": "usb-c",
+                "items": [
+                    {
+                        "name": "A-NEO USB C",
+                        "dateOfRelease": "2022-11-16",
+                        "properties": {
+                            "color": "black",
+                            "length": 5,
+                            "amperage": 2
+                        },
+                        "price": 9,
+                        "discount": 20,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/usb-c-black.png",
+                        "rating": 0.2
+                    },
+                    {
+                        "name": "NEO USB C",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "blue",
+                            "length": 1,
+                            "amperage": 2
+                        },
+                        "price": 5,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/usb-c-blue.png",
+                        "rating": 0.2
+                    },
+                    {
+                        "name": "NEO Right angle USB C",
+                        "dateOfRelease": "2022-11-15",
+                        "properties": {
+                            "color": "white",
+                            "length": 2,
+                            "amperage": 2
+                        },
+                        "price": 6.49,
+                        "discount": 5,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/usb-c-white.png",
+                        "rating": 0.2
+                    },
+                    {
+                        "name": "NEO USB C",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "blue",
+                            "length": 2,
+                            "amperage": 2
+                        },
+                        "price": 6.49,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/usb-c-blue.png",
+                        "rating": 0.2
+                    },
+                    {
+                        "name": "NEO USB C Fast Charging",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "red",
+                            "length": 1,
+                            "amperage": 3
+                        },
+                        "price": 6,
+                        "discount": 20,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/usb-c-red.png",
+                        "rating": 0.2
+                    },
+                    {
+                        "name": "NEO USB C Fast Charging",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "black",
+                            "length": 2,
+                            "amperage": 3
+                        },
+                        "price": 7,
+                        "discount": 20,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/usb-c-black.png",
+                        "rating": 0.2
+                    },
+                    {
+                        "name": "NEO USB C Fast Charging",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "black",
+                            "length": 3,
+                            "amperage": 3
+                        },
+                        "price": 7.49,
+                        "discount": 20,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/usb-c-black.png",
+                        "rating": 0.2
+                    },
+                    {
+                        "name": "NEO USB C",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "turquoise",
+                            "length": 1,
+                            "amperage": 2
+                        },
+                        "price": 5,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/usb-c-turquoise.png",
+                        "rating": 0
+                    },
+                    {
+                        "name": "NEO Right angle USB C",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "black",
+                            "length": 2,
+                            "amperage": 2
+                        },
+                        "price": 6.49,
+                        "discount": 60,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/usb-c-black.png",
+                        "rating": 0
+                    },
+                    {
+                        "name": "NEO USB C",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "black",
+                            "length": 2,
+                            "amperage": 2
+                        },
+                        "price": 6.49,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/usb-c-black.png",
+                        "rating": 0
+                    }
+                ]
+            },
+            {
+                "type": "lightning",
+                "items": [
+                    {
+                        "name": "NEO Lightning To A USB",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "blue",
+                            "length": 1,
+                            "amperage": 2
+                        },
+                        "price": 7,
+                        "discount": 15,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0
+                    },
+                    {
+                        "name": "NEO Lightning To A USB",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "blue",
+                            "length": 2,
+                            "amperage": 2
+                        },
+                        "price": 8.59,
+                        "discount": 15,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0
+                    },
+                    {
+                        "name": "NEO Lightning To A USB",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "blue",
+                            "length": 3,
+                            "amperage": 2
+                        },
+                        "price": 9.49,
+                        "discount": 15,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0.6
+                    },
+                    {
+                        "name": "NEO Lightning To A USB",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "black",
+                            "length": 1,
+                            "amperage": 2
+                        },
+                        "price": 7,
+                        "discount": 15,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0.6
+                    },
+                    {
+                        "name": "NEO Lightning To A USB",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "black",
+                            "length": 2,
+                            "amperage": 2
+                        },
+                        "price": 8.49,
+                        "discount": 15,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0.6
+                    },
+                    {
+                        "name": "NEO Lightning To A USB",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "black",
+                            "length": 3,
+                            "amperage": 2
+                        },
+                        "price": 9.49,
+                        "discount": 15,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0.6
+                    },
+                    {
+                        "name": "NEO Lightning Fast Charging",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "black",
+                            "length": 0.5,
+                            "amperage": 3
+                        },
+                        "price": 15,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0.6
+                    },
+                    {
+                        "name": "NEO Lightning Fast Charging",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "black",
+                            "length": 1,
+                            "amperage": 0.5
+                        },
+                        "price": 14.49,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0.9
+                    },
+                    {
+                        "name": "NEO Lightning Fast Charging",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "black",
+                            "length": 2,
+                            "amperage": 3
+                        },
+                        "price": 15,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0.9
+                    },
+                    {
+                        "name": "NEO Lightning Fast Charging",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "blue",
+                            "length": 0.5,
+                            "amperage": 3
+                        },
+                        "price": 13,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0.9
+                    },
+                    {
+                        "name": "NEO Lightning Fast Charging",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "blue",
+                            "length": 1,
+                            "amperage": 3
+                        },
+                        "price": 14.49,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0.9
+                    },
+                    {
+                        "name": "NEO Lightning Fast Charging",
+                        "dateOfRelease": "2022-11-11",
+                        "properties": {
+                            "color": "blue",
+                            "length": 2,
+                            "amperage": 3
+                        },
+                        "price": 15,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "rating": 0.9
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "charges",
+        "goods": [
+            {
+                "type": "usb-c",
+                "items": [
+                    {
+                        "name": "NEO USB A Charger 5W",
+                        "dateOfRelease": "2022-11-20",
+                        "properties": {
+                            "color": "black",
+                            "watt": 5,
+                            "port": "USB-A"
+                        },
+                        "price": 6.49,
+                        "discount": 15,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/chargers/charger_black_5w.png",
+                        "rating": 0.9
+                    },
+                    {
+                        "name": "NEO USB A Charger 5W",
+                        "dateOfRelease": "2022-11-20",
+                        "properties": {
+                            "color": "blue",
+                            "watt": 5,
+                            "port": "USB-A"
+                        },
+                        "price": 6.49,
+                        "discount": 15,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/chargers/charger_blue_5w.png",
+                        "rating": 0.9
+                    },
+                    {
+                        "name": "NEO Wireless USB C Charger 10W",
+                        "dateOfRelease": "2022-11-21",
+                        "properties": {
+                            "color": "blue",
+                            "watt": 10,
+                            "port": "USB-C"
+                        },
+                        "price": 14,
+                        "discount": 15,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/chargers/wireless_charger_blue_10w.png",
+                        "rating": 0.9,
+                        "tag": "new"
+                    },
+                    {
+                        "name": "NEO Wireless USB C Charger 10W",
+                        "dateOfRelease": "2022-11-21",
+                        "properties": {
+                            "color": "black",
+                            "watt": 10,
+                            "port": "USB-C"
+                        },
+                        "price": 14,
+                        "discount": 15,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "/assets/images/products/chargers/wireless_charger_black_10w.png",
+                        "rating": 1,
+                        "tag": "new"
+                    }
+                ]
+            }
+        ]
+    }
+]

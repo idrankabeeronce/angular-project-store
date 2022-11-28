@@ -1,0 +1,52 @@
+.title-wrapper {
+    max-width: 1200px;
+    border-bottom: solid 1px var(--tui-base-04);
+    margin: auto;
+    padding: 50px 0;
+    text-align: center;
+}
+.settings-wrapper h1{
+    margin: 0;
+}
+.main-content {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+.text-fill {
+    color: var(--tui-base-06);
+}
+
+.wrapper {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    height: 50vw;
+    min-height: 400px;
+}
+.not-found-h1, p, a {
+    letter-spacing: .3rem;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+a {
+    padding: 0 .5rem .1rem .5rem;
+    font-weight: 700;
+    border-bottom: solid 1px var(--tui-base-08);
+    transition: .5s;
+}
+a:hover {
+    color: var(--tui-base-01)!important;
+    background: var(--tui-base-08);
+}
+.tui-text_body-xl {
+    font-weight: bold;
+}
+.not-found-h1 {
+    font-size: 8em;
+    line-height: 1em;
+}

@@ -1,0 +1,136 @@
+<div tuiMode="onDark" class="wrapper">
+    <ng-container *ngIf="isVisible">
+        <ng-container #outlet *ngIf="!showContainer; else basd">
+            <a class="home-h1" routerLink="/" routerLinkActive="active" (click)="resetActiveItemIndex()">
+                <h1 class="tui-text_body-m title">NEO</h1>
+            </a>
+            <tui-tabs class="tabs" [activeItemIndex]="activeItemIndex">
+                <ng-container *ngFor="let tab of tabs">
+
+                    <ng-container *ngIf="isString(tab); else submenu">
+                        <ng-container *ngIf="tab == 'default'; else item">
+                            <button style="display: none" *tuiItem tuiTab></button>
+                        </ng-container>
+                        <ng-template #item>
+
+
+                            <button (click)="onClick(tab, '')">
+                                {{ tab }}
+                            </button>
+
+                        </ng-template>
+                    </ng-container>
+                    <ng-template #submenu>
+                        <tui-hosted-dropdown tuiDropdownHover #host routerLink="/{{tab.name.toLowerCase()}}"
+                           [open]="open" routerLinkActive="active" [content]="dropdown">
+                            <div class="button-field">
+                                <button tuiTab>
+                                    {{ tab.name }}
+                                </button>
+                                <button tuiMode="onLight" class="expand-button" tuiIconButton type="button"
+                                    appearance="icon" icon="tuiIconPlusLarge"></button>
+                            </div>
+
+                        </tui-hosted-dropdown>
+                        <ng-template #dropdown>
+                            <tui-data-list>
+                                <div style="display: flex" *ngFor="let sub of tab.sub">
+                                    <ng-container *ngIf="sub.name; else withoutsub">
+                                        <button tuiOption (click)="onClickTab(host, sub.name, tab.name)">{{ sub.name
+                                            }}</button>
+
+                                        <ng-container *ngFor="let content of sub.content">
+                                            <button tuiOption
+                                                (click)="onClickSubTab(host, content, sub.name, tab.name)"><span
+                                                    style="color: var(--tui-base-06)">{{content}}</span></button>
+                                        </ng-container>
+
+                                    </ng-container>
+                                    <ng-template #withoutsub>
+                                        <button style="width: 100%" tuiOption
+                                            (click)="onClickTab(host, sub, tab.name)">{{ sub }}</button>
+                                    </ng-template>
+                                </div>
+                            </tui-data-list>
+                        </ng-template>
+
+                    </ng-template>
+
+
+                </ng-container>
+
+            </tui-tabs>
+
+        </ng-container>
+    </ng-container>
+
+    <button tuiIconButton (click)="getShoppingCart()" routerLinkActive type="button" appearance="icon"
+        class="button-shopping-cart">
+        <tui-svg [src]="shopping_cart_svg" class="tui-space_right-2"></tui-svg>
+        <span class="index-of-shopping-items">{{sizeOfShoppingList}}</span>
+    </button>
+</div>
+
+
+
+
+
+<ng-template tuiMode="onDark" #basd>
+    <button (click)="getMenu()" tuiIconButton type="button" appearance="icon" icon="tuiIconMenuLarge">
+    </button>
+    <a class="home-h1" routerLink="/" routerLinkActive="active" (click)="resetActiveItemIndex()">
+        <h1 class="tui-text_body-m title">NEO</h1>
+    </a>
+    <div [style]="blockLayot_menu" class="block-wrapper">
+
+        <tui-scrollbar [style]="menuStyle" class="side-menu-wrapper">
+            <div tuiMode="onLight" class="mune-header">
+                <h1 class="tui-text_h6 title">MENU</h1>
+                <button tuiIconButton type="button" appearance="icon" class="button-close-shopping-cart"
+                    icon="tuiIconRemoveLarge" (click)="closeMenu()">
+                </button>
+            </div>
+
+            <ng-container *ngFor="let item of tabs" tuiMode="onLight">
+                <ng-container *ngIf="item != 'default'">
+                    <div>
+                        <div class="custom-padding-left header-field">
+                            <a tuiLink (click)="onClick(item.name, '')" class="content-link-header">
+                                <h3 class="tui-space_top-0 tui-space_bottom-0">{{item.name}}</h3>
+                            </a>
+                            <button #button (click)="getContent(button, section, false)" class="expand-button" tuiIconButton
+                                type="button" appearance="icon" icon="tuiIconPlusLarge"></button>
+                        </div>
+                        <section #section class="content">
+
+                            <ng-container *ngFor="let it of item.sub">
+                                <ng-container *ngIf="it.name; else withoutsub">
+                                    <div class="custom-padding-left_sub-header sub-field">
+                                    <a (click)="onClick(it.name, item.name)" tuiLink
+                                            class=" content-link-sub-header"><span
+                                                class="tui-text_body-m">{{it.name}}</span></a>
+                                                <button #subButton (click)="getContent(subButton, subSection, true)" class="expand-button" tuiIconButton
+                                type="button" appearance="icon" icon="tuiIconPlus"></button>
+                                </div>
+                                <section #subSection class="subContent">
+                                    <ng-container *ngFor="let itSub of it.content">
+                                        
+                                        <a (click)="onClickSub(itSub, it.name, item.name)" tuiLink
+                                            class="custom-padding-left_sub content-link"><span
+                                                class="tui-text_body-s">{{itSub}}</span></a>
+                                    </ng-container>
+                                </section>
+                                </ng-container>
+                                <ng-template #withoutsub>
+                                    <a (click)="onClick(it, item.name)" tuiLink
+                                        class="custom-padding-left_2 content-link"><span
+                                            class="tui-text_body-m">{{it}}</span></a>
+                                </ng-template>
+                            </ng-container>
+                        </section>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </tui-scrollbar>
+    </div>
+</ng-template>
