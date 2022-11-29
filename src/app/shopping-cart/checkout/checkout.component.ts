@@ -109,11 +109,17 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 
   // apply discount code 
   applyDiscount() {
+    let sList:any = [];
     this.try = true;
     if (this.codeField.value == "READY") {
       this.codeValid = true;
       this.codeField.disable();
       this.codeDiscount = 20;
+      this.addToCartService.getShoppingList().subscribe((value) => {
+        sList = value;
+      })
+      sList.discount = 20;
+      this.addToCartService.setShoppingList(sList)
       this.getSubTotalDiscount();
     } else {
       this.codeValid = false;

@@ -36,7 +36,9 @@
               "node_modules/@taiga-ui/styles/taiga-ui-global.less",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/scripts/smtp.js"
+            ]
           },
           "configurations": {
             "production": {

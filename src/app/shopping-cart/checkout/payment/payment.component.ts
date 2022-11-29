@@ -3,7 +3,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AddToCartService } from 'src/app/add-to-cart.service';
 import { TuiDialogService, TuiAlertService, TuiNotification } from '@taiga-ui/core';
 import { Subscription } from 'rxjs';
-import { FormControl, FormGroup, Validators} from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgFor, NgForOf } from '@angular/common';
+declare const Email: any;
+
 
 @Component({
   selector: 'app-payment',
@@ -11,17 +14,23 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit, OnDestroy {
+
+
   sub!: Subscription;
   sub_2!: Subscription;
   sub_3!: Subscription;
+  sub_4!: Subscription;
+  shippingList: any = [];
   contact: any;
   shipTo: any;
+  emailString: string = '';
   shippingMethod: any;
   id: any;
   paymentId: number = 0;
   openDialog = false;
   total = 0;
   try = false;
+  array = [{name: "test-1", price: 1},{name: "test-2", price: 1},{name: "test-3", price: 1}]
   form = new FormGroup({
     card: new FormControl(``, [Validators.required, Validators.minLength(16)]),
     expire: new FormControl(``, [Validators.required, Validators.minLength(5)]),
@@ -37,50 +46,96 @@ export class PaymentComponent implements OnInit, OnDestroy {
     radioValue: new FormControl(0),
 
   });
-  constructor(private router: Router, private Route: ActivatedRoute, private addToCartService: AddToCartService, 
+  constructor(private router: Router, private Route: ActivatedRoute, private addToCartService: AddToCartService,
     @Inject(TuiDialogService) private readonly dialogService: TuiDialogService,
-    @Inject(TuiAlertService) protected readonly alert: TuiAlertService) { }
+    @Inject(TuiAlertService) protected readonly alert: TuiAlertService) {
+
+  }
 
   ngOnInit(): void {
     this.id = String(this.addToCartService.numberOfOrder);
     this.sub = this.addToCartService.getShippingDetails().subscribe((value) => {
       this.contact = String(`${value.contacts.email} ${value.contacts.phone}`);
-      this.shipTo = String(`${value.adress} ${value.postcode}`)
+      this.emailString = String(value.contacts.email)
+      this.shipTo = String(`${value.adress} ${value.postcode}`);
       this.form.controls['firstName'].setValue(value.firstName);
       this.form.controls['lastName'].setValue(value.lastName);
-      console.log(value.firstName, value.lastName);
     });
     this.sub_2 = this.addToCartService.getShippingMethod().subscribe((value) => {
-      this.shippingMethod = { name: value.name, price: value.price };
+      this.shippingMethod = { name: value.name, deliveryTime: value.deliveryTime, price: value.price };
     });
     this.sub_3 = this.addToCartService.getTotalPrice().subscribe((value) => {
       this.total = value;
     })
+    this.sub_4 = this.addToCartService.getShoppingList().subscribe((value) => {
+      this.shippingList = value;
+    })
+    
+    
   }
   ngOnDestroy(): void {
     this.sub.unsubscribe();
     this.sub_2.unsubscribe();
+    this.sub_3.unsubscribe();
+    this.sub_4.unsubscribe();
   }
   changePayment(payment: any) {
     this.paymentId = payment.id;
   }
   completeOrder() {
     if (this.paymentId == 1) {
-    this.openDialog = true;
+      this.openDialog = true;
     } else {
       this.alert
-          .open(`Sorry, this method is not working yet`, { status: TuiNotification.Error, })
-          .subscribe();
+        .open(`Sorry, this method is not working yet`, { status: TuiNotification.Error, })
+        .subscribe();
     }
   }
-
+  func () {
+    let arrayOfString: any = [];
+    for (let item of this.shippingList)
+    {
+      
+      arrayOfString.push(String(`<br/> Name: ${item.name}, Price: ${item.actualPrice}, USD Amount: ${item.amount}, Total: ${item.actualPrice * item.amount} USD`))
+    }
+    return arrayOfString
+  }
   proceedPayment() {
     this.try = true;
     if (this.form.valid) {
       this.openDialog = false;
       this.alert
-          .open(`Payment processed successfully`, { status: TuiNotification.Success, })
-          .subscribe();
+        .open(`Payment processed successfully`, { status: TuiNotification.Success, })
+        .subscribe();
+      Email.send({
+        Host: `smtp.elasticemail.com`,
+        Username: `noreplay@neo.com`,
+        Password: `21337713D3A89938DC21181A2393F98D42F0`,
+        To: `mrhuk06@gmail.com`, //`${this.emailString}`,
+        From: `mrhuk06@gmail.com`,
+        Subject: `Order #${this.id}`,
+        Body: `<html>
+            This is an automatically generated email. 
+            <br/> Please do not reply to this email address.
+            <br/><br/> Order #${this.id} for the amount of ${this.total} USD is accepted.
+            <br/><br/> Order information:
+            <div>${this.func()}</div>
+            + ${this.shippingMethod.price} USD by shipping
+            <br/>
+            - ${this.shippingList.discount}% by discount
+            <br/>
+            <br/><br/> Payment information:
+            <br/><br/> Total: ${this.total} USD
+            <br/> Ship to: ${this.shipTo}
+            <br/> Shipping: ${this.shippingMethod.name} / ${this.shippingMethod.deliveryTime}
+            <br/><br/> Our contacts:
+            <br/> +1 (111) 1111111
+            </html>`,
+        IsBodyHtml: true
+      })
+
+      this.addToCartService.wipeList();
+      this.router.navigate(['/products'])
     }
   }
 
@@ -108,6 +163,6 @@ export class PaymentComponent implements OnInit, OnDestroy {
       default:
         return `https://ng-web-apis.github.io/dist/assets/images/payment-request.svg`;
     }
-    
+
   }
 }

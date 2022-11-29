@@ -59,7 +59,7 @@ export class InformationComponent implements OnInit {
   goToShipping() {
     this.try = true;
     if (this.allValid()) {
-      this.addToCartService.setShippingDetails({firstName: this.firstName.value, lastName: this.lastName.value, adress: `${(this.countryValue.value)} ${(this.adress.value)} ${(this.subAdress.value)}`, postcode: String(this.postcode.value), contacts: {email: this.emailField.value, phone: this.phone.value}});
+      this.addToCartService.setShippingDetails({firstName: this.firstName.value, lastName: this.lastName.value, adress: `${(this.countryValue.value)}, ${(this.adress.value)} ${(this.subAdress.value)}`, postcode: String(this.postcode.value), contacts: {email: this.emailField.value, phone: this.phone.value}});
       //this.addToCartService.getShippingDetails().subscribe((value:any) => {
       //  console.log(value)
       //})

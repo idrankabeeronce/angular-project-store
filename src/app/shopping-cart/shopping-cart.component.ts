@@ -15,6 +15,8 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
   total: number = 0; // sum price of shopping list 
   sub_1!: Subscription; 
   sub_2!: Subscription;
+  sub_3!: Subscription;
+  isInit = false;
   open = false; // if true - display shopping cart / else - hide it
 
   constructor(private addToCartService: AddToCartService, private router: Router) { }
@@ -23,12 +25,14 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
 
     // getting shopped item
     this.sub_1 = this.addToCartService.getItem().subscribe((value: any) => {
+      
       let keys: any = [];
       let values: any = [];
       let found = false;
 
       // define if similar properties
       if (Object.keys(value).length > 0) {
+        this.isInit = true;
         let index = 0;
         for (let item of this.shoppingList) {
           
@@ -101,6 +105,13 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
         this.open = false;
 
     })
+    this.sub_3 = this.addToCartService.getSizeOfShoppingList().subscribe(value => {
+      
+      if (value == 0 && this.isInit) {
+        this.shoppingList = [];
+        this.isInit = false;
+      }
+    })
   }
 
   ngOnDestroy(): void {
@@ -121,6 +132,9 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
       this.shoppingList[index].amount--
     if (this.shoppingList[index].amount == 0) {
       this.shoppingList.splice(index, 1);
+      if (this.shoppingList.length == 0) {
+        this.isInit = false;
+      }
       this.addToCartService.setSizeOfShoppingList(this.shoppingList.length);
     }
     this.getSubtotal();
@@ -129,6 +143,9 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
   // remove selected item from list
   deleteItem(index: number) {
     this.shoppingList.splice(index, 1);
+    if (this.shoppingList.length == 0) {
+      this.isInit = false;
+    }
     this.addToCartService.setSizeOfShoppingList(this.shoppingList.length)
     this.getSubtotal();
   }

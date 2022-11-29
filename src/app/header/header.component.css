@@ -107,7 +107,11 @@
    -webkit-user-select: none;
    -webkit-user-drag: none;
 }
-
+@media (max-width: 400px) {
+    .side-menu-wrapper {
+        max-width: 100%;
+    }
+}
 .mune-header {
     display: flex;
     align-items: center;

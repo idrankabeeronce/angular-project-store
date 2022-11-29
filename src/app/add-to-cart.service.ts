@@ -32,6 +32,7 @@ export class AddToCartService {
   }
 
 
+
   public setShippingDetails(value: any) {
     this.shippingDetails.next(value);
   }
@@ -66,6 +67,14 @@ export class AddToCartService {
   }
   public getShoppingList(): Observable<any> {
     return this.ShoppingList.asObservable();
+  }
+
+  public wipeList() {
+    this.ShoppingList = new BehaviorSubject<any>([]);
+    this.sizeOfShoppingList.next(0)
+    this.shippingMethod.next({})
+    this.totalPrice.next(0)
+
   }
   constructor(private http: HttpClient) { }
 

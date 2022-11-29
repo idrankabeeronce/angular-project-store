@@ -51,11 +51,6 @@
     height: 350px;
     cursor: pointer;
     text-decoration: none;
-    color: #000;
-
-    
-    text-shadow: 3px 2px 2px white;
-
 }
 .item-0, .item-1, .item-2, .item-3 {
     padding: 0 5rem 0 5rem;
@@ -73,14 +68,37 @@
 .item-1 {
     background-image: url("/assets/images/swipe-wrapper/image_2.jpeg");
 }
+.item-2 {
+    background-image: url("/assets/images/swipe-wrapper/image_3.jpg");
+    justify-content: start;    
+    background-position-y: 50%;
+}
+.item-3 {
+    background-image: url("/assets/images/swipe-wrapper/image_4.jpg");   
+    background-position-y: 50%;
+}
+@media (max-width: 700px) {
+    .item-0, .item-1, .item-2, .item-3 {
+        padding: 0 1rem 0 1rem;
+    }
+    .item-1, .item-3 {
+        
+        text-align: center;
+    }
+    .item-2 {
+        background-position-x: 50%;
+    }
+}
 .text-header {
     font-weight: bold;
 }
-.item-2 {
-    background: blue;
+.black {
+    color: #000;
+    text-shadow: 3px 2px 2px #fff;
 }
-.item-3 {
-    background: red;
+.white {
+    color: #fff;
+    text-shadow: 3px 2px 2px #000;
 }
 .item-scroll-0 {
     transform: translate(0);

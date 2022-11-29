@@ -4,14 +4,18 @@
         <button tuiIconButton appearance="flat" icon="tuiIconChevronRightLarge" (click)="scrollItem('left')"></button>
     </div>
     <div class="items" [ngClass]="background">
-        <div class="box-item item-0">
-            <div class="tui-text_h3 text-header">PRODUCTS THAT MAKES <br> YOUR LIFE EASIER</div>
-        </div>
-        <a routerLink="/products" class="box-item item-1">
-            <div class="tui-text_h3 text-header">GET GIFTS FOR YOUR FAMILY</div>
+        <a routerLink="/products" class="box-item item-0">
+            <div class="tui-text_h1 text-header black">PRODUCTS THAT MAKES <br> YOUR LIFE EASIER</div>
         </a>
-        <div class="box-item item-2"></div>
-        <div class="box-item item-3"></div>
+        <a routerLink="/deals/seasonal-deals" class="box-item item-1">
+            <div class="tui-text_h1 text-header black">GET GIFTS FOR YOUR FAMILY</div>
+        </a>
+        <a routerLink="/deals/seasonal-deals" class="box-item item-2">
+            <div class="tui-text_h1 text-header white">PLANNING A TRIP<br>NEO WITH YOU</div>
+        </a>
+        <a routerLink="/deals/seasonal-deals" class="box-item item-3">
+            <div class="tui-text_h1 text-header white">SEASONAL ARMENIA</div>
+        </a>
     </div>
 </div>
 <div class="main-container">

@@ -83,6 +83,7 @@
         <tui-input-card class="tui-space_bottom-3" formControlName="card" [autocompleteEnabled]="true" [cardSrc]="card">
             Card number
         </tui-input-card>
+        
         <ng-container *ngIf="try && form.value.card == ''" [ngTemplateOutlet]="error"
                     [ngTemplateOutletContext]="{value: 'Enter card number'}">
                 </ng-container>
