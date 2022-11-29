@@ -2,7 +2,7 @@
     <!-- CONTACT INFORMATION SECTION-->
     <div class="tui-space_bottom-10">
         <h3 class="tui-text_body-xl">Contact information</h3>
-        <tui-input #d style="width:100%;" [formControl]="emailField"
+        <tui-input #d style="width:100%;" [formControl]="emailField" tuiHintContent="We will send order information to your email later"
             [tuiTextfieldCustomContent]="emailField.valid ? success : ''" tuiTextfield type="email">Email</tui-input>
         <ng-container *ngIf="!emailField.valid && !(emailField.value == '') else errorEmail">
             <tui-notification class="tui-space_top-1 notification-text" status="warning">
@@ -64,7 +64,7 @@
                 </ng-container>
             </div>
         </div>
-        <tui-input-phone-international class="tui-space_bottom-3" [countries]="countriesI"
+        <tui-input-phone-international class="tui-space_bottom-3" [countries]="countriesI" tuiHintContent="In case we need to contact you about order"
             [(countryIsoCode)]="countryCode" [formControl]="phone">Phone</tui-input-phone-international>
             <ng-container *ngIf="try && phone.value == ''" [ngTemplateOutlet]="error"
                     [ngTemplateOutletContext]="{value: 'Enter phone number'}">

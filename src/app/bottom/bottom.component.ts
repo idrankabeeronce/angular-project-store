@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject} from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { TuiAlertService, TuiNotification } from '@taiga-ui/core';
+declare var Email: any;
 
 @Component({
   selector: 'app-bottom',
@@ -29,7 +31,7 @@ export class BottomComponent implements OnInit {
       button.disabled = true
   }
 
-  constructor() { }
+  constructor(@Inject(TuiAlertService) protected readonly alert: TuiAlertService) { }
 
   // if compact view active : expand nav area / display children routes | or close it
   getContent(button: any, element: any) {
@@ -51,6 +53,22 @@ export class BottomComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
+  // sending msg to subscribed email
+  sendEmail() {
+    Email.send({
+      Host: `smtp.elasticemail.com`,
+      Username: `noreplay@neo.com`,
+      Password: `21337713D3A89938DC21181A2393F98D42F0`,
+      To: `${this.emailField.value}`,
+      From: `mrhuk06@gmail.com`,
+      Subject: `Thanks for you subscription`,
+      Body: `You have subscribed to the <b>NEO</b> newsletter`
+    })
+    this.alert
+          .open(`You successfully subscribed`, { status: TuiNotification.Success, })
+          .subscribe();
+    this.emailField.setValue('');
   }
+
+  ngOnInit(): void {}
 }

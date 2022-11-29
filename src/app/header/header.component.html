@@ -4,7 +4,7 @@
             <a class="home-h1" routerLink="/" routerLinkActive="active" (click)="resetActiveItemIndex()">
                 <h1 class="tui-text_body-m title">NEO</h1>
             </a>
-            <tui-tabs class="tabs" [activeItemIndex]="activeItemIndex">
+            <tui-tabs #asd class="tabs" [activeItemIndex]="activeItemIndex">
                 <ng-container *ngFor="let tab of tabs">
 
                     <ng-container *ngIf="isString(tab); else submenu">
@@ -21,10 +21,10 @@
                         </ng-template>
                     </ng-container>
                     <ng-template #submenu>
-                        <tui-hosted-dropdown tuiDropdownHover #host routerLink="/{{tab.name.toLowerCase()}}"
+                        <tui-hosted-dropdown tuiDropdownHover #host 
                            [open]="open" routerLinkActive="active" [content]="dropdown">
                             <div class="button-field">
-                                <button tuiTab>
+                                <button tuiTab (click)="onClick(tab.name, '')">
                                     {{ tab.name }}
                                 </button>
                                 <button tuiMode="onLight" class="expand-button" tuiIconButton type="button"

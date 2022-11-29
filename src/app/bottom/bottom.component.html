@@ -54,7 +54,7 @@
                             [tuiTextfieldLabelOutside]="true" tuiTextfield type="email"
                             (ngModelChange)="changeInput(button_enability)">Email</tui-input>
                         <button #button_enability [disabled]="true" tuiIconButton type="button" appearance="icon"
-                            class="button-email" icon="tuiIconMailLarge"></button>
+                            class="button-email" icon="tuiIconMailLarge" (click)="sendEmail()"></button>
 
                     </div>
                     <ng-container *ngIf="!emailField.valid && !(emailField.value == '')">
