@@ -7,21 +7,37 @@
             <div class="contacts-wrapper">
                 <div class="contacts-content border">
                     <h4 class="tui-text_h6">Phone</h4>
-                    <div>
-                        <a href="tel:{{phone}}">{{phone}}</a>
-                    </div>
-                    <div class="tui-space_top-5">
-                        <span class="tui-text_body-s">Mon-Fri(GMT+4) <br /> 8AM - 17PM</span>
+                    <div class="tui-space_horizontal-3 tui-space_vertical-3">
+                        <div>
+                            <h3 class="tui-text_body-l">Accountant</h3>
+                            <div>
+                                <a href="tel:{{phone_1}}">{{phone_1}}</a>
+                            </div>
+                            <div class="tui-space_top-5">
+                                <span class="tui-text_body-s grey">Mon-Fri (GMT+4) <br /> 8AM - 17PM</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="tui-text_body-l">Secretary</h3>
+                            <div>
+                                <a href="tel:{{phone_2}}">{{phone_2}}</a>
+                            </div>
+                            <div class="tui-space_top-5">
+                                <span class="tui-text_body-s grey">Thu, Fri (GMT+4) <br /> 10AM - 16PM</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="contacts-content border">
                     <h4 class="tui-text_h6">Email</h4>
-                    <ng-container *ngFor="let email of Emails">
-                        <div>
-                            <h3 class="tui-text_body-l">{{email.name}}</h3>
-                            <a href="mailto:{{email.mail}}">{{email.mail}}</a>
-                        </div>
-                    </ng-container>
+                    <div class="tui-space_horizontal-3 tui-space_vertical-3">
+                        <ng-container *ngFor="let email of Emails">
+                            <div>
+                                <h3 class="tui-text_body-l">{{email.name}}</h3>
+                                <a href="mailto:{{email.mail}}">{{email.mail}}</a>
+                            </div>
+                        </ng-container>
+                    </div>
                 </div>
                 <div class="contacts-content border">
                     <h4 class="tui-text_h6">Tech support</h4>

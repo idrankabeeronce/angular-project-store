@@ -50,7 +50,8 @@ export class GoodsComponent implements OnInit, OnDestroy {
   svgView = this.gridSrc; // next view image
 
 
-  constructor(private addToCartService: AddToCartService, private router: Router, private Route: ActivatedRoute, @Inject(TuiAlertService) protected readonly alert: TuiAlertService) {
+  constructor(private addToCartService: AddToCartService, private router: Router, 
+    private Route: ActivatedRoute, @Inject(TuiAlertService) protected readonly alert: TuiAlertService) {
     // change view when resolution changed
     window.onresize = (event) => {
       if (window.innerWidth < 600) {

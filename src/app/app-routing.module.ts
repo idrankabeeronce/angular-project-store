@@ -9,11 +9,12 @@ import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './support/about/about.component';
 import { ContactUsComponent } from './support/contact-us/contact-us.component';
 import { SupportComponent } from './support/support.component';
-import { VacancyComponent } from './support/vacancy/vacancy.component';
+import { VacanciesComponent } from './support/vacancy/vacancies.component';
 import { CheckoutComponent } from './shopping-cart/checkout/checkout.component';
 import { InformationComponent } from './shopping-cart/checkout/information/information.component';
 import { ShippingComponent } from './shopping-cart/checkout/shipping/shipping.component';
 import { PaymentComponent } from './shopping-cart/checkout/payment/payment.component';
+import { VacancyComponent } from './support/vacancy/vacancy/vacancy.component';
 const routes: Routes = [
   { path: '', title: 'NEO Official Store', component: HomeComponent },
   {
@@ -37,7 +38,12 @@ const routes: Routes = [
     path: 'support', title: 'NEO Support', component: SupportComponent,
     children: [
       { path: 'contact-us', title: 'CONTACT US - NEO', component: ContactUsComponent },
-      { path: 'vacancy', title: 'VACANCY - NEO', component: VacancyComponent },
+      { path: 'vacancies', 
+      children: [
+      { path: '', title: 'VACANCIES - NEO', component: VacanciesComponent},
+      { path: '**', title: 'VACANCIES - NEO', component: VacancyComponent}
+      ]
+      },
       { path: 'about', title: 'ABOUT - NEO', component: AboutComponent }
     ]
   },

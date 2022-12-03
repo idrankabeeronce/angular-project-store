@@ -13,7 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { GoodsComponent } from './products/goods/goods.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { SupportComponent } from './support/support.component';
-import { VacancyComponent } from './support/vacancy/vacancy.component';
+import { VacanciesComponent } from './support/vacancy/vacancies.component';
 import { AboutComponent } from './support/about/about.component';
 import { ContactUsComponent } from './support/contact-us/contact-us.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -26,6 +26,7 @@ import { CheckoutComponent } from './shopping-cart/checkout/checkout.component';
 import { InformationComponent } from './shopping-cart/checkout/information/information.component';
 import { ShippingComponent } from './shopping-cart/checkout/shipping/shipping.component';
 import { PaymentComponent } from './shopping-cart/checkout/payment/payment.component';
+import { VacancyComponent } from './support/vacancy/vacancy/vacancy.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { PaymentComponent } from './shopping-cart/checkout/payment/payment.compo
     GoodsComponent,
     BottomComponent,
     SupportComponent,
-    VacancyComponent,
+    VacanciesComponent,
     AboutComponent,
     ContactUsComponent,
     PageNotFoundComponent,
@@ -47,7 +48,8 @@ import { PaymentComponent } from './shopping-cart/checkout/payment/payment.compo
     CheckoutComponent,
     InformationComponent,
     ShippingComponent,
-    PaymentComponent
+    PaymentComponent,
+    VacancyComponent
   ],
   imports: [
     BrowserModule,

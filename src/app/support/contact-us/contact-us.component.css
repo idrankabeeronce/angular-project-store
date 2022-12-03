@@ -5,6 +5,9 @@
     padding: 0 1rem;
     box-sizing: border-box;
 }
+.grey {
+    color: var(--tui-base-06)
+}
 .content-container {
     background: var(--tui-base-04);
 }
@@ -61,3 +64,4 @@
         margin-bottom: 0;
     }
 }
+

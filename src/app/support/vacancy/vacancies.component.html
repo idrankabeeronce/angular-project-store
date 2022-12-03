@@ -1,0 +1,23 @@
+<ng-container *ngIf="parent; else child">
+    <div class="title-wrapper">
+        <h1 class="tui-text_h3 title">We are looking for...</h1>
+    </div>
+    <div class="main-wrapper">
+        <div class="body-container">
+            <div class="cards-container">
+                <ng-container *ngFor="let vacancy of vacancies">
+                    <a tuiAction target="_blank" icon="tuiIconRedoLarge" (click)="navigateVacancy(vacancy)">
+                        <section>
+                            <h3 class="tui-text_body-l">{{vacancy.field}}</h3>
+                            <h3 class="tui-text_h6">{{vacancy.title}}</h3>
+                        </section>
+                    </a>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #child>
+    <router-outlet></router-outlet>
+</ng-template>

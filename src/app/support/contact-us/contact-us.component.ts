@@ -8,7 +8,8 @@ import { TuiAlertService, TuiNotification } from '@taiga-ui/core';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit {
-  phone = "+12345678901";
+  phone_1 = "+12345678901";
+  phone_2 = "+12345678902";
   Emails = [
     {name: "Official store", mail: "main@neo.com"}, 
     {name: "Support", mail: "support@neo.com"}, 
