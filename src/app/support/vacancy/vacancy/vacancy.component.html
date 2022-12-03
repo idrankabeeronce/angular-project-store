@@ -1,1 +1,57 @@
-<p>vacancy works!</p>
+<ng-container *ngIf="content; else error">
+    <div class="main-container tui-text_body-m grid-container">
+        <div class="header-container">
+            <div class="header">
+                <h4 class="tui-text_h3">{{contentObj.name}}</h4>
+            </div>
+            <div class="desc-container">
+                <span>{{contentObj.description}}</span>
+            </div>
+        </div>
+        <div class="body-container">
+            <h2 class="tui-text_h6">Responsibilities: </h2>
+            <h1 class="tui-text_body-m">{{contentObj.responsibilities.description}}</h1>
+            <ul class="tui-list tui-list">
+                <ng-container *ngFor="let responsibility of contentObj.responsibilities.list">
+                    <li class="tui-list__item">{{responsibility}}</li>
+                </ng-container>
+            </ul>
+        </div>
+        <div class="body-container">
+            <h2 class="tui-text_h6">Qualifications: </h2>
+            <ul class="tui-list tui-list">
+                <ng-container *ngFor="let qualification of contentObj.qualifications">
+                    <li class="tui-list__item">{{qualification}}</li>
+                </ng-container>
+            </ul>
+        </div>
+        <div class="flex group">
+            <button tuiButton class="tui-space_right-3 primary">Apply</button>
+            <div class="flex">
+                <span>Share a job</span>
+                <button appearance="outlet" tuiIconButton [icon]="facebookSVG"></button>
+                <button appearance="outlet" tuiIconButton [icon]="twitterSVG"></button>
+                <button appearance="outlet" tuiIconButton [icon]="linkedinSVG"></button>
+            </div>
+        </div>
+
+        <div *ngIf="similarAr.length > 0" class="tui-space_top-5">
+            <h4 class="tui-text_h3">Similar jobs</h4>
+            <div class="grid-container">
+            <ng-container *ngFor="let item of similarAr">
+                <a tuiAction target="_blank" icon="tuiIconRedoLarge" (click)="navigateVacancy(item)">
+                    <section>
+                        <h3 class="tui-text_body-l">{{item.field}}</h3>
+                        <h3 class="tui-text_h6">{{item.title}}</h3>
+                    </section>
+                </a>
+            </ng-container>
+        </div>
+        </div>
+    </div>
+    
+</ng-container>
+
+<ng-template #error>
+    <app-page-not-found></app-page-not-found>
+</ng-template>

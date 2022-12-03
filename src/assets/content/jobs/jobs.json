@@ -1,0 +1,123 @@
+[
+    {
+        "name": "Senior Sales Manager",
+        "path": "sales/senior-sales-manager/",
+        "field": "sales",
+        "description": "text-example",
+        "responsibilities": {
+            "description": "text-example",
+            "list": ["asd", "asd", "asdasd"]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    },
+    {
+        "name": "Senior DevOps Engineer",
+        "path": "development/senior-devops-engineer/",
+        "field": "development",
+        "description": "text-example",
+        "responsibilities": {
+            "description": "text",
+            "list": ["asd", "asd", "asdasd"]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    },
+    {
+        "name": "Senior Front End",
+        "path": "it/senior-front-end/",
+        "field": "it",
+        "description": "text-example",
+        "responsibilities": {
+            "description": "text",
+            "list": ["asd", "asd", "asdasd"]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    },
+    {
+        "name": "Tax Accountant",
+        "path": "finance/tax-accaountant/",
+        "field": "finance",
+        "description": "text-example",
+        "responsibilities": {
+            "description": "text",
+            "list": ["asd", "asd", "asdasd"]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    },
+    {
+        "name": "Business Manager",
+        "path": "marketing/business-manager/",
+        "field": "marketing",
+        "description": "text-example",
+        "responsibilities": {
+            "description": "text",
+            "list": ["asd", "asd", "asdasd"]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    },
+    {
+        "name": "Data Analytics Manager",
+        "path": "other/data-analytics-manager/",
+        "field": "other",
+        "description": "Data Analytics Manager: text-example",
+        "responsibilities": {
+            "description": "text",
+            "list": ["asd", "asd", "asdasd"]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    },
+    {
+        "name": "Network Engineer",
+        "path": "it/network-engineer/",
+        "field": "it",
+        "description": "Network Engineer: text-example",
+        "responsibilities": {
+            "description": "text",
+            "list": ["asd", "asd", "asdasd"]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    },
+    {
+        "name": "Territory Manager",
+        "path": "sales/territory-manager/",
+        "field": "sales",
+        "description": "Territory Manager: text-example",
+        "responsibilities": {
+            "description": "text",
+            "list": ["asd", "asd", "asdasd"]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    },
+    {
+        "name": "Inside Sales Intern",
+        "path": "sales/inside-sales-intern/",
+        "field": "sales",
+        "description": "Inside Sales Intern: text-example",
+        "responsibilities": {
+            "description": "text",
+            "list": ["asd", "asd", "asdasd"]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    },
+    {
+        "name": "National Partner Manager",
+        "path": "sales/national-partner-manager/",
+        "field": "sales",
+        "description": "National Partner Manager: text-example",
+        "responsibilities": {
+            "description": "text",
+            "list": ["asd", "asd", "asdasd"]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    },
+    {
+        "name": "Technical Director",
+        "path": "sales/technical-director/",
+        "field": "sales",
+        "description": "Technical Director: text-example",
+        "responsibilities": {
+            "description": "text",
+            "list": ["asd", "asd", "asdasd"]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    }
+]
