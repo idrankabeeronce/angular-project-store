@@ -1,3 +1,45 @@
 <div class="title-wrapper">
     <h1 class="tui-text_h3 title">{{title}}</h1>
 </div>
+<div class="main-container">
+    <div  class="space-verticaly dark-wrapper">
+        <div class="image-wrapper">
+            <img [src]="imageSrc_1">
+        </div>
+        <div class="text-container on-dark">
+        <ng-container *ngFor="let text of textExample_1">
+            <h1 class="tui-text_h6">{{text.title}}</h1>
+            <p class="tui-text_body-s">{{text.text}}</p>
+        </ng-container>
+        </div>
+    </div>
+    <div class="image-wrapper image-network tui-text_h4">
+        <div class="label-image">
+            <h1 class="tui-text_h3">Global market</h1>
+            
+            <div class="flex">
+                <div class="co-f border-right">
+                    <p>100+</p>
+                    <p>countries</p>
+                </div>
+                <div class="co-f">
+                    <p>1,000,000</p>
+                    <p>users</p>
+                </div>
+            </div>
+        </div>
+        <img [src]="imageSrc_2">
+    </div>
+    <div class="space-verticaly extra-container tui-text_body-s">
+        <h2 class="tui-text_h4 text-center">NEO is...</h2>
+        <div class="border-verticaly text-justify">
+            <ng-container *ngFor="let text of textExample_2">
+                <p>{{text}}</p>
+            </ng-container>
+        </div>
+    </div>
+    <div class="space-verticaly info-container tui-text_body-m">
+        <p>Company name: NEO TEST-STORE</p>
+        <p>Company adress: Nowhere, Nowhere, Nowhere</p>
+    </div>
+</div>

@@ -26,5 +26,10 @@ export class SupportComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
+  scrollTop():void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
 }

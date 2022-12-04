@@ -14,7 +14,7 @@
 .body-container {
     border-radius: var(--tui-radius-s);
     background: var(--tui-base-04);
-    padding: 1rem 1rem;
+    padding: 3rem 1.5rem;
 }
 .grid-container {
     display: grid;
