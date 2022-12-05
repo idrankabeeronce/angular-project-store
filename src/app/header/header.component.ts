@@ -63,7 +63,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   // navigation 
   readonly ProductsCheck = {name: 'Products', sub: [`Charges`, `Cabels`, `Power Banks`, `Earphones`]};
-  readonly Products = { name: 'Products', sub: [`Charges`, { name: `Cabels`, content: [`USB-C`, `Lightning`] }, `Power Banks`, `Earphones`] };
+  readonly Products = { name: 'Products', sub: [ {name: `Charges`, content: [`Common`, `Wireless`, `Fast-Charging`]}, { name: `Cabels`, content: [`USB-C`, `Lightning`, `Thunderbolt`,  `Audio`] }, `Power Banks`, `Earphones`] };
   readonly Deals = { name: 'Deals', sub: [`Seasonal Deals`, `Sale`, `New`] };
   readonly Support = { name: 'Support', sub: [`Contact Us`, `Vacancies`, `About`] };
 

@@ -37,7 +37,7 @@
             <div [ngClass]="{'group-grid' : changeView}" class="group tui-space_bottom-10">
                 <ng-container *ngFor="let item of displayedContent">
                     <button tuiAction
-                        [ngClass]="{'item-card-grid tui-space_left-3  tui-space_right-3 tui-space_bottom-3 tui-space_top-3' : changeView}"
+                        [ngClass]="{'item-card-grid' : changeView}"
                         class="item-card tui-space_left-5 tui-space_right-5 tui-space_bottom-5 tui-space_top-5"
                         >
                         <!-- discount of items  -->
