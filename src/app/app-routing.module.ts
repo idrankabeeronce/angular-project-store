@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DealsComponent } from './deals/deals.component';
 import { ExampleTextComponent } from './example-text/example-text.component';
@@ -15,6 +15,12 @@ import { InformationComponent } from './shopping-cart/checkout/information/infor
 import { ShippingComponent } from './shopping-cart/checkout/shipping/shipping.component';
 import { PaymentComponent } from './shopping-cart/checkout/payment/payment.component';
 import { VacancyComponent } from './support/vacancy/vacancy/vacancy.component';
+import { NewComponent } from './deals/new/new.component';
+import { SaleComponent } from './deals/sale/sale.component';
+import { SeasonalDealsComponent } from './deals/seasonal-deals/seasonal-deals.component';
+import { DealsHomeComponent } from './deals/deals-home/deals-home.component';
+import { Title } from '@angular/platform-browser';
+import { ItemComponent } from './item/item.component';
 const routes: Routes = [
   { path: '', title: 'NEO Official Store', component: HomeComponent },
   {
@@ -27,11 +33,17 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'item', 
+    children: [
+      { path: '**', title: "Title", component: ItemComponent } 
+    ]
+  },
+  {
     path: 'deals', title: 'NEO Deals', component: DealsComponent,
     children: [
-      { path: 'seasonal-deals', title: 'SEASONAL DEALS - NEO', component: GoodsComponent },
-      { path: 'sale', title: 'SALE - NEO', component: GoodsComponent },
-      { path: 'new', title: 'NEW - NEO', component: GoodsComponent }
+      { path: 'seasonal-deals', title: 'SEASONAL DEALS - NEO', component: SeasonalDealsComponent },
+      { path: 'sale', title: 'SALE - NEO', component: SaleComponent },
+      { path: 'new', title: 'NEW - NEO', component: NewComponent }
     ]
   },
   {

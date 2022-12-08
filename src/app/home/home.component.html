@@ -1,10 +1,11 @@
+<!-- BOX HEADER -->
 <div class="box tui-text_body-l" (tuiSwipe)="onSwipe($event)">
-    <div class="buttons-wrapper">
-        <button tuiIconButton appearance="flat" icon="tuiIconChevronLeftLarge" (click)="scrollItem('right')"></button>
-        <button tuiIconButton appearance="flat" icon="tuiIconChevronRightLarge" (click)="scrollItem('left')"></button>
-    </div>
+    <button class="button-absolute left" tuiIconButton appearance="flat" icon="tuiIconChevronLeftLarge"
+        (click)="scrollItem('right')"></button>
+    <button class="button-absolute right" tuiIconButton appearance="flat" icon="tuiIconChevronRightLarge"
+        (click)="scrollItem('left')"></button>
     <div class="items" [ngClass]="background">
-        <a routerLink="/products" class="box-item item-0">
+        <a tuiLink routerLink="/products" class="box-item item-0">
             <div class="tui-text_h1 text-header black">PRODUCTS THAT MAKES <br> YOUR LIFE EASIER</div>
         </a>
         <a routerLink="/deals/seasonal-deals" class="box-item item-1">
@@ -18,11 +19,10 @@
         </a>
     </div>
 </div>
+<!-- BODY CONTENT -->
 <div class="main-container">
-
-
+    <!-- BEST SELLERS -->
     <div class="tui-text_h5 label-best tui-space_bottom-5">Best Seller</div>
-
     <div class="best-container">
         <tui-scrollbar class="scroll-container">
 
@@ -30,14 +30,14 @@
 
                 <ng-container *ngFor="let item of bestSellers">
                     <div class="item">
-                        <ng-container *ngIf="item.tag == 'new'">
+                        <ng-container *ngIf="item.tag === 'new'">
                             <div class="tag">NEW</div>
                         </ng-container>
                         <div class="item-img tui-space_bottom-2">
 
                             <img [src]="item.imageSrc">
                         </div>
-                        <div class="tui-text_body-m-2">{{item.name}}</div>
+                        <div class="name-field tui-text_body-m-2">{{item.name}}</div>
                         <div class="extra tui-text_body-m-2">
                             <div>${{item.price}}</div>
                             <div class="rating-flex">
@@ -74,5 +74,20 @@
                 </ng-container>
             </div>
         </tui-scrollbar>
+    </div>
+    <!-- SOMETHING IMPORTANT AND NEW -->
+    <div tuiMode="onDark" class="flex-grid-container gaped tui-space_left-8 tui-space_right-8">
+        <a routerLink="/" tuiLink [style]="styleOfCards[0].style" class="card-container">
+            <div class="mask">
+                <div class="title tui-text_h5">{{styleOfCards[0].title}}</div>
+                <div class="desc tui-text_body-m">{{styleOfCards[0].desc}}</div>
+            </div>
+        </a>
+        <a routerLink="/" tuiLink [style]="styleOfCards[1].style" class="card-container">
+            <div class="mask">
+                <div class="title tui-text_h5">{{styleOfCards[1].title}}</div>
+                <div class="desc tui-text_body-m">{{styleOfCards[1].desc}}</div>
+            </div>
+        </a>
     </div>
 </div>

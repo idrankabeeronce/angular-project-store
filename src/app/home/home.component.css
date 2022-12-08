@@ -12,26 +12,20 @@
     display: flex;
     align-items: center;
     touch-action: none;
-    
     overflow: hidden;
 }
-.buttons-wrapper, .buttons-wrapper-seller {
+.button-absolute {
     position: absolute;
     z-index: 2;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-
-}
-.buttons-wrapper-seller button {
     border-radius: 25%;
 }
-
-.buttons-wrapper button:last-child{
+.right {
+    right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-.buttons-wrapper button:first-child{
+.left {
+    left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
@@ -51,6 +45,15 @@
     height: 350px;
     cursor: pointer;
     text-decoration: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+.name-field {
+    height: 40px;
+    max-height: 40px;
+    overflow: hidden;
 }
 .item-0, .item-1, .item-2, .item-3 {
     padding: 0 5rem 0 5rem;
@@ -135,6 +138,16 @@
     display: flex;
     align-items: center;
 }
+.flex-grid-container {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 600px) {
+    .flex-grid-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
 .item {
     min-width: 250px;
     min-height: 350px;
@@ -149,6 +162,10 @@
     color: white;
     padding: 10px;
     border-radius: var(--tui-radius-xs) 0% 50% 0%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
 }
 
 .item-img {
@@ -160,11 +177,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .item-img img{
     height: 160px;
     width: 160px;
     background-size: cover;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
 }
 .extra {
     display: flex;
@@ -175,4 +197,25 @@
     display: flex;
     align-items: center;
     color: #ffe100
+}
+.gaped {
+    gap: 2rem;
+}
+.card-container {
+    width: 100%;
+    aspect-ratio: 7/8;
+    border-radius: var(--tui-radius-m);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-decoration: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+.mask {
+    text-align: center;
+}
+.title {
+    margin-top: 15%;
 }

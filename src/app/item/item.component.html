@@ -1,0 +1,6 @@
+<ng-container *ngIf="found; else error">
+    <p>item works!</p>
+</ng-container>
+<ng-template #error>
+    <app-page-not-found></app-page-not-found>
+</ng-template>

@@ -16,10 +16,17 @@ type itemType = {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  
-  arrayOfObject: itemType = {};
-  
+  styleOfCards = [
+    { 
+      style:'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/assets/images/support/building.jpg")',
+      title: 'Something Good',
+      desc: 'Description of something good'
+    },
+    {
+      style:'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/assets/images/support/contact-us.jpg")',
+      title: 'Something Bad',
+      desc: 'Description of something bad'
+    }];
   content: any = []
   bestSellers: any = [];
   indexCurrent = 0;
@@ -53,8 +60,7 @@ export class HomeComponent implements OnInit {
     for (let group of data) {
       for (let typeGroup of group.goods) {
         for (let item of typeGroup.items) {
-          this.arrayOfObject = item;
-          this.content.push({ name: item.name, imageSrc: item.imageSrc, price: Math.round((item.price - (item.price * item.discount / 100)) * 100) / 100, rating: item.rating, tag: this.arrayOfObject.tag})
+          this.content.push({ name: item.name, imageSrc: item.imageSrc, price: Math.round((item.price - (item.price * item.discount / 100)) * 100) / 100, rating: item.rating, tag: item.tag})
         }
       }
     }

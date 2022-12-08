@@ -1,10 +1,9 @@
-<ng-container *ngIf="parent; else child">
-    <!-- Parent with all products -->
-    <div class="title-wrapper">
-        <h1 class="tui-text_h3 title">{{title}}</h1>
-    </div>
-</ng-container>
-<!-- Child of products with certain goods -->
+<div class="title-wrapper">
+    <h1 class="tui-text_h3 title">{{title}}</h1>
+</div>
+<div class="main-container">
+<ng-container *ngIf="parent; else child"></ng-container>
 <ng-template #child>
-    <router-outlet></router-outlet>
+<router-outlet></router-outlet>
 </ng-template>
+</div>

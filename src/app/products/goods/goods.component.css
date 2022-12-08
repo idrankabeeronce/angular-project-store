@@ -1,10 +1,17 @@
+:host {
+    --tui-link: var(--tui-base-07);
+    --tui-link-hover: var(--tui-text-01);
+}
 .body {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
 }
-
+.flex {
+    display: flex;
+    gap: .5rem;
+}
 .title-wrapper {
     max-width: 1200px;
     border-bottom: solid 1px var(--tui-base-04);
@@ -165,6 +172,10 @@
     width: 250px;
     background-size: cover;
     transition: 3s transform;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
 }
 .item-img-grid {
     width: 80%;

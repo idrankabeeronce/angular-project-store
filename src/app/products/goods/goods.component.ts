@@ -224,7 +224,8 @@ export class GoodsComponent implements OnInit, OnDestroy {
 
     // check if group type defined and it's not match to current iteration // false - content++ // else - skip
     let checkMark = false;
-
+    
+    
     this.content = []; // array of whole content
     for (let group of data) {
       if (group.category == this.goodQueary || this.goodQueary == 'products') {
@@ -241,9 +242,9 @@ export class GoodsComponent implements OnInit, OnDestroy {
               checkMark = false;
             }
           }
+          
           if (!checkMark) {
             for (let item of typeGroup.items) {
-
               for (let part of this.arrayOfNames) {
                 if (part.includes(item.name)) {
                   // define similar name item
@@ -259,7 +260,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
                 this.arrayOfNames.push([item.name, index]); // define new unique item name
 
                 // define item of content 
-                this.content.push({ name: '', price: 0, discount: 0, description: '', imageSrc: '', });
+                this.content.push({ name: '', price: 0, discount: 0, description: '', imageSrc: '', ref: item.ref});
                 this.content[index].name = item.name;
                 this.content[index].price = [item.price];
                 this.content[index].actualPrice = [Math.round(item.price * (100 - item.discount)) / 100];

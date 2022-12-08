@@ -20,13 +20,17 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule  } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ExampleTextComponent } from './example-text/example-text.component';
-import { ItemComponent } from './products/goods/item/item.component';
+import { ItemComponent } from './item/item.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './shopping-cart/checkout/checkout.component';
 import { InformationComponent } from './shopping-cart/checkout/information/information.component';
 import { ShippingComponent } from './shopping-cart/checkout/shipping/shipping.component';
 import { PaymentComponent } from './shopping-cart/checkout/payment/payment.component';
 import { VacancyComponent } from './support/vacancy/vacancy/vacancy.component';
+import { NewComponent } from './deals/new/new.component';
+import { SaleComponent } from './deals/sale/sale.component';
+import { SeasonalDealsComponent } from './deals/seasonal-deals/seasonal-deals.component';
+import { DealsHomeComponent } from './deals/deals-home/deals-home.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +53,11 @@ import { VacancyComponent } from './support/vacancy/vacancy/vacancy.component';
     InformationComponent,
     ShippingComponent,
     PaymentComponent,
-    VacancyComponent
+    VacancyComponent,
+    NewComponent,
+    SaleComponent,
+    SeasonalDealsComponent,
+    DealsHomeComponent
   ],
   imports: [
     BrowserModule,
