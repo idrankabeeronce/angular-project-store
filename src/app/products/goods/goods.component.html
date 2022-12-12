@@ -96,9 +96,8 @@
                     <div [ngClass]="{'group-prop-flex' : changeView}">
                         <div [ngClass]="{'item-prop-field-grid' : changeView}" class="item-prop-field tui-space_left-5">
                             <!-- name of item/items -->
-                            <div class="flex">
-                                <div [ngClass]="{'tui-space_top-5': changeView}"
-                                    class=" item-name tui-text_body-l tui-space_bottom-5">{{item.name}}</div>
+                            <div  [ngClass]="{'flex-between tui-space_top-5': changeView}" class="flex">
+                                <div class=" item-name tui-text_body-l tui-space_bottom-5">{{item.name}}</div>
                                 <a routerLink="/item/{{item.ref}}" tuiLink icon="tuiIconRedoLarge"></a>
                             </div>
                             <!-- min and max price of item -->

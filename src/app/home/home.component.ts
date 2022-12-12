@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TuiSwipe } from '@taiga-ui/cdk';
 import data from "src/assets/content/products/products.json";
 
@@ -17,13 +17,13 @@ type itemType = {
 })
 export class HomeComponent implements OnInit {
   styleOfCards = [
-    { 
-      style:'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/assets/images/support/building.jpg")',
+    {
+      style: 'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/assets/images/support/building.jpg")',
       title: 'Something Good',
       desc: 'Description of something good'
     },
     {
-      style:'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/assets/images/support/contact-us.jpg")',
+      style: 'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/assets/images/support/contact-us.jpg")',
       title: 'Something Bad',
       desc: 'Description of something bad'
     }];
@@ -60,7 +60,14 @@ export class HomeComponent implements OnInit {
     for (let group of data) {
       for (let typeGroup of group.goods) {
         for (let item of typeGroup.items) {
-          this.content.push({ name: item.name, imageSrc: item.imageSrc, price: Math.round((item.price - (item.price * item.discount / 100)) * 100) / 100, rating: item.rating, tag: item.tag})
+          this.content.push({
+            name: item.name,
+            imageSrc: item.imageSrc,
+            price: Math.round((item.price - (item.price * item.discount / 100)) * 100) / 100,
+            rating: item.rating,
+            tag: item.tag,
+            ref: item.ref
+          })
         }
       }
     }
@@ -69,7 +76,14 @@ export class HomeComponent implements OnInit {
     for (let value of this.content) {
       if (index == 10)
         break
-      this.bestSellers.push({ name: value.name, imageSrc: value.imageSrc, price: value.price, rating: value.rating, tag: value.tag })
+      this.bestSellers.push({
+        name: value.name,
+        imageSrc: value.imageSrc,
+        price: value.price,
+        rating: value.rating,
+        tag: value.tag,
+        ref: value.ref
+      })
       index++
     }
   }

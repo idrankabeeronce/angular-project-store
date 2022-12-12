@@ -55,6 +55,9 @@
     max-height: 40px;
     overflow: hidden;
 }
+.name-field:hover {
+    color: var(--tui-info-fill);
+}
 .item-0, .item-1, .item-2, .item-3 {
     padding: 0 5rem 0 5rem;
     box-sizing: border-box;
@@ -137,6 +140,7 @@
 .flex-container {
     display: flex;
     align-items: center;
+    gap: .5rem;
 }
 .flex-grid-container {
     display: flex;
@@ -149,9 +153,14 @@
     }
 }
 .item {
-    min-width: 250px;
+    min-width: calc(250px + .5rem);
     min-height: 350px;
-    margin: 0 .5rem 0 .5rem;
+}
+.item:first-child {
+    padding-left: .5rem;
+}
+.item:last-child {
+    padding-right: .5rem;
 }
 .tag {
     position: absolute;
@@ -170,7 +179,7 @@
 
 .item-img {
     height: 250px;
-    width: 250px;
+    width: calc(250px + .5rem);
     background-size: cover;
     background-color: var(--tui-base-03);
     border-radius: var(--tui-radius-xs);
@@ -196,7 +205,7 @@
 .rating-flex {
     display: flex;
     align-items: center;
-    color: #ffe100
+    color: #fb9e20;
 }
 .gaped {
     gap: 2rem;

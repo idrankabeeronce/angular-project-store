@@ -37,7 +37,7 @@
 
                             <img [src]="item.imageSrc">
                         </div>
-                        <div class="name-field tui-text_body-m-2">{{item.name}}</div>
+                        <a tuiLink routerLink="/item/{{item.ref}}" class="name-field"><div class="tui-text_body-m-2">{{item.name}}</div></a>
                         <div class="extra tui-text_body-m-2">
                             <div>${{item.price}}</div>
                             <div class="rating-flex">
