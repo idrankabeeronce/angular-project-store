@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { VacancyComponent } from './vacancy.component';
 
 describe('VacancyComponent', () => {
@@ -8,6 +8,7 @@ describe('VacancyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [ VacancyComponent ]
     })
     .compileComponents();

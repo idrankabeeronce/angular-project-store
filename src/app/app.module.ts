@@ -17,7 +17,7 @@ import { VacanciesComponent } from './support/vacancy/vacancies.component';
 import { AboutComponent } from './support/about/about.component';
 import { ContactUsComponent } from './support/contact-us/contact-us.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { HttpClientModule  } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ExampleTextComponent } from './example-text/example-text.component';
 import { ItemComponent } from './item/item.component';
@@ -70,7 +70,7 @@ import { DealsHomeComponent } from './deals/deals-home/deals-home.component';
     LayoutModule,
     HttpClientModule
   ],
-  providers: [{ provide: TUI_SANITIZER, useClass: NgDompurifySanitizer }],
+  providers: [HttpClientModule, { provide: TUI_SANITIZER, useClass: NgDompurifySanitizer }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

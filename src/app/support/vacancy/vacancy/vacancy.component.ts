@@ -29,8 +29,8 @@ export class VacancyComponent implements OnInit {
   getTitle() {
     this.similarAr = [];
     this.contentObj = {};
-    this.field = this.actRoute.snapshot.url[0].path;
-    this.vacancyName = this.actRoute.snapshot.url[1].path;
+    this.field = this.actRoute.snapshot.url[0]?.path;
+    this.vacancyName = this.actRoute.snapshot.url[1]?.path;
     for (let job of jobs) {
       if (job.path == `${this.field}/${this.vacancyName}/`) {
         this.contentObj = job 

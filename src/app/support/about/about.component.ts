@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit {
   textExample_2:any = [];
   imageSrc_1 = 'assets/images/support/building.jpg';
   imageSrc_2 = 'assets/images/support/global-network.jpg';
-  paused = true;
+  
 
   constructor(private router: Router, private Route: ActivatedRoute) { 
     this.goodQueary = Route.routeConfig?.path;
@@ -25,17 +25,5 @@ export class AboutComponent implements OnInit {
     this.textExample_2 = this.text.split("\n");
   }
 
-  get icon(): string {
-    return this.paused ? `tuiIconPlayLarge` : `tuiIconPauseLarge`;
-  }
-  get styleVideo(): string {
-    return this.paused ? `filter: brightness(0.5)` : `filter: brightness(1)`
-  }
-  get styleBackground(): string {
-    return this.paused ? `opacity: 1` : `opacity: 0`
-  }
-  toggleState(): void {
-    this.paused = !this.paused;
-}
 
 }

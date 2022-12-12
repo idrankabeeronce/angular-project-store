@@ -32,13 +32,9 @@
     </div>
     <div class="player-container space-verticaly-2">
         <div tuiMode="onDark" class="player">
-            <video [style]="styleVideo" tuiMedia class="video" [(paused)]="paused">
-                <source *tuiHighDpi src="/assets/videos/example.mp4" type="video/ogg" />
+            <video controls tuiMedia class="video" >
                 <source src="/assets/videos/example.mp4" type="video/mp4" />
             </video>
-            <div [style]="styleBackground" class="controls" (click)="toggleState()">
-                <button appearance="flat" type="button" tuiIconButton [icon]="icon"></button>
-            </div>
         </div>
         <div class="player-label">
             <h1 class="tui-text_h3">Example video</h1>
