@@ -22,7 +22,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
   goodQueary: any; // route path - group of products if defined
   title!: string; // title of template
   content: any = []; // fetched content (all)
-  
+
   openedOnce = false; // firstly added item to shopping list makes shopping cart pop ups
 
   displayedContent: any = []; // content that displayed in current frame
@@ -30,6 +30,8 @@ export class GoodsComponent implements OnInit, OnDestroy {
   maxLength = 10; // max of displayed content on current frame
   length = 0; // length of pagination
   indexP = 0; // index of current page
+  searchValue = ''; // search parameter
+  searchValueLabel = '';
 
   arrayOfNames: any = []; // array to find similar items (with similar name)
   changeView = false; // boolean that change the view true - grid display \ false - tabs display
@@ -50,7 +52,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
   svgView = this.gridSrc; // next view image
 
 
-  constructor(private addToCartService: AddToCartService, private router: Router, 
+  constructor(private addToCartService: AddToCartService, private router: Router,
     private Route: ActivatedRoute, @Inject(TuiAlertService) protected readonly alert: TuiAlertService) {
     // change view when resolution changed
     window.onresize = (event) => {
@@ -67,6 +69,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.searchValueLabel = String(this.Route.snapshot.queryParamMap.get("search")?.toLocaleLowerCase());
     // init view changed based on resolution
     if (window.innerWidth < 600) {
       this.changeView = true;
@@ -74,10 +77,11 @@ export class GoodsComponent implements OnInit, OnDestroy {
     }
     // get title of page by route params
     this.getTitle();
-  }
-  ngOnDestroy(): void {
+    console.log(this.searchValueLabel);
   }
 
+  ngOnDestroy(): void {
+  }
   // switch between image by selected color
   goToImage(index: number, item: any) {
     if (index > item.imageSrc.length - 1)
@@ -128,13 +132,43 @@ export class GoodsComponent implements OnInit, OnDestroy {
     this.open = !this.open;
   }
 
+  searchProduct() {
+    let queryParam: any = {};
+    let sortParam = this.Route.snapshot.queryParamMap.get("sort")?.toLocaleLowerCase();
+
+    if (this.typeOfCategory != 'null' && this.typeOfCategory != undefined)
+      queryParam.type = this.typeOfCategory;
+    if (sortParam != 'null' && sortParam != undefined)
+      queryParam.sort = sortParam
+    if (this.searchValue != '')
+      queryParam.search = this.searchValue;
+
+    let path = '';
+    if (this.goodQueary == 'products') // if group of products non-selected
+      path = this.goodQueary
+    else
+      path = `${this.Route.parent?.routeConfig?.path}/${this.Route.routeConfig?.path}`;
+    this.router.navigateByUrl('/').then(() => {
+      this.router.navigate([path], { queryParams: queryParam });
+    })
+  }
+  resetSearch() {
+    this.searchValue = '';
+    this.searchProduct();
+  }
   // sort items by selected type of sort
   clickOnSort(query: string, name: string) {
-    let queryParam = {}
-    if (this.typeOfCategory != 'null')
-      queryParam = { type: this.typeOfCategory, sort: query }
-    else
-      queryParam = { sort: query }
+    let queryParam: any = {}
+    let searchParam = this.Route.snapshot.queryParamMap.get("search")?.toLocaleLowerCase();
+
+
+    if (this.typeOfCategory != 'null' && this.typeOfCategory != undefined)
+      queryParam.type = this.typeOfCategory;
+    if (query != 'null' && query != undefined)
+      queryParam.sort = query
+    if (searchParam != 'null' && searchParam != undefined)
+      queryParam.search = searchParam;
+
 
     let path = '';
     this.getSort(query);
@@ -199,10 +233,10 @@ export class GoodsComponent implements OnInit, OnDestroy {
     this.goodQueary = this.Route.routeConfig?.path; // define the group of products
     this.title = String(this.goodQueary).toUpperCase();
     this.title = this.title.replaceAll('-', ' ');
-    
+
     // define the type of group
     this.typeOfCategory = String(this.Route.snapshot.queryParamMap.get('type')).toLocaleLowerCase();
-    
+
     this.sortType = String(this.Route.snapshot.queryParamMap.get('sort')).toLocaleLowerCase();
     this.getData(); // get content
 
@@ -213,7 +247,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
     } else {
       this.getSort('created-descending');
     }
-    if (this.typeOfCategory != 'null') 
+    if (this.typeOfCategory != 'null')
       this.title = `${String(this.Route.snapshot.queryParamMap.get('type')?.toLocaleUpperCase())} ${this.title}`;
 
   }
@@ -221,11 +255,11 @@ export class GoodsComponent implements OnInit, OnDestroy {
     let index = 0; // index of item of content
     let indexOfArray = 0; // index of array with unique names of items
     let check = false; // check if new item have name that already on the list of unique 
-
+    let searchParam = this.Route.snapshot.queryParamMap.get("search")?.toLocaleLowerCase(); // search param if defined
     // check if group type defined and it's not match to current iteration // false - content++ // else - skip
     let checkMark = false;
-    
-    
+    let searchValid = true;
+
     this.content = []; // array of whole content
     for (let group of data) {
       if (group.category == this.goodQueary || this.goodQueary == 'products') {
@@ -242,186 +276,197 @@ export class GoodsComponent implements OnInit, OnDestroy {
               checkMark = false;
             }
           }
-          
+
           if (!checkMark) {
             for (let item of typeGroup.items) {
-              for (let part of this.arrayOfNames) {
-                if (part.includes(item.name)) {
-                  // define similar name item
-                  check = true;
-                  indexOfArray = part[1];
-                  break;
+              if (searchParam != 'null' && searchParam != undefined) {
+                if (!item.name.toLocaleLowerCase().includes(searchParam.toLocaleLowerCase()))  // if name of product contains search param
+                // if (!arrayOfSearch.some(v => {item.name.toLocaleLowerCase().indexOf(v)}))  // - if name of product contains any of word of search param if arraOfSearch = [searchParam.split(" ")]
+                {
+                  searchValid = false;
                 } else {
-                  check = false;
+                  searchValid = true;
                 }
               }
-              // content ++
-              if (!check) {
-                this.arrayOfNames.push([item.name, index]); // define new unique item name
-
-                // define item of content 
-                this.content.push({ name: '', price: 0, discount: 0, description: '', imageSrc: '', ref: item.ref});
-                this.content[index].name = item.name;
-                this.content[index].price = [item.price];
-                this.content[index].actualPrice = [Math.round(item.price * (100 - item.discount)) / 100];
-                this.content[index].disc = [item.discount]; // array of unque discount (if we will get similar name item)
-                this.content[index].prop = [item.properties]; // array of unque properties (if we will get similar name item)
-                this.content[index].selectColor = item.properties.color; // selected color that user would like to purchase
-                this.content[index].isLength = false; // if length in properties of item
-
-
-                this.content[index].description = item.description;
-                this.content[index].discount = item.discount;
-                this.content[index].imageSrc = [item.imageSrc];
-
-                this.content[index].indexOfImage = 0; // index of image that depends on selected color
-                this.content[index].indexOfSecondProperty = 0; // index of able property that depends on selected color
-                this.content[index].indexOfColor = 0; // index of selected color
-
-                this.content[index].dateOfRelease = item.dateOfRelease;
-                this.content[index].minDiscount = item.discount;
-                this.content[index].maxDiscount = item.discount;
-
-                // price without discount 
-                this.content[index].minPrice = item.price;
-                this.content[index].maxPrice = item.price;
-
-                let properties: any = [];
-                let indexOfProperty = 0;
-
-                // define the properties by keys and values
-                let obj = Object.entries(item.properties);
-                obj.forEach(([key, value]) => {
-                  properties[indexOfProperty] = { [key]: [value] };
-                  if (key == 'length')
-                    // define the length property
-                    this.content[index].isLength = true;
-                  indexOfProperty++
-                });
-
-                // add to item properties
-                this.content[index].properties = [];
-                this.content[index].properties = properties;
-
-                // price with discount
-                this.content[index].minActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
-                this.content[index].maxActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
-
-                index++
-              } else {
-                // if found new item with similar name 
-                // push new properties and price
-
-                // default value of indexes
-                this.content[indexOfArray].indexOfSecondProperty = 99;
-                this.content[indexOfArray].indexOfColor = 99;
-                // default value of selected color
-                this.content[indexOfArray].selectColor = '';
-
-                this.content[indexOfArray].price.push(item.price);
-                this.content[indexOfArray].actualPrice.push(Math.round(item.price * (100 - item.discount)) / 100);
-                this.content[indexOfArray].disc.push(item.discount);
-                this.content[indexOfArray].prop.push(item.properties);
-
-                // define range of price without discount
-                if (this.content[indexOfArray].minPrice > item.price) {
-                  this.content[indexOfArray].maxPrice = this.content[indexOfArray].minPrice;
-                  this.content[indexOfArray].minPrice = item.price;
-                } else {
-
-                  if (this.content[indexOfArray].maxPrice < item.price) {
-                    this.content[indexOfArray].maxPrice = item.price;
+              if (searchValid == true) {
+                for (let part of this.arrayOfNames) {
+                  if (part.includes(item.name)) {
+                    // define similar name item
+                    check = true;
+                    indexOfArray = part[1];
+                    break;
+                  } else {
+                    check = false;
                   }
                 }
-                // define range of price with discount
-                if (this.content[indexOfArray].minActualPrice > Math.round(item.price * (100 - item.discount)) / 100) {
-                  this.content[indexOfArray].maxActualPrice = this.content[indexOfArray].minActualPrice;
-                  this.content[indexOfArray].minActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
+                // content ++
+                if (!check) {
+                  this.arrayOfNames.push([item.name, index]); // define new unique item name
+
+                  // define item of content 
+                  this.content.push({ name: '', price: 0, discount: 0, description: '', imageSrc: '', ref: item.ref });
+                  this.content[index].name = item.name;
+                  this.content[index].price = [item.price];
+                  this.content[index].actualPrice = [Math.round(item.price * (100 - item.discount)) / 100];
+                  this.content[index].disc = [item.discount]; // array of unque discount (if we will get similar name item)
+                  this.content[index].prop = [item.properties]; // array of unque properties (if we will get similar name item)
+                  this.content[index].selectColor = item.properties.color; // selected color that user would like to purchase
+                  this.content[index].isLength = false; // if length in properties of item
+
+
+                  this.content[index].description = item.description;
+                  this.content[index].discount = item.discount;
+                  this.content[index].imageSrc = [item.imageSrc];
+
+                  this.content[index].indexOfImage = 0; // index of image that depends on selected color
+                  this.content[index].indexOfSecondProperty = 0; // index of able property that depends on selected color
+                  this.content[index].indexOfColor = 0; // index of selected color
+
+                  this.content[index].dateOfRelease = item.dateOfRelease;
+                  this.content[index].minDiscount = item.discount;
+                  this.content[index].maxDiscount = item.discount;
+
+                  // price without discount 
+                  this.content[index].minPrice = item.price;
+                  this.content[index].maxPrice = item.price;
+
+                  let properties: any = [];
+                  let indexOfProperty = 0;
+
+                  // define the properties by keys and values
+                  let obj = Object.entries(item.properties);
+                  obj.forEach(([key, value]) => {
+                    properties[indexOfProperty] = { [key]: [value] };
+                    if (key == 'length')
+                      // define the length property
+                      this.content[index].isLength = true;
+                    indexOfProperty++
+                  });
+
+                  // add to item properties
+                  this.content[index].properties = [];
+                  this.content[index].properties = properties;
+
+                  // price with discount
+                  this.content[index].minActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
+                  this.content[index].maxActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
+
+                  index++
                 } else {
+                  // if found new item with similar name 
+                  // push new properties and price
 
-                  if (this.content[indexOfArray].maxActualPrice < Math.round(item.price * (100 - item.discount)) / 100) {
-                    this.content[indexOfArray].maxActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
+                  // default value of indexes
+                  this.content[indexOfArray].indexOfSecondProperty = 99;
+                  this.content[indexOfArray].indexOfColor = 99;
+                  // default value of selected color
+                  this.content[indexOfArray].selectColor = '';
+
+                  this.content[indexOfArray].price.push(item.price);
+                  this.content[indexOfArray].actualPrice.push(Math.round(item.price * (100 - item.discount)) / 100);
+                  this.content[indexOfArray].disc.push(item.discount);
+                  this.content[indexOfArray].prop.push(item.properties);
+
+                  // define range of price without discount
+                  if (this.content[indexOfArray].minPrice > item.price) {
+                    this.content[indexOfArray].maxPrice = this.content[indexOfArray].minPrice;
+                    this.content[indexOfArray].minPrice = item.price;
+                  } else {
+
+                    if (this.content[indexOfArray].maxPrice < item.price) {
+                      this.content[indexOfArray].maxPrice = item.price;
+                    }
                   }
-                }
+                  // define range of price with discount
+                  if (this.content[indexOfArray].minActualPrice > Math.round(item.price * (100 - item.discount)) / 100) {
+                    this.content[indexOfArray].maxActualPrice = this.content[indexOfArray].minActualPrice;
+                    this.content[indexOfArray].minActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
+                  } else {
 
-
-                // add new unique image
-                if (!this.content[indexOfArray].imageSrc.includes(item.imageSrc))
-                  this.content[indexOfArray].imageSrc.push(item.imageSrc);
-
-                // define range of discount
-                if (this.content[indexOfArray].minDiscount > item.discount) {
-                  this.content[indexOfArray].maxDiscount = this.content[indexOfArray].minDiscount;
-                  this.content[indexOfArray].minDiscount = item.discount;
-                } else {
-                  if (this.content[indexOfArray].maxDiscount < item.discount)
-                    this.content[indexOfArray].maxDiscount = item.discount;
-                }
-
-                // define properties that may participate in options to purchase and change cost
-                for (let prop of this.content[indexOfArray].properties) {
-                  let key = Object.keys(prop);
-
-                  switch (key[0]) {
-                    case 'color':
-                      let objC = Object.entries(item.properties);
-                      objC.find(([key, value]) => {
-
-                        if (key == 'color') {
-                          if (!prop.color.includes(value))
-                            prop.color.push(value);
-                          return
-                        }
-                        return
-                      });
-
-
-
-
-                      break;
-                    case 'length':
-                      let objL = Object.entries(item.properties);
-                      objL.find(([key, value]) => {
-
-                        if (key == 'length') {
-                          if (!prop.length.includes(value))
-                            prop.length.push(value);
-                          prop.length.sort((a: number, b: number) => (a < b ? -1 : 1));
-
-                          return
-                        }
-                        return
-                      });
-                      break;
-                    case 'amperage':
-                      let objA = Object.entries(item.properties)
-                      objA.find(([key, value]) => {
-
-                        if (key == 'amperage') {
-                          if (!prop.amperage.includes(value))
-                            prop.amperage.push(value);
-                          return
-                        }
-                        return
-                      });
-                      break;
-                    case 'watt':
-                      let objW = Object.entries(item.properties)
-                      objW.find(([key, value]) => {
-
-                        if (key == 'watt') {
-                          if (!prop.watt.includes(value))
-                            prop.watt.push(value);
-                          return
-                        }
-                        return
-                      });
-                      break;
-                    default:
-                      break;
+                    if (this.content[indexOfArray].maxActualPrice < Math.round(item.price * (100 - item.discount)) / 100) {
+                      this.content[indexOfArray].maxActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
+                    }
                   }
-                }
 
+
+                  // add new unique image
+                  if (!this.content[indexOfArray].imageSrc.includes(item.imageSrc))
+                    this.content[indexOfArray].imageSrc.push(item.imageSrc);
+
+                  // define range of discount
+                  if (this.content[indexOfArray].minDiscount > item.discount) {
+                    this.content[indexOfArray].maxDiscount = this.content[indexOfArray].minDiscount;
+                    this.content[indexOfArray].minDiscount = item.discount;
+                  } else {
+                    if (this.content[indexOfArray].maxDiscount < item.discount)
+                      this.content[indexOfArray].maxDiscount = item.discount;
+                  }
+
+                  // define properties that may participate in options to purchase and change cost
+                  for (let prop of this.content[indexOfArray].properties) {
+                    let key = Object.keys(prop);
+
+                    switch (key[0]) {
+                      case 'color':
+                        let objC = Object.entries(item.properties);
+                        objC.find(([key, value]) => {
+
+                          if (key == 'color') {
+                            if (!prop.color.includes(value))
+                              prop.color.push(value);
+                            return
+                          }
+                          return
+                        });
+
+
+
+
+                        break;
+                      case 'length':
+                        let objL = Object.entries(item.properties);
+                        objL.find(([key, value]) => {
+
+                          if (key == 'length') {
+                            if (!prop.length.includes(value))
+                              prop.length.push(value);
+                            prop.length.sort((a: number, b: number) => (a < b ? -1 : 1));
+
+                            return
+                          }
+                          return
+                        });
+                        break;
+                      case 'amperage':
+                        let objA = Object.entries(item.properties)
+                        objA.find(([key, value]) => {
+
+                          if (key == 'amperage') {
+                            if (!prop.amperage.includes(value))
+                              prop.amperage.push(value);
+                            return
+                          }
+                          return
+                        });
+                        break;
+                      case 'watt':
+                        let objW = Object.entries(item.properties)
+                        objW.find(([key, value]) => {
+
+                          if (key == 'watt') {
+                            if (!prop.watt.includes(value))
+                              prop.watt.push(value);
+                            return
+                          }
+                          return
+                        });
+                        break;
+                      default:
+                        break;
+                    }
+                  }
+
+                }
               }
             }
           }
@@ -500,9 +545,9 @@ export class GoodsComponent implements OnInit, OnDestroy {
       itemToSet = { name: item.name, imageSrc: item.imageSrc[item.indexOfImage], actualPrice: actualPrice, price: price, properties: properties, amount: 1 }
 
       this.addToCartService.setItem(itemToSet); // push item to shopping list
-      
+
       //this.addToCartService.setOpenCart(true); // open shopping cart component
-      
+
       if (this.openedOnce)
         this.alert
           .open(`Item added to your cart`, { status: TuiNotification.Success, })
@@ -511,7 +556,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
         this.addToCartService.setOpenCart(true);
         this.openedOnce = true;
       }
-      
+
       // reset select
       item.indexOfColor = 99;
       item.indexOfSecondProperty = 99;

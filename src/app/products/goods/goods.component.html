@@ -3,6 +3,23 @@
 </div>
 <div class="content-wrapper">
     <div class="settings-wrapper tui-space_left-5 tui-space_right-5 tui-space_bottom-10 tui-space_top-10">
+        <div class="flex-block tui-space_right-5">
+        <div class="search-bar ">
+            <tui-input [tuiTextfieldCustomContent]="search" [tuiTextfieldCleaner]="true" [(ngModel)]="searchValue">
+                Search... <input tuiTextfield />
+            </tui-input>
+            <ng-template #search>
+                <tui-svg style="cursor: pointer; pointer-events: all" src="tuiIconSearchLarge" (click)="searchProduct()"></tui-svg>
+            </ng-template>
+        </div>
+        <ng-container *ngIf="searchValueLabel !== 'undefined'">
+        <div tuiMode="onLight" class="flex-center search-param">
+            <span class="tui-text_body-m">{{searchValueLabel}}</span>
+            <span class="tui-space_left-2"><tui-svg style="cursor: pointer" src="tuiIconCloseLarge" (click)="resetSearch()"></tui-svg></span>
+        </div>
+        </ng-container>
+        </div>
+        <div class="flex-end">
         <tui-input-slider class="tui-space_right-5" tuiTextfieldSize="l" class="slider"
             [tuiTextfieldCustomContent]="inputCustomContent" [tuiTextfieldLabelOutside]="true" [min]="5" [max]="20"
             [quantum]="1" [(ngModel)]="maxLength" (ngModelChange)="changeMaxLength()">
@@ -30,6 +47,7 @@
                 </tui-data-list>
             </ng-template>
         </div>
+    </div>
     </div>
     <div class="content-body">
 
