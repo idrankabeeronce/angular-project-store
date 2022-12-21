@@ -14,6 +14,7 @@ export class AddToCartService {
 
   private ShoppingList = new BehaviorSubject<any>([]);
   private shippingDetails = new BehaviorSubject<any>({});
+
   public numberOfOrder!: number;
 
   private shippingMethod = new BehaviorSubject<any>({});

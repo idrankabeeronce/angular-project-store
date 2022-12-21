@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TuiAlertService, TuiNotification } from '@taiga-ui/core';
 import { Subscription } from 'rxjs';
 import { AddToCartService } from 'src/app/add-to-cart.service';
-import data from "src/assets/content/products/products.json"
+import * as data from "src/assets/content/products/products.json"
 
 interface dataInterface {
   name: string,
@@ -22,7 +22,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
   goodQueary: any; // route path - group of products if defined
   title!: string; // title of template
   content: any = []; // fetched content (all)
-
+  dataOfItems: any;
   openedOnce = false; // firstly added item to shopping list makes shopping cart pop ups
 
   displayedContent: any = []; // content that displayed in current frame
@@ -69,6 +69,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.dataOfItems = [];
     this.searchValueLabel = String(this.Route.snapshot.queryParamMap.get("search")?.toLocaleLowerCase());
     // init view changed based on resolution
     if (window.innerWidth < 600) {
@@ -77,19 +78,19 @@ export class GoodsComponent implements OnInit, OnDestroy {
     }
     // get title of page by route params
     this.getTitle();
-    console.log(this.searchValueLabel);
   }
 
   ngOnDestroy(): void {
+    this.dataOfItems = (data as any).default;
   }
   // switch between image by selected color
-  goToImage(index: number, item: any) {
-    if (index > item.imageSrc.length - 1)
-      item.indexOfImage = 0;
+  goToImage(index: number, itemT: any) {
+    if (index > itemT.imageSrc.length - 1)
+      itemT.indexOfImage = 0;
     else if (index < 0)
-      item.indexOfImage = item.imageSrc.length - 1
+      itemT.indexOfImage = itemT.imageSrc.length - 1
     else
-      item.indexOfImage = index;
+      itemT.indexOfImage = index;
 
   }
 
@@ -259,9 +260,10 @@ export class GoodsComponent implements OnInit, OnDestroy {
     // check if group type defined and it's not match to current iteration // false - content++ // else - skip
     let checkMark = false;
     let searchValid = true;
-
+    
+    this.dataOfItems = (data as any).default;
     this.content = []; // array of whole content
-    for (let group of data) {
+    for (let group of this.dataOfItems) {
       if (group.category == this.goodQueary || this.goodQueary == 'products') {
         for (let typeGroup of group.goods) {
 
@@ -278,10 +280,10 @@ export class GoodsComponent implements OnInit, OnDestroy {
           }
 
           if (!checkMark) {
-            for (let item of typeGroup.items) {
+            for (var itemC of typeGroup.items) {
               if (searchParam != 'null' && searchParam != undefined) {
-                if (!item.name.toLocaleLowerCase().includes(searchParam.toLocaleLowerCase()))  // if name of product contains search param
-                // if (!arrayOfSearch.some(v => {item.name.toLocaleLowerCase().indexOf(v)}))  // - if name of product contains any of word of search param if arraOfSearch = [searchParam.split(" ")]
+                if (!itemC.name.toLocaleLowerCase().includes(searchParam.toLocaleLowerCase()))  // if name of product contains search param
+                // if (!arrayOfSearch.some(v => {itemC.name.toLocaleLowerCase().indexOf(v)}))  // - if name of product contains any of word of search param if arraOfSearch = [searchParam.split(" ")]
                 {
                   searchValid = false;
                 } else {
@@ -290,7 +292,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
               }
               if (searchValid == true) {
                 for (let part of this.arrayOfNames) {
-                  if (part.includes(item.name)) {
+                  if (part.includes(itemC.name)) {
                     // define similar name item
                     check = true;
                     indexOfArray = part[1];
@@ -301,40 +303,40 @@ export class GoodsComponent implements OnInit, OnDestroy {
                 }
                 // content ++
                 if (!check) {
-                  this.arrayOfNames.push([item.name, index]); // define new unique item name
+                  this.arrayOfNames.push([itemC.name, index]); // define new unique item name
 
                   // define item of content 
-                  this.content.push({ name: '', price: 0, discount: 0, description: '', imageSrc: '', ref: item.ref });
-                  this.content[index].name = item.name;
-                  this.content[index].price = [item.price];
-                  this.content[index].actualPrice = [Math.round(item.price * (100 - item.discount)) / 100];
-                  this.content[index].disc = [item.discount]; // array of unque discount (if we will get similar name item)
-                  this.content[index].prop = [item.properties]; // array of unque properties (if we will get similar name item)
-                  this.content[index].selectColor = item.properties.color; // selected color that user would like to purchase
+                  this.content.push({ name: '', price: 0, discount: 0, description: '', imageSrc: '', ref: itemC.ref });
+                  this.content[index].name = itemC.name;
+                  this.content[index].price = [itemC.price];
+                  this.content[index].actualPrice = [Math.round(itemC.price * (100 - itemC.discount)) / 100];
+                  this.content[index].disc = [itemC.discount]; // array of unque discount (if we will get similar name item)
+                  this.content[index].prop = [itemC.properties]; // array of unque properties (if we will get similar name item)
+                  this.content[index].selectColor = itemC.properties.color; // selected color that user would like to purchase
                   this.content[index].isLength = false; // if length in properties of item
 
 
-                  this.content[index].description = item.description;
-                  this.content[index].discount = item.discount;
-                  this.content[index].imageSrc = [item.imageSrc];
+                  this.content[index].description = itemC.description;
+                  this.content[index].discount = itemC.discount;
+                  this.content[index].imageSrc = [itemC.imageSrc];
 
                   this.content[index].indexOfImage = 0; // index of image that depends on selected color
                   this.content[index].indexOfSecondProperty = 0; // index of able property that depends on selected color
                   this.content[index].indexOfColor = 0; // index of selected color
 
-                  this.content[index].dateOfRelease = item.dateOfRelease;
-                  this.content[index].minDiscount = item.discount;
-                  this.content[index].maxDiscount = item.discount;
+                  this.content[index].dateOfRelease = itemC.dateOfRelease;
+                  this.content[index].minDiscount = itemC.discount;
+                  this.content[index].maxDiscount = itemC.discount;
 
                   // price without discount 
-                  this.content[index].minPrice = item.price;
-                  this.content[index].maxPrice = item.price;
+                  this.content[index].minPrice = itemC.price;
+                  this.content[index].maxPrice = itemC.price;
 
                   let properties: any = [];
                   let indexOfProperty = 0;
 
                   // define the properties by keys and values
-                  let obj = Object.entries(item.properties);
+                  let obj = Object.entries(itemC.properties);
                   obj.forEach(([key, value]) => {
                     properties[indexOfProperty] = { [key]: [value] };
                     if (key == 'length')
@@ -348,8 +350,8 @@ export class GoodsComponent implements OnInit, OnDestroy {
                   this.content[index].properties = properties;
 
                   // price with discount
-                  this.content[index].minActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
-                  this.content[index].maxActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
+                  this.content[index].minActualPrice = Math.round(itemC.price * (100 - itemC.discount)) / 100;
+                  this.content[index].maxActualPrice = Math.round(itemC.price * (100 - itemC.discount)) / 100;
 
                   index++
                 } else {
@@ -362,44 +364,44 @@ export class GoodsComponent implements OnInit, OnDestroy {
                   // default value of selected color
                   this.content[indexOfArray].selectColor = '';
 
-                  this.content[indexOfArray].price.push(item.price);
-                  this.content[indexOfArray].actualPrice.push(Math.round(item.price * (100 - item.discount)) / 100);
-                  this.content[indexOfArray].disc.push(item.discount);
-                  this.content[indexOfArray].prop.push(item.properties);
+                  this.content[indexOfArray].price.push(itemC.price);
+                  this.content[indexOfArray].actualPrice.push(Math.round(itemC.price * (100 - itemC.discount)) / 100);
+                  this.content[indexOfArray].disc.push(itemC.discount);
+                  this.content[indexOfArray].prop.push(itemC.properties);
 
                   // define range of price without discount
-                  if (this.content[indexOfArray].minPrice > item.price) {
+                  if (this.content[indexOfArray].minPrice > itemC.price) {
                     this.content[indexOfArray].maxPrice = this.content[indexOfArray].minPrice;
-                    this.content[indexOfArray].minPrice = item.price;
+                    this.content[indexOfArray].minPrice = itemC.price;
                   } else {
 
-                    if (this.content[indexOfArray].maxPrice < item.price) {
-                      this.content[indexOfArray].maxPrice = item.price;
+                    if (this.content[indexOfArray].maxPrice < itemC.price) {
+                      this.content[indexOfArray].maxPrice = itemC.price;
                     }
                   }
                   // define range of price with discount
-                  if (this.content[indexOfArray].minActualPrice > Math.round(item.price * (100 - item.discount)) / 100) {
+                  if (this.content[indexOfArray].minActualPrice > Math.round(itemC.price * (100 - itemC.discount)) / 100) {
                     this.content[indexOfArray].maxActualPrice = this.content[indexOfArray].minActualPrice;
-                    this.content[indexOfArray].minActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
+                    this.content[indexOfArray].minActualPrice = Math.round(itemC.price * (100 - itemC.discount)) / 100;
                   } else {
 
-                    if (this.content[indexOfArray].maxActualPrice < Math.round(item.price * (100 - item.discount)) / 100) {
-                      this.content[indexOfArray].maxActualPrice = Math.round(item.price * (100 - item.discount)) / 100;
+                    if (this.content[indexOfArray].maxActualPrice < Math.round(itemC.price * (100 - itemC.discount)) / 100) {
+                      this.content[indexOfArray].maxActualPrice = Math.round(itemC.price * (100 - itemC.discount)) / 100;
                     }
                   }
 
 
                   // add new unique image
-                  if (!this.content[indexOfArray].imageSrc.includes(item.imageSrc))
-                    this.content[indexOfArray].imageSrc.push(item.imageSrc);
+                  if (!this.content[indexOfArray].imageSrc.includes(itemC.imageSrc))
+                    this.content[indexOfArray].imageSrc.push(itemC.imageSrc);
 
                   // define range of discount
-                  if (this.content[indexOfArray].minDiscount > item.discount) {
+                  if (this.content[indexOfArray].minDiscount > itemC.discount) {
                     this.content[indexOfArray].maxDiscount = this.content[indexOfArray].minDiscount;
-                    this.content[indexOfArray].minDiscount = item.discount;
+                    this.content[indexOfArray].minDiscount = itemC.discount;
                   } else {
-                    if (this.content[indexOfArray].maxDiscount < item.discount)
-                      this.content[indexOfArray].maxDiscount = item.discount;
+                    if (this.content[indexOfArray].maxDiscount < itemC.discount)
+                      this.content[indexOfArray].maxDiscount = itemC.discount;
                   }
 
                   // define properties that may participate in options to purchase and change cost
@@ -408,7 +410,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
 
                     switch (key[0]) {
                       case 'color':
-                        let objC = Object.entries(item.properties);
+                        let objC = Object.entries(itemC.properties);
                         objC.find(([key, value]) => {
 
                           if (key == 'color') {
@@ -424,7 +426,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
 
                         break;
                       case 'length':
-                        let objL = Object.entries(item.properties);
+                        let objL = Object.entries(itemC.properties);
                         objL.find(([key, value]) => {
 
                           if (key == 'length') {
@@ -438,7 +440,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
                         });
                         break;
                       case 'amperage':
-                        let objA = Object.entries(item.properties)
+                        let objA = Object.entries(itemC.properties)
                         objA.find(([key, value]) => {
 
                           if (key == 'amperage') {
@@ -450,7 +452,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
                         });
                         break;
                       case 'watt':
-                        let objW = Object.entries(item.properties)
+                        let objW = Object.entries(itemC.properties)
                         objW.find(([key, value]) => {
 
                           if (key == 'watt') {
@@ -474,6 +476,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
         // define the length of pagination that depends on amount of content
         this.length = Math.ceil(this.content.length / this.maxLength);
         this.getDisplayedContent();
+        
       }
     }
   }
@@ -491,17 +494,17 @@ export class GoodsComponent implements OnInit, OnDestroy {
     }
   }
   // define selected color of item and mark it
-  selectColorProperty(color: string, item: any, indexOfElement: number) {
-    if (item.indexOfColor != indexOfElement) {
-      item.selectColor = color;
-      item.indexOfColor = indexOfElement;
-      item.indexOfSecondProperty = 99;
-      this.goToImage(item.indexOfColor, item); // get image of selected color
+  selectColorProperty(color: string, itemS: any, indexOfElement: number) {
+    if (itemS.indexOfColor != indexOfElement) {
+      itemS.selectColor = color;
+      itemS.indexOfColor = indexOfElement;
+      itemS.indexOfSecondProperty = 99;
+      this.goToImage(itemS.indexOfColor, itemS); // get image of selected color
     } else {
       // reset 
-      item.indexOfColor = 99;
-      item.indexOfSecondProperty = 99;
-      item.selectColor = '';
+      itemS.indexOfColor = 99;
+      itemS.indexOfSecondProperty = 99;
+      itemS.selectColor = '';
     }
   }
   // mark selected property if defined
@@ -512,20 +515,20 @@ export class GoodsComponent implements OnInit, OnDestroy {
       item.indexOfSecondProperty = indexSelect;
   }
   // add item to shopping cart
-  addToCart(item: any) {
+  addToCart(itemS: any) {
     // if second property defined and selected or ( there's no length property and color property selected )  
-    if (item.indexOfSecondProperty != 99 || !item.isLength && item.indexOfColor != 99) {
+    if (itemS.indexOfSecondProperty != 99 || !itemS.isLength && itemS.indexOfColor != 99) {
 
       let itemToSet: any;
       let properties: any;
 
-      if (!item.isLength) // define second property select if there's no length property
-        item.indexOfSecondProperty = item.indexOfColor;
+      if (!itemS.isLength) // define second property select if there's no length property
+        itemS.indexOfSecondProperty = itemS.indexOfColor;
 
       // get properties of selected item
-      let objA = Object.entries(item.prop)
+      let objA = Object.entries(itemS.prop)
       objA.forEach(([key, value]: any) => {
-        if (key == item.indexOfSecondProperty)
+        if (key == itemS.indexOfSecondProperty)
           properties = value
       });
 
@@ -533,16 +536,16 @@ export class GoodsComponent implements OnInit, OnDestroy {
       let actualPrice = 0;
 
       // get price with and witound discount 
-      if (item.isLength) {
-        actualPrice = item.actualPrice[item.indexOfSecondProperty];
-        price = item.price[item.indexOfSecondProperty];
+      if (itemS.isLength) {
+        actualPrice = itemS.actualPrice[itemS.indexOfSecondProperty];
+        price = itemS.price[itemS.indexOfSecondProperty];
       } else {
-        actualPrice = item.actualPrice[item.indexOfColor];
-        price = item.price[item.indexOfColor];
+        actualPrice = itemS.actualPrice[itemS.indexOfColor];
+        price = itemS.price[itemS.indexOfColor];
       }
 
       // define class that we gonna push to service that provides connection with component of shopping list 
-      itemToSet = { name: item.name, imageSrc: item.imageSrc[item.indexOfImage], actualPrice: actualPrice, price: price, properties: properties, amount: 1 }
+      itemToSet = { name: itemS.name, imageSrc: itemS.imageSrc[itemS.indexOfImage], actualPrice: actualPrice, price: price, properties: properties, amount: 1 }
 
       this.addToCartService.setItem(itemToSet); // push item to shopping list
 
@@ -558,9 +561,9 @@ export class GoodsComponent implements OnInit, OnDestroy {
       }
 
       // reset select
-      item.indexOfColor = 99;
-      item.indexOfSecondProperty = 99;
-      item.selectColor = '';
+      itemS.indexOfColor = 99;
+      itemS.indexOfSecondProperty = 99;
+      itemS.selectColor = '';
     }
     // else we getting message that we should select required properties
     else {

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import data from "src/assets/content/products/products.json";
+import { Subscription } from 'rxjs';
+import * as dataI from "src/assets/content/products/products.json";
 
 interface struct {
   color: string;
@@ -14,9 +15,11 @@ interface struct {
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css']
 })
-export class ItemComponent implements OnInit {
+export class ItemComponent implements OnInit, OnDestroy {
   found: boolean = false;
   amount: number = 1;
+  sub!: Subscription;
+  dataOfItems: any;
   ratingSrcNull = "tuiIconStarLarge";
   ratingSrcFull = "tuiIconStarFilledLarge";
   ratingSrcHalf = `<svg focusable="false" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
@@ -30,19 +33,23 @@ export class ItemComponent implements OnInit {
   disabled = true;
 
   constructor(private router: Router, private actRoute: ActivatedRoute) { }
-  item: any = {};
+  currentItem: any = {};
+  ngOnDestroy():void {
+    this.dataOfItems = (dataI as any).default;
+  }
   ngOnInit(): void {
+    this.dataOfItems = [];
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-
     this.found = false
     let ref = '';
+    this.dataOfItems = (dataI as any).default;
     if (this.actRoute.snapshot.url.length > 0) {
       ref = this.actRoute.snapshot.url[0].path;
 
-      for (let dataAr of data) {
+      for (let dataAr of this.dataOfItems) {
         for (let goods of dataAr.goods) {
           for (let item of goods.items) {
             if (item.ref == ref) {
@@ -50,69 +57,77 @@ export class ItemComponent implements OnInit {
 
               if (!this.found) {
                 this.found = true;
-                this.item = item;
-                this.item.indexOfImage = 0;
+                //this.currentItem = item;
+                this.currentItem.name = item.name;
+                this.currentItem.ref = item.ref;
+                this.currentItem.rating = item.rating;
 
-                this.item.price = [item.price];
-                this.item.actualPrice = [Math.round((item.price - (item.price * item.discount / 100)) * 100) / 100];
-                this.item.discount = [item.discount];
+                this.currentItem.dateOfRelease = item.dateOfRelease;
+                this.currentItem.description = item.description;
+                this.currentItem.tag = item.tag;
 
-                //this.item.discount.push(item.discount);
-                //this.item.price.push(item.price);
+                this.currentItem.indexOfImage = 0;
+
+                this.currentItem.price = [item.price];
+                this.currentItem.actualPrice = [Math.round((item.price - (item.price * item.discount / 100)) * 100) / 100];
+                this.currentItem.discount = [item.discount];
+
+                //this.currentItem.discount.push(item.discount);
+                //this.currentItem.price.push(item.price);
                 //if (item.discount > 0)
-                //  this.item.actualPrice.push(Math.round((item.price - (item.price * item.discount / 100)) * 100) / 100);
+                //  this.currentItem.actualPrice.push(Math.round((item.price - (item.price * item.discount / 100)) * 100) / 100);
                 //else
-                //  this.item.actualPrice.push(item.price);
+                //  this.currentItem.actualPrice.push(item.price);
 
-                this.item.indexOfColor = 0;
-                this.item.indexOfSecondProperty = 0;
+                this.currentItem.indexOfColor = 0;
+                this.currentItem.indexOfSecondProperty = 0;
 
-                this.item.imagesSrc = [];
-                this.item.imagesSrc.push(item.imageSrc);
+                this.currentItem.imagesSrc = [];
+                this.currentItem.imagesSrc.push(item.imageSrc);
 
-                this.item.color = [];
-                this.item.color.push(item.properties.color);
+                this.currentItem.color = [];
+                this.currentItem.color.push(item.properties.color);
 
-                this.item.secondProperty = [];
-                console.log(this.item);
+                this.currentItem.secondProperty = [];
 
                 if (prop.length !== undefined) {
-                  this.item.secondProperty.push(prop.length);
-                  this.item.suffixOfSecProp = "m";
-                  this.item.labelSecondProperty = "Size";
+                  this.currentItem.secondProperty.push(prop.length);
+                  this.currentItem.suffixOfSecProp = "m";
+                  this.currentItem.labelSecondProperty = "Size";
                 }
                 else if (prop.watt !== undefined) {
-                  this.item.secondProperty.push(prop.watt);
-                  this.item.suffixOfSecProp = "w";
-                  this.item.labelSecondProperty = "Power";
+                  this.currentItem.secondProperty.push(prop.watt);
+                  this.currentItem.suffixOfSecProp = "w";
+                  this.currentItem.labelSecondProperty = "Power";
                 }
               } else {
-                if (!this.item.color.includes(prop.color))
-                  this.item.color.push(prop.color);
+                if (!this.currentItem.color.includes(prop.color))
+                  this.currentItem.color.push(prop.color);
                 
                 if (prop.length !== undefined) {
-                  if (!this.item.secondProperty.includes(prop.length))
-                    this.item.secondProperty.push(prop.length);
+                  if (!this.currentItem.secondProperty.includes(prop.length))
+                    this.currentItem.secondProperty.push(prop.length);
                 } 
                 else if (prop.watt !== undefined) {
-                  if (!this.item.secondProperty.includes(prop.watt))
-                    this.item.secondProperty.push(prop.watt);
+                  if (!this.currentItem.secondProperty.includes(prop.watt))
+                    this.currentItem.secondProperty.push(prop.watt);
                 }
-                if (!this.item.imagesSrc.includes(item.imageSrc))
-                  this.item.imagesSrc.push(item.imageSrc)
+                if (!this.currentItem.imagesSrc.includes(item.imageSrc))
+                  this.currentItem.imagesSrc.push(item.imageSrc)
 
-                this.item.discount.push(item.discount);
-                this.item.price.push(item.price);
+                this.currentItem.discount.push(item.discount);
+                this.currentItem.price.push(item.price);
                 if (item.discount > 0)
-                  this.item.actualPrice.push(Math.round((item.price - (item.price * item.discount / 100)) * 100) / 100);
+                  this.currentItem.actualPrice.push(Math.round((item.price - (item.price * item.discount / 100)) * 100) / 100);
                 else
-                  this.item.actualPrice.push(item.price);
+                  this.currentItem.actualPrice.push(item.price);
               }
             }
           }
         }
       }
     }
+    this.dataOfItems = [];
   }
   goToImage(index: number, item: any) {
     if (index > item.imagesSrc.length - 1)
