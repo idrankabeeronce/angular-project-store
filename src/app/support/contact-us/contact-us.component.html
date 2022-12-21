@@ -11,7 +11,7 @@
                         <div>
                             <h3 class="tui-text_body-l">Accountant</h3>
                             <div>
-                                <a href="tel:{{phone_1}}">{{phone_1}}</a>
+                                <a tuiLink class="form-link" href="tel:{{phone_1}}">{{phone_1}}</a>
                             </div>
                             <div class="tui-space_top-5">
                                 <span class="tui-text_body-s grey">Mon-Fri (GMT+4) <br /> 8AM - 17PM</span>
@@ -20,7 +20,7 @@
                         <div>
                             <h3 class="tui-text_body-l">Secretary</h3>
                             <div>
-                                <a href="tel:{{phone_2}}">{{phone_2}}</a>
+                                <a tuiLink class="form-link" href="tel:{{phone_2}}">{{phone_2}}</a>
                             </div>
                             <div class="tui-space_top-5">
                                 <span class="tui-text_body-s grey">Thu, Fri (GMT+4) <br /> 10AM - 16PM</span>
@@ -34,7 +34,7 @@
                         <ng-container *ngFor="let email of Emails">
                             <div>
                                 <h3 class="tui-text_body-l">{{email.name}}</h3>
-                                <a href="mailto:{{email.mail}}">{{email.mail}}</a>
+                                <a tuiLink class="form-link" href="mailto:{{email.mail}}">{{email.mail}}</a>
                             </div>
                         </ng-container>
                     </div>

@@ -4,7 +4,14 @@
         (click)="scrollItem('right')"></button>
     <button class="button-absolute right" tuiIconButton appearance="flat" icon="tuiIconChevronRightLarge"
         (click)="scrollItem('left')"></button>
-    <div class="items" [ngClass]="background">
+    <div class="items" [style]="smooth" [ngClass]="background">
+        <a routerLink="/deals/seasonal-deals" class="box-item item--2">
+            <div class="tui-text_h1 text-header white">SEASONAL ARMENIA</div>
+        </a>
+        <a routerLink="/deals/seasonal-deals" class="box-item item--1">
+            <div class="tui-text_h1 text-header white">SEASONAL ARMENIA</div>
+        </a>
+        <!-- extra -->
         <a tuiLink routerLink="/products" class="box-item item-0">
             <div class="tui-text_h1 text-header black">PRODUCTS THAT MAKES <br> YOUR LIFE EASIER</div>
         </a>
@@ -16,6 +23,13 @@
         </a>
         <a routerLink="/deals/seasonal-deals" class="box-item item-3">
             <div class="tui-text_h1 text-header white">SEASONAL ARMENIA</div>
+        </a>
+        <!-- extra -->
+        <a tuiLink routerLink="/products" class="box-item item-5">
+            <div class="tui-text_h1 text-header black">PRODUCTS THAT MAKES <br> YOUR LIFE EASIER</div>
+        </a>
+        <a tuiLink routerLink="/products" class="box-item item-6">
+            <div class="tui-text_h1 text-header black">PRODUCTS THAT MAKES <br> YOUR LIFE EASIER</div>
         </a>
     </div>
 </div>
@@ -37,7 +51,7 @@
 
                             <img [src]="item.imageSrc">
                         </div>
-                        <a tuiLink routerLink="/item/{{item.ref}}" class="name-field"><div class="tui-text_body-m-2">{{item.name}}</div></a>
+                        <a tuiLink routerLink="/item/{{item.ref}}" class="form-link"><div class="form-link__text tui-text_body-m-2">{{item.name}}</div></a>
                         <div class="extra tui-text_body-m-2">
                             <div>${{item.price}}</div>
                             <div class="rating-flex">

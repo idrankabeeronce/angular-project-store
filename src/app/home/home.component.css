@@ -19,6 +19,12 @@
     z-index: 2;
     border-radius: 25%;
 }
+@media only screen
+and (max-device-width: 1000px) {
+    .button-absolute {
+        opacity: 0;
+    }
+}
 .right {
     right: 0;
     border-top-right-radius: 0;
@@ -50,15 +56,20 @@
     -webkit-user-select: none;
     -webkit-user-drag: none;
 }
-.name-field {
+.form-link {
     height: 40px;
     max-height: 40px;
     overflow: hidden;
 }
-.name-field:hover {
-    color: var(--tui-info-fill);
+.form-link:hover {
+    color: var(--tui-success-fill);
 }
-.item-0, .item-1, .item-2, .item-3 {
+.form-link__text {
+    height: 40px;
+    max-height: 40px;
+    overflow: hidden;
+}
+.item--2, .item--1, .item-0, .item-1, .item-2, .item-3, .item-4, .item-5 {
     padding: 0 5rem 0 5rem;
     box-sizing: border-box;
     background-size: cover;
@@ -66,7 +77,7 @@
     justify-content: center;
     align-items: center;
 }
-.item-0 {
+.item-0, .item-4, .item-5 {
     background-image: url("/assets/images/swipe-wrapper/image_1.jpg");
     background-position-y: 50%;
     justify-content: start;
@@ -79,15 +90,15 @@
     justify-content: start;    
     background-position-y: 50%;
 }
-.item-3 {
+.item-3, .item--1, .item--2 {
     background-image: url("/assets/images/swipe-wrapper/image_4.jpg");   
     background-position-y: 50%;
 }
 @media (max-width: 700px) {
-    .item-0, .item-1, .item-2, .item-3 {
+    .item--2, .item--1, .item-0, .item-1, .item-2, .item-3, .item-4, .item-5  {
         padding: 0 1rem 0 1rem;
     }
-    .item-1, .item-3 {
+    .item--2, .item--1, .item-1, .item-3  {
         
         text-align: center;
     }
@@ -117,6 +128,18 @@
 }
 .item-scroll-3 {
     transform: translate(-300%);
+}
+.item-scroll-4 {
+    transform: translate(-400%);
+}
+.item-scroll-5 {
+    transform: translate(-500%);
+}
+.item-scroll-6 {
+    transform: translate(-600%);
+}
+.item-scroll-7 {
+    transform: translate(-700%);
 }
 
 .main-container {

@@ -6,13 +6,20 @@
     box-sizing: border-box;
 }
 .grey {
-    color: var(--tui-base-06)
+    color: var(--tui-text-02);
 }
 .content-container {
     background: var(--tui-base-04);
 }
 .border {
     border-radius: var(--tui-radius-s);
+}
+.form-link {
+    color: var(--tui-text-02);
+    text-decoration: none;
+}
+.form-link:hover {
+    color: var(--tui-success-fill);
 }
 .image-wrapper {
     width: 100%;
@@ -36,10 +43,6 @@
     height: 400px;
     text-align: center;
     background: white;
-}
-.contacts-content div a {
-    text-decoration: none;
-    color: var(--tui-base-06);
 }
 .type-area {
     min-height: 150px;

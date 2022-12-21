@@ -29,8 +29,9 @@ export class HomeComponent implements OnInit {
     }];
   content: any = []
   bestSellers: any = [];
-  indexCurrent = 0;
-  background = `image-${this.indexCurrent}`;
+  indexCurrent = 2;
+  background = `item-scroll-${this.indexCurrent}`;
+  smooth = `transition: all 1.5s ease-out`;
   ratingSrcNull = "tuiIconStarLarge";
   ratingSrcFull = "tuiIconStarFilledLarge";
   ratingSrcHalf = `<svg focusable="false" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
@@ -93,19 +94,33 @@ export class HomeComponent implements OnInit {
 
   }
   scrollItem(direction: string) {
+
+    this.smooth = `transition: all 1s ease-out`;
     if (direction == 'left') {
-      if (this.indexCurrent < 3) {
-        this.indexCurrent++
+      if (this.indexCurrent < 6) {
+        this.indexCurrent++;
+        this.background = `item-scroll-${this.indexCurrent}`;
+        if (this.indexCurrent >= 6) {
+          setTimeout(() => {
+            this.indexCurrent = 2;
+            this.smooth = `transition: 0s`;
+            this.background = `item-scroll-${this.indexCurrent}`;
+          }, 1000)
+        }
       }
-      else
-        this.indexCurrent = 0
     } else {
-      if (this.indexCurrent > 0) {
-        this.indexCurrent--
-      } else
-        this.indexCurrent = 3;
+      if (this.indexCurrent > 1) {
+        this.indexCurrent--;
+        this.background = `item-scroll-${this.indexCurrent}`;
+        if (this.indexCurrent <= 1) {
+          setTimeout(() => {
+            this.indexCurrent = 5;
+            this.smooth = `transition: 0s`;
+            this.background = `item-scroll-${this.indexCurrent}`;
+          }, 1000)
+        }
+      }
     }
-    this.background = `item-scroll-${this.indexCurrent}`;
     clearInterval(this.intervalId);
     this.intervalId = setInterval(() => {
       this.autoScroll();
@@ -113,12 +128,14 @@ export class HomeComponent implements OnInit {
 
   }
   autoScroll() {
-    if (this.indexCurrent < 3) {
-      this.indexCurrent++;
-    }
-    else {
-      this.indexCurrent = 0;
-    }
+    this.indexCurrent++;
+    this.smooth = `transition: all 1s ease-out`;
     this.background = `item-scroll-${this.indexCurrent}`;
+    if (this.indexCurrent === 6)
+      setTimeout(() => {
+        this.indexCurrent = 2;
+        this.smooth = `transition: 0s`
+        this.background = `item-scroll-${this.indexCurrent}`;
+      }, 1000);
   }
 }
