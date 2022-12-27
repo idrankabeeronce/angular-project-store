@@ -173,7 +173,10 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
 
   //
   goToCart() {
-
+    this.destroy();
+    this.addToCartService.setShoppingList(this.shoppingList);
+    this.addToCartService.numberOfOrder = this.shoppingList.id;
+    this.router.navigate(['/cart'])
   }
 
   // close by clicking 'go shopping' button

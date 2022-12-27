@@ -31,6 +31,7 @@ import { NewComponent } from './deals/new/new.component';
 import { SaleComponent } from './deals/sale/sale.component';
 import { SeasonalDealsComponent } from './deals/seasonal-deals/seasonal-deals.component';
 import { DealsHomeComponent } from './deals/deals-home/deals-home.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { DealsHomeComponent } from './deals/deals-home/deals-home.component';
     NewComponent,
     SaleComponent,
     SeasonalDealsComponent,
-    DealsHomeComponent
+    DealsHomeComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

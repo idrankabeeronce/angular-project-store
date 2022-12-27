@@ -21,6 +21,7 @@ import { SeasonalDealsComponent } from './deals/seasonal-deals/seasonal-deals.co
 import { DealsHomeComponent } from './deals/deals-home/deals-home.component';
 import { Title } from '@angular/platform-browser';
 import { ItemComponent } from './item/item.component';
+import { CartComponent } from './cart/cart.component';
 const routes: Routes = [
   { path: '', title: 'NEO Official Store', component: HomeComponent },
   {
@@ -66,6 +67,9 @@ const routes: Routes = [
       { path: 'shipping', title: 'Shipping Checkout', component: ShippingComponent},
       { path: 'payment', title: 'Paymant Checkout', component: PaymentComponent}
     ]  
+  },
+  {
+    path: 'cart', component: CartComponent
   },
   {
     path: 'pages/:id',

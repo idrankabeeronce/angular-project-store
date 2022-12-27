@@ -531,7 +531,6 @@ export class GoodsComponent implements OnInit, OnDestroy {
         if (key == itemS.indexOfSecondProperty)
           properties = value
       });
-
       let price = 0;
       let actualPrice = 0;
 

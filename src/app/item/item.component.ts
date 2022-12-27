@@ -1,7 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TuiAlertService, TuiNotification } from '@taiga-ui/core';
 import { Subscription } from 'rxjs';
 import * as dataI from "src/assets/content/products/products.json";
+import { AddToCartService } from '../add-to-cart.service';
 
 interface struct {
   color: string;
@@ -32,7 +34,8 @@ export class ItemComponent implements OnInit, OnDestroy {
     <g id="tuiIconStarFilledLarge" xmlns="http://www.w3.org/2000/svg"><svg fill="url(#grad)" height="1.5em" overflow="visible" viewBox="0 0 24 24" width="1.5em" x="50%" y="50%"><svg x="-12" xmlns="http://www.w3.org/2000/svg" y="-12"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></svg></g></svg>`;
   disabled = true;
 
-  constructor(private router: Router, private actRoute: ActivatedRoute) { }
+  constructor(private router: Router, private actRoute: ActivatedRoute, private addToCartService: AddToCartService,
+    @Inject(TuiAlertService) protected readonly alert: TuiAlertService) { }
   currentItem: any = {};
   ngOnDestroy():void {
     this.dataOfItems = (dataI as any).default;
@@ -98,7 +101,7 @@ export class ItemComponent implements OnInit, OnDestroy {
                 else if (prop.watt !== undefined) {
                   this.currentItem.secondProperty.push(prop.watt);
                   this.currentItem.suffixOfSecProp = "w";
-                  this.currentItem.labelSecondProperty = "Power";
+                  this.currentItem.labelSecondProperty = "Watt";
                 }
               } else {
                 if (!this.currentItem.color.includes(prop.color))
@@ -160,6 +163,39 @@ export class ItemComponent implements OnInit, OnDestroy {
       this.disabled = true;
     } else {
       this.disabled = false;
+    }
+  }
+
+  addToCart() {
+    let itemS = this.currentItem;
+    console.log(itemS);
+    // if second property defined and selected or ( there's no length property and color property selected )  
+    if (itemS.indexOfSecondProperty != 99 || !itemS.isLength && itemS.indexOfColor != 99) {
+
+      let itemToSet: any;
+      let string : string = String(`"color": "${itemS.color[itemS.indexOfColor]}","${itemS.labelSecondProperty.toLocaleLowerCase()}":${itemS.secondProperty[itemS.indexOfSecondProperty]}`)
+      
+      console.log(string);
+      let properties: any = JSON.parse('{' + string + '}');
+
+      // define class that we gonna push to service that provides connection with component of shopping list 
+      itemToSet = { name: itemS.name, 
+        imageSrc: itemS.imagesSrc[itemS.indexOfImage], 
+        actualPrice: itemS.actualPrice[itemS.indexOfColor], 
+        price: itemS.price[itemS.indexOfColor], 
+        properties: properties,
+        amount: 1 }
+
+      this.addToCartService.setItem(itemToSet); // push item to shopping list
+
+      this.addToCartService.setOpenCart(true); // open shopping cart component
+
+    }
+    // else we getting message that we should select required properties
+    else {
+      this.alert
+        .open(`Select all properties to purchase`, { status: TuiNotification.Warning, })
+        .subscribe();
     }
   }
 }

@@ -1,0 +1,56 @@
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.main-container__content {
+    max-width: 900px;
+    margin: 2rem auto 0 auto;
+}
+.main-container__header {
+    border-bottom: solid 1px var(--tui-base-04);
+    text-align: center;
+    max-width: 1200px;
+    border-bottom: solid 1px var(--tui-base-04);
+    padding: 50px 0;
+}
+.tui-table__td_flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;  
+}
+.edit-amount-field {
+    display: inline-flex;
+    border: 1px solid black;
+    
+    border-radius: var(--tui-radius-m);
+    align-items: center;
+    height: 40px;
+}
+.tui-table__td_old-price {
+    text-decoration:line-through;
+}
+  
+.tui-table__td_new-price {
+    color: rgb(200, 0, 0)
+    
+}
+.item-img {
+    margin-top: 25px;
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+}
+.bottom-container-field {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.aside-container {
+    text-align: end;
+}
+.aside-container__header, .aside-container__desc, .aside-container__button {
+    margin: .5rem 0;
+}
+.aside-container__desc_grey {
+    color: var(--tui-text-02);
+}
