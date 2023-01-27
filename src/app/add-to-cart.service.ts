@@ -11,7 +11,7 @@ export class AddToCartService {
   private item = new BehaviorSubject<any>({});
   private sizeOfShoppingList = new BehaviorSubject<number>(0);
   private totalPrice = new BehaviorSubject<number>(0);
-
+  
   private ShoppingList = new BehaviorSubject<any>([]);
   private shippingDetails = new BehaviorSubject<any>({});
 

@@ -17,7 +17,7 @@ import { VacanciesComponent } from './support/vacancy/vacancies.component';
 import { AboutComponent } from './support/about/about.component';
 import { ContactUsComponent } from './support/contact-us/contact-us.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ExampleTextComponent } from './example-text/example-text.component';
 import { ItemComponent } from './item/item.component';
@@ -32,6 +32,13 @@ import { SaleComponent } from './deals/sale/sale.component';
 import { SeasonalDealsComponent } from './deals/seasonal-deals/seasonal-deals.component';
 import { DealsHomeComponent } from './deals/deals-home/deals-home.component';
 import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './login/login.component';
+import { backendProvider } from "./_fakebackend/backend";
+import { JwtInterceptor } from "./_fakebackend/jwt.interceptor";
+import { ErrorInterceptor } from "./_fakebackend/error.interceptor";
+import { ProfileComponent } from './profile/profile.component';
+import { PaymentFormComponent } from './profile/payment-form/payment-form.component';
+import { ShippingFormComponent } from './profile/shipping-form/shipping-form.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +66,11 @@ import { CartComponent } from './cart/cart.component';
     SaleComponent,
     SeasonalDealsComponent,
     DealsHomeComponent,
-    CartComponent
+    CartComponent,
+    LoginComponent,
+    ProfileComponent,
+    PaymentFormComponent,
+    ShippingFormComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +83,12 @@ import { CartComponent } from './cart/cart.component';
     LayoutModule,
     HttpClientModule
   ],
-  providers: [HttpClientModule, { provide: TUI_SANITIZER, useClass: NgDompurifySanitizer }],
+  providers: [HttpClientModule, 
+    { provide: TUI_SANITIZER, useClass: NgDompurifySanitizer },
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    backendProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

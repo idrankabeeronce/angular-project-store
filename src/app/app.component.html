@@ -1,6 +1,7 @@
 <tui-root>
     <app-header></app-header>
     <app-shopping-cart></app-shopping-cart>
+    <app-profile *ngIf="logged"></app-profile>
     <router-outlet></router-outlet>
     <app-bottom></app-bottom>
 

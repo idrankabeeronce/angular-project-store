@@ -1,0 +1,51 @@
+<div class="wrapper">
+    <button tuiIconButton class="close-button" type="button" appearance="icon" (click)="close()">
+        <tui-svg style="color: var(--tui-base-08);" src="tuiIconCloseLarge"></tui-svg>
+    </button>
+    <div class="form">
+<h1>Shipping information</h1>
+<form [formGroup]="dialogFormGroup">
+    <div class="tui-space_bottom-3">
+        <tui-select #country class="tui-space_bottom-3" formControlName="countryValue"
+            (ngModelChange)="changedCountry(country, phone)">Country
+            <input tuiTextfield>
+            <tui-data-list-wrapper *tuiDataList [items]="allowedCountries">
+            </tui-data-list-wrapper>
+
+        </tui-select>
+    </div>
+
+
+    <div class="input-name-container tui-space_bottom-3">
+        <div class="tui-space_right-3">
+            <tui-input tuiTextfield formControlName="firstName">First name</tui-input>
+        </div>
+        <div>
+            <tui-input tuiTextfield formControlName="lastName">Last name</tui-input>
+        </div>
+    </div>
+
+    <div class="tui-space_bottom-3">
+        <tui-input tuiTextfield formControlName="adress">Adress</tui-input>
+    </div>
+
+    <div class="sub-adress-container tui-space_bottom-3">
+        <div class="tui-space_right-3">
+            <tui-input tuiTextfield formControlName="subAdress">Apartment, suite</tui-input>
+        </div>
+        <div>
+            <tui-input type="number" formControlName="postcode"> <input tuiTextfield
+                    oninput="this.value = this.value.toUpperCase()">Postcode</tui-input>
+        </div>
+    </div>
+    <tui-input-phone-international #phone class="tui-space_bottom-3" [countries]="countriesI"
+        tuiHintContent="In case we need to contact you about order" [(countryIsoCode)]="countryCode"
+        formControlName="phone">Phone</tui-input-phone-international>
+    <p>
+        <button tuiButton class="sumbit-button" type="submit" (click)="submitChanges()">
+            Save
+        </button>
+    </p>
+</form>
+</div>
+</div>

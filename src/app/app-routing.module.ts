@@ -22,8 +22,10 @@ import { DealsHomeComponent } from './deals/deals-home/deals-home.component';
 import { Title } from '@angular/platform-browser';
 import { ItemComponent } from './item/item.component';
 import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   { path: '', title: 'NEO Official Store', component: HomeComponent },
+  { path: 'login', component: LoginComponent},
   {
     path: 'products', title: 'NEO Products', component: ProductsComponent,
     children: [

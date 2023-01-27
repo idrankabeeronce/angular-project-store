@@ -82,6 +82,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.dataOfItems = (data as any).default;
+    
   }
   // switch between image by selected color
   goToImage(index: number, itemT: any) {

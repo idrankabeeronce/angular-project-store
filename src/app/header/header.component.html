@@ -21,8 +21,8 @@
                         </ng-template>
                     </ng-container>
                     <ng-template #submenu>
-                        <tui-hosted-dropdown tuiDropdownHover #host 
-                           [open]="open" routerLinkActive="active" [content]="dropdown">
+                        <tui-hosted-dropdown tuiDropdownHover #host [open]="open" routerLinkActive="active"
+                            [content]="dropdown">
                             <div class="button-field">
                                 <button tuiTab (click)="onClick(tab.name, '')">
                                     {{ tab.name }}
@@ -69,7 +69,22 @@
         <tui-svg [src]="shopping_cart_svg" class="tui-space_right-2"></tui-svg>
         <span class="index-of-shopping-items">{{sizeOfShoppingList}}</span>
     </button>
+    <ng-container *ngIf="logged else login">
+
+        <button tuiIconButton (click)="getProfile()" type="button" appearance="icon">
+            <tui-svg [src]="profile_svg" class="tui-space_right-2">
+            </tui-svg>
+        </button>
+
+    </ng-container>
+
+    <ng-template #login>
+        <button tuiButton (click)="goLogIn()" routerLinkActive type="button" appearance="icon" size="m">
+            <p class="tui-text_body-m">Log In</p>
+        </button>
+    </ng-template>
 </div>
+
 
 
 
@@ -98,28 +113,29 @@
                             <a tuiLink (click)="onClick(item.name, '')" class="content-link-header">
                                 <h3 class="tui-space_top-0 tui-space_bottom-0">{{item.name}}</h3>
                             </a>
-                            <button #button (click)="getContent(button, section, false)" class="expand-button" tuiIconButton
-                                type="button" appearance="icon" icon="tuiIconPlusLarge"></button>
+                            <button #button (click)="getContent(button, section, false)" class="expand-button"
+                                tuiIconButton type="button" appearance="icon" icon="tuiIconPlusLarge"></button>
                         </div>
                         <section #section class="content">
 
                             <ng-container *ngFor="let it of item.sub">
                                 <ng-container *ngIf="it.name; else withoutsub">
                                     <div class="custom-padding-left_sub-header sub-field">
-                                    <a (click)="onClick(it.name, item.name)" tuiLink
+                                        <a (click)="onClick(it.name, item.name)" tuiLink
                                             class=" content-link-sub-header"><span
                                                 class="tui-text_body-m">{{it.name}}</span></a>
-                                                <button #subButton (click)="getContent(subButton, subSection, true)" class="expand-button" tuiIconButton
-                                type="button" appearance="icon" icon="tuiIconPlus"></button>
-                                </div>
-                                <section #subSection class="subContent">
-                                    <ng-container *ngFor="let itSub of it.content">
-                                        
-                                        <a (click)="onClickSub(itSub, it.name, item.name)" tuiLink
-                                            class="custom-padding-left_sub content-link"><span
-                                                class="tui-text_body-s">{{itSub}}</span></a>
-                                    </ng-container>
-                                </section>
+                                        <button #subButton (click)="getContent(subButton, subSection, true)"
+                                            class="expand-button" tuiIconButton type="button" appearance="icon"
+                                            icon="tuiIconPlus"></button>
+                                    </div>
+                                    <section #subSection class="subContent">
+                                        <ng-container *ngFor="let itSub of it.content">
+
+                                            <a (click)="onClickSub(itSub, it.name, item.name)" tuiLink
+                                                class="custom-padding-left_sub content-link"><span
+                                                    class="tui-text_body-s">{{itSub}}</span></a>
+                                        </ng-container>
+                                    </section>
                                 </ng-container>
                                 <ng-template #withoutsub>
                                     <a (click)="onClick(it, item.name)" tuiLink
@@ -134,3 +150,4 @@
         </tui-scrollbar>
     </div>
 </ng-template>
+
