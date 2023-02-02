@@ -1,9 +1,11 @@
 <div tuiMode="onDark" class="wrapper">
     <ng-container *ngIf="isVisible">
         <ng-container #outlet *ngIf="!showContainer; else basd">
-            <a class="home-h1" routerLink="/" routerLinkActive="active" (click)="resetActiveItemIndex()">
-                <h1 class="tui-text_body-m title">NEO</h1>
-            </a>
+            <div style="display: flex; min-width: 130px;">
+                <a class="home-h1" routerLink="/" routerLinkActive="active" (click)="resetActiveItemIndex()">
+                    <h1 class="tui-text_body-m title">NEO</h1>
+                </a>
+            </div>
             <tui-tabs #asd class="tabs" [activeItemIndex]="activeItemIndex">
                 <ng-container *ngFor="let tab of tabs">
 
@@ -63,7 +65,7 @@
 
         </ng-container>
     </ng-container>
-
+    <div style="display: flex; align-items: center;">
     <button tuiIconButton (click)="getShoppingCart()" routerLinkActive type="button" appearance="icon"
         class="button-shopping-cart">
         <tui-svg [src]="shopping_cart_svg" class="tui-space_right-2"></tui-svg>
@@ -77,7 +79,7 @@
         </button>
 
     </ng-container>
-
+    </div>
     <ng-template #login>
         <button tuiButton (click)="goLogIn()" routerLinkActive type="button" appearance="icon" size="m">
             <p class="tui-text_body-m">Log In</p>

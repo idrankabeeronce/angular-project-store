@@ -209,7 +209,7 @@ and (max-device-width: 1000px) {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    cursor: pointer;
 }
 .item-img img{
     height: 160px;

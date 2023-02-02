@@ -79,7 +79,7 @@ const routes: Routes = [
       { path: '**', component: ExampleTextComponent}
     ]
   },
-  { path: '**', component: PageNotFoundComponent },];
+  { path: '**', title: '404 - Not Found', component: PageNotFoundComponent },];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
