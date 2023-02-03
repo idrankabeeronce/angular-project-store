@@ -1,0 +1,298 @@
+[
+    {
+        "name": "Senior Sales Manager",
+        "path": "sales/senior-sales-manager/",
+        "field": "sales",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique. \n Ut egestas velit quis lacinia auctor. Praesent id erat semper, lobortis lorem et, sollicitudin augue. Suspendisse sit amet ultrices neque, quis ornare massa. Phasellus nec ligula a lacus egestas facilisis. Donec faucibus mi vitae massa tempus, vitae rutrum enim sodales. Donec sit amet neque ante. Donec porta leo nulla, sed consequat felis auctor nec. Aenean ut urna in nulla vulputate varius. Aliquam a placerat orci, porta tristique purus. Vestibulum volutpat consectetur vulputate.",
+        "responsibilities": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique."
+        },
+        "qualifications": [
+            "Rising Junior or Senior pursuing a Bachelor’s degree in an accredited college or university",
+            "Excellent written, verbal and communication skills",
+            "Detail oriented",
+            "Willingness to learn about technology",
+            "Proficiency in Windows and Microsoft Office",
+            "Ability to work independently with limited direction in a fast-paced environment; must be a high-energy, motivated self-starter"
+        ]
+    },
+    {
+        "name": "Senior DevOps Engineer",
+        "path": "development/senior-devops-engineer/",
+        "field": "development",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique. \n Ut egestas velit quis lacinia auctor. Praesent id erat semper, lobortis lorem et, sollicitudin augue. Suspendisse sit amet ultrices neque, quis ornare massa. Phasellus nec ligula a lacus egestas facilisis. Donec faucibus mi vitae massa tempus, vitae rutrum enim sodales. Donec sit amet neque ante. Donec porta leo nulla, sed consequat felis auctor nec. Aenean ut urna in nulla vulputate varius. Aliquam a placerat orci, porta tristique purus. Vestibulum volutpat consectetur vulputate.",
+        "responsibilities": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique.",
+            "list": [
+                "Contribute to Jenkins pipelines",
+                "Making effort to CI/CD processes to improve them",
+                "Develop middleware to help yourself in CI/CD area"
+            ]
+        },
+        "qualifications": [
+            "Strong knowledge of Jenkins pipelines and Jenkins shared library (Groovy)",
+            "Hands-on with build tools (Maven. Gradle, npm, yarn, PHP-composer, go build etc.)",
+            "Experience with Ansible and Terraform",
+            "Understanding of delivery process to Kubernetes",
+            "Extensive knowledge of CD tools",
+            "Coding skills on Golang and Python"
+        ]
+    },
+    {
+        "name": "Senior Front End",
+        "path": "it/senior-front-end/",
+        "field": "it",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique. \n Ut egestas velit quis lacinia auctor. Praesent id erat semper, lobortis lorem et, sollicitudin augue. Suspendisse sit amet ultrices neque, quis ornare massa. Phasellus nec ligula a lacus egestas facilisis. Donec faucibus mi vitae massa tempus, vitae rutrum enim sodales. Donec sit amet neque ante. Donec porta leo nulla, sed consequat felis auctor nec. Aenean ut urna in nulla vulputate varius. Aliquam a placerat orci, porta tristique purus. Vestibulum volutpat consectetur vulputate.",
+        "responsibilities": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique.",
+            "list": [
+                "Develop rich, interactive, enterprise web pages for desktop and mobile",
+                "Develop new user-facing features",
+                "Directing or performing company website updates",
+                "Developing or validating test routines and schedules to ensure that test cases address all browser and device types",
+                "Optimize web pages performance through A/B testing",
+                "Uphold quality layout according to corporate guidelines",
+                "Make recommendations to optimize and streamline web templates",
+                "Work collaboratively with other developers/designers",
+                "Maintaining and promoting a successful and positive work environment"
+            ]
+        },
+        "qualifications": [
+            "Proficiency in HTML5 and CSS3",
+            "Good experience with client-side scripting and JavaScript frameworks, including jQuery",
+            "Ability to write complex front-end scenarios",
+            "Understand principle of UI and UX in web",
+            "Confident use of SASS preprocessor and experience with Pug preprocessor",
+            "Layout building experience for web (cross-browser and adaptive layout) without CSS-frameworks, including animation and interactivity",
+            "Strong written and verbal communication skills in English",
+            "Dedicated team player",
+            "Accurate and detail-oriented  and responsible personality. Ability to meet deadlines and a goal-oriented mindset",
+            "Experience with BEM-methodology, Git (GitLab), Figma, npm and Gulp is an advantage",
+            "Experience in A/B testing is an advantage",
+            "It will be a plus if you have experience of coding HTML-emails. Knowledge of the various nuances of email clients (especially Outlook)"
+        ]
+    },
+    {
+        "name": "Tax Accountant",
+        "path": "finance/tax-accaountant/",
+        "field": "finance",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique. \n Ut egestas velit quis lacinia auctor. Praesent id erat semper, lobortis lorem et, sollicitudin augue. Suspendisse sit amet ultrices neque, quis ornare massa. Phasellus nec ligula a lacus egestas facilisis. Donec faucibus mi vitae massa tempus, vitae rutrum enim sodales. Donec sit amet neque ante. Donec porta leo nulla, sed consequat felis auctor nec. Aenean ut urna in nulla vulputate varius. Aliquam a placerat orci, porta tristique purus. Vestibulum volutpat consectetur vulputate.",
+        "responsibilities": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique.",
+            "list": [
+                "Assist in the completion of US state and local tax returns",   
+                "Calculate estimated state payments",
+                "Calculate monthly use tax, file sales and use tax returns and make payments",
+                "Assist with examinations/audits of the Group’s subsidiaries’ tax returns",
+                "Resolve state and local tax notices",
+                "Assist with the preparation of the ASC 740 tax provision calculation for the US Companies with a focus on state implications",
+                "Reconcile tax general ledger accounts",
+                "Prepare and review various other tax and compliance filings, as needed, including property tax",
+                "Identify opportunities for efficiencies in tax department processes",
+                "Research state tax issues and provide tax planning ideas, including, but not limited to state tax nexus, state implications of TCJA, sales/use tax issues, property tax",
+                "Keep up to date on tax law changes and their impact on the organization",
+                "Special projects, as needed"
+            ]
+        },
+        "qualifications": ["asd","sss", "Asdas"]
+    },
+    {
+        "name": "Business Manager",
+        "path": "marketing/business-manager/",
+        "field": "marketing",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique. \n Ut egestas velit quis lacinia auctor. Praesent id erat semper, lobortis lorem et, sollicitudin augue. Suspendisse sit amet ultrices neque, quis ornare massa. Phasellus nec ligula a lacus egestas facilisis. Donec faucibus mi vitae massa tempus, vitae rutrum enim sodales. Donec sit amet neque ante. Donec porta leo nulla, sed consequat felis auctor nec. Aenean ut urna in nulla vulputate varius. Aliquam a placerat orci, porta tristique purus. Vestibulum volutpat consectetur vulputate.",
+        "responsibilities": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique.",
+            "list": [
+                "Implementation, management, and maintenance leveraging Google Tag Manager, Google Analytics, and other digital marketing platforms ",
+                "Creating and maintaining detailed documentation of analytics events, variables, segments, etc",
+                "Identifying gaps in the data capture strategy and collaboratively implementing enhancements",
+                "Working across teams to design custom segments based on historical qualitative and quantitative data that can be used to enhance our reporting ",
+                "Collaborating with team members preparing data sets ",
+                "Collaborating with technical analytics analyst, web production, web development and marketing teams to implement required tracking and tagging"
+            ]
+        },
+        "qualifications": [
+            "Developing intuitive, scalable dashboards, reports, and analyses to track website performance and aid in planning and decision-making",
+            "Analyzing complex data sets and transform raw data into actionable insights that ensure marketing efforts are effectively driving awareness, conversion, growth, and revenue ",
+            "Creating data visualizations and presentations to provide actionable and compelling insights to stakeholders that are easy to understand and have demonstrable results ",
+            "Applying comprehensive views of online consumer behaviors through quantitative (online), and qualitative (voice of customer, usability, etc.) metrics to support stakeholders"
+        ]
+    },
+    {
+        "name": "Data Analytics Manager",
+        "path": "other/data-analytics-manager/",
+        "field": "other",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique. \n Ut egestas velit quis lacinia auctor. Praesent id erat semper, lobortis lorem et, sollicitudin augue. Suspendisse sit amet ultrices neque, quis ornare massa. Phasellus nec ligula a lacus egestas facilisis. Donec faucibus mi vitae massa tempus, vitae rutrum enim sodales. Donec sit amet neque ante. Donec porta leo nulla, sed consequat felis auctor nec. Aenean ut urna in nulla vulputate varius. Aliquam a placerat orci, porta tristique purus. Vestibulum volutpat consectetur vulputate.",
+        "responsibilities": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique.",
+            "list": [
+                "Lead the establishment of core standard reports, data sets and metrics to be used by the business globally and become the ‘expert’ in global data for the defined process",
+                "Provide vision of what is needed for the business and lead the team in creation of dashboards to support the business for decision making",
+                "Perform high-level ad-hoc analyses, quantitative and qualitative, to guide business improvement hypotheses and drive decisions",
+                "Supply materials required for QBRs, Summits, and All Hands meetings in a timely manner",
+                "Maintain projects related to standardization of existing Reporting and existing knowledge base",
+                "Work with other business areas including Data Quality and Data Warehouse to reconcile data differences and add data sources as needed",
+                "Develop processes and procedures to ensure business solutions meet strategic goals",
+                "Collaborate with team members to collect, analyze, and evaluate information from multiple sources"
+            ]
+        },
+        "qualifications": [
+            "Team lead or manager in a previous role",
+            "Advanced Excel",
+            "PowerPoint",
+            "Experience with data visualization tools (Tableau, Power BI, Clik, or equivalent)",
+            "Data wrangling / etl",
+            "Data analysis",
+            "Strong problem-solving and management skills",
+            "Excellent communication and analytical skills",
+            "Technical writing",
+            "Experience in project management"
+        ]
+    },
+    {
+        "name": "Network Engineer",
+        "path": "it/network-engineer/",
+        "field": "it",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique. \n Ut egestas velit quis lacinia auctor. Praesent id erat semper, lobortis lorem et, sollicitudin augue. Suspendisse sit amet ultrices neque, quis ornare massa. Phasellus nec ligula a lacus egestas facilisis. Donec faucibus mi vitae massa tempus, vitae rutrum enim sodales. Donec sit amet neque ante. Donec porta leo nulla, sed consequat felis auctor nec. Aenean ut urna in nulla vulputate varius. Aliquam a placerat orci, porta tristique purus. Vestibulum volutpat consectetur vulputate.",
+        "responsibilities": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique.",
+            "list": [
+                "Managing configurations, troubleshooting, provisioning and coordinating 3rd party systems integration",
+                "Designing network architecture to accommodate growth and changes in the company environment",
+                "Implementing changes and configuring equipment",
+                "Dealing with tickets, clarify user concerns and gather all necessary information to troubleshoot and resolve issues and service in a timely manner",
+                "Maintaining configuration backups, network diagrams, and any other documentation as required",
+                "Dealing with vendors and service providers",
+                "Analyzing system performance to ensure high system availability and accessibility for all respective users",
+                "Proactively monitoring the network using software tools to identify problems before outages or performance degradation occur"
+        ]
+        },
+        "qualifications": [
+            "CCNP R&S/CCNP Security certification or equivalent knowledge/experience level",
+            "Substantial operational experience with Cisco enterprise-class routers, firewalls (ASA/vASA, NGWF, FirePower), switches and wireless solutions",
+            "Enterprise network design experience",
+            "Routine operations automation (Python, Gitlab, Ansible)"
+        ]
+    },
+    {
+        "name": "Territory Manager",
+        "path": "sales/territory-manager/",
+        "field": "sales",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique. \n Ut egestas velit quis lacinia auctor. Praesent id erat semper, lobortis lorem et, sollicitudin augue. Suspendisse sit amet ultrices neque, quis ornare massa. Phasellus nec ligula a lacus egestas facilisis. Donec faucibus mi vitae massa tempus, vitae rutrum enim sodales. Donec sit amet neque ante. Donec porta leo nulla, sed consequat felis auctor nec. Aenean ut urna in nulla vulputate varius. Aliquam a placerat orci, porta tristique purus. Vestibulum volutpat consectetur vulputate.",
+        "responsibilities": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique.",
+            "list": [
+                "Develops sales activities with commercial segment new customers; upsells and cross sells to the existing commercial customers",
+                "Develops sales pipeline by proactive calling to convert sales conversations to identified prospects",
+                "Works cross functionally and cooperatively to consistently drive opportunities forward towards closure – this includes Sales Engineering, Inside Sales and Channel",
+                "Closes business in conjunction with Veeam partners (in tier-two model)",
+                "Meets individual and team revenue targets",
+                "Leverages business generated by partners with end users/customers",
+                "Drives account strategies and coordinates team selling efforts with Inside Sales Reps, Channel Partner Managers, Marketing, Sales Engineering and others to close business",
+                "Ownership of the planning and execution of territory plan(s) for territory growth – growing existing business and winning net new logos",
+                "Enters forecasting and account/opportunity details in Veeam’s CRM (SalesForce)",
+                "Engages with Veeam Strategic Alliance Partners to drive mutually beneficial revenue opportunities",
+                "Proposes, coordinates and participates to marketing activities within the territory",
+                "Ability to travel 0 - 75% of the time within the assigned territory/region"
+            ]
+        },
+        "qualifications": [
+            "Strong verbal and written communications skills including presentation skills",
+            "An aptitude for understanding and articulating how technology products and solutions can drive desired outcomes and solve common business problems.",
+            "Bachelor's Degree and/or equivalent years of experience",
+            "At least three (3) years of sales, selling software through the channels and end users",
+            "Experience in business-to-business selling and managing using a consultative sales approach, and will have strong demonstrated closing skills",
+            "Ability to work independently and collaboratively with limited direction in a fast-paced environment",
+            "Knowledge of large distributors and value-added resellers (VAR’s) is highly desired",
+            "Knowledge of virtualization industry, backup and recovery and competitive landscape highly desired",
+            "Experience with target account selling, solution selling, value-based selling and/or consultative sales techniques",
+            "Knowledge of different sales methodologies and customer relationship management (CRM) system; SalesForce knowledge is required",
+            "Microsoft Office tools (Word, Excel, PowerPoint, etc.), Sales Tools (ZoomInfoLinkedIN, TechTarget)"
+    ]
+    },
+    {
+        "name": "Inside Sales Intern",
+        "path": "sales/inside-sales-intern/",
+        "field": "sales",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique. \n Ut egestas velit quis lacinia auctor. Praesent id erat semper, lobortis lorem et, sollicitudin augue. Suspendisse sit amet ultrices neque, quis ornare massa. Phasellus nec ligula a lacus egestas facilisis. Donec faucibus mi vitae massa tempus, vitae rutrum enim sodales. Donec sit amet neque ante. Donec porta leo nulla, sed consequat felis auctor nec. Aenean ut urna in nulla vulputate varius. Aliquam a placerat orci, porta tristique purus. Vestibulum volutpat consectetur vulputate.",
+        "responsibilities": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique.",
+            "list": [
+                "Leads a team of approximately 5 Federal Inside Sales Representatives, driving overachievement and goals with coaching, performance management, engagement, and career development",
+                "Nurtures a positive team environment, in alignment with Veeam's Core Values. Educates team on Federal sales practices",
+                "Manages team performance against quotas and sales forecasts, executes operating plans and ensures sales objectives are met",
+                "Drives revenue and contributes to the continued growth of Veeam through consistently achieving individual and team quotas",
+                "Monitors daily activity of sales representatives; including sales activities and use of Veeam's CRM (Salesforce.com)",
+                "Drives metrics to measure performance of the inside sales activities; corrects deficiencies where necessary",
+                "Collaborates with field sales employees on territory division of labor and sales execution."
+            ]
+        },
+        "qualifications": [
+            "2+ years of Federal inside sales management or supervisory experience preferred; telephone and internet based sales experience required",
+            "Bachelor’s Degree preferred (a combination of education and experience will be considered)",
+            "Demonstrated experience in building, training, managing, developing and getting results from an inside sales team",
+            "Skilled motivator with demonstrated ability to coach and develop sales staff to exceed targeted sales objectives and deliver high quality service to customers",
+            "Proven track record of driving high volume, transactional sales along with more complex enterprise sales",
+            "Ability to work well with all levels of people and teams in a matrix-organization structure. Solid understanding of Federal procurement process",
+            "Excellent management and communication skills (written and verbal)",
+            "Demonstrated knowledge of Federal procurement process", 
+            "Customer relationship management (CRM) systems; SalesForce.com is preferred",
+            "Knowledge of virtualization technology; VMware and/or Microsoft is highly desirable",
+            "Knowledge of storage vendors and partners"
+        ]
+    },
+    {
+        "name": "National Partner Manager",
+        "path": "sales/national-partner-manager/",
+        "field": "sales",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique. \n Ut egestas velit quis lacinia auctor. Praesent id erat semper, lobortis lorem et, sollicitudin augue. Suspendisse sit amet ultrices neque, quis ornare massa. Phasellus nec ligula a lacus egestas facilisis. Donec faucibus mi vitae massa tempus, vitae rutrum enim sodales. Donec sit amet neque ante. Donec porta leo nulla, sed consequat felis auctor nec. Aenean ut urna in nulla vulputate varius. Aliquam a placerat orci, porta tristique purus. Vestibulum volutpat consectetur vulputate.",
+        "responsibilities": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique.",
+            "list": [
+                "Managing internal and external relationships in a highly leverage, matrixed environment",
+                "Develop goals that are measurable and drive productivity within SHI and its operating units",
+                "Participating in impactful QBRs with meaningful and measurable action items, as well as follow-up",
+                "Leverage executive level relationships within SHI and its operating units",
+                "Achieving revenue targets and goals for SHI and its operating units",
+                "Developing and executing partner plan with variable rebates and goals",
+                "Recruiting, training and enabling SHI and its subsidiary sellers with the focus on East Coast Business",
+                "Working closely with VMware, Microsoft, HP and other eco-system product managers"
+        ]
+        },
+        "qualifications": [
+            "uccessful sales experience with channel-focused company and 2 tier distributors in North America",
+            "Proven results driving business objectives across the SHI eco-system",
+            "Proven track record of successful product management within a 2 tier model",
+            "Knowledge of virtualization technology and leverage within a 2 tier model",
+            "Ability to adapt to changes in roles and responsibilities",
+            "Ability to work independently with limited direction in a fast-paced environment; must be a high-energy, motivated self-starter",
+            "Analytical thinker with proven ability to metric and govern"
+        ]
+    },
+    {
+        "name": "Technical Director",
+        "path": "sales/technical-director/",
+        "field": "sales",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique. \n Ut egestas velit quis lacinia auctor. Praesent id erat semper, lobortis lorem et, sollicitudin augue. Suspendisse sit amet ultrices neque, quis ornare massa. Phasellus nec ligula a lacus egestas facilisis. Donec faucibus mi vitae massa tempus, vitae rutrum enim sodales. Donec sit amet neque ante. Donec porta leo nulla, sed consequat felis auctor nec. Aenean ut urna in nulla vulputate varius. Aliquam a placerat orci, porta tristique purus. Vestibulum volutpat consectetur vulputate.",
+        "responsibilities": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida porttitor sapien sed pellentesque. Cras non turpis nec dui venenatis pellentesque quis in neque. Vivamus suscipit sed nisi ac placerat. Nulla vestibulum metus mi, ac efficitur urna cursus id. Phasellus malesuada at nulla non feugiat. Nulla aliquet magna non eleifend volutpat. Ut dapibus justo eget velit aliquet, id rhoncus elit dignissim. Quisque quis ullamcorper dui, tempus accumsan nisi. Aenean venenatis ultrices augue vitae venenatis. Quisque dictum lectus eu lorem molestie, ut sodales dui tincidunt. Vestibulum sodales metus lectus, non sodales diam facilisis a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dui erat, consequat nec leo vitae, accumsan lobortis enim. Fusce urna lacus, maximus at consectetur ac, luctus id orci. Aenean viverra purus ac porta ullamcorper. Ut ac erat et leo maximus dictum. \n Suspendisse pretium neque a urna maximus aliquam. Proin pharetra metus ac arcu hendrerit, eget fringilla justo tristique. Nullam vulputate ultrices leo sed blandit. Aenean porta malesuada laoreet. Nulla id maximus mi. Nulla sit amet ornare quam, sit amet elementum nulla. Praesent in vestibulum augue, in consectetur erat. Integer at mi luctus, pellentesque elit mattis, malesuada velit. Mauris quis aliquam magna, eget tristique tellus. Aenean a eros leo. Sed egestas efficitur purus non molestie. Donec imperdiet libero vitae vulputate tristique.",
+            "list": [
+                "Assist Veeam and Global System Integrators (GSIs) in enterprise opportunities driven by GSIs across all GEOs when needed. Be prepared to assist the field in any way possible but also maintain and enforce appropriate escalation procedures. Appropriately manage the volume, size, and strategic value of deals you’re engaged with",
+                "Support in the creation of high-level strategy for top GSI partners by understanding overall market trends and the partner portfolio of products and solutions as a key member of the GSI business team",
+                "Develop and lead training and enablement strategy and plan with each GSI to establish and grow Veeam expertise within the technical and delivery communities",
+                "Support GSI POCs, NFR, and validation efforts as required to drive new solutions, offerings, and close business",
+                "Participate in quarterly reviews (QBRs) between the Veeam sponsor, GSI partner executives, and Veeam global virtual teams and drive the solution and technical enablement aspects of the reviews"
+            ]
+        },
+        "qualifications": [
+            "Expert-level experience in GSI specific technical offering and solutions building including working in a team accountable for achieving revenue goals",
+            "Deep understanding of GSI culture and how to achieve results through personal network building and collaboration within a fluent partner ecosystem environment",
+            "Deep architecture knowledge of VMware virtualization and related infrastructure and storage technologies",
+            "Deep architecture knowledge of at least one of the public hyperscale cloud providers (e.g. AWS, Azure, Google)",
+            "Hands on knowledge of data protection & disaster recovery technologies a bonus but not requirement",
+            "Advanced skills in Enterprise Datacenter Infrastructure designs and technologies (storage, virtualization, networking)",
+            "Previous pre-sales or other experience interacting with a global partner or large strategic customer"
+        ]
+    }
+]
