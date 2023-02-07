@@ -1,3 +1,4 @@
+import { KeyValuePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { TuiSwipe } from '@taiga-ui/cdk';
 import data from "src/assets/content/products/products.json";
@@ -18,17 +19,26 @@ type itemType = {
 export class HomeComponent implements OnInit {
   styleOfCards = [
     {
-      style: 'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/assets/images/support/building.jpg")',
+      style: 'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("assets/images/support/building.jpg")',
       title: 'Something Good',
-      desc: 'Description of something good'
+      desc: 'Description of something good',
+      ref: '/'
     },
     {
-      style: 'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/assets/images/support/contact-us.jpg")',
+      style: 'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("assets/images/support/contact-us.jpg")',
       title: 'Something Bad',
-      desc: 'Description of something bad'
+      desc: 'Description of something bad',
+      ref: '/'
+    },
+    {
+      style: 'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("assets/images/support/global-network.jpg")',
+      title: 'Something else',
+      desc: 'Description of something else',
+      ref: '/'
     }];
   content: any = []
   bestSellers: any = [];
+  listOfNewItems: any = [];
   indexCurrent = 2;
   background = `item-scroll-${this.indexCurrent}`;
   smooth = `transition: all 1.5s ease-out`;
@@ -58,6 +68,7 @@ export class HomeComponent implements OnInit {
 
   getData() {
     this.bestSellers = []; // array of whole content
+    this.listOfNewItems = [];
     for (let group of data) {
       for (let typeGroup of group.goods) {
         for (let item of typeGroup.items) {
@@ -65,9 +76,12 @@ export class HomeComponent implements OnInit {
             name: item.name,
             imageSrc: item.imageSrc,
             price: Math.round((item.price - (item.price * item.discount / 100)) * 100) / 100,
+            prop: item.properties,
             rating: item.rating,
+            date: item.dateOfRelease,
             tag: item.tag,
-            ref: item.ref
+            ref: item.ref,
+            desc: item.description
           })
         }
       }
@@ -75,7 +89,7 @@ export class HomeComponent implements OnInit {
     this.content.sort((a: any, b: any) => (a.rating < b.rating ? 1 : -1));
     let index = 0;
     for (let value of this.content) {
-      if (index == 10)
+      if (index === 10)
         break
       this.bestSellers.push({
         name: value.name,
@@ -87,8 +101,36 @@ export class HomeComponent implements OnInit {
       })
       index++
     }
-  }
+    this.content.sort((a: any, b: any) => (a.date < b.date ? 1 : -1));
+    index = 0;
+    for (let value of this.content) {
+      if (value.tag === "new") {
+        
+        var i = this.listOfNewItems.findIndex((e: any) => e.ref === value.ref);
+        // exclude similar. if -1, then continue
+        if (i === -1) {
+          if (index === 3)
+            break
+          this.listOfNewItems.push({
+            name: value.name,
+            imageSrc: value.imageSrc,
+            price: value.price,
+            rating: value.rating,
+            tag: value.tag,
+            prop: value.prop,
+            ref: value.ref,
+            date: value.date,
+            desc: value.desc
+          })
+          index++
+        }
+      }
+    }
 
+  }
+  upperCaseFirstCh(string: any) {
+    return string.charAt(0).toLocaleUpperCase() + string.slice(1);  
+  }
   onSwipe(swipe: TuiSwipe): void {
     this.scrollItem(swipe.direction);
 

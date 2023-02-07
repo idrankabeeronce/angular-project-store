@@ -36,7 +36,7 @@
 <!-- BODY CONTENT -->
 <div class="main-container">
     <!-- BEST SELLERS -->
-    <div class="tui-text_h5 label-best tui-space_bottom-5">Best Seller</div>
+    <div class="tui-text_h5 label tui-space_bottom-5">Best Seller</div>
     <div class="best-container">
         <tui-scrollbar class="scroll-container">
 
@@ -51,7 +51,9 @@
 
                             <img [src]="item.imageSrc">
                         </div>
-                        <a tuiLink routerLink="/item/{{item.ref}}" class="form-link"><div class="form-link__text tui-text_body-m-2">{{item.name}}</div></a>
+                        <a tuiLink routerLink="/item/{{item.ref}}" class="form-link">
+                            <div class="form-link__text tui-text_body-m-2">{{item.name}}</div>
+                        </a>
                         <div class="extra tui-text_body-m-2">
                             <div>${{item.price}}</div>
                             <div class="rating-flex">
@@ -90,18 +92,43 @@
         </tui-scrollbar>
     </div>
     <!-- SOMETHING IMPORTANT AND NEW -->
-    <div tuiMode="onDark" class="flex-grid-container gaped tui-space_left-8 tui-space_right-8">
-        <a routerLink="/" tuiLink [style]="styleOfCards[0].style" class="card-container">
-            <div class="mask">
-                <div class="title tui-text_h5">{{styleOfCards[0].title}}</div>
-                <div class="desc tui-text_body-m">{{styleOfCards[0].desc}}</div>
-            </div>
-        </a>
-        <a routerLink="/" tuiLink [style]="styleOfCards[1].style" class="card-container">
-            <div class="mask">
-                <div class="title tui-text_h5">{{styleOfCards[1].title}}</div>
-                <div class="desc tui-text_body-m">{{styleOfCards[1].desc}}</div>
-            </div>
-        </a>
+    <div class="some-container">
+        <div class="tui-text_h5 label tui-space_bottom-5">Some Title</div>
+        <div tuiMode="onDark"
+            class="flex-grid-container gaped tui-space_bottom-5 tui-space_top-5 tui-space_left-8 tui-space_right-8">
+            <ng-container *ngFor="let card of styleOfCards">
+                <a [routerLink]="card.ref" tuiLink [style]="card.style" class="card-container">
+                    <div class="mask">
+                        <div class="title tui-text_h5">{{card.title}}</div>
+                        <div class="desc tui-text_body-m">{{card.desc}}</div>
+                    </div>
+                </a>
+            </ng-container>
+        </div>
+    </div>
+    <!-- NEW PRODUCTS -->
+    <div class="new-items-container">
+        <div class="tui-text_h5 label tui-space_bottom-5">Brand New</div>
+        <div class="items-wrapper tui-space_left-8 tui-space_right-8">
+            <ng-container *ngFor="let item of listOfNewItems">
+                <div class="items-wrapper__card">
+                    <div class="items-wrapper__card__item-extra">
+                        <div class="extra-desc tui-text_body-m">{{item.desc}}</div>
+                        <button routerLink="/deals/new" tuiButton type="button" class="extra-button">More</button>
+                    </div>
+                    <div class="items-wrapper__card__item-main">
+                        <img [src]="item.imageSrc">
+                    </div>
+                    <div class="items-wrapper__card__item-desc">
+                        <div class="item-name">
+                            <h1 class="tui-text_h6">{{item.name}}</h1>
+                        </div>
+                        <ul class="item-prop tui-text_body-m">
+                            <li id="element" *ngFor="let property of item.prop | keyvalue">{{upperCaseFirstCh(property.key)}}: {{property.value}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
     </div>
 </div>

@@ -48,7 +48,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   }
 
   notEmpty(object: any) {
-    if (Object.keys(object).length > 0)
+    if (object && Object.keys(object).length > 0)
       return true;
     else
       return false;

@@ -17,7 +17,7 @@ export class ContactUsComponent implements OnInit {
   ];
   emailField = new FormControl('', [Validators.required, Validators.email]);
   textOfQuestion = new FormControl('');
-  imageSrc = '/assets/images/support/contact-us.jpg'
+  imageSrc = 'assets/images/support/contact-us.jpg'
   constructor(@Inject(TuiAlertService) protected readonly alert: TuiAlertService) { 
   }
   ngOnInit(): void {
