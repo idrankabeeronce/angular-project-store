@@ -16,7 +16,7 @@
                         "price": 9,
                         "discount": 20,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/usb-c-black.png",
+                        "imageSrc": "assets/images/products/cabels/usb-c-black.png",
                         "rating": 0.5,
                         "tag": "",
                         "ref": "A-NEO-USB-C-1256"
@@ -32,7 +32,7 @@
                         "price": 5,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/usb-c-blue.png",
+                        "imageSrc": "assets/images/products/cabels/usb-c-blue.png",
                         "rating": 0.45,
                         "tag": "", "ref": "NEO-USB-C-3555"
                     },
@@ -47,7 +47,7 @@
                         "price": 6.49,
                         "discount": 5,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/usb-c-white.png",
+                        "imageSrc": "assets/images/products/cabels/usb-c-white.png",
                         "rating": 0.2,
                         "tag": "", "ref": "NEO-USB-C-RA52"
                     },
@@ -62,7 +62,7 @@
                         "price": 6.49,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/usb-c-blue.png",
+                        "imageSrc": "assets/images/products/cabels/usb-c-blue.png",
                         "rating": 0.45,
                         "tag": "", "ref": "NEO-USB-C-3555"
                     },
@@ -77,7 +77,7 @@
                         "price": 6,
                         "discount": 20,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/usb-c-red.png",
+                        "imageSrc": "assets/images/products/cabels/usb-c-red.png",
                         "rating": 0.2,
                         "tag": "", "ref": "NEO-USB-C-FC22"
                     },
@@ -92,7 +92,7 @@
                         "price": 7,
                         "discount": 20,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/usb-c-black.png",
+                        "imageSrc": "assets/images/products/cabels/usb-c-black.png",
                         "rating": 0.2,
                         "tag": "", "ref": "NEO-USB-C-FC22"
                     },
@@ -107,7 +107,7 @@
                         "price": 7.49,
                         "discount": 20,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/usb-c-black.png",
+                        "imageSrc": "assets/images/products/cabels/usb-c-black.png",
                         "rating": 0.2,
                         "tag": "", "ref": "NEO-USB-C-FC22"
                     },
@@ -122,7 +122,7 @@
                         "price": 5,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/usb-c-turquoise.png",
+                        "imageSrc": "assets/images/products/cabels/usb-c-turquoise.png",
                         "rating": 0.45,
                         "tag": "", "ref": "NEO-USB-C-3555"
                     },
@@ -137,7 +137,7 @@
                         "price": 6.49,
                         "discount": 60,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/usb-c-black.png",
+                        "imageSrc": "assets/images/products/cabels/usb-c-black.png",
                         "rating": 0.2,
                         "tag": "", "ref": "NEO-USB-C-RA52"
                     },
@@ -152,7 +152,7 @@
                         "price": 6.49,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/usb-c-black.png",
+                        "imageSrc": "assets/images/products/cabels/usb-c-black.png",
                         "rating": 0.45,
                         "tag": "", "ref": "NEO-USB-C-3555"
                     }
@@ -172,7 +172,7 @@
                         "price": 7,
                         "discount": 15,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning_blue.png",
+                        "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0,
                         "tag": "", "ref": "NEO-LIGHTNING-A552"
                     },
@@ -187,7 +187,7 @@
                         "price": 8.59,
                         "discount": 15,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning_blue.png",
+                        "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0,
                         "tag": "", "ref": "NEO-LIGHTNING-A552"
                     },
@@ -202,7 +202,7 @@
                         "price": 9.49,
                         "discount": 15,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning_blue.png",
+                        "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0.6,
                         "tag": "", "ref": "NEO-LIGHTNING-A552"
                     },
@@ -217,7 +217,7 @@
                         "price": 7,
                         "discount": 15,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.6,
                         "tag": "", "ref": "NEO-LIGHTNING-A552"
                     },
@@ -232,7 +232,7 @@
                         "price": 8.49,
                         "discount": 15,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.6,
                         "tag": "", "ref": "NEO-LIGHTNING-A552"
                     },
@@ -247,7 +247,7 @@
                         "price": 9.49,
                         "discount": 15,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.6,
                         "tag": "", "ref": "NEO-LIGHTNING-A552"
                     },
@@ -262,7 +262,7 @@
                         "price": 15,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.6,
                         "tag": "", "ref": "NEO-LIGHTNING-FC52"
                     },
@@ -277,7 +277,7 @@
                         "price": 14.49,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.9,
                         "tag": "", "ref": "NEO-LIGHTNING-FC52"
                     },
@@ -292,7 +292,7 @@
                         "price": 15,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning.png",
+                        "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.9,
                         "tag": "", "ref": "NEO-LIGHTNING-FC52"
                     },
@@ -307,7 +307,7 @@
                         "price": 13,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning_blue.png",
+                        "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0.9,
                         "tag": "", "ref": "NEO-LIGHTNING-FC52"
                     },
@@ -322,7 +322,7 @@
                         "price": 14.49,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning_blue.png",
+                        "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0.9,
                         "tag": "", "ref": "NEO-LIGHTNING-FC52"
                     },
@@ -337,7 +337,7 @@
                         "price": 15,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning_blue.png",
+                        "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0.9,
                         "tag": "", "ref": "NEO-LIGHTNING-FC52"
                     }
@@ -356,7 +356,7 @@
                         "price": 15,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/thunderbolt-blue.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-blue.png",
                         "rating": 0.5,
                         "tag": "", "ref": "THUNDERBOLT-3-2152"
                     }, 
@@ -370,7 +370,7 @@
                         "price": 15,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/thunderbolt-black.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-black.png",
                         "rating": 0.5,
                         "tag": "", "ref": "THUNDERBOLT-3-2152"
                     }, 
@@ -384,7 +384,7 @@
                         "price": 15,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/thunderbolt-red.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-red.png",
                         "rating": 0.5,
                         "tag": "", "ref": "THUNDERBOLT-3-2152"
                     },
@@ -398,7 +398,7 @@
                         "price": 25,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/thunderbolt-blue.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-blue.png",
                         "rating": 0.5,
                         "tag": "", "ref": "THUNDERBOLT-3-2152"
                     }, 
@@ -412,7 +412,7 @@
                         "price": 25,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/thunderbolt-black.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-black.png",
                         "rating": 0.5,
                         "tag": "", "ref": "THUNDERBOLT-3-2152"
                     }, 
@@ -426,7 +426,7 @@
                         "price": 25,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/thunderbolt-red.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-red.png",
                         "rating": 0.5,
                         "tag": "", "ref": "THUNDERBOLT-3-2152"
                     }
@@ -445,7 +445,7 @@
                         "price": 4,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/audio-aux.png",
+                        "imageSrc": "assets/images/products/cabels/audio-aux.png",
                         "rating": 0.5,
                         "tag": "", "ref": "NEO-AUDIO-A5285"
                     },
@@ -459,7 +459,7 @@
                         "price": 6.4,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/audio-aux.png",
+                        "imageSrc": "assets/images/products/cabels/audio-aux.png",
                         "rating": 0.5,
                         "tag": "", "ref": "NEO-AUDIO-A5285"
                     },
@@ -473,7 +473,7 @@
                         "price": 4,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/audio-aux-angle.png",
+                        "imageSrc": "assets/images/products/cabels/audio-aux-angle.png",
                         "rating": 0.5,
                         "tag": "", "ref": "NEO-AUDIO-ARA5285"
                     },
@@ -487,7 +487,7 @@
                         "price": 6.4,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/audio-aux-angle.png",
+                        "imageSrc": "assets/images/products/cabels/audio-aux-angle.png",
                         "rating": 0.5,
                         "tag": "", "ref": "NEO-AUDIO-ARA5285"
                     },
@@ -501,7 +501,7 @@
                         "price": 15,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning_to_audio.png",
+                        "imageSrc": "assets/images/products/cabels/lightning_to_audio.png",
                         "rating": 0.85,
                         "tag": "", "ref": "NEO-L-TO-A-5801"
                     },
@@ -515,7 +515,7 @@
                         "price": 19,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/lightning_to_audio.png",
+                        "imageSrc": "assets/images/products/cabels/lightning_to_audio.png",
                         "rating": 0.85,
                         "tag": "", "ref": "NEO-L-TO-A-5801"
                     },
@@ -529,7 +529,7 @@
                         "price": 15,
                         "discount": 20,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/cabels/audio-splitter.png",
+                        "imageSrc": "assets/images/products/cabels/audio-splitter.png",
                         "rating": 0.85,
                         "tag": "", "ref": "NEO-AS-7312"
                     }
@@ -554,7 +554,7 @@
                         "price": 12,
                         "discount": 10,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/chargers/AC_to_DC.png",
+                        "imageSrc": "assets/images/products/chargers/AC_to_DC.png",
                         "rating": 0.6,
                         "tag": "", "ref": "NEO-AC-DC-W252"
                     },
@@ -569,7 +569,7 @@
                         "price": 6.49,
                         "discount": 15,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/chargers/charger_black_5w.png",
+                        "imageSrc": "assets/images/products/chargers/charger_black_5w.png",
                         "rating": 0.9,
                         "tag": "", "ref": "NEO-CH-USB-A-5W22"
                     },
@@ -584,7 +584,7 @@
                         "price": 6.49,
                         "discount": 15,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/chargers/charger_blue_5w.png",
+                        "imageSrc": "assets/images/products/chargers/charger_blue_5w.png",
                         "rating": 0.9,
                         "tag": "", "ref": "NEO-CH-USB-A-5W22"
                     }                
@@ -604,7 +604,7 @@
                         "price": 100,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/chargers/wireless_station.png",
+                        "imageSrc": "assets/images/products/chargers/wireless_station.png",
                         "rating": 1,
                         "tag": "new", "ref": "NEO-WCH-2522"
                     },
@@ -619,7 +619,7 @@
                         "price": 14,
                         "discount": 15,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/chargers/wireless_charger_blue_10w.png",
+                        "imageSrc": "assets/images/products/chargers/wireless_charger_blue_10w.png",
                         "rating": 0.9,
                         "tag": "new", "ref": "NEO-WCH-10W2"
                     },
@@ -634,7 +634,7 @@
                         "price": 14,
                         "discount": 15,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/chargers/wireless_charger_black_10w.png",
+                        "imageSrc": "assets/images/products/chargers/wireless_charger_black_10w.png",
                         "rating": 1,
                         "tag": "new", "ref": "NEO-WCH-10W2"
                     },
@@ -648,7 +648,7 @@
                         "price": 19,
                         "discount": 20,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/chargers/magnetic_wireless_charger.png",
+                        "imageSrc": "assets/images/products/chargers/magnetic_wireless_charger.png",
                         "rating": 1,
                         "tag": "new", "ref": "NEO-WCH-MG22"
                     }
@@ -668,7 +668,7 @@
                         "price": 16,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/chargers/fast_charger_20w_blue.png",
+                        "imageSrc": "assets/images/products/chargers/fast_charger_20w_blue.png",
                         "rating": 0.9,
                         "tag": "", "ref": "NEO-FCH-20W2"
                     },
@@ -683,7 +683,7 @@
                         "price": 16,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/chargers/fast_charger_20w_white.png",
+                        "imageSrc": "assets/images/products/chargers/fast_charger_20w_white.png",
                         "rating": 0.9,
                         "tag": "", "ref": "NEO-FCH-20W2"
                     },
@@ -698,7 +698,7 @@
                         "price": 24,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/chargers/fast_charger_20w_blue_2.png",
+                        "imageSrc": "assets/images/products/chargers/fast_charger_20w_blue_2.png",
                         "rating": 0.9,
                         "tag": "new", "ref": "NEO-FCH-2P-20W2"
                     },
@@ -713,7 +713,7 @@
                         "price": 24,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "/assets/images/products/chargers/fast_charger_20w_white_2.png",
+                        "imageSrc": "assets/images/products/chargers/fast_charger_20w_white_2.png",
                         "rating": 0.9,
                         "tag": "new", "ref": "NEO-FCH-2P-20W2"
                     }   
