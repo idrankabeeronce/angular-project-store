@@ -1,6 +1,6 @@
 
 
-import { ChangeDetectionStrategy, Component, Inject, OnInit, OnDestroy } from '@angular/core';
+import { Component, Inject, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TuiAlertService, TuiNotification } from '@taiga-ui/core';
 import { Subscription } from 'rxjs';
@@ -55,8 +55,8 @@ export class GoodsComponent implements OnInit, OnDestroy {
   constructor(private addToCartService: AddToCartService, private router: Router,
     private Route: ActivatedRoute, @Inject(TuiAlertService) protected readonly alert: TuiAlertService) {
     // change view when resolution changed
-    window.onresize = (event) => {
-      if (window.innerWidth < 600) {
+    window.onresize = () => {
+      if (window.innerWidth < 800) {
         this.changeView = true;
         this.svgView = this.tabsSrc;
       } else {
@@ -72,7 +72,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
     this.dataOfItems = [];
     this.searchValueLabel = String(this.Route.snapshot.queryParamMap.get("search")?.toLocaleLowerCase());
     // init view changed based on resolution
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 800) {
       this.changeView = true;
       this.svgView = this.tabsSrc;
     }

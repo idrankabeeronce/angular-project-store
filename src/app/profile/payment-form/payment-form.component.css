@@ -34,3 +34,21 @@
 .close-button:hover {
     background: rgba(255,255,255,.5);
 }
+
+@media (max-width: 800px) {
+    .close-button {
+        filter: invert(1);
+    }
+    .wrapper {
+        justify-content: normal;
+    align-items: normal;
+    }
+    .form {
+        padding: 5rem 2rem 2rem 2rem;
+        border-radius: 0;
+        width: 100%;
+    }
+    .extra tui-input-expire, .extra tui-input-cvc {
+        max-width: none;
+    }
+}

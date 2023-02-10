@@ -4,11 +4,9 @@
     --tui-link-hover: #ccc;
     --tui-link-active: #fff;
 }
-
 .box {
     width: 100%;
-    height: 350px;
-    background-color: var(--tui-primary);
+    height: 500px;
     display: flex;
     align-items: center;
     touch-action: none;
@@ -18,7 +16,7 @@
 .button-absolute {
     position: absolute;
     z-index: 2;
-    border-radius: 25%;
+    border-radius: 50%;
 }
 
 @media only screen and (max-device-width: 1000px) {
@@ -28,15 +26,11 @@
 }
 
 .right {
-    right: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    right: 15%;
 }
 
 .left {
-    left: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    left: 15%;
 }
 
 .items {
@@ -44,7 +38,14 @@
     display: flex;
     transition: all 1.5s ease-out;
 }
-
+.items-carousel { 
+    transition: all 1s ease-out 0s;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 60%;
+    gap: 2rem;
+}
 .box img {
     width: 100%;
     height: 350px;
@@ -54,15 +55,29 @@
 
 .box-item {
     min-width: 100%;
-    height: 350px;
+    height: 500px;
     cursor: pointer;
+    background: var(--tui-base-01);
     text-decoration: none;
     user-select: none;
+    box-sizing: border-box;
+    background-size: cover;
     -moz-user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
+    opacity: .5;
 }
-
+.box-item__image img {
+    object-fit: cover;
+}
+.box-item__desc {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    height: 150px;
+}
+.active { 
+    opacity: 1;
+}
 .form-link {
     height: 40px;
     max-height: 40px;
@@ -78,49 +93,6 @@
     max-height: 40px;
     overflow: hidden;
 }
-
-.item--2,
-.item--1,
-.item-0,
-.item-1,
-.item-2,
-.item-3,
-.item-4,
-.item-5 {
-    padding: 0 5rem 0 5rem;
-    box-sizing: border-box;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item-0,
-.item-4,
-.item-5 {
-    background-image: url("^assets/images/swipe-wrapper/image_1.jpg");
-    background-position-y: 50%;
-    justify-content: start;
-}
-
-.item-1 {
-    background-image: url("^assets/images/swipe-wrapper/image_2.jpeg");
-}
-/* or do:   ~/../ */
-.item-2 {
-    background-image: url("^assets/images/swipe-wrapper/image_3.jpg");
-    justify-content: start;
-    background-position-y: 50%;
-}
-
-.item-3,
-.item--1,
-.item--2 {
-    background-image: url("^assets/images/swipe-wrapper/image_4.jpg");
-    background-position-y: 50%;
-}
-
-
 .text-header {
     font-weight: bold;
 }
@@ -140,31 +112,23 @@
 }
 
 .item-scroll-1 {
-    transform: translate(-100%);
+    transform: translate(calc(-100% - 2rem));
 }
 
 .item-scroll-2 {
-    transform: translate(-200%);
+    transform: translate(calc(-200% - 4rem));
 }
 
 .item-scroll-3 {
-    transform: translate(-300%);
+    transform: translate(calc(-300% - 6rem));
 }
 
 .item-scroll-4 {
-    transform: translate(-400%);
+    transform: translate(calc(-400% - 8rem));
 }
 
 .item-scroll-5 {
-    transform: translate(-500%);
-}
-
-.item-scroll-6 {
-    transform: translate(-600%);
-}
-
-.item-scroll-7 {
-    transform: translate(-700%);
+    transform: translate(calc(-500% - 10rem));
 }
 
 .main-container {
@@ -207,15 +171,6 @@
     min-width: calc(250px + .5rem);
     min-height: 350px;
 }
-
-.item:first-child {
-    padding-left: .5rem;
-}
-
-.item:last-child {
-    padding-right: .5rem;
-}
-
 .tag {
     position: absolute;
     margin-top: 10px;
@@ -258,17 +213,28 @@
     align-items: center;
     justify-content: space-between;
 }
-
+.item-rate {
+    font-size: 1.5rem;
+}
 .rating-flex {
     display: flex;
     align-items: center;
     color: #fb9e20;
 }
 
-.some-container {
+.some-container, .carousel-container {
+    
     margin-top: 2.5rem;
 }
-
+.carousel-container {
+    height: calc(500px + 3rem);
+}
+.carousel-layout {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+}
 .gaped {
     gap: 1.5rem;
 }
@@ -324,7 +290,7 @@
 .items-wrapper__card {
     display: flex;
 
-    background: var(--tui-base-02);
+    background: var(--tui-base-01);
     box-shadow: 0.1rem 0.25rem .5rem rgb(0 0 0 / 10%);
 
     padding: 1rem;
@@ -427,27 +393,7 @@
         width: auto;
         margin: 0 2rem;
     }
-
-    .item--2,
-    .item--1,
-    .item-0,
-    .item-1,
-    .item-2,
-    .item-3,
-    .item-4,
-    .item-5 {
-        padding: 0 1rem 0 1rem;
-    }
-
-    .item--2,
-    .item--1,
-    .item-1,
-    .item-3 {
-
-        text-align: center;
-    }
-
-    .item-2 {
-        background-position-x: 50%;
+    .box-item__desc {
+        padding: .5rem 1rem;
     }
 }

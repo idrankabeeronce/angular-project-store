@@ -82,7 +82,7 @@
     </div>
     <ng-template #login>
         <button tuiButton (click)="goLogIn()" routerLinkActive type="button" appearance="icon" size="m">
-            <p class="tui-text_body-m">Log In</p>
+            <p style="margin: 0" class="tui-text_body-m">Log In</p>
         </button>
     </ng-template>
 </div>
@@ -93,11 +93,13 @@
 
 
 <ng-template tuiMode="onDark" #basd>
+    <div style="display: flex; align-items: center; gap: 1rem;">
     <button (click)="getMenu()" tuiIconButton type="button" appearance="icon" icon="tuiIconMenuLarge">
     </button>
     <a class="home-h1" routerLink="/" routerLinkActive="active" (click)="resetActiveItemIndex()">
         <h1 class="tui-text_body-m title">NEO</h1>
     </a>
+    </div>
     <div [style]="blockLayot_menu" class="block-wrapper">
 
         <tui-scrollbar [style]="menuStyle" class="side-menu-wrapper">

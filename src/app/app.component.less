@@ -1,4 +1,7 @@
-:host {
+
+
+
+:root {
     --tui-primary: #333; // primary buttons, background
     --tui-primary-hover: #444; // primary buttons hover
     --tui-primary-active: #222; // primary buttons pressed
@@ -6,4 +9,24 @@
     --tui-secondary: #555;
     --tui-secondary-hover: #666; 
     --tui-secondary-active: #333;
+}
+@import '@taiga-ui/core/styles/taiga-ui-local.less';
+[tuiWrapper][tuiWrapper][data-appearance='primaryW'] {
+    background: #fff;
+    color: #1b1f3b;
+ 
+    .wrapper-hover({
+        background: #f5f5f5;
+    });
+ 
+    .wrapper-active({
+        background: #f0f0f0;
+    });
+ 
+    .wrapper-disabled({
+        background: #c9c9c9;
+    });
+}
+[tuiWrapper][data-appearance='primaryW']:after {
+    color: var(--tui-base-03);
 }

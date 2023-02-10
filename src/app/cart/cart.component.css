@@ -2,9 +2,20 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-.main-container__content {
+
+.main-container__wrapper {
+    display: grid;
     max-width: 900px;
-    margin: 2rem auto 0 auto;
+    gap: 2rem;
+    margin: 2rem auto;
+    background: var(--tui-base-01);
+    border-radius: var(--tui-radius-s);
+    border: 1px solid var(--tui-base-03);
+    box-shadow: 0 0.125rem 0.1875rem rgb(0 0 0 / 10%);
+
+}
+.content {
+    padding: 1.2rem 1rem;
 }
 .main-container__header {
     border-bottom: solid 1px var(--tui-base-04);
@@ -13,44 +24,67 @@
     border-bottom: solid 1px var(--tui-base-04);
     padding: 50px 0;
 }
+
 .tui-table__td_flex {
     display: flex;
     align-items: center;
-    gap: 1rem;  
+    gap: 1rem;
 }
+
 .edit-amount-field {
     display: inline-flex;
     border: 1px solid black;
-    
+
     border-radius: var(--tui-radius-m);
     align-items: center;
     height: 40px;
 }
+
 .tui-table__td_old-price {
-    text-decoration:line-through;
+    text-decoration: line-through;
 }
-  
+
 .tui-table__td_new-price {
     color: rgb(200, 0, 0)
-    
 }
+
 .item-img {
     margin-top: 25px;
     height: 150px;
     width: 150px;
     background-size: cover;
 }
+
 .bottom-container-field {
     display: flex;
     align-items: center;
-    justify-content: end;
 }
+
 .aside-container {
+    flex: 1;
     text-align: end;
 }
-.aside-container__header, .aside-container__desc, .aside-container__button {
+
+.aside-container__header,
+.aside-container__desc,
+.aside-container__button {
     margin: .5rem 0;
 }
-.aside-container__desc_grey {
+
+.aside-container__desc {
     color: var(--tui-text-02);
+}
+@media (max-width: 800px) {
+    .main-container__wrapper {
+        margin: 0;
+    }
+    .aside-container {
+        text-align: center;
+    }
+    .aside-container button {
+        width: 100%;
+    }
+    .content {
+        overflow: auto;
+    }
 }

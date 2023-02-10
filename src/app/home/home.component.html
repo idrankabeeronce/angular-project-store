@@ -1,38 +1,5 @@
-<!-- BOX HEADER -->
-<div class="box tui-text_body-l" (tuiSwipe)="onSwipe($event)">
-    <button class="button-absolute left" tuiIconButton appearance="flat" icon="tuiIconChevronLeftLarge"
-        (click)="scrollItem('right')"></button>
-    <button class="button-absolute right" tuiIconButton appearance="flat" icon="tuiIconChevronRightLarge"
-        (click)="scrollItem('left')"></button>
-    <div class="items" [style]="smooth" [ngClass]="background">
-        <a routerLink="/deals/seasonal-deals" class="box-item item--2">
-            <div class="tui-text_h1 text-header white">SEASONAL ARMENIA</div>
-        </a>
-        <a routerLink="/deals/seasonal-deals" class="box-item item--1">
-            <div class="tui-text_h1 text-header white">SEASONAL ARMENIA</div>
-        </a>
-        <!-- extra -->
-        <a tuiLink routerLink="/products" class="box-item item-0">
-            <div class="tui-text_h1 text-header black">PRODUCTS THAT MAKES <br> YOUR LIFE EASIER</div>
-        </a>
-        <a routerLink="/deals/seasonal-deals" class="box-item item-1">
-            <div class="tui-text_h1 text-header black">GET GIFTS FOR YOUR FAMILY</div>
-        </a>
-        <a routerLink="/deals/seasonal-deals" class="box-item item-2">
-            <div class="tui-text_h1 text-header white">PLANNING A TRIP<br>NEO WITH YOU</div>
-        </a>
-        <a routerLink="/deals/seasonal-deals" class="box-item item-3">
-            <div class="tui-text_h1 text-header white">SEASONAL ARMENIA</div>
-        </a>
-        <!-- extra -->
-        <a tuiLink routerLink="/products" class="box-item item-5">
-            <div class="tui-text_h1 text-header black">PRODUCTS THAT MAKES <br> YOUR LIFE EASIER</div>
-        </a>
-        <a tuiLink routerLink="/products" class="box-item item-6">
-            <div class="tui-text_h1 text-header black">PRODUCTS THAT MAKES <br> YOUR LIFE EASIER</div>
-        </a>
-    </div>
-</div>
+<!-- CAROUSEL HEADER -->
+<div></div>
 <!-- BODY CONTENT -->
 <div class="main-container">
     <!-- BEST SELLERS -->
@@ -56,34 +23,8 @@
                         </a>
                         <div class="extra tui-text_body-m-2">
                             <div>${{item.price}}</div>
-                            <div class="rating-flex">
-                                <ng-container *ngIf="item.rating > 0 || item.rating >= 0.2; else srcNull">
-                                    <tui-svg *ngIf="item.rating >= 0.2; else srcHalf" [src]="ratingSrcFull"></tui-svg>
-                                </ng-container>
 
-                                <ng-container *ngIf="item.rating > 0.2 || item.rating >= 0.4; else srcNull">
-                                    <tui-svg *ngIf="item.rating >= 0.4; else srcHalf" [src]="ratingSrcFull"></tui-svg>
-                                </ng-container>
-
-                                <ng-container *ngIf="item.rating > 0.4 || item.rating >= 0.6; else srcNull">
-                                    <tui-svg *ngIf="item.rating >= 0.6; else srcHalf" [src]="ratingSrcFull"></tui-svg>
-                                </ng-container>
-
-                                <ng-container *ngIf="item.rating > 0.6 || item.rating >= 0.8; else srcNull">
-                                    <tui-svg *ngIf="item.rating >= 0.8; else srcHalf" [src]="ratingSrcFull"></tui-svg>
-                                </ng-container>
-
-                                <ng-container *ngIf="item.rating > 0.8 || item.rating == 1; else srcNull">
-                                    <tui-svg *ngIf="item.rating == 1; else srcHalf" [src]="ratingSrcFull"></tui-svg>
-                                </ng-container>
-
-                            </div>
-                            <ng-template #srcNull>
-                                <tui-svg [src]="ratingSrcNull"></tui-svg>
-                            </ng-template>
-                            <ng-template #srcHalf>
-                                <tui-svg [src]="ratingSrcHalf"></tui-svg>
-                            </ng-template>
+                            <ngb-rating [max]="5" class="item-rate" [readonly]="true" [rate]="(5 * item.rating)"></ngb-rating>
                         </div>
 
                     </div>
@@ -105,6 +46,29 @@
                 </a>
             </ng-container>
         </div>
+    </div>
+    <!-- CAROUSEL PRODUCT SOLUTIONS -->
+    <div class="carousel-container">
+        <div class="tui-text_h5 label tui-space_bottom-5">Neo Fits Your Life</div>
+        <div class="carousel-layout">
+        <div class="box tui-text_body-l" (tuiSwipe)="onSwipe($event)">
+            <button class="button-absolute left" tuiIconButton appearance="flat" icon="tuiIconChevronLeftLarge"
+                (click)="scrollItem('right')"></button>
+            <button class="button-absolute right" tuiIconButton appearance="flat" icon="tuiIconChevronRightLarge"
+                (click)="scrollItem('left')"></button>
+            <div class="items items-carousel" [style]="smooth" [ngClass]="background">
+                <ng-container *ngFor="let image of carouselImages; let index=index">
+                    <div [routerLink]="image.ref" class="box-item" [ngClass]="index === indexCurrent? 'active' : ''">
+                        <div class="box-item__image"><img [src]="image.imageSrc"></div>
+                        <div class="box-item__desc">
+                            <h2 class="tui-text_h6">{{image.title}}</h2>
+                            <p class="tui-text_body-m-2">{{image.desc}}</p>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            
+        </div></div>
     </div>
     <!-- NEW PRODUCTS -->
     <div class="new-items-container">

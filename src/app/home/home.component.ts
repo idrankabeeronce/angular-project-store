@@ -1,4 +1,4 @@
-import { KeyValuePipe } from '@angular/common';
+
 import { Component, OnInit } from '@angular/core';
 import { TuiSwipe } from '@taiga-ui/cdk';
 import data from "src/assets/content/products/products.json";
@@ -17,6 +17,43 @@ type itemType = {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  scrollActive = false; // true if carousel is active by user
+  carouselImages = [{
+    imageSrc: 'assets/images/swipe-wrapper/image_3.jpg',
+    title: 'Travel Solutions',
+    desc: 'Keep your devices connected while you keep on the go. Reliable, effective products are necessities when on the go, and our products are perfect accessories for any excursion.',
+    ref: '/'
+  },{
+    imageSrc: 'assets/images/swipe-wrapper/image_2.jpeg',
+    title: 'Home Solutions',
+    desc: "Whether it's being productive, watching videos, or looking up cooking recipes, spend more time relaxed at home with our products.",
+    ref: '/'
+  },{
+    imageSrc: 'assets/images/swipe-wrapper/image_1.jpg',
+    title: 'Business Solitions',
+    desc: 'Our Hubs & Adapters help to maintain productivity, inspire creativity, and encourage collaboration. Get even more done in the office; easier than ever.',
+    ref: '/'
+  },{
+    imageSrc: 'assets/images/swipe-wrapper/image_3.jpg',
+    title: 'Travel Solutions',
+    desc: 'Keep your devices connected while you keep on the go. Reliable, effective products are necessities when on the go, and our products are perfect accessories for any excursion.',
+    ref: '/'
+  },{
+    imageSrc: 'assets/images/swipe-wrapper/image_2.jpeg',
+    title: 'Home Solutions',
+    desc: "Whether it's being productive, watching videos, or looking up cooking recipes, spend more time relaxed at home with our products.",
+    ref: '/'
+  },{
+    imageSrc: 'assets/images/swipe-wrapper/image_1.jpg',
+    title: 'Business Solitions',
+    desc: 'Our Hubs & Adapters help to maintain productivity, inspire creativity, and encourage collaboration. Get even more done in the office; easier than ever.',
+    ref: '/'
+  },{
+    imageSrc: 'assets/images/swipe-wrapper/image_3.jpg',
+    title: 'Travel Solutions',
+    desc: 'Keep your devices connected while you keep on the go. Reliable, effective products are necessities when on the go, and our products are perfect accessories for any excursion.',
+    ref: '/'
+  }];
   styleOfCards = [
     {
       style: 'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("assets/images/support/building.jpg")',
@@ -41,17 +78,7 @@ export class HomeComponent implements OnInit {
   listOfNewItems: any = [];
   indexCurrent = 2;
   background = `item-scroll-${this.indexCurrent}`;
-  smooth = `transition: all 1.5s ease-out`;
-  ratingSrcNull = "tuiIconStarLarge";
-  ratingSrcFull = "tuiIconStarFilledLarge";
-  ratingSrcHalf = `<svg focusable="false" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-      <linearGradient id="grad">
-        <stop offset="50%" stop-color="currentColor"/>
-        <stop offset="50%" stop-color="transparent"/>
-      </linearGradient>
-    </defs>
-    <g id="tuiIconStarFilledLarge" xmlns="http://www.w3.org/2000/svg"><svg fill="url(#grad)" height="1.5em" overflow="visible" viewBox="0 0 24 24" width="1.5em" x="50%" y="50%"><svg x="-12" xmlns="http://www.w3.org/2000/svg" y="-12"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></svg></g></svg>`;
+  smooth = `transition: all .6s ease-out`;
   intervalId: any;
 
   constructor() {
@@ -136,18 +163,18 @@ export class HomeComponent implements OnInit {
 
   }
   scrollItem(direction: string) {
-
-    this.smooth = `transition: all 1s ease-out`;
+    if (!this.scrollActive) {
+    this.smooth = `transition: all .6s ease-out`;
     if (direction == 'left') {
-      if (this.indexCurrent < 6) {
+      if (this.indexCurrent < 5) {
         this.indexCurrent++;
         this.background = `item-scroll-${this.indexCurrent}`;
-        if (this.indexCurrent >= 6) {
+        if (this.indexCurrent >= 5) {
           setTimeout(() => {
             this.indexCurrent = 2;
             this.smooth = `transition: 0s`;
             this.background = `item-scroll-${this.indexCurrent}`;
-          }, 1000)
+          }, 600)
         }
       }
     } else {
@@ -156,28 +183,31 @@ export class HomeComponent implements OnInit {
         this.background = `item-scroll-${this.indexCurrent}`;
         if (this.indexCurrent <= 1) {
           setTimeout(() => {
-            this.indexCurrent = 5;
+            this.indexCurrent = 4;
             this.smooth = `transition: 0s`;
             this.background = `item-scroll-${this.indexCurrent}`;
-          }, 1000)
+          }, 600)
         }
       }
     }
     clearInterval(this.intervalId);
     this.intervalId = setInterval(() => {
       this.autoScroll();
-    }, 6500)
-
+    }, 4500);
+    this.scrollActive = true;
+    setTimeout(() => {this.scrollActive = false;},600);
+    }
+    
   }
   autoScroll() {
     this.indexCurrent++;
-    this.smooth = `transition: all 1s ease-out`;
+    this.smooth = `transition: all .6s ease-out`;
     this.background = `item-scroll-${this.indexCurrent}`;
-    if (this.indexCurrent === 6)
+    if (this.indexCurrent === 5)
       setTimeout(() => {
         this.indexCurrent = 2;
         this.smooth = `transition: 0s`
         this.background = `item-scroll-${this.indexCurrent}`;
-      }, 1000);
+      }, 600);
   }
 }

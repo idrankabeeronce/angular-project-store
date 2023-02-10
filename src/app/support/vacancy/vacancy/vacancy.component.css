@@ -1,5 +1,7 @@
 .main-container {
-    padding: 0 20px;
+    padding: 1.5rem 1rem;
+    border-radius: var(--tui-radius-s);
+    background: var(--tui-base-01);
     max-width: 1200px;
     margin: 2rem auto;
 }
@@ -20,7 +22,11 @@
     display: grid;
     gap: 2rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+    .main-container {
+        margin: 0;
+        border-radius: 0;
+    }
     .group {
         display: block;
     }

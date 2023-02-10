@@ -9,7 +9,7 @@
     color: var(--tui-text-02);
 }
 .content-container {
-    background: var(--tui-base-04);
+    background: var(--tui-base-03);
 }
 .border {
     border-radius: var(--tui-radius-s);
@@ -41,6 +41,7 @@
     display: inline-block;
     width: 100%;
     height: 400px;
+    padding: 1rem .5rem;
     text-align: center;
     background: white;
 }
@@ -56,7 +57,14 @@
 .contacts-conent h3 {
     color: var(--tui-base-08);
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+    .main-wrapper {
+        margin: 0;
+        padding: 0;
+    }
+    .content-container {
+        background: transparent;
+    }
     .contacts-wrapper {
         display: block;
     }

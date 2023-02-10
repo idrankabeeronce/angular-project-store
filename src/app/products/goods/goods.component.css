@@ -15,7 +15,7 @@
 .flex-block {
     display: flex;
     gap: .5rem;
-    width: 100%;
+    flex: 1;
 }
 .flex-between {
     justify-content: space-between;
@@ -30,16 +30,24 @@
 .settings-wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
+
 }
 .flex-end {
     display: flex;
-    justify-content: end;
+    justify-content: space-around;
+    gap: 1rem;
 }
 .flex-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+}
+.control-button {
+    background: var(--tui-base-01);
+    color: var(--tui-text-01);
+    box-shadow: 0 0.125rem 0.1875rem rgb(0 0 0 / 10%);
 }
 .search-bar {
     width: 100%;   
@@ -50,43 +58,8 @@
     
     box-sizing: border-box;
 }
-@media (max-width: 900px) {
-    .settings-wrapper {
-        display: block;
-    }
-    .flex-end {
-        display: block;
-    }
-    .flex-block {
-        margin: 0;
-        width: 100%!important;
-        margin-bottom: 1.25rem;
-    }
-    .search-param {
-        width: calc(50% - 0.75rem);
-    }
-    .slider {
-        margin: 0;
-        width: 100%!important;;
-        margin-bottom: 1.25rem;
-    }
-    .view {
-        margin: 0;
-        margin-bottom: 1.25rem;
-    }
-    .view button{
-        margin: 0;
-        width: 100%!important;
-    }
-    .sort button{
-        margin: 0;
-        width: 100%!important;
-        margin-bottom: 1.25rem;
-    }
-}
 .slider {
-    width: 12.5rem;
-    margin-right: 1.25rem;
+    min-width: 12.5rem;
 }
 .content-wrapper {
     max-width: 1200px;
@@ -109,7 +82,7 @@
     cursor: pointer;
     height: 300px;
     
-    background: var(--tui-base-02);
+    background: var(--tui-base-01);
     border: 0;
     display: flex;
     align-items: center;
@@ -307,6 +280,41 @@
     }
     .item-card-grid {
         width: calc(33.4vw - 20px - 1rem);
+    }
+}
+
+@media (max-width: 900px) {
+    .settings-wrapper {
+        display: block;
+    }
+    .flex-end {
+        display: block;
+    }
+    .flex-block {
+        margin: 0;
+        flex: 1;
+        margin-bottom: 1.25rem;
+    }
+    .search-param {
+        width: calc(50% - 0.75rem);
+    }
+    .slider {
+        margin: 0;
+        width: 100%!important;;
+        margin-bottom: 1.25rem;
+    }
+    .view {
+        margin: 0;
+        margin-bottom: 1.25rem;
+    }
+    .view button{
+        margin: 0;
+        width: 100%!important;
+    }
+    .sort button{
+        margin: 0;
+        width: 100%!important;
+        margin-bottom: 1.25rem;
     }
 }
 @media (max-width: 750px) {

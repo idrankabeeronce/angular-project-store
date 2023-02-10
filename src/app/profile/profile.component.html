@@ -16,7 +16,7 @@
                 
                 
                 <div class="profile-form__body_shipping">
-                    <div class="card">
+                    <div class="card-form">
                         <ng-container
                             *ngIf="notEmpty(currentUser.shippingInformation) && currentUser.shippingInformation.country !== null else addSI">
                             <div class="card__desc">{{currentUser.shippingInformation}}</div>
@@ -38,7 +38,7 @@
 
                 
                 <div class="profile-form__body_payment">
-                    <div class="card">
+                    <div class="card-form">
                         <ng-container
                             *ngIf="notEmpty(currentUser.paymentInformation) 
                             && currentUser.paymentInformation.card !== '' 

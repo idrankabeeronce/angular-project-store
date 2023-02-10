@@ -28,11 +28,6 @@
    -webkit-user-drag: none;
    transform: translate(100%);
 }
-@media (max-width: 400px) {
-    .shopping-cart-wrapper {
-        width: 100%;
-    }
-}
 .shopping-cart-wrapper-open {
     transform: translate(0);
 }
@@ -115,6 +110,11 @@
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+}
+@media (max-width: 800px) {
+    .shopping-cart-wrapper {
+        width: 100%;
+    }
 }
 @media (max-height: 350px) {
     .list-of-items-scrollbar {

@@ -58,7 +58,7 @@
     gap: 1.5rem;
     padding: 1rem;
 }
-.card {
+.card-form {
     border-radius: var(--tui-radius-m);
     border: 1px solid black;
     display: flex;
@@ -70,7 +70,7 @@
     color: var(--tui-base-01);
     background-color: var(--tui-base-09);
 }
-@media (max-width: 400px) {
+@media (max-width: 800px) {
     .profile-wrapper {
         max-width: 100%;
     }

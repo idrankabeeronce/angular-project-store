@@ -3,7 +3,7 @@
 </div>
 <div class="content-wrapper">
     <div class="settings-wrapper tui-space_left-5 tui-space_right-5 tui-space_bottom-10 tui-space_top-10">
-        <div class="flex-block tui-space_right-5">
+        <div class="flex-block">
         <div class="search-bar ">
             <tui-input [tuiTextfieldCustomContent]="search" [tuiTextfieldCleaner]="true" [(ngModel)]="searchValue">
                 Search... <input tuiTextfield />
@@ -20,20 +20,20 @@
         </ng-container>
         </div>
         <div class="flex-end">
-        <tui-input-slider class="tui-space_right-5" tuiTextfieldSize="l" class="slider"
+        <tui-input-slider tuiTextfieldSize="l" class="slider"
             [tuiTextfieldCustomContent]="inputCustomContent" [tuiTextfieldLabelOutside]="true" [min]="5" [max]="20"
             [quantum]="1" [(ngModel)]="maxLength" (ngModelChange)="changeMaxLength()">
         </tui-input-slider>
 
         <ng-template #inputCustomContent>Displayed amount</ng-template>
-        <div class="view tui-space_right-5">
-            <button tuiButton appearance="outline" (click)="changeDisplay()">
+        <div class="view">
+            <button class="control-button" tuiButton appearance="primaryW" (click)="changeDisplay()">
                 <tui-svg [src]="svgView"></tui-svg>
             </button>
 
         </div>
         <div class="sort">
-            <button #host tuiButton appearance="outline" iconRight="tuiIconChevronDown" [tuiDropdown]="dropdownContent"
+            <button class="control-button" #host tuiButton appearance="primaryW" iconRight="tuiIconChevronDown" [tuiDropdown]="dropdownContent"
                 [tuiDropdownManual]="open" (click)="onClick()">
                 {{currentSort}}
             </button>

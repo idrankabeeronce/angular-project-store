@@ -83,7 +83,9 @@ export class CheckoutComponent implements OnInit, OnDestroy {
     this.subTotalDiscount = Math.round((this.subTotal - this.subTotal * this.codeDiscount / 100) * 100) / 100;
     this.getTotal();
   }
-
+  getRound(value:number) {
+    return Math.round(value * 100) / 100;
+  }
   // get total sum of shopping items, shipping and discount
   getTotal() {
     let shippingPrice = 0;

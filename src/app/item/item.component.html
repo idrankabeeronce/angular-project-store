@@ -19,34 +19,8 @@
                     <!--name-->
                     <div>{{currentItem.name}}</div>
                     <!--rating-->
-                    <div class="rating-flex">
-                        <ng-container *ngIf="currentItem.rating > 0 || currentItem.rating >= 0.2; else srcNull">
-                            <tui-svg *ngIf="currentItem.rating >= 0.2; else srcHalf" [src]="ratingSrcFull"></tui-svg>
-                        </ng-container>
-
-                        <ng-container *ngIf="currentItem.rating > 0.2 || currentItem.rating >= 0.4; else srcNull">
-                            <tui-svg *ngIf="currentItem.rating >= 0.4; else srcHalf" [src]="ratingSrcFull"></tui-svg>
-                        </ng-container>
-
-                        <ng-container *ngIf="currentItem.rating > 0.4 || currentItem.rating >= 0.6; else srcNull">
-                            <tui-svg *ngIf="currentItem.rating >= 0.6; else srcHalf" [src]="ratingSrcFull"></tui-svg>
-                        </ng-container>
-
-                        <ng-container *ngIf="currentItem.rating > 0.6 || currentItem.rating >= 0.8; else srcNull">
-                            <tui-svg *ngIf="currentItem.rating >= 0.8; else srcHalf" [src]="ratingSrcFull"></tui-svg>
-                        </ng-container>
-
-                        <ng-container *ngIf="currentItem.rating > 0.8 || currentItem.rating == 1; else srcNull">
-                            <tui-svg *ngIf="currentItem.rating == 1; else srcHalf" [src]="ratingSrcFull"></tui-svg>
-                        </ng-container>
-
-                    </div>
-                    <ng-template #srcNull>
-                        <tui-svg [src]="ratingSrcNull"></tui-svg>
-                    </ng-template>
-                    <ng-template #srcHalf>
-                        <tui-svg [src]="ratingSrcHalf"></tui-svg>
-                    </ng-template>
+                    <ngb-rating [max]="5" class="item-rate" [rate]="(5 * currentItem.rating)"></ngb-rating>
+                        
                     <!--price-->
 
                     <div style="align-items: end" class="flex gap-1">

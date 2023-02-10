@@ -2,78 +2,84 @@
     <div class="main-container__header">
         <h1 class="tui-text_h3">CART</h1>
     </div>
-    <table class="tui-table main-container__content">
-        <tbody>
-            <tr class="tui-table__tr">
-                <th class="tui-table__th tui-table__th_first">Product</th>
-                <th class="tui-table__th">Price</th>
-                <th class="tui-table__th">Amount</th>
-                <th class="tui-table__th tui-table__th_last">Total</th>
-            </tr>
-            <ng-container *ngFor="let item of shoppingList; let i = index">
-                <tr class="tui-table__tr">
-                    <td class="tui-table__td tui-table__td_first">
-                        <div class="tui-table__td_flex">
-                            <img class="item-img" [src]="item.imageSrc">
-                            <div class="prop-field">
-                                <p>{{item.name}}</p>
-                                <ng-container *ngFor="let key of item.keysOfProperty; let i = index">
-                                    <p class="tui-table__td_font-size_s">{{upperCase(key)}} :
-                                        {{item.valuesOfProperty[i]}}{{item.suffixOfProperty[i]}}</p>
+    <div class="main-container__wrapper">
+        <div class="content">
+            <table class="tui-table tui-table__td_text_overflow">
+                <tbody>
+                    <tr class="tui-table__tr">
+                        <th class="tui-table__th tui-table__th_first">Product</th>
+                        <th class="tui-table__th">Price</th>
+                        <th class="tui-table__th">Amount</th>
+                        <th class="tui-table__th tui-table__th_last">Total</th>
+                    </tr>
+                    <ng-container *ngFor="let item of shoppingList; let i = index">
+                        <tr class="tui-table__tr">
+                            <td class="tui-table__td tui-table__td_first">
+                                <div class="tui-table__td_flex">
+                                    <img class="item-img" [src]="item.imageSrc">
+                                    <div class="prop-field">
+                                        <p>{{item.name}}</p>
+                                        <ng-container *ngFor="let key of item.keysOfProperty; let i = index">
+                                            <p class="tui-table__td_font-size_s">{{upperCase(key)}} :
+                                                {{item.valuesOfProperty[i]}}{{item.suffixOfProperty[i]}}</p>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="tui-table__td tui-table__td_align_center">
+                                <ng-container *ngIf="item.price === item.actualPrice; else discount">
+                                    <span>${{item.price}}</span>
                                 </ng-container>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="tui-table__td tui-table__td_align_center">
-                        <ng-container *ngIf="item.price === item.actualPrice; else discount">
-                            <span>${{item.price}}</span>
-                        </ng-container>
-                        <ng-template #discount>
-                            <span class="tui-table__td_new-price tui-space_right-1">${{item.actualPrice}}</span><span
-                                class="tui-table__td_old-price">${{item.price}}</span>
-                        </ng-template>
-                    </td>
+                                <ng-template #discount>
+                                    <span
+                                        class="tui-table__td_new-price tui-space_right-1">${{item.actualPrice}}</span><span
+                                        class="tui-table__td_old-price">${{item.price}}</span>
+                                </ng-template>
+                            </td>
 
-                    <td class="tui-table__td tui-text_h6 tui-table__td_align_center">
-                        <div class="edit-amount-field">
-                            <ng-container *ngIf="item.amount > 1; else remove">
-                                <button tuiMode="onLight" class="" tuiIconButton type="button" appearance="icon"
-                                    icon="tuiIconMinus" (click)="changeAmount(i, false)"></button>
-                            </ng-container>
+                            <td class="tui-table__td tui-text_h6 tui-table__td_align_center">
+                                <div class="edit-amount-field">
+                                    <ng-container *ngIf="item.amount > 1; else remove">
+                                        <button tuiMode="onLight" class="" tuiIconButton type="button" appearance="icon"
+                                            icon="tuiIconMinus" (click)="changeAmount(i, false)"></button>
+                                    </ng-container>
 
-                            <ng-template #remove>
-                                <button tuiMode="onLight" tuiIconButton type="button" appearance="icon"
-                                    icon="tuiIconTrash" (click)="changeAmount(i, false)"></button>
-                            </ng-template>
+                                    <ng-template #remove>
+                                        <button tuiMode="onLight" tuiIconButton type="button" appearance="icon"
+                                            icon="tuiIconTrash" (click)="changeAmount(i, false)"></button>
+                                    </ng-template>
 
-                            <span>{{item.amount}}</span>
+                                    <span>{{item.amount}}</span>
 
-                            <button tuiMode="onLight" tuiIconButton type="button" appearance="icon" icon="tuiIconPlus"
-                                (click)="changeAmount(i, true)"></button>
-                        </div>
-                    </td>
+                                    <button tuiMode="onLight" tuiIconButton type="button" appearance="icon"
+                                        icon="tuiIconPlus" (click)="changeAmount(i, true)"></button>
+                                </div>
+                            </td>
 
 
-                    <td class="tui-table__td tui-table__td_last tui-table__td_align_center">${{getRound(item.actualPrice
-                        * item.amount)}}</td>
+                            <td class="tui-table__td tui-table__td_last tui-table__td_align_center">
+                                ${{getRound(item.actualPrice
+                                * item.amount)}}</td>
 
-                </tr>
-            </ng-container>
-        </tbody>
-    </table>
-    <div class="bottom-container-field main-container__content">
-        <div class="aside-container">
-            <div class="aside-container__header tui-text_h6">SUBTOTAL: ${{getRound(subtotal)}}</div>
-            <div class="aside-container__desc aside-container__desc_grey">Tax included and shipping calculated at
-                checkout</div>
-            <ng-container *ngIf="shoppingList.length !== 0; else shopping">
-                <button class="aside-container__button" tuiButton type="button" appearance="primary"
-                    (click)="goToCheckout()">CHECK OUT</button>
-            </ng-container>
-            <ng-template #shopping>
-                <button class="aside-container__button" tuiButton type="button" appearance="primary"
-                    (click)="goShopping()">GO SHOPPING</button>
-            </ng-template>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+        <div class="bottom-container-field content">
+            <div class="aside-container">
+                <div class="aside-container__header tui-text_h6">SUBTOTAL: ${{getRound(subtotal)}}</div>
+                <div class="aside-container__desc aside-container__desc_grey">Tax included and shipping calculated at
+                    checkout</div>
+                <ng-container *ngIf="shoppingList.length !== 0; else shopping">
+                    <button class="aside-container__button" tuiButton type="button" appearance="primary"
+                        (click)="goToCheckout()">CHECK OUT</button>
+                </ng-container>
+                <ng-template #shopping>
+                    <button class="aside-container__button" tuiButton type="button" appearance="primary"
+                        (click)="goShopping()">GO SHOPPING</button>
+                </ng-template>
+            </div>
         </div>
     </div>
 </div>

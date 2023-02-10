@@ -6,7 +6,7 @@
         <div class="body-container">
             <div class="cards-container">
                 <ng-container *ngFor="let vacancy of vacancies">
-                    <a tuiAction target="_blank" icon="tuiIconRedoLarge" (click)="navigateVacancy(vacancy)">
+                    <a tuiAction class="card-container" target="_blank" icon="tuiIconRedoLarge" (click)="navigateVacancy(vacancy)">
                         <section>
                             <h3 class="tui-text_body-l">{{vacancy.field}}</h3>
                             <h3 class="tui-text_h6">{{vacancy.title}}</h3>
