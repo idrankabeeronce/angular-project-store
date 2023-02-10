@@ -1,21 +1,6 @@
 .checkout-wrapper, .item-container, .item-h_1, .sub-total-container, .shipping-container, .total-container, .discount-container, .discount-code-container{
     display: flex;
 }
-@media (max-width: 700px) {
-    .nav-items, .link-home {
-        padding: 0 .75rem;
-    }
-    .nav-items {
-        justify-content: space-between;
-    }
-    .checkout-wrapper {
-        display: block;
-    }   
-    .checkout-content, .shopping-list-content {
-        width: auto!important;
-        margin: 1rem;
-    }
-}
 .item-h_1 {
     align-items: center;
 }
@@ -78,4 +63,19 @@
 }
 .focused {
     color: var(--tui-text-01)
+}
+@media (max-width: 800px) {
+    .nav-items, .link-home {
+        padding: 0 .75rem;
+    }
+    .nav-items {
+        justify-content: space-between;
+    }
+    .checkout-wrapper {
+        display: block;
+    }   
+    .checkout-content, .shopping-list-content {
+        width: auto!important;
+        margin: 1rem;
+    }
 }

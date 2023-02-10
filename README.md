@@ -1,5 +1,6 @@
 # StoreApp
 
+Login and password for authentication (login-password): test-test, username-password, nick-secret.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
 
 ## Development server
