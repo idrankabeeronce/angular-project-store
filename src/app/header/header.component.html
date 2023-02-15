@@ -1,6 +1,6 @@
 <div tuiMode="onDark" class="wrapper">
     <ng-container *ngIf="isVisible">
-        <ng-container #outlet *ngIf="!showContainer; else basd">
+        <ng-container #outlet *ngIf="!showContainer; else lowWidth">
             <div style="display: flex; min-width: 130px;">
                 <a class="home-h1" routerLink="/" routerLinkActive="active" (click)="resetActiveItemIndex()">
                     <h1 class="tui-text_body-m title">NEO</h1>
@@ -92,7 +92,7 @@
 
 
 
-<ng-template tuiMode="onDark" #basd>
+<ng-template tuiMode="onDark" #lowWidth>
     <div style="display: flex; align-items: center; gap: 1rem;">
     <button (click)="getMenu()" tuiIconButton type="button" appearance="icon" icon="tuiIconMenuLarge">
     </button>

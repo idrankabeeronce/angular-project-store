@@ -17,8 +17,7 @@ import { PaymentComponent } from './shopping-cart/checkout/payment/payment.compo
 import { VacancyComponent } from './support/vacancy/vacancy/vacancy.component';
 import { NewComponent } from './deals/new/new.component';
 import { SaleComponent } from './deals/sale/sale.component';
-import { SeasonalDealsComponent } from './deals/seasonal-deals/seasonal-deals.component';
-import { DealsHomeComponent } from './deals/deals-home/deals-home.component';
+import { Solutions } from './deals/solutions/solutions.component';
 import { Title } from '@angular/platform-browser';
 import { ItemComponent } from './item/item.component';
 import { CartComponent } from './cart/cart.component';
@@ -44,9 +43,10 @@ const routes: Routes = [
   {
     path: 'deals', title: 'NEO Deals', component: DealsComponent,
     children: [
-      { path: 'seasonal-deals', title: 'SEASONAL DEALS - NEO', component: SeasonalDealsComponent },
-      { path: 'sale', title: 'SALE - NEO', component: SaleComponent },
-      { path: 'new', title: 'NEW - NEO', component: NewComponent }
+      
+      { path: 'solutions', title: 'SOLUTIONS - NEO', component: DealsComponent },
+      { path: 'sale', title: 'SALE - NEO', component: DealsComponent },
+      { path: 'new', title: 'NEW - NEO', component: DealsComponent }
     ]
   },
   {
@@ -82,7 +82,7 @@ const routes: Routes = [
   { path: '**', title: '404 - Not Found', component: PageNotFoundComponent },];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,15 +1,11 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 import { TuiSwipe } from '@taiga-ui/cdk';
 import data from "src/assets/content/products/products.json";
 
-type itemType = {
-  name?: string;
-  price?: number;
-  rating?: number;
-  imageSrc?: string;
-  tag?: string;
-};
+
 
 @Component({
   selector: 'app-home',
@@ -17,42 +13,57 @@ type itemType = {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('carousel') carousel!:NgbCarousel;
+
   scrollActive = false; // true if carousel is active by user
+  carouselHeader =[{
+    imageSrc: 'assets/images/swipe-wrapper/image_1.jpg',
+    title: 'Title',
+    ref: '/'
+  },{
+    imageSrc: 'assets/images/swipe-wrapper/image_2.jpeg',
+    title: 'Title',
+    ref: '/'
+  },{
+    imageSrc: 'assets/images/swipe-wrapper/image_3.jpg',
+    title: 'Title',
+    ref: '/'
+  }]
   carouselImages = [{
     imageSrc: 'assets/images/swipe-wrapper/image_3.jpg',
     title: 'Travel Solutions',
     desc: 'Keep your devices connected while you keep on the go. Reliable, effective products are necessities when on the go, and our products are perfect accessories for any excursion.',
-    ref: '/'
+    ref: '/deals/solutions'
   },{
     imageSrc: 'assets/images/swipe-wrapper/image_2.jpeg',
     title: 'Home Solutions',
     desc: "Whether it's being productive, watching videos, or looking up cooking recipes, spend more time relaxed at home with our products.",
-    ref: '/'
+    ref: '/deals/solutions'
   },{
     imageSrc: 'assets/images/swipe-wrapper/image_1.jpg',
     title: 'Business Solitions',
     desc: 'Our Hubs & Adapters help to maintain productivity, inspire creativity, and encourage collaboration. Get even more done in the office; easier than ever.',
-    ref: '/'
+    ref: '/deals/solutions'
   },{
     imageSrc: 'assets/images/swipe-wrapper/image_3.jpg',
     title: 'Travel Solutions',
     desc: 'Keep your devices connected while you keep on the go. Reliable, effective products are necessities when on the go, and our products are perfect accessories for any excursion.',
-    ref: '/'
+    ref: '/deals/solutions'
   },{
     imageSrc: 'assets/images/swipe-wrapper/image_2.jpeg',
     title: 'Home Solutions',
     desc: "Whether it's being productive, watching videos, or looking up cooking recipes, spend more time relaxed at home with our products.",
-    ref: '/'
+    ref: '/deals/solutions'
   },{
     imageSrc: 'assets/images/swipe-wrapper/image_1.jpg',
     title: 'Business Solitions',
     desc: 'Our Hubs & Adapters help to maintain productivity, inspire creativity, and encourage collaboration. Get even more done in the office; easier than ever.',
-    ref: '/'
+    ref: '/deals/solutions'
   },{
     imageSrc: 'assets/images/swipe-wrapper/image_3.jpg',
     title: 'Travel Solutions',
     desc: 'Keep your devices connected while you keep on the go. Reliable, effective products are necessities when on the go, and our products are perfect accessories for any excursion.',
-    ref: '/'
+    ref: '/deals/solutions'
   }];
   styleOfCards = [
     {
@@ -92,7 +103,20 @@ export class HomeComponent implements OnInit {
     this.getData();
 
   }
+  ngAfterViewInit() {
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(navigator.userAgent))
+      this.carousel.showNavigationArrows = false;
+  }
+  posIni: any;
+  // swipe carousel on mobile
+  move(pos:number) {
+    const offset = this.posIni - pos;
+    this.carousel.pause();
+    if (offset < -100) this.carousel.prev()
 
+    if (offset > 100) this.carousel.next();
+    this.carousel.cycle();
+  }
   getData() {
     this.bestSellers = []; // array of whole content
     this.listOfNewItems = [];
@@ -146,17 +170,13 @@ export class HomeComponent implements OnInit {
             tag: value.tag,
             prop: value.prop,
             ref: value.ref,
-            date: value.date,
-            desc: value.desc
+            date: value.date
           })
           index++
         }
       }
     }
 
-  }
-  upperCaseFirstCh(string: any) {
-    return string.charAt(0).toLocaleUpperCase() + string.slice(1);  
   }
   onSwipe(swipe: TuiSwipe): void {
     this.scrollItem(swipe.direction);

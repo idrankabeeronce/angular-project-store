@@ -29,8 +29,7 @@ import { PaymentComponent } from './shopping-cart/checkout/payment/payment.compo
 import { VacancyComponent } from './support/vacancy/vacancy/vacancy.component';
 import { NewComponent } from './deals/new/new.component';
 import { SaleComponent } from './deals/sale/sale.component';
-import { SeasonalDealsComponent } from './deals/seasonal-deals/seasonal-deals.component';
-import { DealsHomeComponent } from './deals/deals-home/deals-home.component';
+import { Solutions } from './deals/solutions/solutions.component';
 import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
 import { backendProvider } from "./_fakebackend/backend";
@@ -65,13 +64,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     VacancyComponent,
     NewComponent,
     SaleComponent,
-    SeasonalDealsComponent,
-    DealsHomeComponent,
+    Solutions,
     CartComponent,
     LoginComponent,
     ProfileComponent,
     PaymentFormComponent,
     ShippingFormComponent
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -85,7 +85,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     NgbModule
   ],
-  providers: [HttpClientModule, 
+  providers: [HttpClientModule,
     { provide: TUI_SANITIZER, useClass: NgDompurifySanitizer },
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

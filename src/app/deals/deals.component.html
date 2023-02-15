@@ -1,9 +1,8 @@
 <div class="title-wrapper">
-    <h1 class="tui-text_h3 title">{{title}}</h1>
+    <h1 class="tui-text_h3">{{title}}</h1>
 </div>
 <div class="main-container">
-<ng-container *ngIf="parent; else child"></ng-container>
-<ng-template #child>
-<router-outlet></router-outlet>
-</ng-template>
+    <app-sale id="sale"></app-sale>
+    <app-new id="new"></app-new>
+    <app-solutions id="solutions"></app-solutions>
 </div>

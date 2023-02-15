@@ -1,10 +1,68 @@
 <!-- CAROUSEL HEADER -->
-<div></div>
+<ngb-carousel id="carousel" #carousel (touchstart)="posIni = $event.changedTouches[0].pageX"
+    (touchend)="move($event.changedTouches[0].pageX)" [pauseOnHover]="true" *ngIf="carouselHeader">
+    <ng-template ngbSlide *ngFor="let item of carouselHeader">
+        <div [routerLink]="item.ref" class="carousel-wrapper">
+            <div class="img-wrapper">
+                <img [src]="item.imageSrc" alt="Random first slide" />
+            </div>
+            <div class="carousel-caption">
+                <h3 class="tui-text_h3 carousel-caption__label">{{item.title}}</h3>
+            </div>
+        </div>
+    </ng-template>
+</ngb-carousel>
+
 <!-- BODY CONTENT -->
 <div class="main-container">
+    <!-- IMAGE WRAPPER -->
+    <div routerLink="/" class="image-container">
+        <img src="assets/images/swipe-wrapper/image_4.jpg">
+    </div>
+    <!-- SOMETHING IMPORTANT AND NEW -->
+    <div class="some-container">
+        <div class="tui-text_h5 label tui-space_bottom-5">Some Title</div>
+        <div tuiMode="onDark"
+            class="flex-grid-container gaped tui-space_bottom-5 tui-space_top-5">
+            <ng-container *ngFor="let card of styleOfCards">
+                <a [routerLink]="card.ref" tuiLink [style]="card.style" class="card-container">
+                    <div class="mask">
+                        <div class="title tui-text_h5">{{card.title}}</div>
+                        <div class="desc tui-text_body-m">{{card.desc}}</div>
+                    </div>
+                </a>
+            </ng-container>
+        </div>
+    </div>
+    <!-- CAROUSEL PRODUCT SOLUTIONS -->
+    <div class="carousel-container">
+        <div class="tui-text_h5 label tui-space_bottom-5">Neo Fits Your Life</div>
+        <div class="carousel-layout">
+            <div class="box tui-text_body-l" (tuiSwipe)="onSwipe($event)">
+                <button class="button-absolute left" tuiIconButton appearance="primaryW" icon="tuiIconChevronLeftLarge"
+                    (click)="scrollItem('right')"></button>
+                <button class="button-absolute right" appearance="primaryW" tuiIconButton
+                    icon="tuiIconChevronRightLarge" (click)="scrollItem('left')"></button>
+                <div class="items items-carousel" [style]="smooth" [ngClass]="background">
+                    <ng-container *ngFor="let image of carouselImages; let index=index">
+                        <div [routerLink]="image.ref" class="box-item"
+                            [ngClass]="index === indexCurrent? 'active' : ''">
+                            <div class="box-item__image"><img [src]="image.imageSrc"></div>
+                            <div class="box-item__desc">
+                                <h2 class="tui-text_h6">{{image.title}}</h2>
+                                <p class="tui-text_body-m-2">{{image.desc}}</p>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <!-- BEST SELLERS -->
-    <div class="tui-text_h5 label tui-space_bottom-5">Best Seller</div>
+
     <div class="best-container">
+        <div class="tui-text_h5 label tui-space_bottom-5">Best Seller</div>
         <tui-scrollbar class="scroll-container">
 
             <div class="flex-container">
@@ -24,7 +82,8 @@
                         <div class="extra tui-text_body-m-2">
                             <div>${{item.price}}</div>
 
-                            <ngb-rating [max]="5" class="item-rate" [readonly]="true" [rate]="(5 * item.rating)"></ngb-rating>
+                            <ngb-rating [max]="5" class="item-rate" [readonly]="true"
+                                [rate]="(5 * item.rating)"></ngb-rating>
                         </div>
 
                     </div>
@@ -32,65 +91,32 @@
             </div>
         </tui-scrollbar>
     </div>
-    <!-- SOMETHING IMPORTANT AND NEW -->
-    <div class="some-container">
-        <div class="tui-text_h5 label tui-space_bottom-5">Some Title</div>
-        <div tuiMode="onDark"
-            class="flex-grid-container gaped tui-space_bottom-5 tui-space_top-5 tui-space_left-8 tui-space_right-8">
-            <ng-container *ngFor="let card of styleOfCards">
-                <a [routerLink]="card.ref" tuiLink [style]="card.style" class="card-container">
-                    <div class="mask">
-                        <div class="title tui-text_h5">{{card.title}}</div>
-                        <div class="desc tui-text_body-m">{{card.desc}}</div>
-                    </div>
-                </a>
-            </ng-container>
-        </div>
-    </div>
-    <!-- CAROUSEL PRODUCT SOLUTIONS -->
-    <div class="carousel-container">
-        <div class="tui-text_h5 label tui-space_bottom-5">Neo Fits Your Life</div>
-        <div class="carousel-layout">
-        <div class="box tui-text_body-l" (tuiSwipe)="onSwipe($event)">
-            <button class="button-absolute left" tuiIconButton appearance="flat" icon="tuiIconChevronLeftLarge"
-                (click)="scrollItem('right')"></button>
-            <button class="button-absolute right" tuiIconButton appearance="flat" icon="tuiIconChevronRightLarge"
-                (click)="scrollItem('left')"></button>
-            <div class="items items-carousel" [style]="smooth" [ngClass]="background">
-                <ng-container *ngFor="let image of carouselImages; let index=index">
-                    <div [routerLink]="image.ref" class="box-item" [ngClass]="index === indexCurrent? 'active' : ''">
-                        <div class="box-item__image"><img [src]="image.imageSrc"></div>
-                        <div class="box-item__desc">
-                            <h2 class="tui-text_h6">{{image.title}}</h2>
-                            <p class="tui-text_body-m-2">{{image.desc}}</p>
-                        </div>
-                    </div>
-                </ng-container>
-            </div>
-            
-        </div></div>
-    </div>
     <!-- NEW PRODUCTS -->
     <div class="new-items-container">
         <div class="tui-text_h5 label tui-space_bottom-5">Brand New</div>
-        <div class="items-wrapper tui-space_left-8 tui-space_right-8">
+        <div class="items-wrapper">
             <ng-container *ngFor="let item of listOfNewItems">
                 <div class="items-wrapper__card">
-                    <div class="items-wrapper__card__item-extra">
-                        <div class="extra-desc tui-text_body-m">{{item.desc}}</div>
-                        <button routerLink="/deals/new" tuiButton type="button" class="extra-button">More</button>
-                    </div>
-                    <div class="items-wrapper__card__item-main">
+                    <div routerLink="/item/{{item.ref}}" class="items-wrapper__card_image">
                         <img [src]="item.imageSrc">
                     </div>
-                    <div class="items-wrapper__card__item-desc">
+                    <hr />
+                    <div class="item-desc">
                         <div class="item-name">
                             <h1 class="tui-text_h6">{{item.name}}</h1>
                         </div>
-                        <ul class="item-prop tui-text_body-m">
-                            <li id="element" *ngFor="let property of item.prop | keyvalue">{{upperCaseFirstCh(property.key)}}: {{property.value}}</li>
-                        </ul>
+                        <div class="item-price">
+                            <h1 class="tui-text_h6">${{item.price}}</h1>
+                        </div>
+                        <div class="item-etc">
+                            <ul class="item-prop tui-text_body-m">
+                                <li id="element" *ngFor="let property of item.prop | keyvalue">
+                                    {{property.key}}: {{property.value}}</li>
+                            </ul>
+                        </div>
                     </div>
+                    <button routerLink="/deals/new" tuiButton type="button" class="extra-button">More</button>
+
                 </div>
             </ng-container>
         </div>
