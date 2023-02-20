@@ -6,44 +6,46 @@
     <a class="header-link tui-text_h5" (click)="scroll($event, 1)">Home Solutions</a>
     <a class="header-link tui-text_h5" (click)="scroll($event, 2)">Travel Solutions</a>
 </div>
-<div class="solutions-container">
+<div class="solutions-wrapper">
+    <div class="solutions-container">
 
-    <div class="solutions-layout">
-        <div class="box tui-text_body-l">
+        <div class="solutions-layout">
+            <div class="box tui-text_body-l">
 
-            <div [style]="styleScroll" class="items">
-                <div class="item-group">
-                    <ng-container *ngFor="let item of itemsOfBusinessSolution">
-                        <div routerLink="/item/{{item.ref}}" class="item">
-                            <div class="item-image">
-                                <img [src]="item.imageSrc">
+                <div [style]="styleScroll" class="items">
+                    <div class="item-group">
+                        <ng-container *ngFor="let item of itemsOfBusinessSolution">
+                            <div routerLink="/item/{{item.ref}}" class="item">
+                                <div class="item-image">
+                                    <img [src]="item.imageSrc">
+                                </div>
+                                <div class="tui-text_h6 item-name">{{item.name}}</div>
                             </div>
-                            <div class="tui-text_h6 item-name">{{item.name}}</div>
-                        </div>
-                    </ng-container>
-                </div>
-                <div class="item-group">
-                    <ng-container *ngFor="let item of itemsOfHomeSolution">
-                        <div routerLink="/item/{{item.ref}}" class="item">
-                            <div class="item-image">
-                                <img [src]="item.imageSrc">
+                        </ng-container>
+                    </div>
+                    <div class="item-group">
+                        <ng-container *ngFor="let item of itemsOfHomeSolution">
+                            <div routerLink="/item/{{item.ref}}" class="item">
+                                <div class="item-image">
+                                    <img [src]="item.imageSrc">
+                                </div>
+                                <div class="tui-text_h6 item-name">{{item.name}}</div>
                             </div>
-                            <div class="tui-text_h6 item-name">{{item.name}}</div>
-                        </div>
-                    </ng-container>
-                </div>
-                <div class="item-group">
-                    <ng-container *ngFor="let item of itemsOfTravelSolution">
-                        <div routerLink="/item/{{item.ref}}" class="item">
-                            <div class="item-image">
-                                <img [src]="item.imageSrc">
+                        </ng-container>
+                    </div>
+                    <div class="item-group">
+                        <ng-container *ngFor="let item of itemsOfTravelSolution">
+                            <div routerLink="/item/{{item.ref}}" class="item">
+                                <div class="item-image">
+                                    <img [src]="item.imageSrc">
+                                </div>
+                                <div class="tui-text_h6 item-name">{{item.name}}</div>
                             </div>
-                            <div class="tui-text_h6 item-name">{{item.name}}</div>
-                        </div>
-                    </ng-container>
+                        </ng-container>
+                    </div>
                 </div>
+
             </div>
-
         </div>
     </div>
 </div>

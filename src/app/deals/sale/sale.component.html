@@ -1,1 +1,32 @@
-<div class="sale-container"></div>
+<div class="title-wrapper">
+    <h1 class="tui-text_h4">Sales</h1>
+</div>
+<div class="sale-wrapper">
+    <div class="expand-button-wrapper">
+        <button tuiButton apperance="primary" class="expand-list" (click)="changeViewOfList()">See More</button>
+    </div>
+    <div class="sale-items">
+        <ng-container *ngFor="let item of itemsList">
+            <div class="sale-items__card">
+                <div class="item-image">
+                    <img [src]="item.imageSrc">
+                </div>
+                <div class="item-name tui-text_body-m">
+                    {{item.name}}
+                </div>
+                <div class="item-price">
+                    <ng-container *ngIf="item.actualPrice !== item.price; else noDiscount">
+                        <span class="new-price">${{item.actualPrice}} </span><span
+                            class="old-price">${{item.price}}</span>
+                    </ng-container>
+                    <ng-template #noDiscount>
+                        <span>${{item.price}}</span>
+                    </ng-template>
+                </div>
+                <div class="extra">
+                    <button tuiButton type="button" appearance="primary" (click)="addToCart(item)">Quick Add</button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

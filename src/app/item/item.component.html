@@ -8,19 +8,14 @@
 
 
                     </div>
-                    <div *ngIf="currentItem.color.length > 1" class="flex-center gap-2">
-                        <ng-container *ngFor="let color of currentItem.color; let indexOfElement=index">
-                            <div [style]='"background:"+color' class="color-prop"
-                                (click)="goToImage(indexOfElement, currentItem)"></div>
-                        </ng-container>
-                    </div>
+
                 </div>
                 <div class="desc-container tui-text_h5 flex-column gap-2">
                     <!--name-->
                     <div>{{currentItem.name}}</div>
                     <!--rating-->
                     <ngb-rating [max]="5" class="item-rate" [rate]="(5 * currentItem.rating)"></ngb-rating>
-                        
+
                     <!--price-->
 
                     <div style="align-items: end" class="flex gap-1">
@@ -30,13 +25,15 @@
                         <ng-template #discount>
                             <span>${{currentItem.actualPrice[currentItem.indexOfColor]}}</span><span
                                 class="tui-text_body-l old-price">${{currentItem.price[currentItem.indexOfColor]}}</span>
-                            <div class="tui-text_body-l discount">SAVE {{currentItem.discount[currentItem.indexOfColor]}}%</div>
+                            <div class="tui-text_body-l discount">SAVE
+                                {{currentItem.discount[currentItem.indexOfColor]}}%</div>
                         </ng-template>
                     </div>
                     <div class="border-bottom tui-space_vertical-2"></div>
                     <!--color-->
                     <div class="grid gap-1">
-                        <div style="font-weight: bold" class="tui-text_body-l">Color: {{currentItem.color[currentItem.indexOfColor]}}</div>
+                        <div style="font-weight: bold" class="tui-text_body-l">Color:
+                            {{currentItem.color[currentItem.indexOfColor]}}</div>
                         <div class="flex gap-1">
 
                             <ng-container *ngFor="let color of currentItem.color; let indexOfElement = index">
@@ -48,19 +45,23 @@
                     </div>
                     <!--second property-->
                     <div class="grid gap-1">
-                        <div style="font-weight: bold" class="tui-text_body-l">{{currentItem.labelSecondProperty}}: {{currentItem.secondProperty[currentItem.indexOfSecondProperty]}}{{currentItem.suffixOfSecProp}}</div>
-                    <div class="flex gap-1">
-                        <ng-container *ngFor="let secondProperty of currentItem.secondProperty; let indexOfElement = index">
-                            <div [ngClass]="{'selected-second-prop': indexOfElement == currentItem.indexOfSecondProperty}"
-                                class="tui-text_body-m second-prop"
-                                (click)="selectProperty(currentItem, indexOfElement)">{{secondProperty}}{{currentItem.suffixOfSecProp}}</div>
-                        </ng-container>
-                    </div>
+                        <div style="font-weight: bold" class="tui-text_body-l">{{currentItem.labelSecondProperty}}:
+                            {{currentItem.secondProperty[currentItem.indexOfSecondProperty]}}{{currentItem.suffixOfSecProp}}
+                        </div>
+                        <div class="flex gap-1">
+                            <ng-container
+                                *ngFor="let secondProperty of currentItem.secondProperty; let indexOfElement = index">
+                                <div [ngClass]="{'selected-second-prop': indexOfElement == currentItem.indexOfSecondProperty}"
+                                    class="tui-text_body-m second-prop"
+                                    (click)="selectProperty(currentItem, indexOfElement)">
+                                    {{secondProperty}}{{currentItem.suffixOfSecProp}}</div>
+                            </ng-container>
+                        </div>
                     </div>
                     <div style="align-items: center" class="cart-wrapper flex gap-2">
                         <div style="align-items: center" class="flex">
-                            <button tuiMode="onLight" [disabled]="disabled" class="" tuiIconButton type="button" appearance="icon"
-                                icon="tuiIconMinus" (click)="changeAmount(false)"></button>
+                            <button tuiMode="onLight" [disabled]="disabled" class="" tuiIconButton type="button"
+                                appearance="icon" icon="tuiIconMinus" (click)="changeAmount(false)"></button>
 
                             <span>{{amount}}</span>
 

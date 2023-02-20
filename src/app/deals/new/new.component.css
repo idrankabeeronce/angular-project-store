@@ -1,4 +1,57 @@
+.title-wrapper {
+    text-align: center;
+    margin: 2.5rem 0;
+}
 .new-container {
-    background: red;
-    height: 1000px;
+    margin-bottom: 2.5rem;
+}
+.collection-wrapper {
+    position: relative;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+}
+.collection-wrapper img {
+    width: 100%;
+}
+.collection-header, .collection-footer {
+    position: absolute;
+}
+.collection-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 3rem;
+    color: var(--tui-base-02);
+}  
+.collection-header button {
+    border-radius: 2rem;
+} 
+.collection-title {
+    margin-bottom: 1rem;
+}
+.collection-footer {
+    width: 100%;
+    bottom: -40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    background: rgb(20,20,20);
+}
+.footer-item {
+    color: var(--tui-base-02);
+    user-select: none;
+}
+.footer-item > tui-svg {
+    margin-right: .5rem;
+    width: 24px;
+    height: 24px;
+    pointer-events: none; 
+}
+@media (max-width: 900px) {
+    .collection-header button {
+        border-radius: 3rem;
+        height: 40px;
+    }
 }

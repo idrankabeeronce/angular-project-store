@@ -1,13 +1,18 @@
 .title-wrapper {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin: 2.5rem 0;
+}
+.solutions-wrapper {
+    border-bottom: solid 1px var(--tui-base-04);
+}
+.solutions-wrapper > div {
+    margin: 2.5rem 0;
 }
 .solutions-header {
     display: flex;
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0;
 }
 
 .header-link {
@@ -130,5 +135,8 @@
     .item:first-child {
         width: calc(100%);
         height: calc(50% - 1rem);
+    }
+    .item-image {
+        width: 50%;
     }
 }

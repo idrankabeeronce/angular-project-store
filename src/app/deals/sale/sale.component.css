@@ -1,4 +1,143 @@
-.sale-container {
-    height: 1000px;
-    background: blue;
+* {
+    box-sizing: border-box;
+}
+
+.title-wrapper {
+    text-align: center;
+    margin: 2.5rem 0 .5rem 0;
+}
+
+.sale-wrapper {
+    padding: 2rem 1rem 5rem 1rem;
+    background: var(--tui-base-02);
+    overflow: hidden;
+    max-height: 1000px;
+    position: relative;
+    border-bottom: solid 1px var(--tui-base-04);
+    box-sizing: content-box;
+}
+.sale-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+    background: linear-gradient(0deg, var(--tui-base-02), rgba(255,255,255,0));
+    z-index: 4;
+}
+.no-after:after {
+    content: none;
+}
+.expanded {
+    max-height: max-content;
+}
+.expand-button-wrapper {
+    position: absolute;
+    display: flex;
+    bottom: 100px;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+}
+.disabled { 
+    display: none;
+}
+.sale-items {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding-left: 1rem;
+    grid-auto-rows: 1fr;
+}
+
+.sale-items__card {
+    width: 100%;
+    padding: 0 1rem 1rem 0;
+    position: relative;
+    background: var(--tui-base-02);
+}
+
+.sale-items__card:hover {
+    z-index: 5;
+    height: 100%;
+}
+
+.sale-items__card:hover>.item-image,
+.item-name,
+.item-price {
+    z-index: 4;
+    position: relative;
+}
+
+.sale-items__card::after {
+    content: '';
+}
+
+.sale-items__card:hover::after {
+    inset: -1rem;
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: calc(100% + 1rem);
+    background: var(--tui-base-02);
+    height: calc(100% + 66px + 1rem);
+    box-shadow: 0px .5rem 1rem 0 rgba(0, 0, 0, .2), 0px -.1rem .5rem 0 rgba(0, 0, 0, .2);
+}
+
+.sale-items__card:hover .extra {
+    display: flex;
+    justify-content: left;
+    align-items: end;
+}
+
+.item-image {
+    background: var(--tui-base-03);
+    width: 100%;
+}
+
+.item-image img {
+    width: 100%;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    color: var(--tui-text-03);
+    font-weight: bold;
+}
+
+.new-price {
+    color: rgb(172, 71, 71)
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+.extra {
+    z-index: 5;
+    width: calc(100% - 1rem);
+    background: var(--tui-base-02);
+    display: none;
+    position: absolute;
+    bottom: calc(-66px + 1rem);
+    height: 50px;
+}
+
+.extra button {
+    width: 100%;
+    height: 50px;
+}
+@media (max-width: 900px) {
+    .sale-items {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media (max-width: 600px) {
+    .sale-items {
+        grid-template-columns: repeat(2, auto);
+    }
 }

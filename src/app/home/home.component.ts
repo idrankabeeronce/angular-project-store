@@ -155,7 +155,7 @@ export class HomeComponent implements OnInit {
     this.content.sort((a: any, b: any) => (a.date < b.date ? 1 : -1));
     index = 0;
     for (let value of this.content) {
-      if (value.tag === "new") {
+      if (value.tag.includes('new') ) {//value.tag === "new") {
         
         var i = this.listOfNewItems.findIndex((e: any) => e.ref === value.ref);
         // exclude similar. if -1, then continue

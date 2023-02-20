@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import data from 'src/assets/content/products/products.json'
+
 interface typeOfItem {
   name: string;
   imageSrc: string;
@@ -37,22 +38,7 @@ export class Solutions implements OnInit {
     for (let group of data) {
       for (let typeGroup of group.goods) {
         for (let item of typeGroup.items) {
-          //switch (item.tag) {
           this.contentPush(content, item);
-
-          /*
-            this.contentPush(this.itemsOfHomeSolution, item);
-            break;
-          case ('travel'):
-            this.contentPush(this.itemsOfTravelSolution, item);
-            break;
-          case ('business'):
-            this.contentPush(this.itemsOfBusinessSolution, item);
-            break;
-          default: break;
-        }
-        */
-
         }
       }
     }
