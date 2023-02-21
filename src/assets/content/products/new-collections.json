@@ -30,7 +30,7 @@
             "icon":"assets/icons/new-collections/hear-sound__aptx.svg",
             "label":"Lossless Audio"
         }],
-        "imageSrc": "assets/images/products/new-collections/hear-sound.png",
+        "imageSrc": "",
         "ref": "products?search=HearSound"
     },
     {
@@ -48,7 +48,7 @@
             "icon":"assets/icons/new-collections/hear-sound__aptx.svg",
             "label":"Lossless Audio"
         }],
-        "imageSrc": "assets/images/products/new-collections/hear-sound.png",
+        "imageSrc": "",
         "ref": "products?search=HearSound"
     }
 ]

@@ -65,10 +65,50 @@
     padding: .5rem;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
-.card-logo {
+.card-form:has(.card__label) {
+    margin-top: 1.5rem
+}
+.card__label {
+    font-weight: bold;
+    position: absolute;
+    top: -2rem;
+
+}
+.card-logo[ng-reflect-payment-system='maestro'] {
     color: var(--tui-base-01);
-    background-color: var(--tui-base-09);
+    background: linear-gradient(45deg, #565656 0%, #161517 100%);
+}
+.card-logo[ng-reflect-payment-system='visa'] {
+    color: var(--tui-base-01);
+    background: linear-gradient(45deg, #3c4272 0%, #476a9e 100%);
+}
+.card-logo[ng-reflect-payment-system='mastercard'] {
+    color: var(--tui-base-08);
+    background: linear-gradient(45deg, #ecedec 0%, #bfc9b8 90%);
+    position: relative;
+}
+.card-logo[ng-reflect-payment-system='mastercard']::after {
+    content : '';
+    position: absolute;
+    z-index: -1;
+    opacity: .6;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80%, #eee, #eee 68%, #aaa 70%, #eee 74%);
+}
+.card-logo[ng-reflect-payment-system='mir'] {
+    color: var(--tui-base-01);
+    background-image: linear-gradient(145deg, #8aed5f 0%, #417f17 100%);
+}
+.card__desc {
+    text-align: left;
+}
+.card__desc > p {
+    margin: 0;
 }
 @media (max-width: 800px) {
     .profile-wrapper {

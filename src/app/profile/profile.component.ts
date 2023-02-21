@@ -21,19 +21,20 @@ export class ProfileComponent implements OnInit, OnDestroy {
 
 
   ngOnInit(): void {
-    this.authenticationService.currentUser.subscribe( 
+    this.authenticationService.currentUser.subscribe(
       {
-      next: (x => { this.currentUser = x; }), 
-    error: (err => {console.log(err);
-    })
-  })
+        next: (x => { this.currentUser = x; }),
+        error: (err => {
+          console.log(err);
+        })
+      })
     this.sub = this.authenticationService.getProfileOpen().subscribe(x => {
       this.open = x;
     })
   }
-    
+
   @HostListener('unloaded')
-  ngOnDestroy():void {
+  ngOnDestroy(): void {
     console.log('profile destroyed')
   }
 
@@ -72,9 +73,12 @@ export class ProfileComponent implements OnInit, OnDestroy {
     else if (data.method === 'payment') {
       this.openPayment = false;
       this.currentUser.paymentInformation.card = data.card;
+      this.currentUser.paymentInformation.paymentSystem = data.paymentSystem;
       this.currentUser.paymentInformation.cvc = data.cvc;
       this.currentUser.paymentInformation.expire = data.expire;
-      
+    } else {
+      this.openPayment = false;
+      this.openShipping = false;
     }
   }
 }

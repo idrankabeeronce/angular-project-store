@@ -41,7 +41,7 @@
                         (ngModelChange)="changePayment(payment)"></tui-radio>
                     <div class="shipping-description">
                         <div>{{payment.name}}</div>
-                        <ng-container *ngIf="payment.id == 1">
+                        <ng-container *ngIf="payment.id === 1">
                             <div class="svg-group">
                                 <tui-svg src="tuiIconVisa" class="icon"></tui-svg>
                                 <tui-svg src="tuiIconMastercard" class="icon"></tui-svg>
@@ -80,7 +80,7 @@
         <div class="price-text">{{total}} USD</div>
     </div>
     <form [formGroup]="form" class="tui-space_top-3" (ngSubmit)="observer.complete()">
-        <tui-input-card class="tui-space_bottom-3" formControlName="card" [autocompleteEnabled]="true" [cardSrc]="card">
+        <tui-input-card class="tui-space_bottom-3" formControlName="card" [autocompleteEnabled]="true">
             Card number
         </tui-input-card>
         

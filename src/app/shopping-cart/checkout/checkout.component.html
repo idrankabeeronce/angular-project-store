@@ -39,7 +39,7 @@
         <div class="border-top padding-top-bottom-1">
 
             <div class="discount-code-container tui-text_body-m">
-                <tui-input style="width:100%;" class="tui-space_right-3" [formControl]="codeField"
+                <tui-input style="width:100%;" class="tui-space_right-3" tuiHintContent="You can try - READY" [formControl]="codeField"
                     (ngModelChange)="changeInput()">Discount code<input tuiTextfield maxlength="5" oninput="this.value = this.value.toUpperCase()"/></tui-input>
 
                 <button #button [disabled]="disabled" appearance="primary" tuiButton

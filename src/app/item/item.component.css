@@ -39,19 +39,19 @@
     border-bottom: 1px solid var(--tui-base-06);
 }
 
-.gap-1 {
+.custom-gap-1 {
     gap: .5rem;
 }
 
-.gap-2 {
+.custom-gap-2 {
     gap: 1rem;
 }
 
-.gap-3 {
+.custom-gap-3 {
     gap: 1.5rem;
 }
 
-.gap-4 {
+.custom-gap-4 {
     gap: 2rem;
 }
 
@@ -114,6 +114,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    
 }
 
 .selected-color-prop {

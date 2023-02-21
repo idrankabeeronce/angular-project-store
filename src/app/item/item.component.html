@@ -1,8 +1,8 @@
 <ng-container *ngIf="found; else error">
-    <div class="main-container grid gap-4">
+    <div class="main-container grid custom-gap-4">
         <div class="item-wrapper">
-            <div class="flex-grid-container gap-4">
-                <div class="grid gap-1 image-wrapper">
+            <div class="flex-grid-container custom-gap-4">
+                <div class="grid custom-gap-1 image-wrapper">
                     <div class="item-image">
                         <img [src]="currentItem.imagesSrc[currentItem.indexOfImage]">
 
@@ -10,7 +10,7 @@
                     </div>
 
                 </div>
-                <div class="desc-container tui-text_h5 flex-column gap-2">
+                <div class="desc-container tui-text_h5 flex-column custom-gap-2">
                     <!--name-->
                     <div>{{currentItem.name}}</div>
                     <!--rating-->
@@ -18,7 +18,7 @@
 
                     <!--price-->
 
-                    <div style="align-items: end" class="flex gap-1">
+                    <div style="align-items: end" class="flex custom-gap-1">
                         <ng-container *ngIf="currentItem.discount[currentItem.indexOfColor] === 0; else discount">
                             <span>${{currentItem.price[currentItem.indexOfColor]}}</span>
                         </ng-container>
@@ -31,10 +31,10 @@
                     </div>
                     <div class="border-bottom tui-space_vertical-2"></div>
                     <!--color-->
-                    <div class="grid gap-1">
+                    <div class="grid custom-gap-1">
                         <div style="font-weight: bold" class="tui-text_body-l">Color:
                             {{currentItem.color[currentItem.indexOfColor]}}</div>
-                        <div class="flex gap-1">
+                        <div class="flex custom-gap-1">
 
                             <ng-container *ngFor="let color of currentItem.color; let indexOfElement = index">
                                 <div [ngClass]="{'selected-color-prop': indexOfElement == currentItem.indexOfColor}"
@@ -44,11 +44,11 @@
                         </div>
                     </div>
                     <!--second property-->
-                    <div class="grid gap-1">
+                    <div class="grid custom-gap-1" *ngIf="currentItem.secondProperty.length > 0">
                         <div style="font-weight: bold" class="tui-text_body-l">{{currentItem.labelSecondProperty}}:
                             {{currentItem.secondProperty[currentItem.indexOfSecondProperty]}}{{currentItem.suffixOfSecProp}}
                         </div>
-                        <div class="flex gap-1">
+                        <div class="flex custom-gap-1">
                             <ng-container
                                 *ngFor="let secondProperty of currentItem.secondProperty; let indexOfElement = index">
                                 <div [ngClass]="{'selected-second-prop': indexOfElement == currentItem.indexOfSecondProperty}"
@@ -58,7 +58,7 @@
                             </ng-container>
                         </div>
                     </div>
-                    <div style="align-items: center" class="cart-wrapper flex gap-2">
+                    <div style="align-items: center" class="cart-wrapper flex custom-gap-2">
                         <div style="align-items: center" class="flex">
                             <button tuiMode="onLight" [disabled]="disabled" class="" tuiIconButton type="button"
                                 appearance="icon" icon="tuiIconMinus" (click)="changeAmount(false)"></button>

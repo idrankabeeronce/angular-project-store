@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, Input, EventEmitter, HostListener, OnDestroy} from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter, HostListener, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,19 +7,20 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./payment-form.component.css']
 })
 export class PaymentFormComponent implements OnInit, OnDestroy {
-  
+
   @Input() currentUser: any;
   @Output() changeDataEvent = new EventEmitter<any>();
 
   dialogFormGroup!: FormGroup;
   paymentInformation: any = {};
+  valid = true;
 
   constructor() { }
 
   ngOnInit(): void {
     this.paymentInformation = this.currentUser !== undefined ? this.currentUser.paymentInformation : {};
-    let firstName:string = this.currentUser !== undefined ? this.currentUser.firstName : '';
-    let lastName:string = this.currentUser !== undefined ? this.currentUser.lastName : '';
+    let firstName: string = this.currentUser !== undefined ? this.currentUser.firstName : '';
+    let lastName: string = this.currentUser !== undefined ? this.currentUser.lastName : '';
 
     this.dialogFormGroup = new FormGroup({
       card: new FormControl(this.paymentInformation.card !== undefined ? this.paymentInformation.card : null, [Validators.required, Validators.minLength(16)]),
@@ -35,19 +36,34 @@ export class PaymentFormComponent implements OnInit, OnDestroy {
     console.log('payment form destroyed');
   }
 
-  submitChanges() {
-    this.paymentInformation.card = this.dialogFormGroup.value.card;
-    this.paymentInformation.expire = this.dialogFormGroup.value.expire;
-    this.paymentInformation.cvc = this.dialogFormGroup.value.cvc;
-    let data: any = this.paymentInformation;
-    data.close = true;
-    data.method = 'payment';
-    this.changeDataEvent.emit(data);
+  submitChanges(paymentSystem:any) {
+    
+    if (this.dialogFormGroup.valid) {
+      this.valid = true;
+      
+      this.paymentInformation.card = this.dialogFormGroup.value.card;
+      this.paymentInformation.expire = this.dialogFormGroup.value.expire;
+      this.paymentInformation.cvc = this.dialogFormGroup.value.cvc;
+      let data: any = this.paymentInformation;
+      data.close = true;
+      data.method = 'payment';
+      data.paymentSystem = paymentSystem;
+      
+      
+      this.changeDataEvent.emit(data);
+    } else {
+      document.querySelector('#error')?.classList.remove('error-field-shake');
+      setTimeout(() => {
+        document.querySelector('#error')?.classList.add('error-field-shake');
+      },100)
+      this.dialogFormGroup.markAllAsTouched();
+      this.valid = false;
+    }
   }
   close() {
-    let data: any = this.paymentInformation;
+    let data: any = {};
     data.close = true;
-    data.method = 'payment';
+    data.method = 'close';    
     this.changeDataEvent.emit(data);
   }
 }

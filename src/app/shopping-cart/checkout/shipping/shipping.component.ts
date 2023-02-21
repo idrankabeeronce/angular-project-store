@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AddToCartService } from 'src/app/add-to-cart.service';
 import {Subscription} from 'rxjs'
@@ -10,6 +10,8 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./shipping.component.css']
 })
 export class ShippingComponent implements OnInit, OnDestroy {
+  
+
   sub!: Subscription;
   sub_2!: Subscription;
   id:string = '';

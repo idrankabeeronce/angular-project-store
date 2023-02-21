@@ -7,7 +7,7 @@
     <h1>Payment information</h1>
     <form [formGroup]="dialogFormGroup">
         <div class="tui-space_top-5 tui-space_bottom-5">
-                <tui-input-card class="tui-space_bottom-3" formControlName="card" [autocompleteEnabled]="true">
+                <tui-input-card #cardForm class="tui-space_bottom-3" formControlName="card" [autocompleteEnabled]="true">
                     Card number
                 </tui-input-card>
                 <div class="input-name-container tui-space_bottom-3">
@@ -33,11 +33,15 @@
                 <div></div>
                 
         </div>
+        <ng-container *ngIf="!valid">
+            <tui-notification id="error" status="error" class="error-field-shake tui-space_bottom-5">Please complete form</tui-notification>
+        </ng-container>
         <p>
-            <button tuiButton class="submit-button" type="submit" (click)="submitChanges()">
+            <button tuiButton class="submit-button" type="submit" (click)="submitChanges(cardForm.paymentSystem)">
                 Save
             </button>
         </p>
+        
     </form>
     </div>
 </div>

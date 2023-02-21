@@ -7,23 +7,28 @@
     justify-content: center;
     align-items: center;
     top: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, .6);
 }
+
 .form {
     padding: 2rem;
     background: white;
     border-radius: var(--tui-radius-s);
 }
-.input-name-container, .card-extra-container {
+
+.input-name-container,
+.card-extra-container {
     display: flex;
 }
+
 .input-name-container div,
 .card-extra-container div,
 .submit-button {
     width: 100%;
 }
+
 .close-button {
-    background: rgba(255,255,255,.7);
+    background: rgba(255, 255, 255, .7);
     box-shadow: 1px 1px 5px rgb(0 0 0 / 50%);
     border-radius: 50%;
     top: 2rem;
@@ -31,24 +36,47 @@
     position: fixed;
     transition: background .5s;
 }
+
 .close-button:hover {
-    background: rgba(255,255,255,.5);
+    background: rgba(255, 255, 255, .5);
+}
+
+.error-field-shake {
+    animation: shake 150ms 2 ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(3px, 0);
+    }
+
+    50% {
+        transform: translate(-3px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 @media (max-width: 800px) {
     .close-button {
         filter: invert(1);
     }
+
     .wrapper {
         justify-content: normal;
-    align-items: normal;
+        align-items: normal;
     }
+
     .form {
         padding: 5rem 2rem 2rem 2rem;
         border-radius: 0;
         width: 100%;
     }
-    .extra tui-input-expire, .extra tui-input-cvc {
+
+    .extra tui-input-expire,
+    .extra tui-input-cvc {
         max-width: none;
     }
 }

@@ -35,6 +35,24 @@
 .close-button:hover {
     background: rgba(255,255,255,.5);
 }
+
+.error-field-shake {
+    animation: shake 150ms 2 ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(3px, 0);
+    }
+
+    50% {
+        transform: translate(-3px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
 @media (max-width: 800px) {
     .close-button {
         filter: invert(1);
