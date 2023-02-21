@@ -4,7 +4,7 @@
     <ng-template ngbSlide *ngFor="let item of carouselHeader">
         <div [routerLink]="item.ref" class="carousel-wrapper">
             <div class="img-wrapper">
-                <img [src]="item.imageSrc" alt="Random first slide" />
+                <img [src]="item.imageSrc"/>
             </div>
             <div class="carousel-caption">
                 <h3 class="tui-text_h3 carousel-caption__label">{{item.title}}</h3>
@@ -117,6 +117,20 @@
                     </div>
                     <button routerLink="/deals/new" tuiButton type="button" class="extra-button">More</button>
 
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <!-- BENEFITS -->
+    <div class="benefits-container">
+        <div class="tui-text_h5 label tui-space_bottom-5">NEO Benefits</div>
+        <div class="benefits-wrapper">
+            <ng-container *ngFor="let benefit of benefits">
+                <div class="benefits-card">
+                    <div class="benefits-label">{{benefit.label}}</div>
+                    <div class="benefits-desc">{{benefit.desc}}</div>
+                    <img class="benefits-img" [src]="benefit.icon">
+                    <button [routerLink]="benefit.ref" class="benefits-button">Learn More <tui-svg src="tuiIconChevronRight"></tui-svg></button>
                 </div>
             </ng-container>
         </div>

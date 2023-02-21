@@ -13,53 +13,74 @@ import data from "src/assets/content/products/products.json";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  @ViewChild('carousel') carousel!:NgbCarousel;
+  @ViewChild('carousel') carousel!: NgbCarousel;
 
   scrollActive = false; // true if carousel is active by user
-  carouselHeader =[{
-    imageSrc: 'assets/images/swipe-wrapper/image_1.jpg',
-    title: 'Title',
+  benefits = [{
+    label: "Benefeit",
+    icon: 'assets/images/benefits/benefit-icon_1.png',
+    desc: 'Neo makes...',
     ref: '/'
-  },{
-    imageSrc: 'assets/images/swipe-wrapper/image_2.jpeg',
-    title: 'Title',
+  }, {
+    label: "Benefeit",
+    icon: 'assets/images/benefits/benefit-icon_2.png',
+    desc: 'Neo makes...',
     ref: '/'
-  },{
-    imageSrc: 'assets/images/swipe-wrapper/image_3.jpg',
-    title: 'Title',
+  }, {
+    label: "Benefeit",
+    icon: 'assets/images/benefits/benefit-icon_3.png',
+    desc: 'Neo makes...',
     ref: '/'
+  }, {
+    label: "Benefeit",
+    icon: 'assets/images/benefits/benefit-icon_4.webp',
+    desc: 'Neo makes...',
+    ref: '/'
+  }];
+  carouselHeader = [{
+    imageSrc: 'assets/images/swipe-wrapper/carousel-image_1.jpg',
+    title: 'Aesthetic Products For You',
+    ref: '/products'
+  }, {
+    imageSrc: 'assets/images/swipe-wrapper/carousel-image_2.jpg',
+    title: 'Join Our Team',
+    ref: '/support/vacancies'
+  }, {
+    imageSrc: 'assets/images/swipe-wrapper/carousel-image_3.jpg',
+    title: 'Random Article Of Privacy',
+    ref: '/pages/privacy-policy'
   }]
   carouselImages = [{
     imageSrc: 'assets/images/swipe-wrapper/image_3.jpg',
     title: 'Travel Solutions',
     desc: 'Keep your devices connected while you keep on the go. Reliable, effective products are necessities when on the go, and our products are perfect accessories for any excursion.',
     ref: '/deals/solutions'
-  },{
+  }, {
     imageSrc: 'assets/images/swipe-wrapper/image_2.jpeg',
     title: 'Home Solutions',
     desc: "Whether it's being productive, watching videos, or looking up cooking recipes, spend more time relaxed at home with our products.",
     ref: '/deals/solutions'
-  },{
+  }, {
     imageSrc: 'assets/images/swipe-wrapper/image_1.jpg',
     title: 'Business Solitions',
     desc: 'Our Hubs & Adapters help to maintain productivity, inspire creativity, and encourage collaboration. Get even more done in the office; easier than ever.',
     ref: '/deals/solutions'
-  },{
+  }, {
     imageSrc: 'assets/images/swipe-wrapper/image_3.jpg',
     title: 'Travel Solutions',
     desc: 'Keep your devices connected while you keep on the go. Reliable, effective products are necessities when on the go, and our products are perfect accessories for any excursion.',
     ref: '/deals/solutions'
-  },{
+  }, {
     imageSrc: 'assets/images/swipe-wrapper/image_2.jpeg',
     title: 'Home Solutions',
     desc: "Whether it's being productive, watching videos, or looking up cooking recipes, spend more time relaxed at home with our products.",
     ref: '/deals/solutions'
-  },{
+  }, {
     imageSrc: 'assets/images/swipe-wrapper/image_1.jpg',
     title: 'Business Solitions',
     desc: 'Our Hubs & Adapters help to maintain productivity, inspire creativity, and encourage collaboration. Get even more done in the office; easier than ever.',
     ref: '/deals/solutions'
-  },{
+  }, {
     imageSrc: 'assets/images/swipe-wrapper/image_3.jpg',
     title: 'Travel Solutions',
     desc: 'Keep your devices connected while you keep on the go. Reliable, effective products are necessities when on the go, and our products are perfect accessories for any excursion.',
@@ -104,12 +125,12 @@ export class HomeComponent implements OnInit {
 
   }
   ngAfterViewInit() {
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(navigator.userAgent))
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(navigator.userAgent))
       this.carousel.showNavigationArrows = false;
   }
   posIni: any;
   // swipe carousel on mobile
-  move(pos:number) {
+  move(pos: number) {
     const offset = this.posIni - pos;
     this.carousel.pause();
     if (offset < -100) this.carousel.prev()
@@ -155,8 +176,8 @@ export class HomeComponent implements OnInit {
     this.content.sort((a: any, b: any) => (a.date < b.date ? 1 : -1));
     index = 0;
     for (let value of this.content) {
-      if (value.tag.includes('new') ) {//value.tag === "new") {
-        
+      if (value.tag.includes('new')) {//value.tag === "new") {
+
         var i = this.listOfNewItems.findIndex((e: any) => e.ref === value.ref);
         // exclude similar. if -1, then continue
         if (i === -1) {
@@ -184,40 +205,40 @@ export class HomeComponent implements OnInit {
   }
   scrollItem(direction: string) {
     if (!this.scrollActive) {
-    this.smooth = `transition: all .6s ease-out`;
-    if (direction == 'left') {
-      if (this.indexCurrent < 5) {
-        this.indexCurrent++;
-        this.background = `item-scroll-${this.indexCurrent}`;
-        if (this.indexCurrent >= 5) {
-          setTimeout(() => {
-            this.indexCurrent = 2;
-            this.smooth = `transition: 0s`;
-            this.background = `item-scroll-${this.indexCurrent}`;
-          }, 600)
+      this.smooth = `transition: all .6s ease-out`;
+      if (direction == 'left') {
+        if (this.indexCurrent < 5) {
+          this.indexCurrent++;
+          this.background = `item-scroll-${this.indexCurrent}`;
+          if (this.indexCurrent >= 5) {
+            setTimeout(() => {
+              this.indexCurrent = 2;
+              this.smooth = `transition: 0s`;
+              this.background = `item-scroll-${this.indexCurrent}`;
+            }, 600)
+          }
+        }
+      } else {
+        if (this.indexCurrent > 1) {
+          this.indexCurrent--;
+          this.background = `item-scroll-${this.indexCurrent}`;
+          if (this.indexCurrent <= 1) {
+            setTimeout(() => {
+              this.indexCurrent = 4;
+              this.smooth = `transition: 0s`;
+              this.background = `item-scroll-${this.indexCurrent}`;
+            }, 600)
+          }
         }
       }
-    } else {
-      if (this.indexCurrent > 1) {
-        this.indexCurrent--;
-        this.background = `item-scroll-${this.indexCurrent}`;
-        if (this.indexCurrent <= 1) {
-          setTimeout(() => {
-            this.indexCurrent = 4;
-            this.smooth = `transition: 0s`;
-            this.background = `item-scroll-${this.indexCurrent}`;
-          }, 600)
-        }
-      }
+      clearInterval(this.intervalId);
+      this.intervalId = setInterval(() => {
+        this.autoScroll();
+      }, 4500);
+      this.scrollActive = true;
+      setTimeout(() => { this.scrollActive = false; }, 600);
     }
-    clearInterval(this.intervalId);
-    this.intervalId = setInterval(() => {
-      this.autoScroll();
-    }, 4500);
-    this.scrollActive = true;
-    setTimeout(() => {this.scrollActive = false;},600);
-    }
-    
+
   }
   autoScroll() {
     this.indexCurrent++;
