@@ -126,11 +126,11 @@
         <div class="tui-text_h5 label tui-space_bottom-5">NEO Benefits</div>
         <div class="benefits-wrapper">
             <ng-container *ngFor="let benefit of benefits">
-                <div class="benefits-card">
-                    <div class="benefits-label">{{benefit.label}}</div>
-                    <div class="benefits-desc">{{benefit.desc}}</div>
+                <div [routerLink]="benefit.ref" class="benefits-card">
+                    <div class="benefits-label tui-text_h6">{{benefit.label}}</div>
+                    <div class="benefits-desc tui-text_body-m">{{benefit.desc}}</div>
                     <img class="benefits-img" [src]="benefit.icon">
-                    <button [routerLink]="benefit.ref" class="benefits-button">Learn More <tui-svg src="tuiIconChevronRight"></tui-svg></button>
+                    <button class="benefits-button tui-text_body-m">Learn More <tui-svg src="tuiIconChevronRight"></tui-svg></button>
                 </div>
             </ng-container>
         </div>

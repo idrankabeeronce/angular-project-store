@@ -8,7 +8,7 @@
 .settings-wrapper h1{
     margin: 0;
 }
-.main-content {
+.main-content, .discount-container {
     padding: 0 20px;
     max-width: 1200px;
     margin: auto;
@@ -26,27 +26,67 @@
     height: 50vw;
     min-height: 400px;
 }
-.not-found-h1, p, a {
-    letter-spacing: .3rem;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-}
-a {
-    padding: 0 .5rem .1rem .5rem;
-    font-weight: 700;
-    border-bottom: solid 1px var(--tui-base-08);
-    transition: .5s;
-}
-a:hover {
-    color: var(--tui-base-01)!important;
-    background: var(--tui-base-08);
-}
 .tui-text_body-xl {
     font-weight: bold;
 }
-.not-found-h1 {
-    font-size: 8em;
-    line-height: 1em;
+
+.discount-container {
+    text-align: center;
+}
+.sub-label {
+    margin-top: 2rem;
+    color: var(--tui-text-03);
+}
+.discount-cards {
+    margin: 5rem 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 5rem;
+    padding: 0 2rem;
+}
+.discount-card {
+    flex: 1;
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+.card-body {
+    background: var(--tui-accent);
+    /*background: linear-gradient(0deg, #fdce3b, #ff4b12);*/
+    display: flex;
+    align-items: center;
+    color: var(--tui-text-01-night);
+    padding: 1rem 0.5rem 1rem 1.5rem;
+    border-radius: var(--tui-radius-s) var(--tui-radius-s) 0 0;
+}
+.card-value {
+    padding-right: .5rem;
+}
+.card-body > ul {
+    flex: 1;
+    text-align: left;
+}
+.card-bottom {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    background: var(--tui-base-08);
+    height: calc(40px + 1rem);
+    color: var(--tui-text-01-night);
+    text-align: left;
+    border-radius: 0 0 var(--tui-radius-s) var(--tui-radius-s);
+}
+.card-bottom > button {
+    height: 40px;
+}
+@media (max-width: 1200px) {
+    .discount-cards {
+        gap: 2rem;
+    }
+}
+@media (max-width: 900px) {
+    .discount-cards {
+        flex-direction: column;
+    }
 }

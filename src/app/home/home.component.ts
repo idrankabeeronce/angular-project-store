@@ -17,25 +17,25 @@ export class HomeComponent implements OnInit {
 
   scrollActive = false; // true if carousel is active by user
   benefits = [{
-    label: "Benefeit",
+    label: "Neo-discount",
     icon: 'assets/images/benefits/benefit-icon_1.png',
-    desc: 'Neo makes...',
-    ref: '/'
+    desc: 'Save Money with Discounts on Neo Products',
+    ref: '/pages/discount'
   }, {
-    label: "Benefeit",
+    label: "Something Program",
     icon: 'assets/images/benefits/benefit-icon_2.png',
-    desc: 'Neo makes...',
-    ref: '/'
+    desc: 'Get 15% Commission with the something Program',
+    ref: '/pages/something'
   }, {
-    label: "Benefeit",
+    label: "Dropshipping",
     icon: 'assets/images/benefits/benefit-icon_3.png',
-    desc: 'Neo makes...',
-    ref: '/'
+    desc: 'For large purchases of over 10 items, please contact us for a quote',
+    ref: '/pages/dropshipping-program'
   }, {
-    label: "Benefeit",
+    label: "Something & Something",
     icon: 'assets/images/benefits/benefit-icon_4.webp',
-    desc: 'Neo makes...',
-    ref: '/'
+    desc: 'Earn Something, Get Something w/ Savings',
+    ref: '/pages/something'
   }];
   carouselHeader = [{
     imageSrc: 'assets/images/swipe-wrapper/carousel-image_1.jpg',

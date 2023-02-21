@@ -18,6 +18,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
   subTotalDiscount = 0;
   total = 0;
   codeField = new FormControl('');
+  errorMessage = 'Enter a valid discount code';
   disabled = true;
   codeValid = false;
   try = false;
@@ -112,18 +113,62 @@ export class CheckoutComponent implements OnInit, OnDestroy {
   applyDiscount() {
     let sList: any = [];
     this.try = true;
-    if (this.codeField.value == "READY") {
-      this.codeValid = true;
-      this.codeField.disable();
-      this.codeDiscount = 20;
-      this.addToCartService.getShoppingList().subscribe((value) => {
-        sList = value;
-      })
-      sList.discount = 20;
-      this.addToCartService.setShoppingList(sList)
-      this.getSubTotalDiscount();
-    } else {
-      this.codeValid = false;
+    switch (this.codeField.value) {
+      case ('READY'):
+        this.codeValid = true;
+        this.codeField.disable();
+        this.codeDiscount = 5;
+        this.addToCartService.getShoppingList().subscribe((value) => {
+          sList = value;
+        })
+        sList.discount = 5;
+        this.addToCartService.setShoppingList(sList)
+        this.getSubTotalDiscount();
+        break;
+      case ('STEADY'):
+        if (this.subTotal >= 150) {
+          this.codeValid = true;
+          this.codeField.disable();
+          this.codeDiscount = Math.round((20 / this.subTotal) * 100 * 100) / 100;
+
+          console.log(this.codeDiscount)
+
+          this.addToCartService.getShoppingList().subscribe((value) => {
+            sList = value;
+          })
+          sList.discount = this.codeDiscount;
+          this.addToCartService.setShoppingList(sList)
+          this.getSubTotalDiscount();
+        } else {
+          console.log(this.errorMessage);          
+          this.errorMessage = 'Order must be over $150';
+          this.codeValid = false;
+        }
+        break;
+      case ('GOADY'):
+        if (this.subTotal >= 200) {
+          this.codeValid = true;
+          this.codeField.disable();
+          this.codeDiscount = Math.round((39 / this.subTotal) * 100 * 100) / 100;
+
+          console.log(this.codeDiscount)
+
+          this.addToCartService.getShoppingList().subscribe((value) => {
+            sList = value;
+          })
+          sList.discount = this.codeDiscount;
+          this.addToCartService.setShoppingList(sList)
+          this.getSubTotalDiscount();
+        } else {
+          this.errorMessage = 'Order must be over $200';
+          this.codeValid = false;
+        }
+        break;
+      default:
+
+        this.errorMessage = 'Enter a valid discount code';
+        this.codeValid = false;
+        break;
     }
   }
 

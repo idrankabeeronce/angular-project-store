@@ -40,7 +40,7 @@
 
             <div class="discount-code-container tui-text_body-m">
                 <tui-input style="width:100%;" class="tui-space_right-3" tuiHintContent="You can try - READY" [formControl]="codeField"
-                    (ngModelChange)="changeInput()">Discount code<input tuiTextfield maxlength="5" oninput="this.value = this.value.toUpperCase()"/></tui-input>
+                    (ngModelChange)="changeInput()">Discount code<input tuiTextfield maxlength="6" oninput="this.value = this.value.toUpperCase()"/></tui-input>
 
                 <button #button [disabled]="disabled" appearance="primary" tuiButton
                     (click)="applyDiscount()">Apply</button>
@@ -55,7 +55,7 @@
                 </ng-container>
                 <ng-template #error>
                     <tui-notification class="tui-space_top-3 notification-text" status="error">
-                        Enter a valid discount code
+                        {{errorMessage}}
                     </tui-notification>
                 </ng-template>
             </ng-container>

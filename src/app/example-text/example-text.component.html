@@ -1,17 +1,49 @@
 <ng-container *ngIf="!noContent; else error">
-<div class="title-wrapper">
-    <h1 class="tui-text_h3">{{title}}</h1>
-</div>
-<div tuiMode="onLight" class="tui-space_top-3 main-content ">
-    <ng-container *ngFor="let item of activeData">
-        <div class="paragraph tui-space_bottom-8">
-            <div class="tui-text_h6 tui-space_bottom-2">{{item.subtitle}}</div>
-            <div class="tui-text_body-m text-fill">{{item.text}}</div>
+    <div class="title-wrapper">
+        <h1 class="tui-text_h3">{{title}}</h1>
+    </div>
+    <ng-container *ngIf="!discountTemplate; else discount">
+        <div tuiMode="onLight" class="tui-space_top-3 main-content ">
+            <ng-container *ngFor="let item of activeData">
+                <div class="paragraph tui-space_bottom-8">
+                    <div class="tui-text_h6 tui-space_bottom-2">{{item.subtitle}}</div>
+                    <div class="tui-text_body-m text-fill">{{item.text}}</div>
+                </div>
+            </ng-container>
         </div>
     </ng-container>
-</div>
 </ng-container>
 <ng-template #error>
-    
+
     <app-page-not-found></app-page-not-found>
+</ng-template>
+
+<ng-template #discount>
+    <div class="discount-container">
+        <div class="discount-header">
+            <h2 class="label tui-text_h4">Use Voucher to Get More Savings</h2>
+            <p class="sub-label tui-text_h6">Apply the Best Code to Your Cart!</p>
+        </div>
+        <div class="discount-cards">
+            <ng-container *ngFor="let card of discountCards">
+                <div class="discount-card">
+                    <div class="card-body">
+                        <ng-container *ngIf="card.unit === '%'; else dolla">
+                            <div class="card-value tui-text_h3">{{card.value}}%</div>
+                        </ng-container>
+                        <ng-template #dolla>
+                            <div class="card-value tui-text_h3">${{card.value}}</div>
+                        </ng-template>
+                        <ul class="tui-text_body-m">
+                            <li *ngFor="let item of card.desc">{{item}}</li>
+                        </ul>
+                    </div>
+                    <div class="card-bottom">
+                        <span>Code: {{card.code}}</span>
+                        <button tuiButton appearance="primaryW" (click)="copyCode(card.code)">Copy Code</button>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
 </ng-template>
