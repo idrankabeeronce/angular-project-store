@@ -3,7 +3,7 @@
 </div>
 <div class="new-container">
     <ng-container *ngFor="let collection of collections">
-        <div (click)="routeTo(collection.ref)" class="collection-wrapper">
+        <div  *ngIf="collection.imageSrc !== ''" (click)="routeTo(collection.ref)" class="collection-wrapper">
             <img [src]="collection.imageSrc">
             <div class="collection-header">
                 <div class="collection-title tui-text_h4">
