@@ -1,3 +1,7 @@
+:host {
+    --tui-action-color: var(--tui-text-01);
+    --tui-action-background: var(--tui-base-04);
+}
 .main-container {
     padding: 1.5rem 1rem;
     border-radius: var(--tui-radius-s);
@@ -21,6 +25,9 @@
 .grid-container {
     display: grid;
     gap: 2rem;
+}
+.similar-card:hover {
+    color: var(--tui-success-fill);
 }
 @media (max-width: 800px) {
     .main-container {

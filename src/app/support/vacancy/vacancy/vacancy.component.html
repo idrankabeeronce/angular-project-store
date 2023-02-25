@@ -43,7 +43,7 @@
             <h4 class="tui-text_h3">Similar jobs</h4>
             <div class="grid-container">
             <ng-container *ngFor="let item of similarAr">
-                <a tuiAction target="_blank" icon="tuiIconRedoLarge" (click)="navigateVacancy(item)">
+                <a tuiAction class="similar-card" target="_blank" icon="tuiIconRedoLarge" (click)="navigateVacancy(item)">
                     <section>
                         <h3 class="tui-text_body-l">{{item.field}}</h3>
                         <h3 class="tui-text_h6">{{item.title}}</h3>
