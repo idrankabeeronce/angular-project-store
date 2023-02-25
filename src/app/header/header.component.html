@@ -100,7 +100,7 @@
         <h1 class="tui-text_body-m title">NEO</h1>
     </a>
     </div>
-    <div [style]="blockLayot_menu" class="block-wrapper">
+    <div [style]="blockLayot_menu" (click)="destroyOnWrapper($event)" class="block-wrapper">
 
         <tui-scrollbar [style]="menuStyle" class="side-menu-wrapper">
             <div tuiMode="onLight" class="mune-header">

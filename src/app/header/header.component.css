@@ -305,11 +305,6 @@
         display: none;
     }
 }
-@media (max-width: 800px) {
-    .wrapper {
-        padding: 0;
-    }
-}
 @media (max-height: 350px) {
     .list-of-items-scrollbar {
         height: 0;
@@ -318,5 +313,8 @@
 @media (max-width: 800px) {
     .side-menu-wrapper {
         max-width: 100%;
+    }
+    .wrapper {
+        padding: 0;
     }
 }

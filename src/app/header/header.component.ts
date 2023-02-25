@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     })
     // change view of header by changed resolution 
     this.breakpointObserver
-      .observe(['(max-width: 700px)'])
+      .observe(['(max-width: 800px)'])
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
           this.showContainer = true; // compact view
@@ -170,6 +170,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   getMenu() {
     this.blockLayot_menu = 'visibility: visible; opacity: 1;';
     this.menuStyle = 'transform: translate(0)';
+  }
+  
+  destroyOnWrapper(e:any) {    
+    if(e.target.classList.contains('block-wrapper'))
+      this.closeMenu() 
   }
   // close
   closeMenu() {
