@@ -545,7 +545,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
       }
 
       // define class that we gonna push to service that provides connection with component of shopping list 
-      itemToSet = { name: itemS.name, imageSrc: itemS.imageSrc[itemS.indexOfImage], actualPrice: actualPrice, price: price, properties: properties, amount: 1 }
+      itemToSet = { name: itemS.name, imageSrc: itemS.imageSrc[itemS.indexOfImage], actualPrice: actualPrice, price: price, properties: properties, amount: 1, ref: itemS.ref }
 
       this.addToCartService.setItem(itemToSet); // push item to shopping list
 

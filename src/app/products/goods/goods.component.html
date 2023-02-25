@@ -4,277 +4,290 @@
 <div class="content-wrapper">
     <div class="settings-wrapper tui-space_left-5 tui-space_right-5 tui-space_bottom-10 tui-space_top-10">
         <div class="flex-block">
-        <div class="search-bar ">
-            <tui-input [tuiTextfieldCustomContent]="search" [tuiTextfieldCleaner]="true" [(ngModel)]="searchValue">
-                Search... <input tuiTextfield />
-            </tui-input>
-            <ng-template #search>
-                <tui-svg style="cursor: pointer; pointer-events: all" src="tuiIconSearchLarge" (click)="searchProduct()"></tui-svg>
-            </ng-template>
-        </div>
-        <ng-container *ngIf="searchValueLabel !== 'undefined'">
-        <div tuiMode="onLight" class="flex-center search-param">
-            <span class="tui-text_body-m">{{searchValueLabel}}</span>
-            <span class="tui-space_left-2"><tui-svg style="cursor: pointer" src="tuiIconCloseLarge" (click)="resetSearch()"></tui-svg></span>
-        </div>
-        </ng-container>
+            <div class="search-bar ">
+                <tui-input [tuiTextfieldCustomContent]="search" [tuiTextfieldCleaner]="true" [(ngModel)]="searchValue">
+                    Search... <input tuiTextfield />
+                </tui-input>
+                <ng-template #search>
+                    <tui-svg style="cursor: pointer; pointer-events: all" src="tuiIconSearchLarge"
+                        (click)="searchProduct()"></tui-svg>
+                </ng-template>
+            </div>
+            <ng-container *ngIf="searchValueLabel !== 'undefined'">
+                <div tuiMode="onLight" class="flex-center search-param">
+                    <span class="tui-text_body-m">{{searchValueLabel}}</span>
+                    <span class="tui-space_left-2"><tui-svg style="cursor: pointer" src="tuiIconCloseLarge"
+                            (click)="resetSearch()"></tui-svg></span>
+                </div>
+            </ng-container>
         </div>
         <div class="flex-end">
-        <tui-input-slider tuiTextfieldSize="l" class="slider"
-            [tuiTextfieldCustomContent]="inputCustomContent" [tuiTextfieldLabelOutside]="true" [min]="5" [max]="20"
-            [quantum]="1" [(ngModel)]="maxLength" (ngModelChange)="changeMaxLength()">
-        </tui-input-slider>
+            <tui-input-slider tuiTextfieldSize="l" class="slider" [tuiTextfieldCustomContent]="inputCustomContent"
+                [tuiTextfieldLabelOutside]="true" [min]="5" [max]="20" [quantum]="1" [(ngModel)]="maxLength"
+                (ngModelChange)="changeMaxLength()">
+            </tui-input-slider>
 
-        <ng-template #inputCustomContent>Displayed amount</ng-template>
-        <div class="view">
-            <button class="control-button" tuiButton appearance="primaryW" (click)="changeDisplay()">
-                <tui-svg [src]="svgView"></tui-svg>
-            </button>
+            <ng-template #inputCustomContent>Displayed amount</ng-template>
+            <div class="view">
+                <button class="control-button" tuiButton appearance="primaryW" (click)="changeDisplay()">
+                    <tui-svg [src]="svgView"></tui-svg>
+                </button>
 
-        </div>
-        <div class="sort">
-            <button class="control-button" #host tuiButton appearance="primaryW" iconRight="tuiIconChevronDown" [tuiDropdown]="dropdownContent"
-                [tuiDropdownManual]="open" (click)="onClick()">
-                {{currentSort}}
-            </button>
+            </div>
+            <div class="sort">
+                <button class="control-button" #host tuiButton appearance="primaryW" iconRight="tuiIconChevronDown"
+                    [tuiDropdown]="dropdownContent" [tuiDropdownManual]="open" (click)="onClick()">
+                    {{currentSort}}
+                </button>
 
-            <ng-template #dropdownContent>
-                <tui-data-list>
-                    <ng-container *ngFor="let sortParam of sortParams">
-                        <button tuiOption class="dropdown"
-                            (click)="clickOnSort(sortParam.query, sortParam.name)">{{sortParam.name}}</button>
-                    </ng-container>
-                </tui-data-list>
-            </ng-template>
+                <ng-template #dropdownContent>
+                    <tui-data-list>
+                        <ng-container *ngFor="let sortParam of sortParams">
+                            <button tuiOption class="dropdown"
+                                (click)="clickOnSort(sortParam.query, sortParam.name)">{{sortParam.name}}</button>
+                        </ng-container>
+                    </tui-data-list>
+                </ng-template>
+            </div>
         </div>
     </div>
-    </div>
-    <div class="content-body">
+    <ng-container *ngIf="displayedContent.length > 0; else noGoods">
+        <div class="content-body">
 
-        <div [ngClass]="{'group-grid' : changeView}" class="group tui-space_bottom-10">
-            <ng-container *ngFor="let item of displayedContent">
-                <button tuiAction [ngClass]="{'item-card-grid' : changeView}"
-                    class="item-card tui-space_left-5 tui-space_right-5 tui-space_bottom-5 tui-space_top-5">
-                    <!-- discount of items  -->
-                    <div [ngClass]="{'discount-grid' : changeView}" class="discount tui-text_body-s"
-                        *ngIf="item.discount > 0"><span id="discount-text">
-                            <ng-container
-                                *ngIf="item.selectColor == '' || ( item.indexOfSecondProperty == 99 && item.isLength ); else ifColorDiscount">
-                                -{{item.maxDiscount}}%</ng-container>
-                        </span></div>
-                    <!-- discount of selected item -->
-                    <ng-template #ifColorDiscount>
-                        <ng-container *ngFor="let discount of item.disc; let indexOfElement=index">
-                            <ng-container *ngIf="indexOfElement == item.indexOfColor">
-                                -{{item.disc[indexOfElement]}}%
-                            </ng-container>
-                        </ng-container>
-
-                    </ng-template>
-
-                    <div>
-                        <!-- images of item -->
-                        <div style="display: flex; justify-content: space-between;">
-                            <button [ngClass]="{'hidden': item.imageSrc.length <= 1 }" *ngIf="changeView"
-                                style="width: 10%; height: initial;" tuiIconButton type="button" appearance="icon"
-                                icon="tuiIconChevronLeft" (click)="goToImage(item.indexOfImage-1, item)"></button>
-                            <img [ngClass]="{'item-img-grid' : changeView}" class="item-img"
-                                [src]="item.imageSrc[item.indexOfImage]">
-
-
-                            <button [ngClass]="{'hidden': item.imageSrc.length <= 1 }" *ngIf="changeView"
-                                style="width: 10%; height: initial;" tuiIconButton type="button" appearance="icon"
-                                icon="tuiIconChevronRight" (click)="goToImage(item.indexOfImage+1, item)"></button>
-                        </div>
-
-                        <ng-container *ngIf="!changeView">
-                            <tui-pagination [ngClass]="{'hidden': item.imageSrc.length <= 1 }" tuiMode="onLight"
-                                [size]="'s'" [length]="item.imageSrc.length" [index]="item.indexOfImage"
-                                (indexChange)="goToImage($event, item)">
-                            </tui-pagination>
-                        </ng-container>
-                    </div>
-                    <!-- color property with grid view -->
-
-                    <ng-container *ngIf="changeView">
-                        <div [ngClass]="{'item-color-group-grid' : changeView}" class="item-color-group">
-                            <ng-container *ngFor="let prop of item.properties">
-                                <ng-container *ngFor="let color of prop.color; let indexOfElement=index">
-                                    <div #color [ngClass]="{'selected-color': indexOfElement == item.indexOfColor}"
-                                        (click)="selectColorProperty(color, item, indexOfElement)"
-                                        [style]="'background:'+color"
-                                        class="item-color tui-space_left-1 tui-space_right-1"></div>
-
+            <div [ngClass]="{'group-grid' : changeView}" class="group tui-space_bottom-10">
+                <ng-container *ngFor="let item of displayedContent">
+                    <button tuiAction [ngClass]="{'item-card-grid' : changeView}"
+                        class="item-card tui-space_left-5 tui-space_right-5 tui-space_bottom-5 tui-space_top-5">
+                        <!-- discount of items  -->
+                        <div [ngClass]="{'discount-grid' : changeView}" class="discount tui-text_body-s"
+                            *ngIf="item.discount > 0"><span id="discount-text">
+                                <ng-container
+                                    *ngIf="item.selectColor == '' || ( item.indexOfSecondProperty == 99 && item.isLength ); else ifColorDiscount">
+                                    -{{item.maxDiscount}}%</ng-container>
+                            </span></div>
+                        <!-- discount of selected item -->
+                        <ng-template #ifColorDiscount>
+                            <ng-container *ngFor="let discount of item.disc; let indexOfElement=index">
+                                <ng-container *ngIf="indexOfElement == item.indexOfColor">
+                                    -{{item.disc[indexOfElement]}}%
                                 </ng-container>
                             </ng-container>
 
-                        </div>
-                    </ng-container>
+                        </ng-template>
 
-                    <div [ngClass]="{'group-prop-flex' : changeView}">
-                        <div [ngClass]="{'item-prop-field-grid' : changeView}" class="item-prop-field tui-space_left-5">
-                            <!-- name of item/items -->
-                            <div  [ngClass]="{'flex-between tui-space_top-5': changeView}" class="flex">
-                                <div class=" item-name tui-text_body-l tui-space_bottom-5">{{item.name}}</div>
-                                <a routerLink="/item/{{item.ref}}" tuiLink icon="tuiIconRedoLarge"></a>
+                        <div>
+                            <!-- images of item -->
+                            <div style="display: flex; justify-content: space-between;">
+                                <button [ngClass]="{'hidden': item.imageSrc.length <= 1 }" *ngIf="changeView"
+                                    style="width: 10%; height: initial;" tuiIconButton type="button" appearance="icon"
+                                    icon="tuiIconChevronLeft" (click)="goToImage(item.indexOfImage-1, item)"></button>
+                                <img [ngClass]="{'item-img-grid' : changeView}" class="item-img"
+                                    [src]="item.imageSrc[item.indexOfImage]">
+
+
+                                <button [ngClass]="{'hidden': item.imageSrc.length <= 1 }" *ngIf="changeView"
+                                    style="width: 10%; height: initial;" tuiIconButton type="button" appearance="icon"
+                                    icon="tuiIconChevronRight" (click)="goToImage(item.indexOfImage+1, item)"></button>
                             </div>
-                            <!-- min and max price of item -->
-                            <ng-container *ngIf="item.selectColor == '' || item.isLength; else ifColorPrice">
-                                <ng-container
-                                    *ngIf="item.selectColor == '' || item.indexOfSecondProperty == 99; else ifColorPrice">
-                                    <ng-container *ngIf="item.discount == 0; else discount">
-                                        <div class="tui-text_body-l price-field tui-space_bottom-5"><span
-                                                *ngIf="item.minActualPrice != item.maxActualPrice; else price">${{item.minActualPrice}}
-                                                - ${{item.maxActualPrice}}</span></div>
+
+                            <ng-container *ngIf="!changeView">
+                                <tui-pagination [ngClass]="{'hidden': item.imageSrc.length <= 1 }" tuiMode="onLight"
+                                    [size]="'s'" [length]="item.imageSrc.length" [index]="item.indexOfImage"
+                                    (indexChange)="goToImage($event, item)">
+                                </tui-pagination>
+                            </ng-container>
+                        </div>
+                        <!-- color property with grid view -->
+
+                        <ng-container *ngIf="changeView">
+                            <div [ngClass]="{'item-color-group-grid' : changeView}" class="item-color-group">
+                                <ng-container *ngFor="let prop of item.properties">
+                                    <ng-container *ngFor="let color of prop.color; let indexOfElement=index">
+                                        <div #color [ngClass]="{'selected-color': indexOfElement == item.indexOfColor}"
+                                            (click)="selectColorProperty(color, item, indexOfElement)"
+                                            [style]="'background:'+color"
+                                            class="item-color tui-space_left-1 tui-space_right-1"></div>
+
                                     </ng-container>
                                 </ng-container>
-                                <!-- min and max price of item with discount -->
-                                <ng-template #discount>
+
+                            </div>
+                        </ng-container>
+
+                        <div [ngClass]="{'group-prop-flex' : changeView}">
+                            <div [ngClass]="{'item-prop-field-grid' : changeView}"
+                                class="item-prop-field tui-space_left-5">
+                                <!-- name of item/items -->
+                                <div [ngClass]="{'flex-between tui-space_top-5': changeView}" class="flex">
+                                    <div class=" item-name tui-text_body-l tui-space_bottom-5">{{item.name}}</div>
+                                    <a routerLink="/item/{{item.ref}}" tuiLink icon="tuiIconRedoLarge"></a>
+                                </div>
+                                <!-- min and max price of item -->
+                                <ng-container *ngIf="item.selectColor == '' || item.isLength; else ifColorPrice">
+                                    <ng-container
+                                        *ngIf="item.selectColor == '' || item.indexOfSecondProperty == 99; else ifColorPrice">
+                                        <ng-container *ngIf="item.discount == 0; else discount">
+                                            <div class="tui-text_body-l price-field tui-space_bottom-5"><span
+                                                    *ngIf="item.minActualPrice != item.maxActualPrice; else price">${{item.minActualPrice}}
+                                                    - ${{item.maxActualPrice}}</span></div>
+                                        </ng-container>
+                                    </ng-container>
+                                    <!-- min and max price of item with discount -->
+                                    <ng-template #discount>
+                                        <div [ngClass]="{'price-field-grid' : changeView}"
+                                            class="tui-text_body-l price-field tui-space_bottom-5">
+                                            <span class="new-price-field tui-space_right-1"><span
+                                                    *ngIf="item.minActualPrice != item.maxActualPrice; else price">
+                                                    ${{item.minActualPrice}}
+                                                    - ${{item.maxActualPrice}}</span></span>
+                                            <span class="old-price-field"><span
+                                                    *ngIf="item.minPrice != item.maxPrice; else priceDiscount">${{item.minPrice}}
+                                                    - ${{item.maxPrice}}</span></span>
+                                        </div>
+                                    </ng-template>
+
+                                    <ng-template #price>
+                                        ${{item.minActualPrice}}
+                                    </ng-template>
+
+                                    <ng-template #priceDiscount>
+                                        ${{item.minPrice}}
+                                    </ng-template>
+
+
+
+                                </ng-container>
+
+                                <!-- price of selected item -->
+                                <ng-template #ifColorPrice>
                                     <div [ngClass]="{'price-field-grid' : changeView}"
                                         class="tui-text_body-l price-field tui-space_bottom-5">
-                                        <span class="new-price-field tui-space_right-1"><span
-                                                *ngIf="item.minActualPrice != item.maxActualPrice; else price">
-                                                ${{item.minActualPrice}}
-                                                - ${{item.maxActualPrice}}</span></span>
-                                        <span class="old-price-field"><span
-                                                *ngIf="item.minPrice != item.maxPrice; else priceDiscount">${{item.minPrice}}
-                                                - ${{item.maxPrice}}</span></span>
+
+                                        <ng-container *ngFor="let prop of item.prop; let indexOfElement = index">
+
+                                            <ng-container *ngIf="prop.color == item.selectColor">
+
+                                                <ng-container
+                                                    *ngIf="indexOfElement == item.indexOfSecondProperty || !item.isLength">
+                                                    <ng-container
+                                                        *ngIf="item.price[indexOfElement] != item.actualPrice[indexOfElement]; else NoDiscount">
+                                                        <span
+                                                            class="new-price-field tui-space_right-1"><span>${{item.actualPrice[indexOfElement]}}</span></span>
+                                                        <span
+                                                            class="old-price-field tui-space_right-1"><span>${{item.price[indexOfElement]}}</span></span>
+                                                    </ng-container>
+                                                </ng-container>
+
+                                                <ng-template #NoDiscount>
+                                                    <span>${{item.price[indexOfElement]}}</span>
+                                                </ng-template>
+                                            </ng-container>
+                                        </ng-container>
                                     </div>
                                 </ng-template>
 
-                                <ng-template #price>
-                                    ${{item.minActualPrice}}
-                                </ng-template>
+                                <!-- color with tabs view -->
+                                <ng-container *ngIf="!changeView">
 
-                                <ng-template #priceDiscount>
-                                    ${{item.minPrice}}
-                                </ng-template>
+                                    <div class="item-color-group tui-space_bottom-5">
+                                        <ng-container *ngFor="let prop of item.properties">
+                                            <ng-container *ngFor="let color of prop.color; let indexOfElement=index">
+                                                <div [ngClass]="{'selected-color': indexOfElement == item.indexOfColor}"
+                                                    (click)="selectColorProperty(color, item, indexOfElement)" #color
+                                                    [style]="'background:'+color" class="item-color tui-space_right-2">
+                                                </div>
 
+                                            </ng-container>
+                                        </ng-container>
+                                    </div>
+                                    <!-- second property with tabs view -->
+                                    <ng-container *ngIf="item.isLength">
+                                        <div class="tui-space_right-1 tui-space_bottom-1 tui-text_body-s">Size:</div>
+                                        <div class="item-length-group  tui-text_body-s tui-space_bottom-5">
+                                            <ng-container *ngIf="item.selectColor == ''; else ifColorLength">
+                                                <ng-container *ngFor="let prop of item.properties">
+                                                    <ng-container *ngFor="let length of prop.length">
+                                                        <div class="item-length tui-space_right-1">{{length}}m</div>
+                                                    </ng-container>
+                                                </ng-container>
+                                            </ng-container>
 
-
-                            </ng-container>
-
-                            <!-- price of selected item -->
-                            <ng-template #ifColorPrice>
-                                <div [ngClass]="{'price-field-grid' : changeView}"
-                                    class="tui-text_body-l price-field tui-space_bottom-5">
-
-                                    <ng-container *ngFor="let prop of item.prop; let indexOfElement = index">
-
-                                        <ng-container *ngIf="prop.color == item.selectColor">
-
-                                            <ng-container
-                                                *ngIf="indexOfElement == item.indexOfSecondProperty || !item.isLength">
+                                            <ng-template #ifColorLength>
                                                 <ng-container
-                                                    *ngIf="item.price[indexOfElement] != item.actualPrice[indexOfElement]; else NoDiscount">
-                                                    <span
-                                                        class="new-price-field tui-space_right-1"><span>${{item.actualPrice[indexOfElement]}}</span></span>
-                                                    <span
-                                                        class="old-price-field tui-space_right-1"><span>${{item.price[indexOfElement]}}</span></span>
-                                                </ng-container>
-                                            </ng-container>
+                                                    *ngFor="let prop of item.prop; let indexOfElement = index">
+                                                    <ng-container *ngIf="prop.color == item.selectColor">
+                                                        <div [ngClass]="{'selected-length': indexOfElement == item.indexOfSecondProperty}"
+                                                            class="item-length tui-space_right-1"
+                                                            (click)="selectProperty(item, indexOfElement)">
+                                                            {{prop.length}}m</div>
+                                                    </ng-container>
 
-                                            <ng-template #NoDiscount>
-                                                <span>${{item.price[indexOfElement]}}</span>
+
+                                                </ng-container>
                                             </ng-template>
-                                        </ng-container>
+
+                                        </div>
                                     </ng-container>
-                                </div>
-                            </ng-template>
-
-                            <!-- color with tabs view -->
-                            <ng-container *ngIf="!changeView">
-
-                                <div class="item-color-group tui-space_bottom-5">
-                                    <ng-container *ngFor="let prop of item.properties">
-                                        <ng-container *ngFor="let color of prop.color; let indexOfElement=index">
-                                            <div [ngClass]="{'selected-color': indexOfElement == item.indexOfColor}"
-                                                (click)="selectColorProperty(color, item, indexOfElement)" #color
-                                                [style]="'background:'+color" class="item-color tui-space_right-2">
-                                            </div>
-
-                                        </ng-container>
-                                    </ng-container>
-                                </div>
-                                <!-- second property with tabs view -->
-                                <ng-container *ngIf="item.isLength">
-                                    <div class="tui-space_right-1 tui-space_bottom-1 tui-text_body-s">Size:</div>
-                                    <div class="item-length-group  tui-text_body-s tui-space_bottom-5">
-                                        <ng-container *ngIf="item.selectColor == ''; else ifColorLength">
+                                </ng-container>
+                                <!-- desciption if tabs view -->
+                                <tui-scrollbar [ngClass]="{'item-description-grid' : changeView}"
+                                    class="item-description tui-text_body-m">
+                                    <div>{{item.description}}</div>
+                                </tui-scrollbar>
+                            </div>
+                            <!-- second property with grid view -->
+                            <ng-container *ngIf="item.isLength">
+                                <ng-container *ngIf="changeView">
+                                    <div class="tui-space_top-5 tui-space_right-5">
+                                        <ng-container *ngIf="item.selectColor == ''; else ifColorLengthGrid">
                                             <ng-container *ngFor="let prop of item.properties">
-                                                <ng-container *ngFor="let length of prop.length">
-                                                    <div class="item-length tui-space_right-1">{{length}}m</div>
+                                                <ng-container
+                                                    *ngFor="let length of prop.length; let indexOfElement=index">
+                                                    <div [ngClass]="{'selected-length': indexOfElement == item.indexOfSecondProperty}"
+                                                        #length class="item-length tui-space_bottom-2">{{length}}m</div>
                                                 </ng-container>
                                             </ng-container>
                                         </ng-container>
 
-                                        <ng-template #ifColorLength>
+                                        <ng-template #ifColorLengthGrid>
                                             <ng-container *ngFor="let prop of item.prop; let indexOfElement = index">
                                                 <ng-container *ngIf="prop.color == item.selectColor">
                                                     <div [ngClass]="{'selected-length': indexOfElement == item.indexOfSecondProperty}"
-                                                        class="item-length tui-space_right-1"
+                                                        class="item-length tui-space_bottom-2"
                                                         (click)="selectProperty(item, indexOfElement)">
                                                         {{prop.length}}m</div>
                                                 </ng-container>
-
-
                                             </ng-container>
                                         </ng-template>
-
                                     </div>
                                 </ng-container>
                             </ng-container>
-                            <!-- desciption if tabs view -->
-                            <tui-scrollbar [ngClass]="{'item-description-grid' : changeView}"
-                                class="item-description tui-text_body-m">
-                                <div>{{item.description}}</div>
-                            </tui-scrollbar>
                         </div>
-                        <!-- second property with grid view -->
-                        <ng-container *ngIf="item.isLength">
-                            <ng-container *ngIf="changeView">
-                                <div class="tui-space_top-5 tui-space_right-5">
-                                    <ng-container *ngIf="item.selectColor == ''; else ifColorLengthGrid">
-                                        <ng-container *ngFor="let prop of item.properties">
-                                            <ng-container *ngFor="let length of prop.length; let indexOfElement=index">
-                                                <div [ngClass]="{'selected-length': indexOfElement == item.indexOfSecondProperty}"
-                                                    #length class="item-length tui-space_bottom-2">{{length}}m</div>
-                                            </ng-container>
-                                        </ng-container>
-                                    </ng-container>
+                        <div [ngClass]="{'buy-field-grid' : changeView}" class="buy-field">
+                            <button tuiButton appearance="primary" (click)="addToCart(item)">
+                                <tui-svg [src]="shopping_card_svg" class="tui-space_right-2"></tui-svg>
+                            </button>
 
-                                    <ng-template #ifColorLengthGrid>
-                                        <ng-container *ngFor="let prop of item.prop; let indexOfElement = index">
-                                            <ng-container *ngIf="prop.color == item.selectColor">
-                                                <div [ngClass]="{'selected-length': indexOfElement == item.indexOfSecondProperty}"
-                                                    class="item-length tui-space_bottom-2"
-                                                    (click)="selectProperty(item, indexOfElement)">
-                                                    {{prop.length}}m</div>
-                                            </ng-container>
-                                        </ng-container>
-                                    </ng-template>
-                                </div>
-                            </ng-container>
-                        </ng-container>
-                    </div>
-                    <div [ngClass]="{'buy-field-grid' : changeView}" class="buy-field">
-                        <button tuiButton appearance="primary" (click)="addToCart(item)">
-                            <tui-svg [src]="shopping_card_svg" class="tui-space_right-2"></tui-svg>
-                        </button>
+                        </div>
 
-                    </div>
-
-                </button>
+                    </button>
 
 
 
-            </ng-container>
+                </ng-container>
+            </div>
+
         </div>
-    </div>
 
-    <div class="pagination"></div>
+        <div class="pagination"></div>
+    
     <tui-pagination [ngClass]="{'hidden': content.length < maxLength}" tuiMode="onLight"
         class="tui-space_top-10 tui-space_bottom-15" [length]="length" [index]="indexP"
         (indexChange)="clickOnPagination($event)"></tui-pagination>
-
+    </ng-container>
 </div>
+<ng-template #noGoods>
+    <div class="empty-container">
+        <h1 class="empty-label tui-text_h3">Sorry, we couldn't find anything</h1>
+    </div>
+</ng-template>
