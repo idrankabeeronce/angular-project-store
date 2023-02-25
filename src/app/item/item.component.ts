@@ -36,7 +36,6 @@ export class ItemComponent implements OnInit, OnDestroy {
   disabled = true;
   similarItems: any = [];
   currentItem: any = {};
-  StyleIfLessFour = '';
 
   category = '';
   type = '';
@@ -159,10 +158,6 @@ export class ItemComponent implements OnInit, OnDestroy {
           }
         }
       }
-    }
-
-    if (this.similarItems.length < 4) {
-      this.StyleIfLessFour = `grid-template-columns: repeat(${this.similarItems.length}, minmax(0, 1fr))`;
     }
   }
   routeTo(parentPath: string, childPath: string, typePath?: string) {

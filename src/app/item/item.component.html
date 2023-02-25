@@ -99,7 +99,7 @@
             <div class="similar-items-header">
                 <h2 class="tui-text_h4">Similar products</h2>
             </div>
-            <div [style]="StyleIfLessFour" class="similar-items">
+            <div  class="similar-items">
                 <ng-container *ngFor="let item of similarItems">
                     <div (click)="routeTo('item', item.ref)" class="similar-item-card">
                         <img [src]="item.imageSrc">

@@ -16,22 +16,11 @@
         "ref": "products?search=HearSound"
     },
     {
-        "label": "Collection of HearSound",
+        "label": "",
         "dateOfRelease": "2023-02-20",
-        "price": 100,
-        "discount": 0,
-        "description": [{
-            "icon":"assets/icons/new-collections/hear-sound__microphone.svg",
-            "label":"Quality Mics"
-        },{
-            "icon":"assets/icons/new-collections/hear-sound__autonomy.svg",
-            "label":"9H Single Charge 27H With Case"
-        },{
-            "icon":"assets/icons/new-collections/hear-sound__aptx.svg",
-            "label":"Lossless Audio"
-        }],
-        "imageSrc": "",
-        "ref": "products?search=HearSound"
+        "description": [],
+        "imageSrc": "assets/images/products/new-collections/pb__wrapper.webp",
+        "ref": "products?search=power bank"
     },
     {
         "label": "Collection of HearSound",

@@ -11,7 +11,7 @@
                 </div>
                 <button (click)="routeTo(collection.ref)" tuiButton appearance="primaryW">Learn More<tui-svg src="tuiIconChevronRight"></tui-svg></button>
             </div>
-            <div class="collection-footer">
+            <div *ngIf="collection.description.length > 0" class="collection-footer">
                 <ng-container *ngFor="let desc of collection.description">
                     <div class="footer-item">
                         <tui-svg [src]="desc.icon"></tui-svg>
