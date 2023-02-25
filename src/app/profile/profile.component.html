@@ -1,4 +1,4 @@
-<div [ngClass]="{'block-wrapper-open':open}" tuiMode="onLight" class="block-wrapper">
+<div [ngClass]="{'block-wrapper-open':open}" (click)="destroyOnWrapper($event)" tuiMode="onLight" class="block-wrapper">
     <div [ngClass]="{'profile-wrapper-open':open}" class="profile-wrapper">
         <div class="profile-form">
 

@@ -53,6 +53,7 @@
     height: 150px;
     width: 150px;
     background-size: cover;
+    cursor: pointer;
 }
 
 .bottom-container-field {

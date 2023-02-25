@@ -11,9 +11,9 @@ import { Router } from '@angular/router';
 export class ShoppingCartComponent implements OnInit, OnDestroy {
   @Output() newItemEvent = new EventEmitter<any>();
 
-  shoppingList: any = []; 
+  shoppingList: any = [];
   total: number = 0; // sum price of shopping list 
-  sub_1!: Subscription; 
+  sub_1!: Subscription;
   sub_2!: Subscription;
   sub_3!: Subscription;
   isInit = false;
@@ -22,10 +22,9 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
   constructor(private addToCartService: AddToCartService, private router: Router) { }
 
   ngOnInit(): void {
-
     // getting shopped item
     this.sub_1 = this.addToCartService.getItem().subscribe((value: any) => {
-      
+
       let keys: any = [];
       let values: any = [];
       let found = false;
@@ -35,10 +34,10 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
         this.isInit = true;
         let index = 0;
         for (let item of this.shoppingList) {
-          
+
           if (item.name == value.name) {
             if (item.properties == value.properties) {
-              found = true;  
+              found = true;
               break;
             }
           }
@@ -49,7 +48,7 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
           this.shoppingList.push(value);
           if (this.shoppingList.length == 1) {
             if (this.shoppingList.id == undefined)
-              this.shoppingList.id = (Math.round(Math.random() * (9999-1000) + 1000));
+              this.shoppingList.id = (Math.round(Math.random() * (9999 - 1000) + 1000));
           }
           // define properties
           let Obj = Object.entries(value);
@@ -88,7 +87,7 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
           // set the amount of unique items of shopping list
           this.addToCartService.setSizeOfShoppingList(this.shoppingList.length)
 
-        } 
+        }
         // increase amount
         else {
           this.shoppingList[index].amount++
@@ -106,7 +105,7 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
 
     })
     this.sub_3 = this.addToCartService.getSizeOfShoppingList().subscribe(value => {
-      
+
       if (value == 0 && this.isInit) {
         this.shoppingList = [];
         this.isInit = false;
@@ -118,7 +117,10 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
     this.sub_1.unsubscribe();
     this.sub_2.unsubscribe();
   }
-
+  destroyOnWrapper(e:any) {    
+    if(e.target.classList.contains('block-wrapper'))
+      this.destroy() 
+  }
   // setting value to false that causes close event
   destroy() {
     this.addToCartService.setOpenCart(false)

@@ -29,34 +29,50 @@
                                 {{currentItem.discount[currentItem.indexOfColor]}}%</div>
                         </ng-template>
                     </div>
-                    <div class="border-bottom tui-space_vertical-2"></div>
-                    <!--color-->
-                    <div class="grid custom-gap-1">
-                        <div style="font-weight: bold" class="tui-text_body-l">Color:
-                            {{currentItem.color[currentItem.indexOfColor]}}</div>
-                        <div class="flex custom-gap-1">
+                    <div class="border-bottom">
 
-                            <ng-container *ngFor="let color of currentItem.color; let indexOfElement = index">
-                                <div [ngClass]="{'selected-color-prop': indexOfElement == currentItem.indexOfColor}"
-                                    [style]="'background:'+color" class="color-prop-l"
-                                    (click)="selectColorProperty(color, currentItem, indexOfElement)"></div>
+
+                        <!--desc of item-->
+                        <div class="desc-of-item  tui-space_vertical-4">
+                        <div>
+                            <!--color-->
+                            <div class="grid custom-gap-1">
+                                <div style="font-weight: bold" class="tui-text_body-l">Color:
+                                    {{currentItem.color[currentItem.indexOfColor]}}</div>
+                                <div class="flex custom-gap-1">
+
+                                    <ng-container *ngFor="let color of currentItem.color; let indexOfElement = index">
+                                        <div [ngClass]="{'selected-color-prop': indexOfElement == currentItem.indexOfColor}"
+                                            [style]="'background:'+color" class="color-prop-l"
+                                            (click)="selectColorProperty(color, currentItem, indexOfElement)"></div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                            <!--second property-->
+                            <div class="grid custom-gap-1" *ngIf="currentItem.secondProperty.length > 0">
+                                <div style="font-weight: bold" class="tui-text_body-l">
+                                    {{currentItem.labelSecondProperty}}:
+                                    {{currentItem.secondProperty[currentItem.indexOfSecondProperty]}}{{currentItem.suffixOfSecProp}}
+                                </div>
+                                <div class="flex custom-gap-1">
+                                    <ng-container
+                                        *ngFor="let secondProperty of currentItem.secondProperty; let indexOfElement = index">
+                                        <div [ngClass]="{'selected-second-prop': indexOfElement == currentItem.indexOfSecondProperty}"
+                                            class="tui-text_body-m second-prop"
+                                            (click)="selectProperty(currentItem, indexOfElement)">
+                                            {{secondProperty}}{{currentItem.suffixOfSecProp}}</div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="currentItem.listOfBenefits !== undefined" class="item-benefits">
+                            <ul class="tui-text_body-m list-of-benefits">
+                            <ng-container *ngFor="let benefit of currentItem.listOfBenefits">
+                                <li class="benefit-item">{{benefit}}</li>
                             </ng-container>
+                        </ul>
                         </div>
                     </div>
-                    <!--second property-->
-                    <div class="grid custom-gap-1" *ngIf="currentItem.secondProperty.length > 0">
-                        <div style="font-weight: bold" class="tui-text_body-l">{{currentItem.labelSecondProperty}}:
-                            {{currentItem.secondProperty[currentItem.indexOfSecondProperty]}}{{currentItem.suffixOfSecProp}}
-                        </div>
-                        <div class="flex custom-gap-1">
-                            <ng-container
-                                *ngFor="let secondProperty of currentItem.secondProperty; let indexOfElement = index">
-                                <div [ngClass]="{'selected-second-prop': indexOfElement == currentItem.indexOfSecondProperty}"
-                                    class="tui-text_body-m second-prop"
-                                    (click)="selectProperty(currentItem, indexOfElement)">
-                                    {{secondProperty}}{{currentItem.suffixOfSecProp}}</div>
-                            </ng-container>
-                        </div>
                     </div>
                     <div style="align-items: center" class="cart-wrapper flex custom-gap-2">
                         <div style="align-items: center" class="flex">
@@ -77,6 +93,22 @@
         <div class="item-wrapper">
             <div class="tui-text_body-m">
                 <p>{{currentItem.description}}</p>
+            </div>
+        </div>
+        <div *ngIf="similarItems.length > 0" class="items-wrapper">
+            <div class="similar-items-header">
+                <h2 class="tui-text_h4">Similar products</h2>
+            </div>
+            <div [style]="StyleIfLessFour" class="similar-items">
+                <ng-container *ngFor="let item of similarItems">
+                    <div (click)="routeTo('item', item.ref)" class="similar-item-card">
+                        <img [src]="item.imageSrc">
+                        <div class="similar-item-name tui-text_h6">{{item.name}}</div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="button-container">
+                <button tuiButton appearance="primary" (click)="routeTo('products', category, type)">More</button>
             </div>
         </div>
     </div>

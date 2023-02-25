@@ -16,7 +16,7 @@
                         <tr class="tui-table__tr">
                             <td class="tui-table__td tui-table__td_first">
                                 <div class="tui-table__td_flex">
-                                    <img class="item-img" [src]="item.imageSrc">
+                                    <img routerLink="/item/{{item.ref}}" class="item-img" [src]="item.imageSrc">
                                     <div class="prop-field">
                                         <p>{{item.name}}</p>
                                         <ng-container *ngFor="let key of item.keysOfProperty; let i = index">

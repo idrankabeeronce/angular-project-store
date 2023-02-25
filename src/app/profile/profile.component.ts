@@ -54,6 +54,11 @@ export class ProfileComponent implements OnInit, OnDestroy {
     else
       return false;
   }
+  
+  destroyOnWrapper(e:any) {    
+    if(e.target.classList.contains('block-wrapper'))
+      this.hideProfile() 
+  }
   logOut() {
     this.authenticationService.logout();
     this.hideProfile();

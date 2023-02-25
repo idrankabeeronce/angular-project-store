@@ -59,7 +59,7 @@ export class SaleComponent implements OnInit {
     })
   }
   addToCart(item: typeOfItem) {
-    let itemToSet = { name: item.name, imageSrc: item.imageSrc, actualPrice: item.actualPrice, price: item.price, properties: item.properties, amount: 1 }
+    let itemToSet = { name: item.name, imageSrc: item.imageSrc, actualPrice: item.actualPrice, price: item.price, properties: item.properties, amount: 1, ref: item.ref }
 
     this.addToCartService.setItem(itemToSet);
 

@@ -424,6 +424,8 @@
     align-items: stretch;
 }
 .benefits-card {
+    display: grid;
+    place-items: center;
     border-radius: var(--tui-radius-m);
     background: linear-gradient(0deg, var(--tui-base-01), #e6f5fb);
     padding: .5rem 1rem;
@@ -433,6 +435,7 @@
     scale: 1;
     transition: .3s ease;
     cursor: pointer;
+    
 }
 .benefits-card > div {
     margin-bottom: 1rem;

@@ -961,5 +961,78 @@
                 ]
             }
         ]
+    },
+    {
+        "category": "power-banks",
+        "goods": [
+            {
+                "type": "",
+                "items": [
+                    {
+                        "name": "NEO 10000mAh PD 20W USB-C Power Bank",
+                        "dateOfRelease": "2023-02-25",
+                        "properties": {
+                            "color": "blue",
+                            "watt": 20
+                        },
+                        "price": 29.99,
+                        "discount": 0,
+                        "description": "USB-C Portable Charger PD 20W, Portable Charger Power Bank for Samsung Galaxy S22/S21/S20/S10, iPhone 13 Series/iPhone 12 Series, iPad, and More (USB C to A Cable Included)",
+                        "imageSrc": "assets/images/products/power-banks/PB_10000PD20W.png",
+                        "rating": 1,
+                        "listOfBenefits": [
+                            "Portable Charger with USB-C Power Delivery 20W",
+                            "Universal Capability",
+                            "Compact and Convenient",
+                            "Premium and Safe ATL Battery"
+                        ],
+                        "tag": [
+                            "new"
+                        ],
+                        "ref": "NEO-PB-PD20W"
+                    },
+                    {
+                        "name": "A-NEO 20W PD 10000mAh Power Bank",
+                        "dateOfRelease": "2023-02-25",
+                        "properties": {
+                            "color": "blue",
+                            "watt": 20
+                        },
+                        "price": 42.99,
+                        "discount": 0,
+                        "description": "Portable Fast Charger Including 3 USB-C Cables Compatible with Samsung Galaxy S22/S21/S20/S10, iPhone 14/iPhone 13/iPhone 12 Series/iPad and More",
+                        "imageSrc": "assets/images/products/power-banks/PB_10000PD20WFC.png",
+                        "rating": 1,
+                        "tag": [
+                            "new"
+                        ],
+                        "ref": "NEO-PB-PD20WFC"
+                    },
+                    {
+                        "name": "NEO 20000mAh PD 20W Portable Charger Power Bank",
+                        "dateOfRelease": "2023-02-25",
+                        "properties": {
+                            "color": "black",
+                            "watt": 20
+                        },
+                        "price": 45.99,
+                        "discount": 0,
+                        "description": "Fast Charging Including 2 USB-C Cables, Compatible with Samsung Galaxy S22/S21/S20/S10, iPhone 14/iPhone 13/iPhone 12 Series/iPad",
+                        "imageSrc": "assets/images/products/power-banks/PB_20000PD20WFC.png",
+                        "rating": 0.82,
+                        "listOfBenefits": [
+                            "Portable yet powerful",
+                            "PD 20W Fast Charging",
+                            "Repaid Recharge",
+                            "Long Life Expectancy"
+                        ],
+                        "tag": [
+                            "new"
+                        ],
+                        "ref": "NEO-PB-PD20W20"
+                    }
+                ]
+            }
+        ]
     }
 ]

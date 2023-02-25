@@ -1,4 +1,4 @@
-<div [ngClass]="{'block-wrapper-open':open}" class="block-wrapper">
+<div [ngClass]="{'block-wrapper-open':open}" (click)="destroyOnWrapper($event)" class="block-wrapper">
     <div [ngClass]="{'shopping-cart-wrapper-open':open}" class="shopping-cart-wrapper">
         <div class="shopping-cart-header">
             <h1 class="tui-text_h6">SHOPPING CART</h1>
@@ -33,8 +33,8 @@
                                         <ng-container *ngIf="item.actualPrice != item.price; else noDiscount">
                                             <div class="tui-text_body-m"><span
                                                     class="new-price tui-space_right-1">${{getRound(item.actualPrice,
-                                                    item.amount)}}</span><span class="old-price">${{item.price *
-                                                    item.amount}}</span></div>
+                                                    item.amount)}}</span><span class="old-price">${{getRound(item.price,
+                                                    item.amount)}}</span></div>
                                         </ng-container>
                                         <ng-template #noDiscount>
                                             <div class="tui-text_body-m"><span

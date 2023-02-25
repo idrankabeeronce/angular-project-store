@@ -91,15 +91,32 @@
     color: var(--tui-info-fill);
     border-radius: var(--tui-radius-s);
     border: 1px solid var(--tui-info-fill);
-    
+
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
 }
+.desc-of-item {
+    display: flex;
+    gap: 0.5rem;
+
+}
+.desc-of-item > div {
+    flex: 1;
+    display: grid;
+    gap: 1rem;
+}
+.list-of-benefits {
+    list-style: inside;
+}
+li.benefit-item:not(:last-child) { 
+    margin-bottom: .8rem;  
+ }
 .item-rate {
     font-size: 2rem;
 }
+
 .color-prop {
 
     filter: contrast(0.6);
@@ -114,7 +131,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    
+
 }
 
 .selected-color-prop {
@@ -126,7 +143,7 @@
     padding: .2rem;
     border-radius: var(--tui-radius-xs);
     border: 1px solid var(--tui-base-08);
-    
+
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -141,15 +158,80 @@
 .button-flex {
     flex: 1;
 }
+
+.items-wrapper {
+    margin-bottom: 5rem;
+}
+.similar-items-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.similar-items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-left: 1rem;
+}
+
+.similar-item-card {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: var(--tui-radius-s);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 2rem;
+    max-width: 500px;
+    padding: 1rem .5rem 2rem .5rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px 1px #00000017, -1px -1px 5px #0000001d;
+}
+
+.similar-item-card>img {
+    width: 80%;
+}
+.similar-item-name {
+    overflow: hidden;
+    width: 100%;
+}
+.button-container {
+    margin-top: 2rem;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.button-container > button {
+    border-radius: 2rem;
+    width: 200px;
+}
 @media (max-width: 800px) {
     .main-container {
         padding: 0;
         margin: 0;
     }
+
     .flex-grid-container {
         display: grid;
     }
+
     .image-wrapper {
         width: 100% !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .similar-items {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (max-width: 750px) {
+    .similar-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr))!important;
+    }
+}
+@media (max-width: 500px) {
+    .similar-items {
+        grid-template-columns: minmax(0, 1fr)!important;
     }
 }
