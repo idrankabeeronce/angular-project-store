@@ -5,12 +5,13 @@
     <div class="settings-wrapper tui-space_left-5 tui-space_right-5 tui-space_bottom-10 tui-space_top-10">
         <div class="flex-block">
             <div class="search-bar ">
-                <tui-input [tuiTextfieldCustomContent]="search" [tuiTextfieldCleaner]="true" [(ngModel)]="searchValue">
+                <tui-input (keydown.enter)="searchProduct()" [tuiTextfieldCustomContent]="search" [tuiTextfieldCleaner]="true" [(ngModel)]="searchValue">
                     Search... <input tuiTextfield />
                 </tui-input>
                 <ng-template #search>
                     <tui-svg style="cursor: pointer; pointer-events: all" src="tuiIconSearchLarge"
-                        (click)="searchProduct()"></tui-svg>
+                    (click)="searchProduct()"></tui-svg>
+                
                 </ng-template>
             </div>
             <ng-container *ngIf="searchValueLabel !== 'undefined'">

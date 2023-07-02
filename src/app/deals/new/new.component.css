@@ -54,6 +54,9 @@
         border-radius: 3rem;
         height: 40px;
     }
+    .collection-header > button {
+        display: none;
+    }
 }
 
 @media (max-width: 700px) {

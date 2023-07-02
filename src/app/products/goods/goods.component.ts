@@ -82,7 +82,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.dataOfItems = (data as any).default;
-    
+
   }
   // switch between image by selected color
   goToImage(index: number, itemT: any) {
@@ -138,15 +138,15 @@ export class GoodsComponent implements OnInit, OnDestroy {
     let queryParam: any = {};
     let sortParam = this.Route.snapshot.queryParamMap.get("sort")?.toLocaleLowerCase();
 
-    if (this.typeOfCategory != 'null' && this.typeOfCategory != undefined)
+    if (this.typeOfCategory !== 'null' && this.typeOfCategory != undefined)
       queryParam.type = this.typeOfCategory;
-    if (sortParam != 'null' && sortParam != undefined)
+    if (sortParam !== 'null' && sortParam != undefined)
       queryParam.sort = sortParam
-    if (this.searchValue != '')
+    if (this.searchValue !== '')
       queryParam.search = this.searchValue;
 
     let path = '';
-    if (this.goodQueary == 'products') // if group of products non-selected
+    if (this.goodQueary === 'products') // if group of products non-selected
       path = this.goodQueary
     else
       path = `${this.Route.parent?.routeConfig?.path}/${this.Route.routeConfig?.path}`;
@@ -261,7 +261,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
     // check if group type defined and it's not match to current iteration // false - content++ // else - skip
     let checkMark = false;
     let searchValid = true;
-    
+
     this.dataOfItems = (data as any).default;
     this.content = []; // array of whole content
     for (let group of this.dataOfItems) {
@@ -477,7 +477,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
         // define the length of pagination that depends on amount of content
         this.length = Math.ceil(this.content.length / this.maxLength);
         this.getDisplayedContent();
-        
+
       }
     }
   }

@@ -80,6 +80,7 @@ export class AddToCartService {
   constructor(private http: HttpClient) { }
 
   // get ip adress
+  /*
   getIPAddress() {
     let ipAdress: any;
     this.http.get("http://api.ipify.org/?format=json").subscribe((res: any) => {
@@ -87,4 +88,5 @@ export class AddToCartService {
     });
     return ipAdress
   }
+  */
 }

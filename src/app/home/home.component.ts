@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 import { TuiSwipe } from '@taiga-ui/cdk';
 import data from "src/assets/content/products/products.json";
+import { AddToCartService } from '../add-to-cart.service';
 
 
 
@@ -113,7 +114,7 @@ export class HomeComponent implements OnInit {
   smooth = `transition: all .6s ease-out`;
   intervalId: any;
 
-  constructor() {
+  constructor(private addToCardService: AddToCartService) {
 
   }
 
@@ -138,6 +139,7 @@ export class HomeComponent implements OnInit {
     if (offset > 100) this.carousel.next();
     this.carousel.cycle();
   }
+
   getData() {
     this.bestSellers = []; // array of whole content
     this.listOfNewItems = [];
