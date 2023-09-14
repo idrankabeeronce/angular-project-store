@@ -117,6 +117,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
       case ('READY'):
         this.codeValid = true;
         this.codeField.disable();
+        this.disabled = true;
         this.codeDiscount = 5;
         this.addToCartService.getShoppingList().subscribe((value) => {
           sList = value;
@@ -129,6 +130,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
         if (this.subTotal >= 150) {
           this.codeValid = true;
           this.codeField.disable();
+          this.disabled = true;
           this.codeDiscount = Math.round((20 / this.subTotal) * 100 * 100) / 100;
 
           console.log(this.codeDiscount)
@@ -149,6 +151,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
         if (this.subTotal >= 200) {
           this.codeValid = true;
           this.codeField.disable();
+          this.disabled = true;
           this.codeDiscount = Math.round((39 / this.subTotal) * 100 * 100) / 100;
 
           console.log(this.codeDiscount)

@@ -178,7 +178,9 @@ export class ItemComponent implements OnInit, OnDestroy {
     if (itemS.indexOfSecondProperty != 99 || !itemS.isLength && itemS.indexOfColor != 99) {
 
       let itemToSet: any;
-      let stringOfProperty : string = String(`"color": "${itemS.color[itemS.indexOfColor]}","${itemS.labelSecondProperty.toLocaleLowerCase()}":${itemS.secondProperty[itemS.indexOfSecondProperty]}`)
+      let stringOfProperty : string = String(`"color": "${itemS.color[itemS.indexOfColor]}"`)
+      if (itemS.secondProperty.length > 0) 
+        stringOfProperty = stringOfProperty + `,"${itemS.labelSecondProperty.toLocaleLowerCase()}":${itemS.secondProperty[itemS.indexOfSecondProperty]}`;
       let properties: any = JSON.parse('{' + stringOfProperty + '}');
 
       // define class that we gonna push to service that provides connection with component of shopping list 

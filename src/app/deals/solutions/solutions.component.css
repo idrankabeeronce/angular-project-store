@@ -2,12 +2,15 @@
     text-align: center;
     margin: 2.5rem 0;
 }
+
 .solutions-wrapper {
     border-bottom: solid 1px var(--tui-base-04);
 }
-.solutions-wrapper > div {
+
+.solutions-wrapper>div {
     margin: 2.5rem 0;
 }
+
 .solutions-header {
     display: flex;
     gap: 1rem;
@@ -24,12 +27,14 @@
     text-decoration: underline 0.15em rgba(255, 255, 255, 0);
     transition: text-decoration-color .3s;
 }
+
 .active {
     position: relative;
     transition: .3s ease;
     display: grid;
     place-items: center;
 }
+
 .active::after {
     height: 3px;
     width: 100%;
@@ -40,14 +45,17 @@
     position: absolute;
     animation: fill .3s linear;
 }
+
 @keyframes fill {
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
 }
+
 .solutions-container {
     height: 600px;
 }
@@ -57,12 +65,12 @@
     left: 0;
     overflow: hidden;
 }
+
 .box {
     width: 100%;
     height: 600px;
     display: flex;
     align-items: center;
-    touch-action: none;
     overflow: hidden;
 }
 
@@ -124,9 +132,17 @@
         height: 1200px;
         flex-direction: row;
     }
-    .solutions-container, .box {
+
+    .solutions-container,
+    .box {
         height: 1200px;
     }
+
+    .solutions-header {
+        padding: 0 1rem;
+        text-align: center;
+    }
+
     .item {
         width: calc(50% - 0.5rem);
         height: calc(25% - 0.5rem);
@@ -136,6 +152,7 @@
         width: calc(100%);
         height: calc(50% - 1rem);
     }
+
     .item-image {
         width: 50%;
     }

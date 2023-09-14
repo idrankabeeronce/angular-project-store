@@ -46,7 +46,6 @@
     height: 500px;
     display: flex;
     align-items: center;
-    touch-action: none;
     overflow: hidden;
 }
 
@@ -472,6 +471,7 @@
         margin: 0 1rem!important;
     }
     .benefits-wrapper {
+        flex-direction: column;
         margin: 0 1rem!important;
     }
 }
@@ -502,10 +502,15 @@
     }
 
     .items-wrapper__card_image img {
-        height: 400px;
+        width: 50%;
+        height: auto;
     }
 }
-
+@media (max-width: 400px) {
+    .items-wrapper__card_image img {
+        width: 100%;
+    }
+}
 @media only screen and (max-device-width: 1000px) {
     .button-absolute {
         opacity: 0;

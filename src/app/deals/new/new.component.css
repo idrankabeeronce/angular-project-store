@@ -55,3 +55,9 @@
         height: 40px;
     }
 }
+
+@media (max-width: 700px) {
+    .footer-item {
+        font-size: 10px;
+    }
+}

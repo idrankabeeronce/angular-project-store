@@ -18,7 +18,7 @@ export class DealsComponent implements OnInit {
     this.getTitle();
   }
   ngAfterViewInit() {
-    setTimeout(() => {this.scroller.scrollToAnchor(String(this.Route.snapshot.children[0].routeConfig?.path));}, 1000);
+    setTimeout(() => {this.scroller.scrollToAnchor(String(this.Route.snapshot.children[0]?.routeConfig?.path));}, 1000);
   }
   getTitle() {
     this.goodQueary = this.Route.routeConfig?.path;
