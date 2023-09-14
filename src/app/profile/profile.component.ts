@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   openPayment: boolean = false;
   currentUser!: User;
   sub!: Subscription;
-
+  backgroundCard = '';
 
   ngOnInit(): void {
     this.authenticationService.currentUser.subscribe(
@@ -76,6 +76,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
       this.currentUser.paymentInformation.paymentSystem = data.paymentSystem;
       this.currentUser.paymentInformation.cvc = data.cvc;
       this.currentUser.paymentInformation.expire = data.expire;
+
     } else {
       this.openPayment = false;
       this.openShipping = false;

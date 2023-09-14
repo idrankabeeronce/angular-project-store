@@ -10,6 +10,7 @@
     visibility: hidden;
     opacity: 0;
 }
+
 .block-wrapper-open {
     opacity: 1;
     visibility: visible;
@@ -30,16 +31,19 @@
     -webkit-user-drag: none;
     transform: translate(100%);
 }
+
 .profile-wrapper-open {
     transform: translate(0);
 }
+
 .profile-form {
     width: 100%;
 }
+
 .profile-form__header {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     padding: .5rem;
 }
 
@@ -50,6 +54,7 @@
 .button-close:hover {
     transform: rotate(180deg);
 }
+
 .profile-form__body {
     height: auto;
     box-shadow: inset 0 3px 8px -7px black;
@@ -58,6 +63,7 @@
     gap: 1.5rem;
     padding: 1rem;
 }
+
 .card-form {
     border-radius: var(--tui-radius-m);
     border: 1px solid black;
@@ -67,16 +73,38 @@
     justify-content: space-between;
     position: relative;
 }
+
 .card-form:has(.card__label) {
     margin-top: 1.5rem
 }
+
 .card__label {
     font-weight: bold;
     position: absolute;
     top: -2rem;
 
 }
-.card-logo[ng-reflect-payment-system='maestro'] {
+
+.card-logo {
+    color: var(--tui-base-08);
+    background: linear-gradient(45deg, #ecedec 0%, #bfc9b8 90%);
+    position: relative;
+}
+
+.card-logo::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    opacity: .6;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80%, #eee, #eee 68%, #aaa 70%, #eee 74%);
+}
+
+/*
+.card-logo[data-value='maestro'] {
     color: var(--tui-base-01);
     background: linear-gradient(45deg, #565656 0%, #161517 100%);
 }
@@ -104,12 +132,15 @@
     color: var(--tui-base-01);
     background-image: linear-gradient(145deg, #8aed5f 0%, #417f17 100%);
 }
+*/
 .card__desc {
     text-align: left;
 }
-.card__desc > p {
+
+.card__desc>p {
     margin: 0;
 }
+
 @media (max-width: 800px) {
     .profile-wrapper {
         max-width: 100%;
