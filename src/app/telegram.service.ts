@@ -8,7 +8,6 @@ export class TelegramService {
   private api_token: string = '';
   private chat_id: string = '-1001968649978';
   public url: string = 'http://api.telegram.org/bot';
-  public method: string = 'sendMessage?';
 
   constructor() { }
 

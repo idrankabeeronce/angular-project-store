@@ -142,20 +142,22 @@ export class PaymentComponent implements OnInit, OnDestroy {
     return encodeURI(result);
   }
   proceedPayment() {
-    this.try = true;
-    console.log(this.shippingList, this.total, this.shippingMethod);
-    this.telegramService
-      .sendMessage(this.handleToSendText(this.shippingList, this.total, this.shippingMethod))
-      .then(res => {
-        console.log("Success!", res);
-      })
-      .catch(err => console.log(err));
+    this.try = true;    
 
     if (this.form.valid) {
       this.openDialog = false;
+
       this.alert
         .open(`Payment processed successfully`, { status: TuiNotification.Success, })
         .subscribe();
+
+      this.telegramService
+        .sendMessage(this.handleToSendText(this.shippingList, this.total, this.shippingMethod))
+        .then(res => {
+          console.log("Success!", res);
+        })
+        .catch(err => console.log(err));
+
       Email.send({
         Host: `smtp.elasticemail.com`,
         Username: `noreplay@neo.com`,
@@ -181,7 +183,7 @@ export class PaymentComponent implements OnInit, OnDestroy {
             <br/> +1 (111) 1111111
             </html>`,
         IsBodyHtml: true
-      })
+      });
 
       this.addToCartService.wipeList();
       this.router.navigate(['/products'])
