@@ -41,10 +41,9 @@ export class ShippingComponent implements OnInit, OnDestroy {
   }
   changeMethod(method: any) {
     this.addToCartService.setShippingMethod({name: method.name, price: method.price, deliveryTime: method.deliveryTime })
-    this.total = Math.round((this.total + method.price) * 100) / 100;
-    
+    let newTotal = Math.round((this.total + method.price) * 100) / 100;
     this.sub_2.unsubscribe();
-    this.addToCartService.setTotalPrice(this.total);
+    this.addToCartService.setTotalPrice(newTotal);
   }
   goToPayment() {
     this.router.navigate([`/${this.id}/checkout/payment`])

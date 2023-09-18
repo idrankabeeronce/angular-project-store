@@ -41,7 +41,12 @@ export class CheckoutComponent implements OnInit, OnDestroy {
     })
 
   }
-  navigations = [{ caption: 'Cart', routerLink: `/cart`, class: '' }, { caption: 'Information', class: 'focused', routerLink: `/${this.route.snapshot.paramMap.get('id')}/checkout` }, { caption: 'Shipping', class: 'disabled', routerLink: `/${this.route.snapshot.paramMap.get('id')}/checkout/shipping` }, { caption: 'Payment', class: 'disabled', routerLink: `/${this.route.snapshot.paramMap.get('id')}/checkout/payment` }]
+  navigations = [
+    { caption: 'Cart', routerLink: `/cart`, class: '' }, 
+    { caption: 'Information', class: 'focused', routerLink: `/${this.route.snapshot.paramMap.get('id')}/checkout` }, 
+    { caption: 'Shipping', class: 'disabled', routerLink: `/${this.route.snapshot.paramMap.get('id')}/checkout/shipping` }, 
+    { caption: 'Payment', class: 'disabled', routerLink: `/${this.route.snapshot.paramMap.get('id')}/checkout/payment` }
+  ]
 
   ngOnInit(): void {
     this.sub = this.addToCartService.getShoppingList().subscribe((value) => {

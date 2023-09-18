@@ -7,6 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgFor, NgForOf } from '@angular/common';
 import { AuthenticationService } from 'src/app/authentication.service';
 import { User } from 'src/app/_models/user';
+import { TelegramService } from 'src/app/telegram.service';
 declare const Email: any;
 
 
@@ -49,12 +50,12 @@ export class PaymentComponent implements OnInit, OnDestroy {
     radioValue: new FormControl(0),
 
   });
-  constructor(private authenticationService: AuthenticationService,
+  constructor(
+    private authenticationService: AuthenticationService,
+    private telegramService: TelegramService,
     private router: Router, private Route: ActivatedRoute, private addToCartService: AddToCartService,
     @Inject(TuiDialogService) private readonly dialogService: TuiDialogService,
-    @Inject(TuiAlertService) protected readonly alert: TuiAlertService) {
-
-  }
+    @Inject(TuiAlertService) protected readonly alert: TuiAlertService) { }
 
   ngOnInit(): void {
 
@@ -119,8 +120,37 @@ export class PaymentComponent implements OnInit, OnDestroy {
     }
     return arrayOfString
   }
+  handleToSendText(shippingList: any, totalPrice: number, shippingMethod: any, buyer?: any) {
+    let result: string = '';
+    if (shippingList.id) {
+      result += `Order ${shippingList.id}\n\n`;
+
+      if (buyer)
+        result += `Buyer: ${buyer.name}`;
+
+      result += `Order list:\n`;
+      let i = 1;
+      for (let item of this.shippingList) {
+        result += `${i}. ${item.name} - x${item.amount}\n`;
+        i++;
+      }
+
+      result += `\nShipping: ${shippingMethod.name} - ${shippingMethod.price > 0 ? shippingMethod.price + ' USD' : 'Free'}\n\n`;
+      
+      result += `Total: ${totalPrice} USD`;
+    }
+    return encodeURI(result);
+  }
   proceedPayment() {
     this.try = true;
+    console.log(this.shippingList, this.total, this.shippingMethod);
+    this.telegramService
+      .sendMessage(this.handleToSendText(this.shippingList, this.total, this.shippingMethod))
+      .then(res => {
+        console.log("Success!", res);
+      })
+      .catch(err => console.log(err));
+
     if (this.form.valid) {
       this.openDialog = false;
       this.alert
