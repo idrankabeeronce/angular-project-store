@@ -9,8 +9,7 @@ import { User } from './_models/user';
   providedIn: 'root'
 })
 export class AuthenticationService {
-
-  isLoginSubject = new BehaviorSubject<boolean>(this.hasToken());
+  isLoginSubject = new BehaviorSubject<boolean>(this.isAuth());
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
   private openProfile = new BehaviorSubject <boolean>(false);
@@ -19,6 +18,7 @@ export class AuthenticationService {
     this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(
       localStorage.getItem('currentUser') || '{}'));
     this.currentUser = this.currentUserSubject.asObservable();
+    
   }
   public getProfileOpen():Observable<boolean> {
     return this.openProfile.asObservable()
@@ -47,7 +47,7 @@ export class AuthenticationService {
     this.isLoginSubject.next(false);
   }
 
-  public hasToken() {
-    return !!localStorage.getItem('token');
+  public isAuth() {
+    return !!localStorage.getItem('currentUser');
   }
 }
