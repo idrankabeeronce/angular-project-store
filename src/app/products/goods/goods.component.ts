@@ -34,7 +34,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
   searchValueLabel = '';
 
   arrayOfNames: any = []; // array to find similar items (with similar name)
-  changeView = false; // boolean that change the view true - grid display \ false - tabs display
+  changeView = localStorage.getItem('display_view') === 'grid' ? true : false || false; // changes view - grid \ tabs
   typeOfCategory: string = ''; // path of query - type of products
   sortType: string = ''; // path of query - type of sort
   itemFocus = false; // boolean that change the view from list of items to select item
@@ -54,25 +54,13 @@ export class GoodsComponent implements OnInit, OnDestroy {
 
   constructor(private addToCartService: AddToCartService, private router: Router,
     private Route: ActivatedRoute, @Inject(TuiAlertService) protected readonly alert: TuiAlertService) {
-    // change view when resolution changed
-    window.onresize = () => {
-      if (window.innerWidth < 800) {
-        this.changeView = true;
-        this.svgView = this.tabsSrc;
-      } else {
-        if (!this.changedViewByUser) {
-          this.changeView = false;
-          this.svgView = this.gridSrc;
-        }
-      }
-    }
   }
 
   ngOnInit(): void {
     this.dataOfItems = [];
     this.searchValueLabel = String(this.Route.snapshot.queryParamMap.get("search")?.toLocaleLowerCase());
     // init view changed based on resolution
-    if (window.innerWidth < 800) {
+    if (window.innerWidth < 800 && localStorage.getItem('display_view') === null) {
       this.changeView = true;
       this.svgView = this.tabsSrc;
     }
@@ -126,6 +114,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
     else
       this.svgView = this.tabsSrc;
     this.changeView = !this.changeView;
+    localStorage.setItem('display_view', this.changeView ? 'grid' : 'tab')
     this.changedViewByUser = !this.changedViewByUser;
   }
 
@@ -548,7 +537,21 @@ export class GoodsComponent implements OnInit, OnDestroy {
       itemToSet = { name: itemS.name, imageSrc: itemS.imageSrc[itemS.indexOfImage], actualPrice: actualPrice, price: price, properties: properties, amount: 1, ref: itemS.ref }
 
       this.addToCartService.setItem(itemToSet); // push item to shopping list
-
+      
+      let tmpArray:Array<any> = localStorage.getItem('basket_items') 
+        && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
+          ? JSON.parse(localStorage.getItem('basket_items') || '[]') 
+          : [];
+      let isInBasket = tmpArray.find((el) => {
+        if (el.ref === itemToSet.ref) {
+          el.amount += 1;
+          return true;
+        } else {
+          return false;
+        }
+      });
+      if (!isInBasket) tmpArray.push(itemToSet)
+      localStorage.setItem('basket_items', JSON.stringify(tmpArray));
       //this.addToCartService.setOpenCart(true); // open shopping cart component
 
       if (this.openedOnce)

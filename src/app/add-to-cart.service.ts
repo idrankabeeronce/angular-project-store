@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { AuthenticationService } from './authentication.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +10,18 @@ export class AddToCartService {
 
   private openCart = new BehaviorSubject<boolean>(false);
   private item = new BehaviorSubject<any>({});
-  private sizeOfShoppingList = new BehaviorSubject<number>(0);
+  private sizeOfShoppingList = new BehaviorSubject<number>(
+    !this.authenticationService.isAuth() && localStorage.getItem('basket_items') && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
+    ? JSON.parse(localStorage.getItem('basket_items') || '[]').length  
+    : 0
+  );
   private totalPrice = new BehaviorSubject<number>(0);
   
-  private ShoppingList = new BehaviorSubject<any>([]);
+  private ShoppingList = new BehaviorSubject<any>(
+    !this.authenticationService.isAuth() && localStorage.getItem('basket_items') && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
+      ? JSON.parse(localStorage.getItem('basket_items') || '[]') 
+      : []
+    );
   private shippingDetails = new BehaviorSubject<any>({});
 
   public numberOfOrder!: number;
@@ -77,7 +86,7 @@ export class AddToCartService {
     this.totalPrice.next(0)
 
   }
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private authenticationService:AuthenticationService) { }
 
   // get ip adress
   /*

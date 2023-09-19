@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/cor
 import { AddToCartService } from '../add-to-cart.service';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -11,7 +12,10 @@ import { Router } from '@angular/router';
 export class ShoppingCartComponent implements OnInit, OnDestroy {
   @Output() newItemEvent = new EventEmitter<any>();
 
-  shoppingList: any = [];
+  shoppingList: any = 
+  !this.authenticationService.isAuth() &&  localStorage.getItem('basket_items') && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
+      ? JSON.parse(localStorage.getItem('basket_items') || '{}') 
+      : [];
   total: number = 0; // sum price of shopping list 
   sub_1!: Subscription;
   sub_2!: Subscription;
@@ -19,9 +23,15 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
   isInit = false;
   open = false; // if true - display shopping cart / else - hide it
 
-  constructor(private addToCartService: AddToCartService, private router: Router) { }
+  constructor(private addToCartService: AddToCartService, private router: Router,
+    private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
+    this.getSubtotal();
+    this.addToCartService.getShoppingList().subscribe((value: any) => {
+      console.log(value);
+      
+    })
     // getting shopped item
     this.sub_1 = this.addToCartService.getItem().subscribe((value: any) => {
 
@@ -56,6 +66,8 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
             if (key == 'properties') {
               Object.entries(value).forEach(([key, value]: any) => {
                 keys.push(key);
+                console.log(key);
+                
                 if (typeof value === 'string')
                   values.push(value.charAt(0).toUpperCase() + value.slice(1));
                 else
@@ -128,10 +140,31 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
 
   // change amount of selected item from list and count price sum
   changeAmount(index: number, bool: boolean) {
-    if (bool)
-      this.shoppingList[index].amount++
-    else
-      this.shoppingList[index].amount--
+    if (bool) {
+      this.shoppingList[index].amount++;
+    }
+    else {
+      this.shoppingList[index].amount--;
+    }
+    
+    let tmpArray:Array<any> = localStorage.getItem('basket_items') 
+      && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
+        ? JSON.parse(localStorage.getItem('basket_items') || '[]') 
+        : [];
+    let tmpKey = null;
+    tmpArray.find((el, key) => {
+      console.log(el);
+      if (el.ref === this.shoppingList[index].ref) {
+        el.amount += bool? 1 : -1;
+        if (el.amount <= 0) {
+          tmpKey = key;
+        }
+      }
+    });
+    console.log(tmpKey);
+    if (tmpKey !== null) tmpArray.splice(tmpKey, 1);
+    localStorage.setItem('basket_items', JSON.stringify(tmpArray));
+
     if (this.shoppingList[index].amount == 0) {
       this.shoppingList.splice(index, 1);
       if (this.shoppingList.length == 0) {
@@ -160,7 +193,8 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
   getSubtotal() {
     this.total = 0;
     for (let item of this.shoppingList) {
-      this.total = this.total + item.actualPrice * item.amount;
+      console.log(item.actualPrice, item.amount);
+      this.total += item.actualPrice * item.amount;
     }
     this.total = Math.round(this.total * 100) / 100;
   }
