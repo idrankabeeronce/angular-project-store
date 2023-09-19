@@ -82,9 +82,10 @@
                                 <button [ngClass]="{'hidden': item.imageSrc.length <= 1 }" *ngIf="changeView"
                                     style="width: 10%; height: initial;" tuiIconButton type="button" appearance="icon"
                                     icon="tuiIconChevronLeft" (click)="goToImage(item.indexOfImage-1, item)"></button>
-                                <img [ngClass]="{'item-img-grid' : changeView}" class="item-img"
-                                    [src]="item.imageSrc[item.indexOfImage]">
-
+                                    <a routerLink="/item/{{item.ref}}">
+                                        <img [ngClass]="{'item-img-grid' : changeView}" class="item-img"
+                                            [src]="item.imageSrc[item.indexOfImage]">
+                                    </a>
 
                                 <button [ngClass]="{'hidden': item.imageSrc.length <= 1 }" *ngIf="changeView"
                                     style="width: 10%; height: initial;" tuiIconButton type="button" appearance="icon"
@@ -121,7 +122,9 @@
                                 <!-- name of item/items -->
                                 <div [ngClass]="{'flex-between tui-space_top-5': changeView}" class="flex">
                                     <div class=" item-name tui-text_body-l tui-space_bottom-5">{{item.name}}</div>
-                                    <a routerLink="/item/{{item.ref}}" tuiLink icon="tuiIconRedoLarge"></a>
+                                    <ng-container *ngIf="!changeView">
+                                        <a routerLink="/item/{{item.ref}}" class="item-link" tuiLink icon="tuiIconRedoLarge"></a>
+                                    </ng-container>
                                 </div>
                                 <!-- min and max price of item -->
                                 <ng-container *ngIf="item.selectColor == '' || item.isLength; else ifColorPrice">
