@@ -51,15 +51,17 @@ export class InformationComponent implements OnInit {
     }
   }
   setProfileInfo(user: User) {
-    if (Object.keys(user.shippingInformation).length !== 0) {
-    this.countryValue.setValue(user.shippingInformation.country);
-    this.firstName.setValue(user.firstName);
-    this.lastName.setValue(user.lastName);
-    this.adress.setValue(user.shippingInformation.adress);
-    this.subAdress.setValue(user.shippingInformation.subAdress);
-    this.phone.setValue(user.shippingInformation.phone);
-    this.postcode.setValue(user.shippingInformation.postcode);
-    this.phone.enable();
+    if (user.shippingInformation) {
+      if (Object.keys(user.shippingInformation).length !== 0) {
+      this.countryValue.setValue(user.shippingInformation.country);
+      this.firstName.setValue(user.firstName);
+      this.lastName.setValue(user.lastName);
+      this.adress.setValue(user.shippingInformation.adress);
+      this.subAdress.setValue(user.shippingInformation.subAdress);
+      this.phone.setValue(user.shippingInformation.phone);
+      this.postcode.setValue(user.shippingInformation.postcode);
+      this.phone.enable();
+    }
   }
   }
   changedCountry() {
