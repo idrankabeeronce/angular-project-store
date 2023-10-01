@@ -2,3 +2,21 @@
 .carousel-control-prev, .carousel-control-next, .carousel-indicators {
     filter: drop-shadow(1px 2px 1px rgba(0,0,0));
 }
+.text-max-height-block {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  display: -webkit-inline-box;
+}
+.text-max-height-block_1 {
+    -webkit-line-clamp: 1;
+}
+.text-max-height-block_2 {
+    -webkit-line-clamp: 2;
+}
+.text-max-height-block_3 {
+    -webkit-line-clamp: 3;
+}

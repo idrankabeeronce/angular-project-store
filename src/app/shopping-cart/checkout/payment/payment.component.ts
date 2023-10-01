@@ -66,7 +66,7 @@ export class PaymentComponent implements OnInit, OnDestroy {
           console.log(err);
         })
       })
-    this.setProfileInfo(this.currentUser);
+    this.setUserProfileInfo(this.currentUser);
     this.id = String(this.addToCartService.numberOfOrder);
     this.sub = this.addToCartService.getShippingDetails().subscribe((value) => {
       this.contact = String(`${value.contacts.email} ${value.contacts.phone}`);
@@ -87,12 +87,14 @@ export class PaymentComponent implements OnInit, OnDestroy {
 
 
   }
-  setProfileInfo(user: User) {
-    this.form.controls['firstName'].setValue(user.firstName);
-    this.form.controls['lastName'].setValue(user.lastName);
-    this.form.controls['card'].setValue(user.paymentInformation.card);
-    this.form.controls['cvc'].setValue(user.paymentInformation.cvc);
-    this.form.controls['expire'].setValue(user.paymentInformation.expire);
+  setUserProfileInfo(user: User) {
+    if (Object.keys(user).length) {
+      this.form.controls['firstName'].setValue(user.firstName);
+      this.form.controls['lastName'].setValue(user.lastName);
+      this.form.controls['card'].setValue(user.paymentInformation.card);
+      this.form.controls['cvc'].setValue(user.paymentInformation.cvc);
+      this.form.controls['expire'].setValue(user.paymentInformation.expire);
+    }
   }
   ngOnDestroy(): void {
     this.sub.unsubscribe();

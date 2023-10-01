@@ -24,7 +24,7 @@ export class AddToCartService {
     );
   private shippingDetails = new BehaviorSubject<any>({});
 
-  public numberOfOrder!: number;
+  public numberOfOrder: number = parseInt(localStorage.getItem('basket_id') || '0');
 
   private shippingMethod = new BehaviorSubject<any>({});
 
@@ -84,7 +84,8 @@ export class AddToCartService {
     this.sizeOfShoppingList.next(0)
     this.shippingMethod.next({})
     this.totalPrice.next(0)
-
+    localStorage.removeItem('basket_id');
+    localStorage.removeItem('basket_items');
   }
   constructor(private http: HttpClient, private authenticationService:AuthenticationService) { }
 

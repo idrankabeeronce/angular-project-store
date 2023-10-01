@@ -33,11 +33,31 @@ export class CartComponent implements OnInit, OnDestroy {
       this.shoppingList[i].amount++
     else
       this.shoppingList[i].amount--
+
+    let tmpArray:Array<any> = localStorage.getItem('basket_items') 
+    && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
+      ? JSON.parse(localStorage.getItem('basket_items') || '[]') 
+      : [];
+    let tmpKey = null;
+    tmpArray.find((el, key) => {
+      if (el.ref === this.shoppingList[i].ref) {
+        el.amount += bool? 1 : -1;
+        if (el.amount <= 0) {
+          tmpKey = key;
+        }
+      }
+    });
+    console.log(tmpKey);
+    if (tmpKey !== null) tmpArray.splice(tmpKey, 1);
+    if (!tmpArray.length) localStorage.removeItem('basket_id');
+    localStorage.setItem('basket_items', JSON.stringify(tmpArray));
+
     if (this.shoppingList[i].amount == 0) {
       this.shoppingList.splice(i, 1);
       this.addToCartService.setSizeOfShoppingList(this.shoppingList.length);
     }
-    this.getTotal(i);
+    if (this.shoppingList.length) this.getTotal(i);
+    else this.getSubtotal();
   }
   getTotal(i: number) {
     this.shoppingList[i].total = this.shoppingList[i].amount * this.shoppingList[i].actualPrice;
@@ -50,8 +70,9 @@ export class CartComponent implements OnInit, OnDestroy {
     this.router.navigate(['/products']);
   }
   goToCheckout() {
-    this.addToCartService.numberOfOrder = this.shoppingList.id;
-    this.router.navigate([this.shoppingList.id, 'checkout']);
+    if (!this.addToCartService.numberOfOrder) this.addToCartService.numberOfOrder = this.shoppingList.id;
+    console.log(this.addToCartService.numberOfOrder);
+    this.router.navigate([this.addToCartService.numberOfOrder, 'checkout']);
   }
   getSubtotal() {
     this.subtotal = 0;

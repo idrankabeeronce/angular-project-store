@@ -13,8 +13,10 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
   @Output() newItemEvent = new EventEmitter<any>();
 
   shoppingList: any = 
-  !this.authenticationService.isAuth() &&  localStorage.getItem('basket_items') && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
-      ? JSON.parse(localStorage.getItem('basket_items') || '{}') 
+  !this.authenticationService.isAuth() 
+    && localStorage.getItem('basket_items') 
+    && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
+      ? JSON.parse(localStorage.getItem('basket_items') || '[]') 
       : [];
   total: number = 0; // sum price of shopping list 
   sub_1!: Subscription;
@@ -56,9 +58,12 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
         // if it's unique 
         if (!found) {
           this.shoppingList.push(value);
-          if (this.shoppingList.length == 1) {
-            if (this.shoppingList.id == undefined)
+          if (this.shoppingList.length) {
+            if (this.addToCartService.numberOfOrder)
+              this.shoppingList.id = this.addToCartService.numberOfOrder.toString();
+            else if (this.shoppingList.id == undefined)
               this.shoppingList.id = (Math.round(Math.random() * (9999 - 1000) + 1000));
+              
           }
           // define properties
           let Obj = Object.entries(value);
@@ -163,6 +168,7 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
     });
     console.log(tmpKey);
     if (tmpKey !== null) tmpArray.splice(tmpKey, 1);
+    if (!tmpArray.length) localStorage.removeItem('basket_id');
     localStorage.setItem('basket_items', JSON.stringify(tmpArray));
 
     if (this.shoppingList[index].amount == 0) {
@@ -177,6 +183,22 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
 
   // remove selected item from list
   deleteItem(index: number) {
+    let tmpArray:Array<any> = localStorage.getItem('basket_items') 
+      && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
+        ? JSON.parse(localStorage.getItem('basket_items') || '[]') 
+        : [];
+    let tmpKey = null;
+    tmpArray.find((el, key) => {
+      console.log(el);
+      if (el.ref === this.shoppingList[index].ref) {
+        tmpKey = key;
+      }
+    });
+    if (tmpKey !== null) tmpArray.splice(tmpKey, 1);
+    if (!tmpArray.length) localStorage.removeItem('basket_id');
+    localStorage.setItem('basket_items', JSON.stringify(tmpArray));
+
+
     this.shoppingList.splice(index, 1);
     if (this.shoppingList.length == 0) {
       this.isInit = false;
@@ -203,15 +225,17 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
   goToCheckout() {
     this.destroy();
     this.addToCartService.setShoppingList(this.shoppingList);
-    this.addToCartService.numberOfOrder = this.shoppingList.id;
-    this.router.navigate([this.shoppingList.id, 'checkout']);
+    if (!this.addToCartService.numberOfOrder) this.addToCartService.numberOfOrder = this.shoppingList.id;
+    localStorage.setItem('basket_id', this.addToCartService.numberOfOrder.toString());
+    this.router.navigate([this.addToCartService.numberOfOrder.toString(), 'checkout']);
   }
 
   //
   goToCart() {
     this.destroy();
     this.addToCartService.setShoppingList(this.shoppingList);
-    this.addToCartService.numberOfOrder = this.shoppingList.id;
+    if (!this.addToCartService.numberOfOrder) this.addToCartService.numberOfOrder = this.shoppingList.id;
+    localStorage.setItem('basket_id', this.addToCartService.numberOfOrder.toString());
     this.router.navigate(['/cart'])
   }
 

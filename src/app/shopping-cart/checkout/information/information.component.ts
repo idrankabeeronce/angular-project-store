@@ -45,24 +45,43 @@ export class InformationComponent implements OnInit {
           console.log(err);
         })
       })
-    this.setProfileInfo(this.currentUser);
+    
+    this.addToCartService.getShippingDetails().subscribe(value=> {
+      if (Object.keys(value).length) {
+        console.log(value);
+        this.setProfileInfo(value);
+      } else {
+        this.setUserProfileInfo(this.currentUser);
+      }
+    })
     for (let country of this.countries) {
       this.allowedCountries.push(country.name);
     }
   }
-  setProfileInfo(user: User) {
-    if (user.shippingInformation) {
-      if (Object.keys(user.shippingInformation).length !== 0) {
-      this.countryValue.setValue(user.shippingInformation.country);
+  setUserProfileInfo(user: User) {
+    if (Object.keys(user).length) {
       this.firstName.setValue(user.firstName);
       this.lastName.setValue(user.lastName);
-      this.adress.setValue(user.shippingInformation.adress);
-      this.subAdress.setValue(user.shippingInformation.subAdress);
-      this.phone.setValue(user.shippingInformation.phone);
-      this.postcode.setValue(user.shippingInformation.postcode);
-      this.phone.enable();
+      if (Object.keys(user.shippingInformation).length !== 0) {
+        this.countryValue.setValue(user.shippingInformation.country);
+        this.adress.setValue(user.shippingInformation.adress);
+        this.subAdress.setValue(user.shippingInformation.subAdress);
+        this.phone.setValue(user.shippingInformation.phone);
+        this.postcode.setValue(user.shippingInformation.postcode);
+        this.phone.enable();
+      }
     }
   }
+  setProfileInfo(obj: any) {
+    this.countryValue.setValue(obj.country);
+    this.firstName.setValue(obj.firstName);
+    this.lastName.setValue(obj.lastName);
+    this.adress.setValue(obj.adressField);
+    this.subAdress.setValue(obj.subAdressField);
+    this.phone.setValue(obj.contacts.phone);
+    this.postcode.setValue(obj.postcode);
+    this.emailField.setValue(obj.contacts.email);
+    this.phone.enable();
   }
   changedCountry() {
     for (let country of this.countries) {
@@ -86,7 +105,18 @@ export class InformationComponent implements OnInit {
   goToShipping() {
     this.try = true;
     if (this.allValid()) {
-      this.addToCartService.setShippingDetails({ firstName: this.firstName.value, lastName: this.lastName.value, adress: `${(this.countryValue.value)}, ${(this.adress.value)} ${(this.subAdress.value)}`, postcode: String(this.postcode.value), contacts: { email: this.emailField.value, phone: this.phone.value } });
+      this.addToCartService.setShippingDetails({ 
+        firstName: this.firstName.value, 
+        lastName: this.lastName.value, 
+        adress: `${(this.countryValue.value)}, ${(this.adress.value)}, ${(this.subAdress.value)}`, 
+        country: this.countryValue.value, 
+        adressField: this.adress.value, 
+        subAdressField: this.subAdress.value,
+        postcode: String(this.postcode.value), 
+        contacts: { 
+          email: this.emailField.value, 
+          phone: this.phone.value } 
+      });
       //this.addToCartService.getShippingDetails().subscribe((value:any) => {
       //  console.log(value)
       //})
