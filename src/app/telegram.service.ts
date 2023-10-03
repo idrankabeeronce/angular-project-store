@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TelegramService {
 
-  private api_token: string = '';
+  private api_token: string = environment.TG_TOKEN;
   private chat_id: string = '-1001968649978';
   public url: string = 'http://api.telegram.org/bot';
 

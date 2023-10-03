@@ -459,7 +459,8 @@
 @media (max-width: 1200px) {
 
     .some-container,
-    .new-items-container {
+    .new-items-container,
+    .best-container {
         margin: 0 2rem!important;
     }
     .benefits-wrapper {
@@ -470,7 +471,8 @@
 @media (max-width: 900px) {
 
     .some-container,
-    .new-items-container {
+    .new-items-container,
+    .best-container {
         margin: 0 1rem!important;
     }
     .benefits-wrapper {
