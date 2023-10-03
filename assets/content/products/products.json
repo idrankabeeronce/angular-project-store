@@ -18,7 +18,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/usb-c-black.png",
                         "rating": 0.5,
-                        "tag": "",
+                        "tag": [
+                            "business",
+                            "home",
+                            "travel",
+                            "sale"
+                        ],
                         "ref": "A-NEO-USB-C-1256"
                     },
                     {
@@ -34,7 +39,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/usb-c-blue.png",
                         "rating": 0.45,
-                        "tag": "", "ref": "NEO-USB-C-3555"
+                        "tag": [
+                            "business",
+                            "home",
+                            "travel"
+                        ],
+                        "ref": "NEO-USB-C-3555"
                     },
                     {
                         "name": "NEO Right angle USB C",
@@ -49,7 +59,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/usb-c-white.png",
                         "rating": 0.2,
-                        "tag": "", "ref": "NEO-USB-C-RA52"
+                        "tag": [
+                            "business",
+                            "sale"
+                        ],
+                        "ref": "NEO-USB-C-RA52"
                     },
                     {
                         "name": "NEO USB C",
@@ -64,7 +78,8 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/usb-c-blue.png",
                         "rating": 0.45,
-                        "tag": "", "ref": "NEO-USB-C-3555"
+                        "tag": [],
+                        "ref": "NEO-USB-C-3555"
                     },
                     {
                         "name": "NEO USB C Fast Charging",
@@ -79,7 +94,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/usb-c-red.png",
                         "rating": 0.2,
-                        "tag": "", "ref": "NEO-USB-C-FC22"
+                        "tag": [
+                            "business",
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "NEO-USB-C-FC22"
                     },
                     {
                         "name": "NEO USB C Fast Charging",
@@ -94,7 +114,8 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/usb-c-black.png",
                         "rating": 0.2,
-                        "tag": "", "ref": "NEO-USB-C-FC22"
+                        "tag": [],
+                        "ref": "NEO-USB-C-FC22"
                     },
                     {
                         "name": "NEO USB C Fast Charging",
@@ -109,7 +130,10 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/usb-c-black.png",
                         "rating": 0.2,
-                        "tag": "", "ref": "NEO-USB-C-FC22"
+                        "tag": [
+                            "sale"
+                        ],
+                        "ref": "NEO-USB-C-FC22"
                     },
                     {
                         "name": "NEO USB C",
@@ -124,7 +148,8 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/usb-c-turquoise.png",
                         "rating": 0.45,
-                        "tag": "", "ref": "NEO-USB-C-3555"
+                        "tag": [],
+                        "ref": "NEO-USB-C-3555"
                     },
                     {
                         "name": "NEO Right angle USB C",
@@ -139,7 +164,10 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/usb-c-black.png",
                         "rating": 0.2,
-                        "tag": "", "ref": "NEO-USB-C-RA52"
+                        "tag": [
+                            "sale"
+                        ],
+                        "ref": "NEO-USB-C-RA52"
                     },
                     {
                         "name": "NEO USB C",
@@ -154,7 +182,8 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/usb-c-black.png",
                         "rating": 0.45,
-                        "tag": "", "ref": "NEO-USB-C-3555"
+                        "tag": [],
+                        "ref": "NEO-USB-C-3555"
                     }
                 ]
             },
@@ -174,7 +203,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0,
-                        "tag": "", "ref": "NEO-LIGHTNING-A552"
+                        "tag": [
+                            "business",
+                            "home",
+                            "travel"
+                        ],
+                        "ref": "NEO-LIGHTNING-A552"
                     },
                     {
                         "name": "NEO Lightning To A USB",
@@ -189,7 +223,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0,
-                        "tag": "", "ref": "NEO-LIGHTNING-A552"
+                        "tag": [
+                            "business",
+                            "home",
+                            "travel"
+                        ],
+                        "ref": "NEO-LIGHTNING-A552"
                     },
                     {
                         "name": "NEO Lightning To A USB",
@@ -204,7 +243,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0.6,
-                        "tag": "", "ref": "NEO-LIGHTNING-A552"
+                        "tag": [
+                            "business",
+                            "home",
+                            "travel"
+                        ],
+                        "ref": "NEO-LIGHTNING-A552"
                     },
                     {
                         "name": "NEO Lightning To A USB",
@@ -219,7 +263,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.6,
-                        "tag": "", "ref": "NEO-LIGHTNING-A552"
+                        "tag": [
+                            "business",
+                            "home",
+                            "travel"
+                        ],
+                        "ref": "NEO-LIGHTNING-A552"
                     },
                     {
                         "name": "NEO Lightning To A USB",
@@ -234,7 +283,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.6,
-                        "tag": "", "ref": "NEO-LIGHTNING-A552"
+                        "tag": [
+                            "business",
+                            "home",
+                            "travel"
+                        ],
+                        "ref": "NEO-LIGHTNING-A552"
                     },
                     {
                         "name": "NEO Lightning To A USB",
@@ -249,7 +303,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.6,
-                        "tag": "", "ref": "NEO-LIGHTNING-A552"
+                        "tag": [
+                            "business",
+                            "home",
+                            "travel"
+                        ],
+                        "ref": "NEO-LIGHTNING-A552"
                     },
                     {
                         "name": "NEO Lightning Fast Charging",
@@ -264,7 +323,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.6,
-                        "tag": "", "ref": "NEO-LIGHTNING-FC52"
+                        "tag": [
+                            "business",
+                            "home"
+                        ],
+                        "ref": "NEO-LIGHTNING-FC52"
                     },
                     {
                         "name": "NEO Lightning Fast Charging",
@@ -279,7 +342,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.9,
-                        "tag": "", "ref": "NEO-LIGHTNING-FC52"
+                        "tag": [
+                            "business",
+                            "home"
+                        ],
+                        "ref": "NEO-LIGHTNING-FC52"
                     },
                     {
                         "name": "NEO Lightning Fast Charging",
@@ -294,7 +361,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning.png",
                         "rating": 0.9,
-                        "tag": "", "ref": "NEO-LIGHTNING-FC52"
+                        "tag": [
+                            "business",
+                            "home"
+                        ],
+                        "ref": "NEO-LIGHTNING-FC52"
                     },
                     {
                         "name": "NEO Lightning Fast Charging",
@@ -309,7 +380,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0.9,
-                        "tag": "", "ref": "NEO-LIGHTNING-FC52"
+                        "tag": [
+                            "business",
+                            "home"
+                        ],
+                        "ref": "NEO-LIGHTNING-FC52"
                     },
                     {
                         "name": "NEO Lightning Fast Charging",
@@ -324,7 +399,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0.9,
-                        "tag": "", "ref": "NEO-LIGHTNING-FC52"
+                        "tag": [
+                            "business",
+                            "home"
+                        ],
+                        "ref": "NEO-LIGHTNING-FC52"
                     },
                     {
                         "name": "NEO Lightning Fast Charging",
@@ -339,7 +418,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning_blue.png",
                         "rating": 0.9,
-                        "tag": "", "ref": "NEO-LIGHTNING-FC52"
+                        "tag": [
+                            "business",
+                            "home"
+                        ],
+                        "ref": "NEO-LIGHTNING-FC52"
                     }
                 ]
             },
@@ -356,10 +439,15 @@
                         "price": 15,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "assets/images/products/cabels/thunderbolt-blue.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-blue.webp",
                         "rating": 0.5,
-                        "tag": "", "ref": "THUNDERBOLT-3-2152"
-                    }, 
+                        "tag": [
+                            "business",
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "THUNDERBOLT-3-2152"
+                    },
                     {
                         "name": "NEO Thunderbolt 3",
                         "dateOfRelease": "2022-11-11",
@@ -370,10 +458,15 @@
                         "price": 15,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "assets/images/products/cabels/thunderbolt-black.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-black.webp",
                         "rating": 0.5,
-                        "tag": "", "ref": "THUNDERBOLT-3-2152"
-                    }, 
+                        "tag": [
+                            "business",
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "THUNDERBOLT-3-2152"
+                    },
                     {
                         "name": "NEO Thunderbolt 3",
                         "dateOfRelease": "2022-11-11",
@@ -384,9 +477,13 @@
                         "price": 15,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "assets/images/products/cabels/thunderbolt-red.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-red.webp",
                         "rating": 0.5,
-                        "tag": "", "ref": "THUNDERBOLT-3-2152"
+                        "tag": [
+                            "business",
+                            "home"
+                        ],
+                        "ref": "THUNDERBOLT-3-2152"
                     },
                     {
                         "name": "NEO Thunderbolt 3",
@@ -398,10 +495,15 @@
                         "price": 25,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "assets/images/products/cabels/thunderbolt-blue.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-blue.webp",
                         "rating": 0.5,
-                        "tag": "", "ref": "THUNDERBOLT-3-2152"
-                    }, 
+                        "tag": [
+                            "business",
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "THUNDERBOLT-3-2152"
+                    },
                     {
                         "name": "NEO Thunderbolt 3",
                         "dateOfRelease": "2022-11-11",
@@ -412,10 +514,15 @@
                         "price": 25,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "assets/images/products/cabels/thunderbolt-black.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-black.webp",
                         "rating": 0.5,
-                        "tag": "", "ref": "THUNDERBOLT-3-2152"
-                    }, 
+                        "tag": [
+                            "business",
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "THUNDERBOLT-3-2152"
+                    },
                     {
                         "name": "NEO Thunderbolt 3",
                         "dateOfRelease": "2022-11-11",
@@ -426,9 +533,14 @@
                         "price": 25,
                         "discount": 0,
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
-                        "imageSrc": "assets/images/products/cabels/thunderbolt-red.png",
+                        "imageSrc": "assets/images/products/cabels/thunderbolt-red.webp",
                         "rating": 0.5,
-                        "tag": "", "ref": "THUNDERBOLT-3-2152"
+                        "tag": [
+                            "business",
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "THUNDERBOLT-3-2152"
                     }
                 ]
             },
@@ -447,7 +559,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/audio-aux.png",
                         "rating": 0.5,
-                        "tag": "", "ref": "NEO-AUDIO-A5285"
+                        "tag": [
+                            "home",
+                            "travel",
+                            "sale"
+                        ],
+                        "ref": "NEO-AUDIO-A5285"
                     },
                     {
                         "name": "NEO Audio 3.5 Aux",
@@ -461,7 +578,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/audio-aux.png",
                         "rating": 0.5,
-                        "tag": "", "ref": "NEO-AUDIO-A5285"
+                        "tag": [
+                            "home",
+                            "travel",
+                            "sale"
+                        ],
+                        "ref": "NEO-AUDIO-A5285"
                     },
                     {
                         "name": "NEO Right Angle Audio 3.5 Aux",
@@ -475,7 +597,8 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/audio-aux-angle.png",
                         "rating": 0.5,
-                        "tag": "", "ref": "NEO-AUDIO-ARA5285"
+                        "tag": [],
+                        "ref": "NEO-AUDIO-ARA5285"
                     },
                     {
                         "name": "NEO Right Angle Audio 3.5 Aux",
@@ -489,7 +612,8 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/audio-aux-angle.png",
                         "rating": 0.5,
-                        "tag": "", "ref": "NEO-AUDIO-ARA5285"
+                        "tag": [],
+                        "ref": "NEO-AUDIO-ARA5285"
                     },
                     {
                         "name": "NEO Lightning to 3.5 Audio",
@@ -503,7 +627,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning_to_audio.png",
                         "rating": 0.85,
-                        "tag": "", "ref": "NEO-L-TO-A-5801"
+                        "tag": [
+                            "travel",
+                            "sale"
+                        ],
+                        "ref": "NEO-L-TO-A-5801"
                     },
                     {
                         "name": "NEO Lightning to 3.5 Audio",
@@ -517,7 +645,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/lightning_to_audio.png",
                         "rating": 0.85,
-                        "tag": "", "ref": "NEO-L-TO-A-5801"
+                        "tag": [
+                            "travel",
+                            "sale"
+                        ],
+                        "ref": "NEO-L-TO-A-5801"
                     },
                     {
                         "name": "NEO Audio splitter",
@@ -531,7 +663,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/cabels/audio-splitter.png",
                         "rating": 0.85,
-                        "tag": "", "ref": "NEO-AS-7312"
+                        "tag": [
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "NEO-AS-7312"
                     }
                 ]
             }
@@ -556,7 +692,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/chargers/AC_to_DC.png",
                         "rating": 0.6,
-                        "tag": "", "ref": "NEO-AC-DC-W252"
+                        "tag": [
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "NEO-AC-DC-W252"
                     },
                     {
                         "name": "NEO USB A Charger 5W",
@@ -571,7 +711,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/chargers/charger_black_5w.png",
                         "rating": 0.9,
-                        "tag": "", "ref": "NEO-CH-USB-A-5W22"
+                        "tag": [
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "NEO-CH-USB-A-5W22"
                     },
                     {
                         "name": "NEO USB A Charger 5W",
@@ -586,15 +730,18 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/chargers/charger_blue_5w.png",
                         "rating": 0.9,
-                        "tag": "", "ref": "NEO-CH-USB-A-5W22"
-                    }                
+                        "tag": [
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "NEO-CH-USB-A-5W22"
+                    }
                 ]
-            }, 
+            },
             {
                 "type": "wireless",
                 "items": [
                     {
-                        
                         "name": "NEO 3-in-1 MagSafe Wireless Charging Station",
                         "dateOfRelease": "2022-11-23",
                         "properties": {
@@ -606,7 +753,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/chargers/wireless_station.png",
                         "rating": 1,
-                        "tag": "new", "ref": "NEO-WCH-2522"
+                        "tag": [
+                            "new",
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "NEO-WCH-2522"
                     },
                     {
                         "name": "NEO Wireless USB C Charger 10W",
@@ -621,7 +773,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/chargers/wireless_charger_blue_10w.png",
                         "rating": 0.9,
-                        "tag": "new", "ref": "NEO-WCH-10W2"
+                        "tag": [
+                            "new",
+                            "home"
+                        ],
+                        "ref": "NEO-WCH-10W2"
                     },
                     {
                         "name": "NEO Wireless USB C Charger 10W",
@@ -636,7 +792,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/chargers/wireless_charger_black_10w.png",
                         "rating": 1,
-                        "tag": "new", "ref": "NEO-WCH-10W2"
+                        "tag": [
+                            "new",
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "NEO-WCH-10W2"
                     },
                     {
                         "name": "NEO Magnetic Wireless Charger",
@@ -650,10 +811,15 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/chargers/magnetic_wireless_charger.png",
                         "rating": 1,
-                        "tag": "new", "ref": "NEO-WCH-MG22"
+                        "tag": [
+                            "new",
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "NEO-WCH-MG22"
                     }
                 ]
-            }, 
+            },
             {
                 "type": "fast-charging",
                 "items": [
@@ -670,7 +836,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/chargers/fast_charger_20w_blue.png",
                         "rating": 0.9,
-                        "tag": "", "ref": "NEO-FCH-20W2"
+                        "tag": [
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "NEO-FCH-20W2"
                     },
                     {
                         "name": "NEO 20W USB C Fast Charger",
@@ -685,7 +855,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/chargers/fast_charger_20w_white.png",
                         "rating": 0.9,
-                        "tag": "", "ref": "NEO-FCH-20W2"
+                        "tag": [
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "NEO-FCH-20W2"
                     },
                     {
                         "name": "NEO 20W USB C Fast Charger - 2 pack",
@@ -700,7 +874,11 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/chargers/fast_charger_20w_blue_2.png",
                         "rating": 0.9,
-                        "tag": "new", "ref": "NEO-FCH-2P-20W2"
+                        "tag": [
+                            "new",
+                            "home"
+                        ],
+                        "ref": "NEO-FCH-2P-20W2"
                     },
                     {
                         "name": "NEO 20W USB C Fast Charger - 2 pack",
@@ -715,8 +893,144 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
                         "imageSrc": "assets/images/products/chargers/fast_charger_20w_white_2.png",
                         "rating": 0.9,
-                        "tag": "new", "ref": "NEO-FCH-2P-20W2"
-                    }   
+                        "tag": [
+                            "new",
+                            "home",
+                            "sale"
+                        ],
+                        "ref": "NEO-FCH-2P-20W2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "earphones",
+        "goods": [
+            {
+                "type": "audio",
+                "items": [
+                    {
+                        "name": "NEO HearSound x5 Wireless Eearbuds",
+                        "dateOfRelease": "2023-02-20",
+                        "properties": {
+                            "color": "black"
+                        },
+                        "price": 25.99,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "assets/images/products/earphones/hear-sound_1.png",
+                        "rating": 1,
+                        "tag": [
+                            "new"
+                        ],
+                        "ref": "NEO-HS-X5WE"
+                    },
+                    {
+                        "name": "NEO HearSound Rx True Wireless Earbuds",
+                        "dateOfRelease": "2023-02-20",
+                        "properties": {
+                            "color": "black"
+                        },
+                        "price": 49.99,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "assets/images/products/earphones/hear-sound_2.png",
+                        "rating": 1,
+                        "tag": [
+                            "new"
+                        ],
+                        "ref": "NEO-HS-RXTWE"
+                    },
+                    {
+                        "name": "NEO HearSound Changin Wireless Earbuds",
+                        "dateOfRelease": "2023-02-20",
+                        "properties": {
+                            "color": "white"
+                        },
+                        "price": 39.99,
+                        "discount": 0,
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Convallis convallis tellus id interdum velit laoreet id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Aliquet lectus proin nibh nisl condimentum. Et molestie ac feugiat sed lectus vestibulum. Urna et pharetra pharetra massa massa ultricies. Egestas congue quisque egestas diam in arcu. Elit eget gravida cum sociis natoque penatibus.",
+                        "imageSrc": "assets/images/products/earphones/hear-sound_3.png",
+                        "rating": 1,
+                        "tag": [
+                            "new"
+                        ],
+                        "ref": "NEO-HS-CWE"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "power-banks",
+        "goods": [
+            {
+                "type": "",
+                "items": [
+                    {
+                        "name": "NEO 10000mAh PD 20W USB-C Power Bank",
+                        "dateOfRelease": "2023-02-25",
+                        "properties": {
+                            "color": "blue",
+                            "watt": 20
+                        },
+                        "price": 29.99,
+                        "discount": 0,
+                        "description": "USB-C Portable Charger PD 20W, Portable Charger Power Bank for Samsung Galaxy S22/S21/S20/S10, iPhone 13 Series/iPhone 12 Series, iPad, and More (USB C to A Cable Included)",
+                        "imageSrc": "assets/images/products/power-banks/PB_10000PD20W.png",
+                        "rating": 1,
+                        "listOfBenefits": [
+                            "Portable Charger with USB-C Power Delivery 20W",
+                            "Universal Capability",
+                            "Compact and Convenient",
+                            "Premium and Safe ATL Battery"
+                        ],
+                        "tag": [
+                            "new"
+                        ],
+                        "ref": "NEO-PB-PD20W"
+                    },
+                    {
+                        "name": "A-NEO 20W PD 10000mAh Power Bank",
+                        "dateOfRelease": "2023-02-25",
+                        "properties": {
+                            "color": "blue",
+                            "watt": 20
+                        },
+                        "price": 42.99,
+                        "discount": 0,
+                        "description": "Portable Fast Charger Including 3 USB-C Cables Compatible with Samsung Galaxy S22/S21/S20/S10, iPhone 14/iPhone 13/iPhone 12 Series/iPad and More",
+                        "imageSrc": "assets/images/products/power-banks/PB_10000PD20WFC.png",
+                        "rating": 1,
+                        "tag": [
+                            "new"
+                        ],
+                        "ref": "NEO-PB-PD20WFC"
+                    },
+                    {
+                        "name": "NEO 20000mAh PD 20W Portable Charger Power Bank",
+                        "dateOfRelease": "2023-02-25",
+                        "properties": {
+                            "color": "black",
+                            "watt": 20
+                        },
+                        "price": 45.99,
+                        "discount": 0,
+                        "description": "Fast Charging Including 2 USB-C Cables, Compatible with Samsung Galaxy S22/S21/S20/S10, iPhone 14/iPhone 13/iPhone 12 Series/iPad",
+                        "imageSrc": "assets/images/products/power-banks/PB_20000PD20WFC.png",
+                        "rating": 0.82,
+                        "listOfBenefits": [
+                            "Portable yet powerful",
+                            "PD 20W Fast Charging",
+                            "Repaid Recharge",
+                            "Long Life Expectancy"
+                        ],
+                        "tag": [
+                            "new"
+                        ],
+                        "ref": "NEO-PB-PD20W20"
+                    }
                 ]
             }
         ]
