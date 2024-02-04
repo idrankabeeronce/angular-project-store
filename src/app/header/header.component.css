@@ -170,6 +170,14 @@
     visibility: hidden;
 }
 
+.custom-padding-right {
+    padding-right: 0.75rem;
+    box-sizing: border-box;
+}
+.custom-padding-right_2 {
+    padding-right: 0.5rem;
+    box-sizing: border-box;
+}
 .custom-padding-left {
     padding-left: 0.75rem;
     box-sizing: border-box;

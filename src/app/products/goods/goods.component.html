@@ -82,7 +82,7 @@
                                 <button [ngClass]="{'hidden': item.imageSrc.length <= 1 }" *ngIf="changeView"
                                     style="width: 10%; height: initial;" tuiIconButton type="button" appearance="icon"
                                     icon="tuiIconChevronLeft" (click)="goToImage(item.indexOfImage-1, item)"></button>
-                                    <a routerLink="/item/{{item.ref}}">
+                                    <a routerLink="/item/{{item.ref}}" class="item-img-wrap">
                                         <img [ngClass]="{'item-img-grid' : changeView}" class="item-img"
                                             [src]="item.imageSrc[item.indexOfImage]">
                                     </a>

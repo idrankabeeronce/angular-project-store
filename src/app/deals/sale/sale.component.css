@@ -38,7 +38,7 @@
     bottom: 100px;
     justify-content: center;
     width: 100%;
-    z-index: 10;
+    z-index: 5;
 }
 .disabled { 
     display: none;

@@ -47,7 +47,6 @@ export class CartComponent implements OnInit, OnDestroy {
         }
       }
     });
-    console.log(tmpKey);
     if (tmpKey !== null) tmpArray.splice(tmpKey, 1);
     if (!tmpArray.length) localStorage.removeItem('basket_id');
     localStorage.setItem('basket_items', JSON.stringify(tmpArray));
@@ -71,7 +70,6 @@ export class CartComponent implements OnInit, OnDestroy {
   }
   goToCheckout() {
     if (!this.addToCartService.numberOfOrder) this.addToCartService.numberOfOrder = this.shoppingList.id;
-    console.log(this.addToCartService.numberOfOrder);
     this.router.navigate([this.addToCartService.numberOfOrder, 'checkout']);
   }
   getSubtotal() {

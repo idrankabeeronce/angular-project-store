@@ -25,7 +25,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
       {
         next: (x => { this.currentUser = x; }),
         error: (err => {
-          console.log(err);
+          console.error(err);
         })
       })
     this.sub = this.authenticationService.getProfileOpen().subscribe(x => {

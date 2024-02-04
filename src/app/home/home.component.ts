@@ -90,20 +90,20 @@ export class HomeComponent implements OnInit {
   styleOfCards = [
     {
       style: 'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("assets/images/support/building.jpg")',
-      title: 'Something Good',
-      desc: 'Description of something good',
+      title: 'Something',
+      desc: 'Description of something',
       ref: '/'
     },
     {
       style: 'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("assets/images/support/contact-us.jpg")',
-      title: 'Something Bad',
-      desc: 'Description of something bad',
+      title: 'Something',
+      desc: 'Description of something',
       ref: '/'
     },
     {
       style: 'background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url("assets/images/support/global-network.jpg")',
-      title: 'Something else',
-      desc: 'Description of something else',
+      title: 'Something',
+      desc: 'Description of something',
       ref: '/'
     }];
   content: any = []
