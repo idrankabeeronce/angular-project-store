@@ -6,8 +6,8 @@ import { environment } from '../environments/environment';
 })
 export class TelegramService {
 
-  private api_token: string = environment.TG_TOKEN;
-  private chat_id: string = '-1001968649978';
+  private api_token: string = environment.TG_TOKEN ?? '';
+  private chat_id: string = environment.CHAT_ID ?? '';
   public url: string = 'http://api.telegram.org/bot';
 
   constructor() { }
