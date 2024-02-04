@@ -84,7 +84,7 @@
             </ng-template>
             <div class="shipping-container ">
                 <span>Shipping</span>
-                <ng-container *ngIf="shipping != null; else later">
+                <ng-container *ngIf="isShippingSet; else later">
                     <ng-container *ngIf="shipping != 0; else priceShipping">
                         <span>${{shipping}}</span>
                     </ng-container>

@@ -13,7 +13,9 @@ export class CheckoutComponent implements OnInit, OnDestroy {
   shoppingList: any = [];
   sub!: Subscription;
   subPrice!: Subscription;
-  shipping!: number;
+  subContacts!: Subscription;
+  shipping: number = 0;
+  isShippingSet = false;
   subTotal = 0;
   subTotalDiscount = 0;
   total = 0;
@@ -23,20 +25,33 @@ export class CheckoutComponent implements OnInit, OnDestroy {
   codeValid = false;
   try = false;
   codeDiscount = 0;
+  noContacts = true;
+
   constructor(private addToCartService: AddToCartService, private router: Router, private route: ActivatedRoute) {
+    
+    this.subContacts = this.addToCartService.getShippingDetails().subscribe((value) => {      
+      if (value.contacts) this.noContacts = false;
+    });
 
     router.events.subscribe(res => {
       if (res instanceof NavigationEnd) {
         if (router.url.match('/checkout')) {
           if (router.url.match('/shipping')) {
+            this.isShippingSet = true;
             this.navigations[2].class = '';
             this.onClickChangeFocus('Shipping');
           }
-          if (router.url.match('/payment')) {
+          else if (router.url.match('/payment')) {
+            this.isShippingSet = true;
             this.navigations[3].class = '';
             this.onClickChangeFocus('Payment');
+          } else {
+            this.onClickChangeFocus('Information');
+            this.isShippingSet = false;
+            if (this.noContacts) this.navigations[2].class = 'disabled';
+            if (this.noContacts) this.navigations[3].class = 'disabled';
           }
-        }
+        }        
       }
     })
 
@@ -54,12 +69,14 @@ export class CheckoutComponent implements OnInit, OnDestroy {
       this.getSubTotal();
     })
     this.subPrice = this.addToCartService.getShippingMethod().subscribe((value) => {
-      this.shipping = value.price;
+      this.shipping = value.price ?? 0;
       this.getSubTotal();
     })
   }
   ngOnDestroy(): void {
-
+    this.sub.unsubscribe();
+    this.subPrice.unsubscribe();
+    this.subContacts.unsubscribe();
   }
   //
   onClickChangeFocus(caption: string) {
@@ -114,6 +131,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
       this.disabled = true;
   }
 
+  // ONLY for testing
   // apply discount code 
   applyDiscount() {
     let sList: any = [];
@@ -138,8 +156,6 @@ export class CheckoutComponent implements OnInit, OnDestroy {
           this.disabled = true;
           this.codeDiscount = Math.round((20 / this.subTotal) * 100 * 100) / 100;
 
-          console.log(this.codeDiscount)
-
           this.addToCartService.getShoppingList().subscribe((value) => {
             sList = value;
           })
@@ -147,7 +163,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
           this.addToCartService.setShoppingList(sList)
           this.getSubTotalDiscount();
         } else {
-          console.log(this.errorMessage);          
+          console.error(this.errorMessage);          
           this.errorMessage = 'Order must be over $150';
           this.codeValid = false;
         }
@@ -158,8 +174,6 @@ export class CheckoutComponent implements OnInit, OnDestroy {
           this.codeField.disable();
           this.disabled = true;
           this.codeDiscount = Math.round((39 / this.subTotal) * 100 * 100) / 100;
-
-          console.log(this.codeDiscount)
 
           this.addToCartService.getShoppingList().subscribe((value) => {
             sList = value;

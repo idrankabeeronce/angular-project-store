@@ -63,14 +63,16 @@ export class PaymentComponent implements OnInit, OnDestroy {
       {
         next: (x => { this.currentUser = x; }),
         error: (err => {
-          console.log(err);
+          console.error(err);
         })
       })
     this.setUserProfileInfo(this.currentUser);
     this.id = String(this.addToCartService.numberOfOrder);
+    if (!this.id) this.router.navigate(['/cart']);
     this.sub = this.addToCartService.getShippingDetails().subscribe((value) => {
-      this.contact = String(`${value.contacts.email} ${value.contacts.phone}`);
-      this.emailString = String(value.contacts.email)
+      if (!value.contacts) this.router.navigate(['/' + this.id + '/checkout']);
+      this.contact = String(`${value.contacts?.email} ${value.contacts?.phone}`);
+      this.emailString = String(value.contacts?.email);
       this.shipTo = String(`${value.adress} ${value.postcode}`);
       this.form.controls['firstName'].setValue(value.firstName);
       this.form.controls['lastName'].setValue(value.lastName);
@@ -158,7 +160,7 @@ export class PaymentComponent implements OnInit, OnDestroy {
         .then(res => {
           console.log("Success!", res);
         })
-        .catch(err => console.log(err));
+        .catch(err => console.error(err));
 
       Email.send({
         Host: `smtp.elasticemail.com`,

@@ -42,13 +42,12 @@ export class InformationComponent implements OnInit {
       {
         next: (x => { this.currentUser = x; }),
         error: (err => {
-          console.log(err);
+          console.error(err);
         })
       })
     
     this.addToCartService.getShippingDetails().subscribe(value=> {
       if (Object.keys(value).length) {
-        console.log(value);
         this.setProfileInfo(value);
       } else {
         this.setUserProfileInfo(this.currentUser);
@@ -117,9 +116,6 @@ export class InformationComponent implements OnInit {
           email: this.emailField.value, 
           phone: this.phone.value } 
       });
-      //this.addToCartService.getShippingDetails().subscribe((value:any) => {
-      //  console.log(value)
-      //})
 
       this.router.navigate([`${this.Route.snapshot.paramMap.get('id')}/checkout/shipping`])
     }

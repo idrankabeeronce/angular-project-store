@@ -30,10 +30,6 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.getSubtotal();
-    this.addToCartService.getShoppingList().subscribe((value: any) => {
-      console.log(value);
-      
-    })
     // getting shopped item
     this.sub_1 = this.addToCartService.getItem().subscribe((value: any) => {
 
@@ -70,9 +66,7 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
           Obj.forEach(([key, value]: any) => {
             if (key == 'properties') {
               Object.entries(value).forEach(([key, value]: any) => {
-                keys.push(key);
-                console.log(key);
-                
+                keys.push(key);                
                 if (typeof value === 'string')
                   values.push(value.charAt(0).toUpperCase() + value.slice(1));
                 else
@@ -158,7 +152,6 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
         : [];
     let tmpKey = null;
     tmpArray.find((el, key) => {
-      console.log(el);
       if (el.ref === this.shoppingList[index].ref) {
         el.amount += bool? 1 : -1;
         if (el.amount <= 0) {
@@ -166,7 +159,6 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
         }
       }
     });
-    console.log(tmpKey);
     if (tmpKey !== null) tmpArray.splice(tmpKey, 1);
     if (!tmpArray.length) localStorage.removeItem('basket_id');
     localStorage.setItem('basket_items', JSON.stringify(tmpArray));
@@ -189,7 +181,6 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
         : [];
     let tmpKey = null;
     tmpArray.find((el, key) => {
-      console.log(el);
       if (el.ref === this.shoppingList[index].ref) {
         tmpKey = key;
       }
@@ -215,7 +206,6 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
   getSubtotal() {
     this.total = 0;
     for (let item of this.shoppingList) {
-      console.log(item.actualPrice, item.amount);
       this.total += item.actualPrice * item.amount;
     }
     this.total = Math.round(this.total * 100) / 100;

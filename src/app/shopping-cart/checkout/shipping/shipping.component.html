@@ -24,7 +24,7 @@
         <form class="shipping-methods-sum" [formGroup]="radioForm">
         <ng-container *ngFor="let method of shippingMethod">
             <div class="shipping-method-container padding-top padding-bottom tui-text_body-m">
-                <tui-radio class="tui-space_right-5" formControlName="radioValue" [item]="method.id" (ngModelChange)="changeMethod(method)"></tui-radio>
+                <tui-radio class="tui-space_right-5" formControlName="radioValue" checked="true" [item]="method.id" (ngModelChange)="changeMethod(method)"></tui-radio>
                 <div class="shipping-description">
                 <div>
                     <div>{{method.name}}</div>
