@@ -20,3 +20,8 @@
 .text-max-height-block_3 {
     -webkit-line-clamp: 3;
 }
+@media (hover: none) {
+    .tui-island_hoverable:hover {
+        transform: none;
+    }
+}

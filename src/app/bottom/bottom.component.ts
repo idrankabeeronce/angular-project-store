@@ -1,6 +1,7 @@
-import { Component, OnInit, Inject} from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { TuiAlertService, TuiNotification } from '@taiga-ui/core';
+import { MailService } from '../mail.service';
 declare var Email: any;
 
 @Component({
@@ -31,7 +32,10 @@ export class BottomComponent implements OnInit {
       button.disabled = true
   }
 
-  constructor(@Inject(TuiAlertService) protected readonly alert: TuiAlertService) { }
+  constructor(
+    @Inject(TuiAlertService) protected readonly alert: TuiAlertService,
+    private mailService: MailService
+  ) { }
 
   // if compact view active : expand nav area / display children routes | or close it
   getContent(button: any, element: any) {
@@ -45,7 +49,7 @@ export class BottomComponent implements OnInit {
       button.icon = 'tuiIconPlusLarge';
     }
   }
-  
+
   scrollTop() {
     window.scrollTo({
       top: 0,
@@ -54,21 +58,32 @@ export class BottomComponent implements OnInit {
   }
 
   // sending msg to subscribed email
-  sendEmail() {
-    Email.send({
-      Host: `smtp.elasticemail.com`,
-      Username: `noreplay@neo.com`,
-      Password: `21337713D3A89938DC21181A2393F98D42F0`,
-      To: `${this.emailField.value}`,
-      From: `mrhuk06@gmail.com`,
-      Subject: `Thanks for you subscription`,
-      Body: `You have subscribed to the <b>NEO</b> newsletter`
-    })
-    this.alert
-          .open(`You successfully subscribed`, { status: TuiNotification.Success, })
-          .subscribe();
-    this.emailField.setValue('');
+  async sendEmail() {
+    let data = {
+      to: this.emailField.value,
+      template: 'subscribe'
+    };
+
+    await this.mailService.sendEmail(data)
+      .then((result) => {
+        if (result.ok) {
+          this.alert
+            .open(`You successfully subscribed`, { status: TuiNotification.Success, })
+            .subscribe();
+          this.emailField.setValue('');
+        } else {
+
+          this.alert
+            .open(`Something went wrong, try one more time later`, { status: TuiNotification.Error, })
+            .subscribe();
+        }
+
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

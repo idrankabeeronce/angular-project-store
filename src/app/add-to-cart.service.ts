@@ -28,6 +28,8 @@ export class AddToCartService {
 
   private shippingMethod = new BehaviorSubject<any>({});
 
+  constructor(private http: HttpClient, private authenticationService:AuthenticationService) { }
+
   public setTotalPrice(value: number) {
     this.totalPrice.next(value)
   }
@@ -79,6 +81,20 @@ export class AddToCartService {
     return this.ShoppingList.asObservable();
   }
 
+  public isInShoppingList(itemRef: string): boolean {
+    let result = false;
+    this.getShoppingList().subscribe((v:any) => {
+        v.forEach((e:any) => {
+          if (e.ref === itemRef) {
+            result = true;
+            return;
+          }
+        });
+    });
+
+    return result;
+  }
+
   public wipeList() {
     this.ShoppingList = new BehaviorSubject<any>([]);
     this.sizeOfShoppingList.next(0)
@@ -87,16 +103,5 @@ export class AddToCartService {
     localStorage.removeItem('basket_id');
     localStorage.removeItem('basket_items');
   }
-  constructor(private http: HttpClient, private authenticationService:AuthenticationService) { }
 
-  // get ip adress
-  /*
-  getIPAddress() {
-    let ipAdress: any;
-    this.http.get("http://api.ipify.org/?format=json").subscribe((res: any) => {
-      ipAdress = res.ip;
-    });
-    return ipAdress
-  }
-  */
 }

@@ -59,6 +59,9 @@
                 <ng-container *ngFor="let item of displayedContent">
                     <button tuiAction [ngClass]="{'item-card-grid' : changeView}"
                         class="item-card tui-space_left-5 tui-space_right-5 tui-space_bottom-5 tui-space_top-5">
+                        <ng-container *ngIf="changeView">
+                            <a routerLink="/item/{{item.ref}}" class="item-link item-link-grid" tuiLink icon="tuiIconRedoLarge"></a>
+                        </ng-container>
                         <!-- discount of items  -->
                         <div [ngClass]="{'discount-grid' : changeView}" class="discount tui-text_body-s"
                             *ngIf="item.discount > 0"><span id="discount-text">
@@ -78,8 +81,8 @@
 
                         <div>
                             <!-- images of item -->
-                            <div style="display: flex; justify-content: space-between;">
-                                <button [ngClass]="{'hidden': item.imageSrc.length <= 1 }" *ngIf="changeView"
+                            <div style="display: flex; justify-content: center;">
+                                <button [ngClass]="{'hidden': item.imageSrc.length <= 1 }" class="item-img__control" *ngIf="changeView"
                                     style="width: 10%; height: initial;" tuiIconButton type="button" appearance="icon"
                                     icon="tuiIconChevronLeft" (click)="goToImage(item.indexOfImage-1, item)"></button>
                                     <a routerLink="/item/{{item.ref}}" class="item-img-wrap">
@@ -87,7 +90,7 @@
                                             [src]="item.imageSrc[item.indexOfImage]">
                                     </a>
 
-                                <button [ngClass]="{'hidden': item.imageSrc.length <= 1 }" *ngIf="changeView"
+                                <button [ngClass]="{'hidden': item.imageSrc.length <= 1 }" class="item-img__control" *ngIf="changeView"
                                     style="width: 10%; height: initial;" tuiIconButton type="button" appearance="icon"
                                     icon="tuiIconChevronRight" (click)="goToImage(item.indexOfImage+1, item)"></button>
                             </div>
@@ -100,9 +103,9 @@
                             </ng-container>
                         </div>
                         <!-- color property with grid view -->
-
-                        <ng-container *ngIf="changeView">
-                            <div [ngClass]="{'item-color-group-grid' : changeView}" class="item-color-group">
+                        <ng-container *ngIf="changeView && item.colorLength && item.colorLength > 1">
+                            <div [ngClass]="{'item-color-group-grid' : changeView}" 
+                                class="item-color-group">
                                 <ng-container *ngFor="let prop of item.properties">
                                     <ng-container *ngFor="let color of prop.color; let indexOfElement=index">
                                         <div #color [ngClass]="{'selected-color': indexOfElement == item.indexOfColor}"

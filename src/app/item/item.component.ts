@@ -21,6 +21,7 @@ interface struct {
 export class ItemComponent implements OnInit, OnDestroy {
   found: boolean = false;
   amount: number = 1;
+  inCart = false;
   sub!: Subscription;
   dataOfItems: any;
   ratingSrcNull = "tuiIconStarLarge";
@@ -137,6 +138,7 @@ export class ItemComponent implements OnInit, OnDestroy {
       }
       this.findSimilar(this.category, this.type, this.currentItem.ref);
     }
+    this.inCart = this.addToCartService.isInShoppingList(this.currentItem.ref);
     this.dataOfItems = [];
   }
   findSimilar(category: string, type: string, ref: string) {
@@ -185,19 +187,6 @@ export class ItemComponent implements OnInit, OnDestroy {
     if (item.indexOfSecondProperty !== indexSelect)
       item.indexOfSecondProperty = indexSelect;
   }
-  changeAmount(state: boolean) {
-    if (state) {
-      this.amount++
-    } else {
-      this.amount--
-    }
-
-    if (this.amount == 1) {
-      this.disabled = true;
-    } else {
-      this.disabled = false;
-    }
-  }
 
   addToCart() {
     let itemS = this.currentItem;
@@ -222,7 +211,7 @@ export class ItemComponent implements OnInit, OnDestroy {
       }
 
       this.addToCartService.setItem(itemToSet); // push item to shopping list
-
+      this.inCart = true;
       this.addToCartService.setOpenCart(true); // open shopping cart component
 
     }
@@ -232,5 +221,9 @@ export class ItemComponent implements OnInit, OnDestroy {
         .open(`Select all properties to purchase`, { status: TuiNotification.Warning, })
         .subscribe();
     }
+  }
+
+  getShoppingCart() {
+    this.addToCartService.setOpenCart(true);
   }
 }

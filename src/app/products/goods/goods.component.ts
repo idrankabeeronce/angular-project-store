@@ -60,7 +60,7 @@ export class GoodsComponent implements OnInit, OnDestroy {
     this.dataOfItems = [];
     this.searchValueLabel = String(this.Route.snapshot.queryParamMap.get("search")?.toLocaleLowerCase());
     // init view changed based on resolution
-    if (window.innerWidth < 800 && localStorage.getItem('display_view') === null) {
+    if (window.innerWidth < 768 || localStorage.getItem('display_view') === null) {
       this.changeView = true;
       this.svgView = this.tabsSrc;
     }
@@ -465,6 +465,21 @@ export class GoodsComponent implements OnInit, OnDestroy {
         }
         // define the length of pagination that depends on amount of content
         this.length = Math.ceil(this.content.length / this.maxLength);
+        for (let item of this.content) {
+          item.properties.forEach((el: any) => {
+            if (el.hasOwnProperty('color')) {
+              item.colorLength = el.color.length;
+              if (item.colorLength === 1) {
+                item.selectColor = el.color[0];
+                item.indexOfColor = 0;
+              }
+            }
+            if (el.hasOwnProperty('length')) {
+              item.secPropLength = el.length.length;
+            }
+          });
+        }
+
         this.getDisplayedContent();
 
       }
@@ -534,14 +549,22 @@ export class GoodsComponent implements OnInit, OnDestroy {
       }
 
       // define class that we gonna push to service that provides connection with component of shopping list 
-      itemToSet = { name: itemS.name, imageSrc: itemS.imageSrc[itemS.indexOfImage], actualPrice: actualPrice, price: price, properties: properties, amount: 1, ref: itemS.ref }
+      itemToSet = { 
+        name: itemS.name, 
+        imageSrc: itemS.imageSrc[itemS.indexOfImage], 
+        actualPrice: actualPrice, 
+        price: price, properties: 
+        properties, 
+        amount: 1, 
+        ref: itemS.ref 
+      }
 
       this.addToCartService.setItem(itemToSet); // push item to shopping list
-      
-      let tmpArray:Array<any> = localStorage.getItem('basket_items') 
+
+      let tmpArray: Array<any> = localStorage.getItem('basket_items')
         && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
-          ? JSON.parse(localStorage.getItem('basket_items') || '[]') 
-          : [];
+        ? JSON.parse(localStorage.getItem('basket_items') || '[]')
+        : [];
       let isInBasket = tmpArray.find((el) => {
         if (el.ref === itemToSet.ref) {
           el.amount += 1;
@@ -564,9 +587,14 @@ export class GoodsComponent implements OnInit, OnDestroy {
       }
 
       // reset select
-      itemS.indexOfColor = 99;
-      itemS.indexOfSecondProperty = 99;
-      itemS.selectColor = '';
+      if (itemS.colorLength && itemS.colorLength > 1) {
+        itemS.selectColor = '';
+        itemS.indexOfColor = 99;
+        if (itemS.secPropLength && itemS.secPropLength > 1) {
+          itemS.indexOfSecondProperty = 99;
+        }
+      }
+      
     }
     // else we getting message that we should select required properties
     else {

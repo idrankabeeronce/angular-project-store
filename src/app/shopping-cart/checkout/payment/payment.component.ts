@@ -8,6 +8,7 @@ import { NgFor, NgForOf } from '@angular/common';
 import { AuthenticationService } from 'src/app/authentication.service';
 import { User } from 'src/app/_models/user';
 import { TelegramService } from 'src/app/telegram.service';
+import { MailService } from 'src/app/mail.service';
 declare const Email: any;
 
 
@@ -53,6 +54,7 @@ export class PaymentComponent implements OnInit, OnDestroy {
   constructor(
     private authenticationService: AuthenticationService,
     private telegramService: TelegramService,
+    private mailService: MailService,
     private router: Router, private Route: ActivatedRoute, private addToCartService: AddToCartService,
     @Inject(TuiDialogService) private readonly dialogService: TuiDialogService,
     @Inject(TuiAlertService) protected readonly alert: TuiAlertService) { }
@@ -140,13 +142,13 @@ export class PaymentComponent implements OnInit, OnDestroy {
       }
 
       result += `\nShipping: ${shippingMethod.name} - ${shippingMethod.price > 0 ? shippingMethod.price + ' USD' : 'Free'}\n\n`;
-      
+
       result += `Total: ${totalPrice} USD`;
     }
     return encodeURI(result);
   }
-  proceedPayment() {
-    this.try = true;    
+  async proceedPayment() {
+    this.try = true;
 
     if (this.form.valid) {
       this.openDialog = false;
@@ -162,33 +164,22 @@ export class PaymentComponent implements OnInit, OnDestroy {
         })
         .catch(err => console.error(err));
 
-      Email.send({
-        Host: `smtp.elasticemail.com`,
-        Username: `noreplay@neo.com`,
-        Password: `21337713D3A89938DC21181A2393F98D42F0`,
-        To: `mrhuk06@gmail.com`, //`${this.emailString}`,
-        From: `mrhuk06@gmail.com`,
-        Subject: `Order #${this.id}`,
-        Body: `<html>
-            This is an automatically generated email. 
-            <br/> Please do not reply to this email address.
-            <br/><br/> Order #${this.id} for the amount of ${this.total} USD is accepted.
-            <br/><br/> Order information:
-            <div>${this.func()}</div>
-            + ${this.shippingMethod.price} USD by shipping
-            <br/>
-            - ${this.shippingList.discount}% by discount
-            <br/>
-            <br/><br/> Payment information:
-            <br/><br/> Total: ${this.total} USD
-            <br/> Ship to: ${this.shipTo}
-            <br/> Shipping: ${this.shippingMethod.name} / ${this.shippingMethod.deliveryTime}
-            <br/><br/> Our contacts:
-            <br/> +1 (111) 1111111
-            </html>`,
-        IsBodyHtml: true
-      });
-
+      let data = {
+        to: this.emailString,
+        orderId: this.id,
+        total: this.total,
+        shippingMethod: this.shippingMethod,
+        shippingList: this.shippingList,
+        shipTo: this.shipTo,
+        temlate: 'order'
+      }
+      await this.mailService.sendEmail(data)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
       this.addToCartService.wipeList();
       this.router.navigate(['/products'])
     }

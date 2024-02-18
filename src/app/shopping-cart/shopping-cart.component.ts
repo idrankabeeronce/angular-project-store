@@ -12,11 +12,11 @@ import { AuthenticationService } from '../authentication.service';
 export class ShoppingCartComponent implements OnInit, OnDestroy {
   @Output() newItemEvent = new EventEmitter<any>();
 
-  shoppingList: any = 
-  !this.authenticationService.isAuth() 
-    && localStorage.getItem('basket_items') 
-    && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
-      ? JSON.parse(localStorage.getItem('basket_items') || '[]') 
+  shoppingList: any =
+    !this.authenticationService.isAuth()
+      && localStorage.getItem('basket_items')
+      && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
+      ? JSON.parse(localStorage.getItem('basket_items') || '[]')
       : [];
   total: number = 0; // sum price of shopping list 
   sub_1!: Subscription;
@@ -43,11 +43,9 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
         let index = 0;
         for (let item of this.shoppingList) {
 
-          if (item.name == value.name) {
-            if (item.properties == value.properties) {
-              found = true;
-              break;
-            }
+          if (item.ref == value.ref) {
+            found = true;
+            break;
           }
           index++;
         }
@@ -59,14 +57,14 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
               this.shoppingList.id = this.addToCartService.numberOfOrder.toString();
             else if (this.shoppingList.id == undefined)
               this.shoppingList.id = (Math.round(Math.random() * (9999 - 1000) + 1000));
-              
+
           }
           // define properties
           let Obj = Object.entries(value);
           Obj.forEach(([key, value]: any) => {
             if (key == 'properties') {
               Object.entries(value).forEach(([key, value]: any) => {
-                keys.push(key);                
+                keys.push(key);
                 if (typeof value === 'string')
                   values.push(value.charAt(0).toUpperCase() + value.slice(1));
                 else
@@ -128,9 +126,9 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
     this.sub_1.unsubscribe();
     this.sub_2.unsubscribe();
   }
-  destroyOnWrapper(e:any) {    
-    if(e.target.classList.contains('block-wrapper'))
-      this.destroy() 
+  destroyOnWrapper(e: any) {
+    if (e.target.classList.contains('block-wrapper'))
+      this.destroy()
   }
   // setting value to false that causes close event
   destroy() {
@@ -145,15 +143,15 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
     else {
       this.shoppingList[index].amount--;
     }
-    
-    let tmpArray:Array<any> = localStorage.getItem('basket_items') 
+
+    let tmpArray: Array<any> = localStorage.getItem('basket_items')
       && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
-        ? JSON.parse(localStorage.getItem('basket_items') || '[]') 
-        : [];
+      ? JSON.parse(localStorage.getItem('basket_items') || '[]')
+      : [];
     let tmpKey = null;
     tmpArray.find((el, key) => {
       if (el.ref === this.shoppingList[index].ref) {
-        el.amount += bool? 1 : -1;
+        el.amount += bool ? 1 : -1;
         if (el.amount <= 0) {
           tmpKey = key;
         }
@@ -175,10 +173,10 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
 
   // remove selected item from list
   deleteItem(index: number) {
-    let tmpArray:Array<any> = localStorage.getItem('basket_items') 
+    let tmpArray: Array<any> = localStorage.getItem('basket_items')
       && Array.isArray(JSON.parse(localStorage.getItem('basket_items') || '{}'))
-        ? JSON.parse(localStorage.getItem('basket_items') || '[]') 
-        : [];
+      ? JSON.parse(localStorage.getItem('basket_items') || '[]')
+      : [];
     let tmpKey = null;
     tmpArray.find((el, key) => {
       if (el.ref === this.shoppingList[index].ref) {
@@ -229,6 +227,12 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
     this.router.navigate(['/cart'])
   }
 
+  routeToItem(href: string) {
+    this.router.navigateByUrl('/').then(() => {
+      this.router.navigate([`/item/${href}`]);
+    })
+    this.destroy();
+  }
   // close by clicking 'go shopping' button
   goShopping() {
     this.destroy();

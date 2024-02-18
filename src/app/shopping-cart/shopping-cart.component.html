@@ -16,7 +16,7 @@
                                     <img class="item-img" [src]="item.imageSrc">
                                     <div>
                                         <div class="item-head">
-                                            <div [routerLink]="item.ref" routerLinkActive="active"
+                                            <div (click)="routeToItem(item.ref)" routerLinkActive="active"
                                                 class="tui-text_body-m item-header-card text-max-height-block text-max-height-block_3">
                                                 {{item.name}}
                                             </div>

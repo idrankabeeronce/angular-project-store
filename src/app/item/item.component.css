@@ -39,6 +39,11 @@
     border-bottom: 1px solid var(--tui-base-06);
 }
 
+.cart-wrapper {
+    flex: 1;
+    align-items: end;
+}
+
 .custom-gap-1 {
     gap: .5rem;
 }

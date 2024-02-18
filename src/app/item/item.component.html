@@ -74,18 +74,13 @@
                         </div>
                     </div>
                     </div>
-                    <div style="align-items: center" class="cart-wrapper flex custom-gap-2">
-                        <div style="align-items: center" class="flex">
-                            <button tuiMode="onLight" [disabled]="disabled" class="" tuiIconButton type="button"
-                                appearance="icon" icon="tuiIconMinus" (click)="changeAmount(false)"></button>
-
-                            <span>{{amount}}</span>
-
-                            <button tuiMode="onLight" tuiIconButton type="button" appearance="icon" icon="tuiIconPlus"
-                                (click)="changeAmount(true)"></button>
-
-                        </div>
-                        <button class="button-flex" tuiButton (click)="addToCart()">Add to cart</button>
+                    <div class="cart-wrapper flex custom-gap-2">
+                        <ng-container *ngIf="!inCart; else inCartTemplate">
+                            <button class="button-flex" tuiButton (click)="addToCart()">Add to cart</button>
+                        </ng-container>
+                        <ng-template #inCartTemplate>
+                            <button class="button-flex" tuiButton (click)="getShoppingCart()">In cart</button>
+                        </ng-template>
                     </div>
                 </div>
             </div>
