@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "name": "Store 1",
+        "country": "USA",
+        "city": "Chicago",
+        "address": "85 Congress Pkwy, Chicago, IL 60605, USA",
+        "working_hours": "10: 00-20: 00",
+        "phone": "+1 111-111-1111",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse.",
+        "image": {
+            "src": "assets/images/stores/1.jpg",
+            "pos": "bottom"
+        },
+        "coords": {
+            "lat": 41.875169008464894,
+            "lng": -87.63037895639337
+        },
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Store 2",
+        "country": "USA",
+        "city": "Madison",
+        "address": "144 Johnson St, Madison, WI 53703, USA",
+        "working_hours": "09: 00-21: 00",
+        "phone": "+1 121-111-1111",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse.",
+        "image": {
+            "src": "assets/images/stores/2.jpg",
+            "pos": "bottom"
+        },
+        "coords": {
+            "lat": 43.07534660698374,
+            "lng": -89.38963503262592
+        },
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Store 3",
+        "country": "USA",
+        "city": "Kansas City",
+        "address": "909 Walnut St, Kansas City, MO 64106, USA",
+        "working_hours": "11: 00-20: 00",
+        "phone": "+1 131-111-1111",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse.",
+        "image": {
+            "src": "assets/images/stores/3.jpg",
+            "pos": "center"
+        },
+        "coords": {
+            "lat": 39.103162975711626,
+            "lng": -94.58158681373784
+        },
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Store 4",
+        "country": "United Kingdom",
+        "city": "London",
+        "address": "United Agents Ltd, 32 Brewer St, London W1F 0ST, United Kingdom",
+        "working_hours": "10: 00-20: 00",
+        "phone": "+44 1111 111111",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse.",
+        "image": {
+            "src": "assets/images/stores/4.jpg",
+            "pos": "center"
+        },
+        "coords": {
+            "lat": 51.51220385648398,
+            "lng": -0.13526435368515877
+        },
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Store 5",
+        "country": "United Kingdom",
+        "city": "London",
+        "address": "2 Tolpuddle St, London N1 0YY, United Kingdom",
+        "working_hours": "08: 00-20: 00",
+        "phone": "+44 1211 111111",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse.",
+        "image": {
+            "src": "",
+            "pos": ""
+        },
+        "coords": {
+            "lat": 51.5338037204329,
+            "lng": -0.11092535197735742
+        },
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Store 6",
+        "country": "United Kingdom",
+        "city": "London",
+        "address": "Glastonbury House, 18 Alderney St, Pimlico, London, United Kingdom",
+        "working_hours": "08: 00-20: 00",
+        "phone": "+44 1311 111111",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse.",
+        "image": {
+            "src": "assets/images/stores/6.jpg",
+            "pos": "bottom"
+        },
+        "coords": {
+            "lat": 51.49047687621601,
+            "lng": -0.14688272749961584
+        },
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Store 7",
+        "country": "United Kingdom",
+        "city": "London",
+        "address": "Glastonbury House, 18 Alderney St, Pimlico, London, United Kingdom",
+        "working_hours": "08: 00-20: 00",
+        "phone": "+44 1311 111111",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Rhoncus urna neque viverra justo nec ultrices dui sapien. Viverra nam libero justo laoreet. Pulvinar etiam non quam lacus suspendisse.",
+        "image": {
+            "src": "assets/images/stores/7.jpg",
+            "pos": "center"
+        },
+        "coords": {
+            "lat": 51.69047687621601,
+            "lng": -0.14688272749961584
+        },
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4"
+        ]
+    }
+]

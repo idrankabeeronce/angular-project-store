@@ -5,6 +5,7 @@ import { Subject, Subscription } from 'rxjs';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { AddToCartService } from '../add-to-cart.service';
 import { AuthenticationService } from '../authentication.service';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header',
@@ -26,11 +27,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
   showContainer = false; // true - show compact view / false - show general view
   public sizeOfShoppingList = 0;
   constructor(private addToCartService: AddToCartService, private authenticationService: AuthenticationService,
-    public cdr: ChangeDetectorRef, private router: Router, public breakpointObserver: BreakpointObserver) {
+    public cdr: ChangeDetectorRef, private router: Router, public breakpointObserver: BreakpointObserver,
+    private meta: Meta) {
   }
   open = false;
 
   ngOnInit(): void {
+    this.meta.updateTag({ 
+      name: 'viewport', 
+      content: 'width=device-width, initial-scale=1, maximum-scale=1' 
+    }, 'name=viewport');
     // get amount of shopping items
     this.sub = this.addToCartService.getSizeOfShoppingList().subscribe(value => {
       if (this.sizeOfShoppingList != value) {

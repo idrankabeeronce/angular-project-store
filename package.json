@@ -37,6 +37,7 @@
     "angular2-text-mask": "^8.0.5",
     "bootstrap": "^5.2.0",
     "dompurify": "2.2.9",
+    "mapbox-gl": "^2.12.0",
     "rxjs": "~7.5.0",
     "text-mask-core": "^5.1.2",
     "zone.js": "~0.11.4"
@@ -47,6 +48,7 @@
     "@angular/compiler-cli": "^14.2.0",
     "@types/dompurify": "2.2.3",
     "@types/jasmine": "~4.0.0",
+    "@types/mapbox-gl": "^2.7.10",
     "css-loader": "^6.7.3",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",

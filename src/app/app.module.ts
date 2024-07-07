@@ -39,6 +39,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { PaymentFormComponent } from './profile/payment-form/payment-form.component';
 import { ShippingFormComponent } from './profile/shipping-form/shipping-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StoresComponent } from './stores/stores.component';
 
 @NgModule({
   declarations: [
@@ -69,9 +70,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     ProfileComponent,
     PaymentFormComponent,
-    ShippingFormComponent
-    
-    
+    ShippingFormComponent,
+    StoresComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,7 +83,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ALL_TAIGA_UI_MODULES,
     LayoutModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [HttpClientModule,
     { provide: TUI_SANITIZER, useClass: NgDompurifySanitizer },

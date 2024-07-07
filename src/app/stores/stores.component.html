@@ -1,0 +1,78 @@
+<div class="stores-container">
+    <div class="stores">
+        <div class="stores__list">
+            <div class="st-select">
+                <tui-select
+                    tuiTextfieldSize="l"
+                    [formControl]="cityFormControl"
+                    [valueContent]="content"
+                >
+                    Choose city
+                    <input
+                        placeholder="Choose"
+                        tuiTextfield
+                    />
+                    <tui-data-list-wrapper
+                        *tuiDataList
+                        [items]="allowedCities"
+                        [itemContent]="content"
+                    ></tui-data-list-wrapper>
+                </tui-select>
+                <ng-template #content let-data>
+                    {{data.label}}
+                </ng-template>
+            </div>
+            <ng-container *ngIf="activeStore !== undefined; else list">
+                <div class="st-active-wrapper">
+                    <div class="st-active-item st-item">
+                        <div class="st-item__label tui-text_body-l tui-text_bold">
+                            <button class="st-active-item__back" appearance="" tuiIconButton
+                                icon="tuiIconChevronLeft"  size="xs" (click)="resetActiveStore()"></button>
+                            <span>{{activeStore.name}}</span>
+                            <button class="st-active-item__to-map" appearance="" tuiIconButton
+                                icon="tuiIconMap" size="xs" (click)="scrollToMap(map)"></button>
+                        </div>
+                        <div class="st-item__address tui-text_body-s">{{activeStore.address}}</div>
+                        <div *ngIf="activeStore.tags.length" class="st-item__tags">
+                            <ng-container *ngFor="let tag of activeStore.tags">
+                                <span class="st-item__tag tui-text_body-xs">{{tag}}</span>
+                            </ng-container>
+                        </div>
+                        <div class="st-item__desc">
+                            <span class="tui-text_body-xs">{{activeStore.description}}</span>
+                        </div>
+                        <div *ngIf="activeStore.image.src" #wrapper class="st-item__image-wrapper tui-skeleton">
+                            <img src="{{activeStore.image.src}}" alt="{{activeStore.name}}" [class]="activeStore.image.pos ? 'st-item__image_pos-'+activeStore.image.pos : ''" (load)="removeSkeleton(wrapper)">
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-template #list>
+                <ul class="st-list">
+                    <tui-scrollbar class="st-list__scrollbar">
+                        <ng-container *ngFor="let store of stList">
+                            <button tuiAction class="st-list__item st-item">
+                                <li 
+                                    class=""
+                                    [attr.data-store-id]="store.id"
+                                    (click)="selectStore(store.id, map)"
+                                >
+                                    <div class="st-item__label tui-text_body-l tui-text_bold">{{store.name}}</div>
+                                    <div class="st-item__desc tui-text_body-s">{{store.address}}</div>
+                                    <div *ngIf="store.tags.length" class="st-item__tags">
+                                        <ng-container *ngFor="let tag of store.tags">
+                                            <span class="st-item__tag tui-text_body-xs">{{tag}}</span>
+                                        </ng-container>
+                                    </div>
+                                </li>
+                            </button>
+                        </ng-container>
+                    </tui-scrollbar>
+                </ul>
+            </ng-template>
+        </div> 
+        <div #map [class.tui-skeleton]="mapSkeletonVisible" class="stores__map">
+            <div id="map" class="map-container"></div>
+        </div>
+    </div>
+</div>

@@ -22,6 +22,7 @@ import { Title } from '@angular/platform-browser';
 import { ItemComponent } from './item/item.component';
 import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
+import { StoresComponent } from './stores/stores.component';
 
 const routes: Routes = [
   { path: '', title: 'NEO Official Store', component: HomeComponent },
@@ -73,6 +74,9 @@ const routes: Routes = [
   },
   {
     path: 'cart', component: CartComponent
+  },
+  {
+    path: 'stores', component: StoresComponent
   },
   {
     path: 'pages/:id',
